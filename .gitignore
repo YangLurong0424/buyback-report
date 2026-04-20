@@ -1,0 +1,10 @@
+mail_imap_config.json
+mail_downloads/
+outputs/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+.env
+.env.*

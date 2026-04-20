@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026-04-19回购概览</title>
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --panel: #ffffff;
+      --line: #d8deea;
+      --text: #213047;
+      --muted: #64748b;
+      --blue: #2b6cb0;
+      --blue-soft: #e7f0fb;
+      --green: #2f855a;
+      --green-soft: #e6f6ee;
+      --gold: #b7791f;
+      --gold-soft: #fff4df;
+      --rose: #b83280;
+      --rose-soft: #fde9f5;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+    .page {
+      max-width: 1580px;
+      margin: 0 auto;
+      padding: 28px 24px 40px;
+    }
+    .hero {
+      background: linear-gradient(135deg, #ffffff 0%, #f3f6fc 100%);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 24px 28px;
+      box-shadow: 0 12px 32px rgba(31, 45, 61, 0.06);
+    }
+    h1 {
+      margin: 0;
+      font-size: 28px;
+      line-height: 1.2;
+    }
+    .sub {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 20px;
+    }
+    .card {
+      border-radius: 8px;
+      padding: 16px 18px;
+      border: 1px solid transparent;
+    }
+    .card .label {
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .card .value {
+      margin-top: 8px;
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 1;
+    }
+    .card.blue { background: var(--blue-soft); border-color: #c9daf6; }
+    .card.blue .value { color: var(--blue); }
+    .card.green { background: var(--green-soft); border-color: #cdecd9; }
+    .card.green .value { color: var(--green); }
+    .card.gold { background: var(--gold-soft); border-color: #f0d9ad; }
+    .card.gold .value { color: var(--gold); }
+    .card.rose { background: var(--rose-soft); border-color: #f6c7e4; }
+    .card.rose .value { color: var(--rose); }
+    .notes {
+      margin-top: 18px;
+      padding: 14px 18px;
+      background: #fbfcfe;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+    .notes h2 {
+      margin: 0 0 8px;
+      font-size: 16px;
+    }
+    .notes ul {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+    .market {
+      margin-top: 24px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px;
+      box-shadow: 0 12px 24px rgba(31, 45, 61, 0.04);
+    }
+    .market > h2 {
+      margin: 0 0 14px;
+      font-size: 20px;
+    }
+    .table-section + .table-section {
+      margin-top: 18px;
+    }
+    .section-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+    .section-head h3 {
+      margin: 0;
+      font-size: 16px;
+    }
+    .count {
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .table-wrap {
+      overflow: auto;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #ffffff;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 960px;
+      table-layout: auto;
+    }
+    th, td {
+      padding: 10px 12px;
+      border-bottom: 1px solid #e8edf5;
+      vertical-align: top;
+      font-size: 13px;
+      text-align: left;
+      white-space: nowrap;
+    }
+    th {
+      position: sticky;
+      top: 0;
+      background: #f7f9fc;
+      z-index: 1;
+      color: #3a4a63;
+      font-weight: 600;
+    }
+    tbody tr:nth-child(even) {
+      background: #fbfcfe;
+    }
+    tbody tr:hover {
+      background: #eef4ff;
+    }
+    .num {
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+    }
+    .cell-text {
+      display: inline-block;
+      max-width: 180px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      vertical-align: middle;
+    }
+    .source-link {
+      color: var(--blue);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .source-link:hover {
+      text-decoration: underline;
+    }
+    .source-note {
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .title-details {
+      max-width: 220px;
+    }
+    .title-details summary {
+      list-style: none;
+      cursor: pointer;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: #2d4b7c;
+      font-weight: 600;
+    }
+    .title-details summary::-webkit-details-marker {
+      display: none;
+    }
+    .title-full {
+      margin-top: 6px;
+      padding: 8px 10px;
+      white-space: normal;
+      line-height: 1.6;
+      color: var(--text);
+      background: #f8fbff;
+      border: 1px solid #d8e5fb;
+      border-radius: 6px;
+    }
+    .empty {
+      padding: 24px 12px;
+      border: 1px dashed var(--line);
+      border-radius: 8px;
+      text-align: center;
+      color: var(--muted);
+      background: #fbfcfe;
+    }
+    @media (max-width: 1120px) {
+      .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 640px) {
+      .page { padding: 18px 14px 28px; }
+      .cards { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <section class="hero">
+      <h1>2026-04-19回购概览</h1>
+      <div class="sub">生成时间：2026-04-20 21:10:55</div>
+      <div class="cards"><div class="card blue"><div class="label">A股预案</div><div class="value">0</div></div><div class="card green"><div class="label">A股累计实施</div><div class="value">0</div></div><div class="card gold"><div class="label">港股预案</div><div class="value">0</div></div><div class="card rose"><div class="label">港股累计实施</div><div class="value">2</div></div></div>
+      <div class="notes">
+        <h2>说明</h2>
+        <ul><li>统计窗口：2026-04-18 22:00 - 2026-04-19 22:00</li><li>A股文件已从 Wind 邮件正文链接下载。</li><li>A股邮件的 sheet1 为空，视为本窗口无新增回购统计。</li></ul>
+      </div>
+    </section>
+    <section class="market">
+      <h2>A股</h2>
+      <section class="table-section"><div class="section-head"><h3>A股预案</h3><span class="count">0 条</span></div><div class="empty">暂无数据</div></section>
+      <section class="table-section"><div class="section-head"><h3>A股累计实施</h3><span class="count">0 条</span></div><div class="empty">暂无数据</div></section>
+    </section>
+    <section class="market">
+      <h2>港股</h2>
+      <section class="table-section"><div class="section-head"><h3>港股预案</h3><span class="count">0 条</span></div><div class="empty">暂无数据</div></section>
+      <section class="table-section"><div class="section-head"><h3>港股累计实施</h3><span class="count">2 条</span></div><div class="table-wrap"><table><thead><tr><th>公告日</th><th>代码</th><th>简称</th><th>标题</th><th>交易日</th><th>实施场所</th><th>回购股数(万股)</th><th>回购金额(百万元)</th><th>价格区间</th><th>授权上限股数(万股)</th><th>累计已回购股数(万股)</th><th>累计占授权比例</th><th>来源</th></tr></thead><tbody><tr><td class="text"><span class="cell-text" title="2026-04-19">2026-04-19</span></td><td class="text"><span class="cell-text" title="09987.HK">09987.HK</span></td><td class="text"><span class="cell-text" title="百胜中国">百胜中国</span></td><td class="text"><details class="title-details"><summary title="百胜中国&lt;09987&gt; - 翌日披露报表">翌日披露报表</summary><div class="title-full">百胜中国&lt;09987&gt; - 翌日披露报表</div></details></td><td class="text"><span class="cell-text" title="2026年4月17日">2026年4月17日</span></td><td class="text"><span class="cell-text" title="纽约证券交易所">纽约证券交易所</span></td><td class="num"><span class="cell-text" title="6.20">6.20</span></td><td class="num"><span class="cell-text" title="3.00">3.00</span></td><td class="num"><span class="cell-text" title="USD 47.7-48.7">USD 47.7-48.7</span></td><td class="num"><span class="cell-text" title="3,723.96">3,723.96</span></td><td class="num"><span class="cell-text" title="2,371.95">2,371.95</span></td><td class="num"><span class="cell-text" title="6.37%">6.37%</span></td><td class="text"><span class="source-note">本地文件</span></td></tr><tr><td class="text"><span class="cell-text" title="2026-04-19">2026-04-19</span></td><td class="text"><span class="cell-text" title="09987.HK">09987.HK</span></td><td class="text"><span class="cell-text" title="百胜中国">百胜中国</span></td><td class="text"><details class="title-details"><summary title="百胜中国&lt;09987&gt; - 翌日披露报表">翌日披露报表</summary><div class="title-full">百胜中国&lt;09987&gt; - 翌日披露报表</div></details></td><td class="text"><span class="cell-text" title="2026年4月17日">2026年4月17日</span></td><td class="text"><span class="cell-text" title="香港联交所">香港联交所</span></td><td class="num"><span class="cell-text" title="2.06">2.06</span></td><td class="num"><span class="cell-text" title="7.74">7.74</span></td><td class="num"><span class="cell-text" title="HKD 371.6-383.6">HKD 371.6-383.6</span></td><td class="num"><span class="cell-text" title="3,723.96">3,723.96</span></td><td class="num"><span class="cell-text" title="2,371.95">2,371.95</span></td><td class="num"><span class="cell-text" title="6.37%">6.37%</span></td><td class="text"><span class="source-note">本地文件</span></td></tr></tbody></table></div></section>
+    </section>
+  </div>
+</body>
+</html>
