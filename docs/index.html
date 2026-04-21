@@ -11,14 +11,20 @@
       --line: #d8deea;
       --text: #213047;
       --muted: #64748b;
-      --blue: #2b6cb0;
-      --green: #2f855a;
+      --blue: #1f5f99;
+      --blue-soft: #e5f1fb;
+      --green: #2f7d5c;
+      --green-soft: #e6f6ee;
+      --orange: #c66828;
+      --orange-soft: #fff0e5;
+      --purple: #6d5aa8;
+      --purple-soft: #f0edfb;
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
-      background: var(--bg);
+      background: linear-gradient(180deg, #f7f4ee 0%, #f5f7fb 42%, #f7faf8 100%);
       color: var(--text);
     }
     .shell {
@@ -34,9 +40,10 @@
       margin-bottom: 14px;
       padding: 14px 16px;
       border: 1px solid var(--line);
+      border-top: 4px solid var(--orange);
       border-radius: 8px;
-      background: var(--panel);
-      box-shadow: 0 10px 24px rgba(31, 45, 61, 0.05);
+      background: linear-gradient(135deg, #ffffff 0%, #fff7ea 48%, #eef8f1 100%);
+      box-shadow: 0 12px 28px rgba(83, 67, 42, 0.07);
     }
     h1 {
       margin: 0;
@@ -56,6 +63,7 @@
     .tab-button {
       min-width: 138px;
       border: 1px solid var(--line);
+      border-left-width: 4px;
       border-radius: 8px;
       background: #ffffff;
       color: var(--text);
@@ -78,15 +86,33 @@
       white-space: nowrap;
     }
     .tab-button.active {
-      border-color: var(--blue);
-      background: #e7f0fb;
-      color: var(--blue);
+      font-weight: 700;
+    }
+    .tab-button.buyback {
+      border-left-color: var(--orange);
+    }
+    .tab-button.buyback.active {
+      border-color: #f0d9ad;
+      border-left-color: var(--orange);
+      background: var(--orange-soft);
+      color: var(--orange);
+    }
+    .tab-button.increase {
+      border-left-color: var(--purple);
+    }
+    .tab-button.increase.active {
+      border-color: #d8d0f0;
+      border-left-color: var(--purple);
+      background: var(--purple-soft);
+      color: var(--purple);
     }
     .tab-button.active small {
-      color: #356899;
+      color: inherit;
+      opacity: .82;
     }
     .frame-wrap {
       border: 1px solid var(--line);
+      border-top: 4px solid var(--green);
       border-radius: 8px;
       overflow: hidden;
       background: #ffffff;
@@ -115,12 +141,12 @@
     <header class="topbar">
       <div>
         <h1>A/H股公告概览</h1>
-        <div class="stamp">生成时间：2026-04-21 14:08:30</div>
+        <div class="stamp">生成时间：2026-04-21 14:26:10</div>
       </div>
-      <nav class="tabs" aria-label="公告类型切换"><button type="button" class="tab-button" data-page="buyback.html" data-key="buyback"><span>回购</span><small>A股与港股回购预案、累计实施</small></button><button type="button" class="tab-button active" data-page="increase.html" data-key="increase"><span>增持</span><small>A股与港股增持计划、增持进展</small></button></nav>
+      <nav class="tabs" aria-label="公告类型切换"><button type="button" class="tab-button buyback active" data-page="buyback.html" data-key="buyback"><span>回购</span><small>A股与港股回购预案、累计实施</small></button><button type="button" class="tab-button increase" data-page="increase.html" data-key="increase"><span>增持</span><small>A股与港股拟增持、实际增持进展</small></button></nav>
     </header>
     <main class="frame-wrap">
-      <iframe id="reportFrame" src="increase.html" title="公告报表"></iframe>
+      <iframe id="reportFrame" src="buyback.html" title="公告报表"></iframe>
     </main>
   </div>
   <script>

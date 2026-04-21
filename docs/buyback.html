@@ -11,20 +11,24 @@
       --line: #d8deea;
       --text: #213047;
       --muted: #64748b;
-      --blue: #2b6cb0;
-      --blue-soft: #e7f0fb;
-      --green: #2f855a;
+      --blue: #1f5f99;
+      --blue-soft: #e5f1fb;
+      --green: #2f7d5c;
       --green-soft: #e6f6ee;
-      --gold: #b7791f;
+      --gold: #a97913;
       --gold-soft: #fff4df;
-      --rose: #b83280;
-      --rose-soft: #fde9f5;
+      --rose: #a94461;
+      --rose-soft: #fdebf1;
+      --orange: #c66828;
+      --orange-soft: #fff0e5;
+      --purple: #6d5aa8;
+      --purple-soft: #f0edfb;
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
-      background: var(--bg);
+      background: linear-gradient(180deg, #f7f4ee 0%, #f5f7fb 34%, #f7faf8 100%);
       color: var(--text);
     }
     .page {
@@ -33,11 +37,12 @@
       padding: 28px 24px 40px;
     }
     .hero {
-      background: linear-gradient(135deg, #ffffff 0%, #f3f6fc 100%);
+      background: linear-gradient(135deg, #ffffff 0%, #fff7ea 46%, #edf8f2 100%);
       border: 1px solid var(--line);
+      border-top: 4px solid var(--orange);
       border-radius: 8px;
       padding: 24px 28px;
-      box-shadow: 0 12px 32px rgba(31, 45, 61, 0.06);
+      box-shadow: 0 14px 34px rgba(83, 67, 42, 0.08);
     }
     h1 {
       margin: 0;
@@ -59,6 +64,8 @@
       border-radius: 8px;
       padding: 16px 18px;
       border: 1px solid transparent;
+      border-left-width: 4px;
+      background: #ffffff;
     }
     .card .label {
       font-size: 13px;
@@ -70,13 +77,13 @@
       font-weight: 700;
       line-height: 1;
     }
-    .card.blue { background: var(--blue-soft); border-color: #c9daf6; }
+    .card.blue { background: var(--blue-soft); border-color: #c9daf6; border-left-color: var(--blue); }
     .card.blue .value { color: var(--blue); }
-    .card.green { background: var(--green-soft); border-color: #cdecd9; }
+    .card.green { background: var(--green-soft); border-color: #cdecd9; border-left-color: var(--green); }
     .card.green .value { color: var(--green); }
-    .card.gold { background: var(--gold-soft); border-color: #f0d9ad; }
+    .card.gold { background: var(--gold-soft); border-color: #f0d9ad; border-left-color: var(--gold); }
     .card.gold .value { color: var(--gold); }
-    .card.rose { background: var(--rose-soft); border-color: #f6c7e4; }
+    .card.rose { background: var(--rose-soft); border-color: #f6c7e4; border-left-color: var(--rose); }
     .card.rose .value { color: var(--rose); }
     .update-bar {
       display: flex;
@@ -85,9 +92,9 @@
       gap: 12px;
       margin-top: 16px;
       padding: 12px 14px;
-      border: 1px solid #c9daf6;
+      border: 1px solid #f0d9ad;
       border-radius: 8px;
-      background: #f8fbff;
+      background: #fffaf1;
     }
     .new-summary {
       color: var(--text);
@@ -95,7 +102,7 @@
       font-weight: 600;
     }
     .new-summary strong {
-      color: var(--blue);
+      color: var(--orange);
       font-size: 20px;
       margin: 0 4px;
     }
@@ -123,16 +130,16 @@
       cursor: pointer;
     }
     .filter-button.active {
-      border-color: var(--blue);
-      background: var(--blue);
+      border-color: var(--purple);
+      background: var(--purple);
       color: #ffffff;
       font-weight: 700;
     }
     .notes {
       margin-top: 18px;
       padding: 14px 18px;
-      background: #fbfcfe;
-      border: 1px solid var(--line);
+      background: #fffdf7;
+      border: 1px solid #eadfc8;
       border-radius: 8px;
     }
     .notes h2 {
@@ -154,6 +161,8 @@
       padding: 18px;
       box-shadow: 0 12px 24px rgba(31, 45, 61, 0.04);
     }
+    .market:nth-of-type(2) { border-top: 4px solid var(--orange); }
+    .market:nth-of-type(3) { border-top: 4px solid var(--purple); }
     .market > h2 {
       margin: 0 0 14px;
       font-size: 20px;
@@ -198,9 +207,9 @@
     th {
       position: sticky;
       top: 0;
-      background: #f7f9fc;
+      background: #f9f5ec;
       z-index: 1;
-      color: #3a4a63;
+      color: #3f4b5f;
       font-weight: 600;
       cursor: pointer;
       user-select: none;
@@ -212,17 +221,17 @@
     }
     th.sort-asc::after {
       content: " ↑";
-      color: var(--blue);
+      color: var(--orange);
     }
     th.sort-desc::after {
       content: " ↓";
-      color: var(--blue);
+      color: var(--orange);
     }
     tbody tr:nth-child(even) {
       background: #fbfcfe;
     }
     tbody tr:hover {
-      background: #eef4ff;
+      background: #fff7e8;
     }
     tbody tr.focus-row td {
       background: #fff7d6;
@@ -292,6 +301,7 @@
       text-overflow: ellipsis;
       white-space: nowrap;
       color: #2d4b7c;
+      color: var(--purple);
       font-weight: 600;
       text-align: center;
     }
@@ -332,12 +342,12 @@
   <div class="page">
     <section class="hero">
       <h1>2026-04-21回购概览</h1>
-      <div class="sub">生成时间：2026-04-21 14:07:41</div>
+      <div class="sub">生成时间：2026-04-21 14:26:10</div>
       <div class="cards"><div class="card blue"><div class="label">A股预案</div><div class="value">6</div></div><div class="card green"><div class="label">A股累计实施</div><div class="value">7</div></div><div class="card gold"><div class="label">港股预案</div><div class="value">0</div></div><div class="card rose"><div class="label">港股累计实施</div><div class="value">0</div></div></div>
       <div class="update-bar"><div class="new-summary">本次新增 <strong>1</strong> 条<span>A股预案1条；A股累计实施0条；港股预案0条；港股累计实施0条</span></div><div class="filter-controls" aria-label="公告筛选"><button type="button" class="filter-button active" data-filter-mode="all">全部</button><button type="button" class="filter-button" data-filter-mode="new">只看新增</button></div></div>
       <div class="notes">
         <h2>说明</h2>
-        <ul><li>更新规则：按自然日口径更新；每日21:30运行邮件+网站补充，22:00、23:00、23:30仅看各网站补跑新增公告，并在页面高亮标记新增。</li><li>统计窗口：2026-04-21 00:00 - 2026-04-21 14:01</li><li>筛选范围：预案只纳入正式回购方案、计划、要约或已进入董事会/股东大会审议的具体回购安排；单纯回购授权、一般授权、AGM通函、章程或委任表格不纳入预案。</li><li>A股来源与逻辑：优先读取Wind邮件Excel的sheet1；若sheet1为空、字段不足或疑似漏项，再用巨潮资讯及交易所官方公告补漏，并排除股权激励、限制性股票回购注销等非普通股份回购事项。</li><li>港股来源与逻辑：21:30优先读取Wind邮件正文中的港股公告链接，并结合HKEX网站公告补充；22:00、23:00、23:30仅看HKEX网站是否有当日新增公告。系统会下载并解析公告PDF，实施类纳入翌日披露报表及明确股份购回执行公告，预案类不纳入repurchase mandate、general mandate to repurchase等授权类文件，并排除供股、期权行权、RSU归属、转股等非回购公告。</li><li>本次为网站补跑，仅核查当日官网新增公告。</li><li>网站补跑新增：A股预案0条，A股实施0条。</li><li>网站补跑新增：港股预案0条，港股实施0条。</li></ul>
+        <ul><li>更新：自然日口径；21:30邮件+网站，22:00/23:00/23:30仅补当日官网新增。</li><li>统计窗口：2026-04-21 00:00 - 2026-04-21 14:21</li><li>范围：预案=具体回购方案、计划或要约；授权、AGM通函、章程等不计入。</li><li>来源：A股Wind sheet1+巨潮/交易所补漏；港股Wind/HKEX公告PDF，排除股权激励注销、供股、期权/RSU、转股等非普通回购。</li></ul>
       </div>
     </section>
     <section class="market">
