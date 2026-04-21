@@ -11,14 +11,16 @@
       --line: #d8deea;
       --text: #213047;
       --muted: #64748b;
-      --blue: #1f5f99;
-      --blue-soft: #e5f1fb;
       --green: #2f7d5c;
       --green-soft: #e6f6ee;
       --orange: #c66828;
       --orange-soft: #fff0e5;
       --purple: #6d5aa8;
       --purple-soft: #f0edfb;
+      --rose: #a94461;
+      --rose-soft: #fdebf1;
+      --gold: #a97913;
+      --gold-soft: #fff4df;
     }
     * { box-sizing: border-box; }
     body {
@@ -106,6 +108,15 @@
       background: var(--purple-soft);
       color: var(--purple);
     }
+    .tab-button.performance {
+      border-left-color: var(--green);
+    }
+    .tab-button.performance.active {
+      border-color: #cdecd9;
+      border-left-color: var(--green);
+      background: var(--green-soft);
+      color: var(--green);
+    }
     .tab-button.active small {
       color: inherit;
       opacity: .82;
@@ -126,13 +137,13 @@
       border: 0;
       background: #ffffff;
     }
-    @media (max-width: 820px) {
+    @media (max-width: 920px) {
       .shell { width: min(100vw - 20px, 1680px); padding-top: 10px; }
       .topbar { align-items: stretch; flex-direction: column; }
-      .tabs { display: grid; grid-template-columns: 1fr 1fr; }
+      .tabs { display: grid; grid-template-columns: 1fr; }
       .tab-button { min-width: 0; }
       .tab-button small { white-space: normal; }
-      iframe { height: calc(100vh - 176px); min-height: 640px; }
+      iframe { height: calc(100vh - 230px); min-height: 640px; }
     }
   </style>
 </head>
@@ -141,12 +152,12 @@
     <header class="topbar">
       <div>
         <h1>A/H股公告概览</h1>
-        <div class="stamp">生成时间：2026-04-21 14:26:41</div>
+        <div class="stamp">生成时间：2026-04-21 14:50:57</div>
       </div>
-      <nav class="tabs" aria-label="公告类型切换"><button type="button" class="tab-button buyback" data-page="buyback.html" data-key="buyback"><span>回购</span><small>A股与港股回购预案、累计实施</small></button><button type="button" class="tab-button increase active" data-page="increase.html" data-key="increase"><span>增持</span><small>A股与港股拟增持、实际增持进展</small></button></nav>
+      <nav class="tabs" aria-label="公告类型切换"><button type="button" class="tab-button buyback" data-page="buyback.html" data-key="buyback"><span>回购</span><small>A股与港股回购预案、累计实施</small></button><button type="button" class="tab-button increase" data-page="increase.html" data-key="increase"><span>增持</span><small>A股与港股拟增持、实际增持</small></button><button type="button" class="tab-button performance active" data-page="performance.html" data-key="performance"><span>业绩</span><small>A股与港股业绩预告、定期报告</small></button></nav>
     </header>
     <main class="frame-wrap">
-      <iframe id="reportFrame" src="increase.html" title="公告报表"></iframe>
+      <iframe id="reportFrame" src="performance.html" title="公告报表"></iframe>
     </main>
   </div>
   <script>
