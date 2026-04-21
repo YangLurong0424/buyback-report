@@ -11,44 +11,54 @@
       --line: #d8deea;
       --text: #213047;
       --muted: #64748b;
-      --blue: #2b6cb0;
-      --blue-soft: #e7f0fb;
-      --green: #2f855a;
+      --blue: #1f5f99;
+      --blue-soft: #e5f1fb;
+      --green: #2f7d5c;
       --green-soft: #e6f6ee;
-      --gold: #b7791f;
+      --gold: #a97913;
       --gold-soft: #fff4df;
-      --rose: #b83280;
+      --rose: #a94461;
       --rose-soft: #fde9f5;
+      --orange: #c66828;
+      --orange-soft: #fff0e5;
+      --purple: #6d5aa8;
+      --purple-soft: #f0edfb;
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
-      background: var(--bg);
+      background: linear-gradient(180deg, #f7f4ee 0%, #f5f7fb 34%, #f7faf8 100%);
       color: var(--text);
     }
     .page { max-width: 1580px; margin: 0 auto; padding: 28px 24px 40px; }
     .hero, .market {
-      background: var(--panel);
       border: 1px solid var(--line);
       border-radius: 8px;
       box-shadow: 0 12px 28px rgba(31,45,61,.05);
     }
-    .hero { padding: 24px 28px; }
+    .hero {
+      padding: 24px 28px;
+      background: linear-gradient(135deg, #ffffff 0%, #f0edfb 44%, #e8f6ef 100%);
+      border-top: 4px solid var(--purple);
+    }
+    .market { background: var(--panel); }
     h1 { margin: 0; font-size: 28px; line-height: 1.2; }
     .sub { margin-top: 10px; color: var(--muted); font-size: 14px; }
     .cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 20px; }
-    .card { border-radius: 8px; padding: 16px 18px; border: 1px solid transparent; }
+    .card { border-radius: 8px; padding: 16px 18px; border: 1px solid transparent; border-left-width: 4px; }
     .card .label { font-size: 13px; color: var(--muted); }
     .card .value { margin-top: 8px; font-size: 28px; font-weight: 700; line-height: 1; }
-    .card.blue { background: var(--blue-soft); border-color: #c9daf6; } .card.blue .value { color: var(--blue); }
-    .card.green { background: var(--green-soft); border-color: #cdecd9; } .card.green .value { color: var(--green); }
-    .card.gold { background: var(--gold-soft); border-color: #f0d9ad; } .card.gold .value { color: var(--gold); }
-    .card.rose { background: var(--rose-soft); border-color: #f6c7e4; } .card.rose .value { color: var(--rose); }
-    .notes { margin-top: 18px; padding: 14px 18px; background: #fbfcfe; border: 1px solid var(--line); border-radius: 8px; }
+    .card.blue { background: var(--blue-soft); border-color: #c9daf6; border-left-color: var(--blue); } .card.blue .value { color: var(--blue); }
+    .card.green { background: var(--green-soft); border-color: #cdecd9; border-left-color: var(--green); } .card.green .value { color: var(--green); }
+    .card.gold { background: var(--gold-soft); border-color: #f0d9ad; border-left-color: var(--gold); } .card.gold .value { color: var(--gold); }
+    .card.rose { background: var(--rose-soft); border-color: #f6c7e4; border-left-color: var(--rose); } .card.rose .value { color: var(--rose); }
+    .notes { margin-top: 18px; padding: 14px 18px; background: #fffdf7; border: 1px solid #eadfc8; border-radius: 8px; }
     .notes h2 { margin: 0 0 8px; font-size: 16px; }
     .notes ul { margin: 0; padding-left: 18px; color: var(--muted); font-size: 13px; line-height: 1.7; }
     .market { margin-top: 24px; padding: 18px; }
+    .market:nth-of-type(2) { border-top: 4px solid var(--orange); }
+    .market:nth-of-type(3) { border-top: 4px solid var(--purple); }
     .market > h2 { margin: 0 0 14px; font-size: 20px; }
     .table-section + .table-section { margin-top: 18px; }
     .section-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
@@ -57,12 +67,12 @@
     .table-wrap { overflow: auto; border: 1px solid var(--line); border-radius: 8px; background: #ffffff; }
     table { width: 100%; border-collapse: collapse; min-width: 980px; table-layout: auto; }
     th, td { padding: 10px 12px; border-bottom: 1px solid #e8edf5; vertical-align: middle; font-size: 13px; text-align: center; white-space: nowrap; }
-    th { position: sticky; top: 0; background: #f7f9fc; z-index: 1; color: #3a4a63; font-weight: 600; cursor: pointer; user-select: none; }
+    th { position: sticky; top: 0; background: #f9f5ec; z-index: 1; color: #3f4b5f; font-weight: 600; cursor: pointer; user-select: none; }
     th::after { content: " ↕"; color: #94a3b8; font-size: 11px; }
-    th.sort-asc::after { content: " ↑"; color: var(--blue); }
-    th.sort-desc::after { content: " ↓"; color: var(--blue); }
+    th.sort-asc::after { content: " ↑"; color: var(--orange); }
+    th.sort-desc::after { content: " ↓"; color: var(--orange); }
     tbody tr:nth-child(even) { background: #fbfcfe; }
-    tbody tr:hover { background: #eef4ff; }
+    tbody tr:hover { background: #fff7e8; }
     .num { text-align: center; font-variant-numeric: tabular-nums; }
     .cell-text { display: inline-block; max-width: 180px; overflow: hidden; text-overflow: ellipsis; vertical-align: middle; }
     .cell-stack { display: flex; flex-direction: column; gap: 6px; align-items: center; }
@@ -71,7 +81,7 @@
     .source-link:hover { text-decoration: underline; }
     .source-note { color: var(--muted); font-size: 12px; }
     .title-details { max-width: 220px; margin: 0 auto; }
-    .title-details summary { list-style: none; cursor: pointer; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: #2d4b7c; font-weight: 600; text-align: center; }
+    .title-details summary { list-style: none; cursor: pointer; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--purple); font-weight: 600; text-align: center; }
     .title-details summary::-webkit-details-marker { display: none; }
     .title-full { margin-top: 6px; padding: 8px 10px; white-space: normal; line-height: 1.6; color: var(--text); background: #f8fbff; border: 1px solid #d8e5fb; border-radius: 6px; }
     .empty { padding: 24px 12px; border: 1px dashed var(--line); border-radius: 8px; text-align: center; color: var(--muted); background: #fbfcfe; }
@@ -83,12 +93,12 @@
   <div class="page">
     <section class="hero">
       <h1>2026-04-20增持概览</h1>
-      <div class="sub">生成时间：2026-04-21 14:16:13</div>
-      <div class="cards"><div class="card blue"><div class="label">A股拟增持</div><div class="value">0</div></div><div class="card green"><div class="label">A股实际增持进展</div><div class="value">0</div></div><div class="card gold"><div class="label">港股拟增持</div><div class="value">1</div></div><div class="card rose"><div class="label">港股实际增持进展</div><div class="value">1</div></div></div>
-      <div class="notes"><h2>说明</h2><ul><li>更新规则：按自然日口径更新；每日21:00后读取Wind拟增持邮箱，A股下载Excel并只统计sheet1，港股下载公告PDF并提取增持信息；本地Wind下载目录中的同日港股PDF也会作为补充源扫描。</li><li>统计窗口：2026-04-20 00:00 - 2026-04-20 23:59</li><li>筛选范围：拟增持仅纳入明确拟增持、增持计划或进一步增持计划；实际增持进展纳入已增持、已购买、完成增持或进展披露；纯减持、配售、供股、回购、期权/RSU归属、转股等不纳入。</li><li>A股来源与逻辑：优先读取Wind拟增持邮件Excel的sheet1；sheet1为空则视为A股当日无新增统计。</li><li>港股来源与逻辑：读取Wind公告邮件中的港股公告链接，并扫描本地Wind下载目录中的同日PDF；下载或打开PDF后用标题与正文共同判断是否为拟增持或实际增持进展，并尽量保留股数、金额、比例、价格等数字。</li><li>A股文件已从Wind拟增持邮件正文链接下载。</li><li>A股邮件Excel的 sheet1 为空，视为本窗口无新增拟增持统计。</li><li>港股已合并本地Wind下载目录PDF补充结果2条。</li></ul></div>
+      <div class="sub">生成时间：2026-04-21 14:26:41</div>
+      <div class="cards"><div class="card blue"><div class="label">A股拟增持</div><div class="value">0</div></div><div class="card green"><div class="label">A股实际增持进展</div><div class="value">0</div></div><div class="card gold"><div class="label">港股拟增持</div><div class="value">0</div></div><div class="card rose"><div class="label">港股实际增持进展</div><div class="value">0</div></div></div>
+      <div class="notes"><h2>说明</h2><ul><li>更新：自然日口径；21:10读取Wind拟增持邮件，并扫描同日本地港股PDF。</li><li>统计窗口：2026-04-20 00:00 - 2026-04-20 23:59</li><li>范围：拟增持=明确计划或进一步增持；实际增持进展=已购买、完成或进展披露。</li><li>来源：A股Wind sheet1；港股Wind公告PDF+本地Wind下载目录PDF，排除减持、配售、供股、回购、期权/RSU、转股等。</li><li>A股下载失败，已回退到本地最近一次增持Excel。原因：Error: Client network socket disconnected before secure TLS connection was established</li></ul></div>
     </section>
     <section class="market"><h2>A股</h2><section class="table-section"><div class="section-head"><h3>A股拟增持</h3><span class="count">0 条</span></div><div class="empty">暂无数据</div></section><section class="table-section"><div class="section-head"><h3>A股实际增持进展</h3><span class="count">0 条</span></div><div class="empty">暂无数据</div></section></section>
-    <section class="market"><h2>港股</h2><section class="table-section" data-total-count="1" data-new-count="0"><div class="section-head"><h3>港股拟增持</h3><span class="count" data-count-suffix=" 条">1 条</span></div><div class="table-wrap"><table><thead><tr><th data-sort-type="date">公告日</th><th data-sort-type="text">代码</th><th data-sort-type="text">简称</th><th data-sort-type="text">标题</th><th data-sort-type="text">增持主体</th><th data-sort-type="text">增持进度</th><th data-sort-type="text">增持期间</th><th data-sort-type="number">当前持股数(万股)</th><th data-sort-type="number">当前持股比例(%)</th><th data-sort-type="text">摘要</th><th data-sort-type="text">来源</th></tr></thead><tbody><tr><td class="text" data-sort-value="2026-04-20"><span class="cell-text" title="2026-04-20">2026-04-20</span></td><td class="text" data-sort-value="02551.HK"><span class="cell-text" title="02551.HK">02551.HK</span></td><td class="text" data-sort-value="晶科电子股份"><span class="cell-text" title="晶科电子股份">晶科电子股份</span></td><td class="text" data-sort-value="自愿性公告 - 控股股东集团及高管拟进一步增持本公司H股股份"><details class="title-details"><summary title="自愿性公告 - 控股股东集团及高管拟进一步增持本公司H股股份">自愿性公告 - 控股股东集团及高管拟进一步增持本公司H股股份</summary><div class="title-full"><div class="stack-item">自愿性公告 - 控股股东集团及高管拟进一步增持本公司H股股份</div></div></details></td><td class="text" data-sort-value="控股股东集团及高管"><span class="cell-text" title="控股股东集团及高管">控股股东集团及高管</span></td><td class="text" data-sort-value="拟增持"><span class="cell-text" title="拟增持">拟增持</span></td><td class="text" data-sort-value="自本公告之日起3个月内"><span class="cell-text" title="自本公告之日起3个月内">自本公告之日起3个月内</span></td><td class="num" data-sort-value="23,653.6"><span class="cell-text" title="23,653.6">23,653.6</span></td><td class="num" data-sort-value="44.04"><span class="cell-text" title="44.04">44.04</span></td><td class="text" data-sort-value="自愿性公告 - 控股股东集团及高管拟进一步增持本公司H股股份 – 1 – 香港交易及结算所有限公司及香港联合交易所有限公司对本公告之内容概不负责，对其准确 性或完整性亦不发表任何声明，并明确表示概不就因本公告全部或任何部分内容而产生或因 倚赖该等内容而引致之任何损失承担任何责任。..."><span class="cell-text" title="自愿性公告 - 控股股东集团及高管拟进一步增持本公司H股股份 – 1 – 香港交易及结算所有限公司及香港联合交易所有限公司对本公告之内容概不负责，对其准确 性或完整性亦不发表任何声明，并明确表示概不就因本公告全部或任何部分内容而产生或因 倚赖该等内容而引致之任何损失承担任何责任。...">自愿性公告 - 控股股东集团及高管拟进一步增持本公司H股股份 – 1 – 香港交易及结算所有限公司及香港联合交易所有限公司对本公告之内容概不负责，对其准确 性或完整性亦不发表任何声明，并明确表示概不就因本公告全部或任何部分内容而产生或因 倚赖该等内容而引致之任何损失承担任何责任。...</span></td><td class="text" data-sort-value="本地文件"><span class="source-note">本地文件</span></td></tr></tbody></table></div></section><section class="table-section" data-total-count="1" data-new-count="0"><div class="section-head"><h3>港股实际增持进展</h3><span class="count" data-count-suffix=" 条">1 条</span></div><div class="table-wrap"><table><thead><tr><th data-sort-type="date">公告日</th><th data-sort-type="text">代码</th><th data-sort-type="text">简称</th><th data-sort-type="text">标题</th><th data-sort-type="text">增持主体</th><th data-sort-type="text">增持进度</th><th data-sort-type="text">增持期间</th><th data-sort-type="text">摘要</th><th data-sort-type="text">来源</th></tr></thead><tbody><tr><td class="text" data-sort-value="2026-04-20"><span class="cell-text" title="2026-04-20">2026-04-20</span></td><td class="text" data-sort-value="01274.HK"><span class="cell-text" title="01274.HK">01274.HK</span></td><td class="text" data-sort-value="知行科技"><span class="cell-text" title="知行科技">知行科技</span></td><td class="text" data-sort-value="自愿性公告董事及监事集体购买本公司H股"><details class="title-details"><summary title="自愿性公告董事及监事集体购买本公司H股">自愿性公告董事及监事集体购买本公司H股</summary><div class="title-full"><div class="stack-item">自愿性公告董事及监事集体购买本公司H股</div></div></details></td><td class="text" data-sort-value="董事及监事"><span class="cell-text" title="董事及监事">董事及监事</span></td><td class="text" data-sort-value="实际增持进展"><span class="cell-text" title="实际增持进展">实际增持进展</span></td><td class="text" data-sort-value="2026年4月13日至4月17日"><span class="cell-text" title="2026年4月13日至4月17日">2026年4月13日至4月17日</span></td><td class="text" data-sort-value="） 自愿性公告 董事及监事集体购买本公司H股 本公告乃由知行汽车科技（苏州）股份有限公司（「本公司」，连同其附属公司统称 「本集团」）自愿刊发。 本公司董事（「董事」）会（「董事会」）欣然宣布，于2026年4月20日，董事会获悉： (i)执行董事宋阳先生（董事会主席）、卢玉坤先生..."><span class="cell-text" title="） 自愿性公告 董事及监事集体购买本公司H股 本公告乃由知行汽车科技（苏州）股份有限公司（「本公司」，连同其附属公司统称 「本集团」）自愿刊发。 本公司董事（「董事」）会（「董事会」）欣然宣布，于2026年4月20日，董事会获悉： (i)执行董事宋阳先生（董事会主席）、卢玉坤先生...">） 自愿性公告 董事及监事集体购买本公司H股 本公告乃由知行汽车科技（苏州）股份有限公司（「本公司」，连同其附属公司统称 「本集团」）自愿刊发。 本公司董事（「董事」）会（「董事会」）欣然宣布，于2026年4月20日，董事会获悉： (i)执行董事宋阳先生（董事会主席）、卢玉坤先生...</span></td><td class="text" data-sort-value="本地文件"><span class="source-note">本地文件</span></td></tr></tbody></table></div></section></section>
+    <section class="market"><h2>港股</h2><section class="table-section"><div class="section-head"><h3>港股拟增持</h3><span class="count">0 条</span></div><div class="empty">暂无数据</div></section><section class="table-section"><div class="section-head"><h3>港股实际增持进展</h3><span class="count">0 条</span></div><div class="empty">暂无数据</div></section></section>
   </div>
   <script>
     (() => {
