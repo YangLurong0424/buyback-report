@@ -53,11 +53,11 @@
     .card.green { background: var(--green-soft); border-color: #cdecd9; border-left-color: var(--green); } .card.green .value { color: var(--green); }
     .card.gold { background: var(--gold-soft); border-color: #f0d9ad; border-left-color: var(--gold); } .card.gold .value { color: var(--gold); }
     .card.rose { background: var(--rose-soft); border-color: #f6c7e4; border-left-color: var(--rose); } .card.rose .value { color: var(--rose); }
-    .update-bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 16px; padding: 12px 14px; border: 1px solid #d8d0f0; border-radius: 8px; background: #fbf9ff; }
+    .update-bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-top: 16px; padding: 12px 14px; border: 1px solid #d8d0f0; border-radius: 8px; background: #fbf9ff; }
     .new-summary { color: var(--text); font-size: 14px; font-weight: 600; }
     .new-summary strong { color: var(--purple); font-size: 20px; margin: 0 4px; }
     .new-summary span, .update-note { margin-left: 10px; color: var(--muted); font-size: 13px; font-weight: 400; }
-    .filter-controls { display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap; margin-top: 16px; padding: 12px 14px; border: 1px solid #d8d0f0; border-radius: 8px; background: #fbf9ff; }
+    .filter-controls { display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap; margin-left: auto; }
     .filter-button { min-width: 76px; border: 1px solid var(--line); border-radius: 8px; background: #ffffff; color: var(--text); padding: 7px 12px; font: inherit; font-size: 13px; cursor: pointer; }
     .filter-button.active { border-color: var(--purple); background: var(--purple); color: #ffffff; font-weight: 700; }
     .notes { margin-top: 18px; padding: 14px 18px; background: #fffdf7; border: 1px solid #eadfc8; border-radius: 8px; }
@@ -104,9 +104,9 @@
   <div class="page">
     <section class="hero">
       <h1>2026-04-20增持概览</h1>
-      <div class="sub">生成时间：2026-04-21 19:31:13</div>
+      <div class="sub">生成时间：2026-04-21 19:45:50</div>
       <div class="cards"><div class="card blue"><div class="label">A股拟增持</div><div class="value">0</div></div><div class="card green"><div class="label">A股实际增持进展</div><div class="value">0</div></div><div class="card gold"><div class="label">港股拟增持</div><div class="value">0</div></div><div class="card rose"><div class="label">港股实际增持进展</div><div class="value">0</div></div></div>
-      <div class="update-bar"><div class="new-summary">本次新增 <strong>0</strong> 条<span>A股拟增持0条；A股实际增持进展0条；港股拟增持0条；港股实际增持进展0条</span></div><div class="update-note">补抓：邮件PDF + 本地Wind目录；重复公告自动去重。</div></div><div class="filter-controls" aria-label="公告筛选"><button type="button" class="filter-button active" data-filter-mode="all">全部</button><button type="button" class="filter-button" data-filter-mode="a">A股</button><button type="button" class="filter-button" data-filter-mode="hk">港股</button><button type="button" class="filter-button" data-filter-mode="preplan">拟增持</button><button type="button" class="filter-button" data-filter-mode="progress">实际进展</button></div>
+      <div class="update-bar"><div class="new-summary">本次新增 <strong>0</strong> 条<span>A股拟增持0条；A股实际增持进展0条；港股拟增持0条；港股实际增持进展0条</span></div><div class="update-note">补抓：邮件PDF + 本地Wind目录；重复公告自动去重。</div><div class="filter-controls" aria-label="公告筛选"><button type="button" class="filter-button active" data-filter-mode="all">全部</button><button type="button" class="filter-button" data-filter-mode="a">A股</button><button type="button" class="filter-button" data-filter-mode="hk">港股</button><button type="button" class="filter-button" data-filter-mode="preplan">拟增持</button><button type="button" class="filter-button" data-filter-mode="progress">实际进展</button></div></div>
       <div class="notes"><h2>说明</h2><ul><li>更新：自然日口径；21:10读取Wind拟增持邮件，并扫描同日本地港股PDF。</li><li>统计窗口：2026-04-20 00:00 - 2026-04-20 23:59</li><li>范围：拟增持=明确计划或进一步增持；实际增持进展=已购买、完成或进展披露。</li><li>来源：A股Wind sheet1；港股Wind公告PDF+本地Wind下载目录PDF，排除减持、配售、供股、回购、期权/RSU、转股等。</li></ul></div>
     </section>
     <section class="market"><h2>A股</h2><section class="table-section" data-filter-tags="a preplan"><div class="section-head"><h3>A股拟增持</h3><span class="count">0 条</span></div><div class="empty">暂无数据</div></section><section class="table-section" data-filter-tags="a progress"><div class="section-head"><h3>A股实际增持进展</h3><span class="count">0 条</span></div><div class="empty">暂无数据</div></section></section>
