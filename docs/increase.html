@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026-04-21增持概览</title>
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --panel: #ffffff;
+      --line: #d8deea;
+      --text: #213047;
+      --muted: #64748b;
+      --blue: #2b6cb0;
+      --blue-soft: #e7f0fb;
+      --green: #2f855a;
+      --green-soft: #e6f6ee;
+      --gold: #b7791f;
+      --gold-soft: #fff4df;
+      --rose: #b83280;
+      --rose-soft: #fde9f5;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+    .page { max-width: 1580px; margin: 0 auto; padding: 28px 24px 40px; }
+    .hero, .market {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: 0 12px 28px rgba(31,45,61,.05);
+    }
+    .hero { padding: 24px 28px; }
+    h1 { margin: 0; font-size: 28px; line-height: 1.2; }
+    .sub { margin-top: 10px; color: var(--muted); font-size: 14px; }
+    .cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 20px; }
+    .card { border-radius: 8px; padding: 16px 18px; border: 1px solid transparent; }
+    .card .label { font-size: 13px; color: var(--muted); }
+    .card .value { margin-top: 8px; font-size: 28px; font-weight: 700; line-height: 1; }
+    .card.blue { background: var(--blue-soft); border-color: #c9daf6; } .card.blue .value { color: var(--blue); }
+    .card.green { background: var(--green-soft); border-color: #cdecd9; } .card.green .value { color: var(--green); }
+    .card.gold { background: var(--gold-soft); border-color: #f0d9ad; } .card.gold .value { color: var(--gold); }
+    .card.rose { background: var(--rose-soft); border-color: #f6c7e4; } .card.rose .value { color: var(--rose); }
+    .notes { margin-top: 18px; padding: 14px 18px; background: #fbfcfe; border: 1px solid var(--line); border-radius: 8px; }
+    .notes h2 { margin: 0 0 8px; font-size: 16px; }
+    .notes ul { margin: 0; padding-left: 18px; color: var(--muted); font-size: 13px; line-height: 1.7; }
+    .market { margin-top: 24px; padding: 18px; }
+    .market > h2 { margin: 0 0 14px; font-size: 20px; }
+    .table-section + .table-section { margin-top: 18px; }
+    .section-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+    .section-head h3 { margin: 0; font-size: 16px; }
+    .count { color: var(--muted); font-size: 13px; }
+    .table-wrap { overflow: auto; border: 1px solid var(--line); border-radius: 8px; background: #ffffff; }
+    table { width: 100%; border-collapse: collapse; min-width: 980px; table-layout: auto; }
+    th, td { padding: 10px 12px; border-bottom: 1px solid #e8edf5; vertical-align: middle; font-size: 13px; text-align: center; white-space: nowrap; }
+    th { position: sticky; top: 0; background: #f7f9fc; z-index: 1; color: #3a4a63; font-weight: 600; cursor: pointer; user-select: none; }
+    th::after { content: " ↕"; color: #94a3b8; font-size: 11px; }
+    th.sort-asc::after { content: " ↑"; color: var(--blue); }
+    th.sort-desc::after { content: " ↓"; color: var(--blue); }
+    tbody tr:nth-child(even) { background: #fbfcfe; }
+    tbody tr:hover { background: #eef4ff; }
+    .num { text-align: center; font-variant-numeric: tabular-nums; }
+    .cell-text { display: inline-block; max-width: 180px; overflow: hidden; text-overflow: ellipsis; vertical-align: middle; }
+    .cell-stack { display: flex; flex-direction: column; gap: 6px; align-items: center; }
+    .stack-item { width: 100%; }
+    .source-link { color: var(--blue); text-decoration: none; font-weight: 600; display: inline-block; }
+    .source-link:hover { text-decoration: underline; }
+    .source-note { color: var(--muted); font-size: 12px; }
+    .title-details { max-width: 220px; margin: 0 auto; }
+    .title-details summary { list-style: none; cursor: pointer; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: #2d4b7c; font-weight: 600; text-align: center; }
+    .title-details summary::-webkit-details-marker { display: none; }
+    .title-full { margin-top: 6px; padding: 8px 10px; white-space: normal; line-height: 1.6; color: var(--text); background: #f8fbff; border: 1px solid #d8e5fb; border-radius: 6px; }
+    .empty { padding: 24px 12px; border: 1px dashed var(--line); border-radius: 8px; text-align: center; color: var(--muted); background: #fbfcfe; }
+    @media (max-width: 1120px) { .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 640px) { .page { padding: 18px 14px 28px; } .cards { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <section class="hero">
+      <h1>2026-04-21增持概览</h1>
+      <div class="sub">生成时间：2026-04-21 14:08:30</div>
+      <div class="cards"><div class="card blue"><div class="label">A股计划</div><div class="value">0</div></div><div class="card green"><div class="label">A股进展</div><div class="value">0</div></div><div class="card gold"><div class="label">港股计划</div><div class="value">0</div></div><div class="card rose"><div class="label">港股进展</div><div class="value">0</div></div></div>
+      <div class="notes"><h2>说明</h2><ul><li>更新规则：按自然日口径更新；每日21:00后读取Wind拟增持邮箱，A股下载Excel并只统计sheet1，港股下载公告PDF并提取增持信息。</li><li>统计窗口：2026-04-21 00:00 - 2026-04-21 14:08</li><li>筛选范围：仅纳入拟增持、增持计划、增持进展、已增持或完成增持；纯减持、配售、供股、回购、期权/RSU归属、转股等不纳入。</li><li>A股来源与逻辑：优先读取Wind拟增持邮件Excel的sheet1；sheet1为空则视为A股当日无新增统计。</li><li>港股来源与逻辑：读取Wind公告邮件中的港股公告链接，下载PDF后用标题与正文共同判断是否为增持计划或增持进展，并尽量保留股数、金额、比例、价格等数字。</li><li>A股文件已从Wind拟增持邮件正文链接下载。</li><li>A股邮件Excel的 sheet1 为空，视为本窗口无新增拟增持统计。</li></ul></div>
+    </section>
+    <section class="market"><h2>A股</h2><section class="table-section"><div class="section-head"><h3>A股计划</h3><span class="count">0 条</span></div><div class="empty">暂无数据</div></section><section class="table-section"><div class="section-head"><h3>A股进展</h3><span class="count">0 条</span></div><div class="empty">暂无数据</div></section></section>
+    <section class="market"><h2>港股</h2><section class="table-section"><div class="section-head"><h3>港股计划</h3><span class="count">0 条</span></div><div class="empty">暂无数据</div></section><section class="table-section"><div class="section-head"><h3>港股进展</h3><span class="count">0 条</span></div><div class="empty">暂无数据</div></section></section>
+  </div>
+  <script>
+    (() => {
+      const parseValue = (text, type) => {
+        const value = (text || '').trim();
+        if (!value) return type === 'number' ? Number.NEGATIVE_INFINITY : '';
+        if (type === 'number') {
+          const normalized = value.replace(/,/g, '').replace(/%/g, '').match(/-?\d+(?:\.\d+)?/);
+          return normalized ? Number(normalized[0]) : Number.NEGATIVE_INFINITY;
+        }
+        if (type === 'date') {
+          const m = value.match(/(\d{4})[-年](\d{1,2})[-月](\d{1,2})/);
+          return m ? new Date(Number(m[1]), Number(m[2]) - 1, Number(m[3])).getTime() : 0;
+        }
+        return value.toLowerCase();
+      };
+      document.querySelectorAll('table').forEach((table) => {
+        const headers = Array.from(table.querySelectorAll('th'));
+        const tbody = table.querySelector('tbody');
+        headers.forEach((header, index) => {
+          header.addEventListener('click', () => {
+            const current = header.dataset.order === 'asc' ? 'desc' : 'asc';
+            headers.forEach((item) => { item.dataset.order = ''; item.classList.remove('sort-asc', 'sort-desc'); });
+            header.dataset.order = current;
+            header.classList.add(current === 'asc' ? 'sort-asc' : 'sort-desc');
+            const type = header.dataset.sortType || 'text';
+            const rows = Array.from(tbody.querySelectorAll('tr'));
+            rows.sort((a, b) => {
+              const aValue = parseValue(a.children[index]?.dataset.sortValue || a.children[index]?.innerText || '', type);
+              const bValue = parseValue(b.children[index]?.dataset.sortValue || b.children[index]?.innerText || '', type);
+              if (aValue < bValue) return current === 'asc' ? -1 : 1;
+              if (aValue > bValue) return current === 'asc' ? 1 : -1;
+              return 0;
+            });
+            rows.forEach((row) => tbody.appendChild(row));
+          });
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
