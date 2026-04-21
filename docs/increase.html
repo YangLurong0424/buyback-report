@@ -40,7 +40,7 @@
     .hero {
       padding: 24px 28px;
       background: linear-gradient(135deg, #ffffff 0%, #f0edfb 44%, #e8f6ef 100%);
-      border-top: 4px solid var(--purple);
+      border-top: 2px solid var(--purple);
     }
     .market { background: var(--panel); }
     h1 { margin: 0; font-size: 28px; line-height: 1.2; }
@@ -53,14 +53,22 @@
     .card.green { background: var(--green-soft); border-color: #cdecd9; border-left-color: var(--green); } .card.green .value { color: var(--green); }
     .card.gold { background: var(--gold-soft); border-color: #f0d9ad; border-left-color: var(--gold); } .card.gold .value { color: var(--gold); }
     .card.rose { background: var(--rose-soft); border-color: #f6c7e4; border-left-color: var(--rose); } .card.rose .value { color: var(--rose); }
+    .update-bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 16px; padding: 12px 14px; border: 1px solid #d8d0f0; border-radius: 8px; background: #fbf9ff; }
+    .new-summary { color: var(--text); font-size: 14px; font-weight: 600; }
+    .new-summary strong { color: var(--purple); font-size: 20px; margin: 0 4px; }
+    .new-summary span, .update-note { margin-left: 10px; color: var(--muted); font-size: 13px; font-weight: 400; }
+    .filter-controls { display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap; margin-top: 16px; padding: 12px 14px; border: 1px solid #d8d0f0; border-radius: 8px; background: #fbf9ff; }
+    .filter-button { min-width: 76px; border: 1px solid var(--line); border-radius: 8px; background: #ffffff; color: var(--text); padding: 7px 12px; font: inherit; font-size: 13px; cursor: pointer; }
+    .filter-button.active { border-color: var(--purple); background: var(--purple); color: #ffffff; font-weight: 700; }
     .notes { margin-top: 18px; padding: 14px 18px; background: #fffdf7; border: 1px solid #eadfc8; border-radius: 8px; }
     .notes h2 { margin: 0 0 8px; font-size: 16px; }
     .notes ul { margin: 0; padding-left: 18px; color: var(--muted); font-size: 13px; line-height: 1.7; }
     .market { margin-top: 24px; padding: 18px; }
-    .market:nth-of-type(2) { border-top: 4px solid var(--orange); }
-    .market:nth-of-type(3) { border-top: 4px solid var(--purple); }
+    .market:nth-of-type(2) { border-top: 2px solid var(--orange); }
+    .market:nth-of-type(3) { border-top: 2px solid var(--purple); }
     .market > h2 { margin: 0 0 14px; font-size: 20px; }
     .table-section + .table-section { margin-top: 18px; }
+    .table-section.section-hidden, .market.market-hidden { display: none; }
     .section-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
     .section-head h3 { margin: 0; font-size: 16px; }
     .count { color: var(--muted); font-size: 13px; }
@@ -73,6 +81,8 @@
     th.sort-desc::after { content: " ↓"; color: var(--orange); }
     tbody tr:nth-child(even) { background: #fbfcfe; }
     tbody tr:hover { background: #fff7e8; }
+    tbody tr.new-row td { background: #e8f4ff; }
+    tbody tr.new-row td:first-child { box-shadow: inset 4px 0 0 #2b6cb0; }
     .num { text-align: center; font-variant-numeric: tabular-nums; }
     .cell-text { display: inline-block; max-width: 180px; overflow: hidden; text-overflow: ellipsis; vertical-align: middle; }
     .cell-stack { display: flex; flex-direction: column; gap: 6px; align-items: center; }
@@ -86,6 +96,7 @@
     .title-full { margin-top: 6px; padding: 8px 10px; white-space: normal; line-height: 1.6; color: var(--text); background: #f8fbff; border: 1px solid #d8e5fb; border-radius: 6px; }
     .empty { padding: 24px 12px; border: 1px dashed var(--line); border-radius: 8px; text-align: center; color: var(--muted); background: #fbfcfe; }
     @media (max-width: 1120px) { .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 760px) { .update-bar { align-items: stretch; flex-direction: column; } .new-summary span { display: block; margin-left: 0; margin-top: 4px; } .update-note { margin-left: 0; } }
     @media (max-width: 640px) { .page { padding: 18px 14px 28px; } .cards { grid-template-columns: 1fr; } }
   </style>
 </head>
@@ -93,12 +104,13 @@
   <div class="page">
     <section class="hero">
       <h1>2026-04-20增持概览</h1>
-      <div class="sub">生成时间：2026-04-21 14:27:55</div>
+      <div class="sub">生成时间：2026-04-21 19:31:13</div>
       <div class="cards"><div class="card blue"><div class="label">A股拟增持</div><div class="value">0</div></div><div class="card green"><div class="label">A股实际增持进展</div><div class="value">0</div></div><div class="card gold"><div class="label">港股拟增持</div><div class="value">0</div></div><div class="card rose"><div class="label">港股实际增持进展</div><div class="value">0</div></div></div>
+      <div class="update-bar"><div class="new-summary">本次新增 <strong>0</strong> 条<span>A股拟增持0条；A股实际增持进展0条；港股拟增持0条；港股实际增持进展0条</span></div><div class="update-note">补抓：邮件PDF + 本地Wind目录；重复公告自动去重。</div></div><div class="filter-controls" aria-label="公告筛选"><button type="button" class="filter-button active" data-filter-mode="all">全部</button><button type="button" class="filter-button" data-filter-mode="a">A股</button><button type="button" class="filter-button" data-filter-mode="hk">港股</button><button type="button" class="filter-button" data-filter-mode="preplan">拟增持</button><button type="button" class="filter-button" data-filter-mode="progress">实际进展</button></div>
       <div class="notes"><h2>说明</h2><ul><li>更新：自然日口径；21:10读取Wind拟增持邮件，并扫描同日本地港股PDF。</li><li>统计窗口：2026-04-20 00:00 - 2026-04-20 23:59</li><li>范围：拟增持=明确计划或进一步增持；实际增持进展=已购买、完成或进展披露。</li><li>来源：A股Wind sheet1；港股Wind公告PDF+本地Wind下载目录PDF，排除减持、配售、供股、回购、期权/RSU、转股等。</li></ul></div>
     </section>
-    <section class="market"><h2>A股</h2><section class="table-section"><div class="section-head"><h3>A股拟增持</h3><span class="count">0 条</span></div><div class="empty">暂无数据</div></section><section class="table-section"><div class="section-head"><h3>A股实际增持进展</h3><span class="count">0 条</span></div><div class="empty">暂无数据</div></section></section>
-    <section class="market"><h2>港股</h2><section class="table-section"><div class="section-head"><h3>港股拟增持</h3><span class="count">0 条</span></div><div class="empty">暂无数据</div></section><section class="table-section"><div class="section-head"><h3>港股实际增持进展</h3><span class="count">0 条</span></div><div class="empty">暂无数据</div></section></section>
+    <section class="market"><h2>A股</h2><section class="table-section" data-filter-tags="a preplan"><div class="section-head"><h3>A股拟增持</h3><span class="count">0 条</span></div><div class="empty">暂无数据</div></section><section class="table-section" data-filter-tags="a progress"><div class="section-head"><h3>A股实际增持进展</h3><span class="count">0 条</span></div><div class="empty">暂无数据</div></section></section>
+    <section class="market"><h2>港股</h2><section class="table-section" data-filter-tags="hk preplan"><div class="section-head"><h3>港股拟增持</h3><span class="count">0 条</span></div><div class="empty">暂无数据</div></section><section class="table-section" data-filter-tags="hk progress"><div class="section-head"><h3>港股实际增持进展</h3><span class="count">0 条</span></div><div class="empty">暂无数据</div></section></section>
   </div>
   <script>
     (() => {
@@ -136,6 +148,22 @@
             rows.forEach((row) => tbody.appendChild(row));
           });
         });
+      });
+      const updateSectionFilter = (mode) => {
+        document.querySelectorAll('.filter-button').forEach((button) => {
+          button.classList.toggle('active', button.dataset.filterMode === mode);
+        });
+        document.querySelectorAll('.table-section').forEach((section) => {
+          const tags = (section.dataset.filterTags || '').split(/\s+/).filter(Boolean);
+          section.classList.toggle('section-hidden', !(mode === 'all' || tags.includes(mode)));
+        });
+        document.querySelectorAll('.market').forEach((market) => {
+          const sections = Array.from(market.querySelectorAll('.table-section'));
+          market.classList.toggle('market-hidden', sections.length > 0 && sections.every((section) => section.classList.contains('section-hidden')));
+        });
+      };
+      document.querySelectorAll('.filter-button').forEach((button) => {
+        button.addEventListener('click', () => updateSectionFilter(button.dataset.filterMode || 'all'));
       });
     })();
   </script>
