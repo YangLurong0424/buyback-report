@@ -64,79 +64,33 @@
       line-height: 1.6;
       text-align: right;
     }
-    .metrics {
-      display: grid;
-      grid-template-columns: repeat(5, minmax(140px, 1fr));
-      gap: 10px;
-      margin: 14px 0;
-    }
-    .metric {
-      min-height: 96px;
-      padding: 13px 14px;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: var(--panel);
-    }
-    .metric span, .metric small {
-      display: block;
+    .status-strip {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 12px 0 10px;
       color: var(--muted);
       font-size: 13px;
-      line-height: 1.35;
-    }
-    .metric strong {
-      display: block;
-      margin: 7px 0 4px;
-      font-size: 27px;
-      line-height: 1.1;
-      color: var(--blue);
-    }
-    .metric.blue { background: var(--blue-soft); }
-    .metric.green { background: var(--green-soft); }
-    .metric.green strong { color: var(--green); }
-    .metric.purple { background: var(--purple-soft); }
-    .metric.purple strong { color: var(--purple); }
-    .metric.rose { background: var(--rose-soft); }
-    .metric.rose strong { color: var(--rose); }
-    .metric.gold { background: var(--gold-soft); }
-    .metric.gold strong { color: var(--gold); }
-    .summaries {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1.5fr;
-      gap: 10px;
-      margin-bottom: 14px;
-    }
-    .summary-block {
-      border: 1px solid var(--line);
-      border-top: 4px solid var(--blue);
-      border-radius: 8px;
-      background: var(--panel);
-      overflow: hidden;
-    }
-    .summary-block.green { border-top-color: var(--green); }
-    .summary-block.purple { border-top-color: var(--purple); }
-    .summary-block h2 {
-      margin: 0;
-      padding: 10px 12px;
-      font-size: 15px;
-      background: #f8fafc;
-      border-bottom: 1px solid var(--line);
       text-align: center;
     }
-    .summary-block ul {
-      list-style: none;
-      margin: 0;
-      padding: 8px 12px 11px;
-      display: grid;
-      gap: 7px;
-    }
-    .summary-block li {
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      font-size: 13px;
+    .status-chip {
+      min-height: 30px;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: #ffffff;
       line-height: 1.35;
     }
-    .summary-block strong { font-variant-numeric: tabular-nums; }
+    .status-chip strong {
+      color: var(--text);
+      font-variant-numeric: tabular-nums;
+    }
+    .status-chip.blue strong { color: var(--blue); }
+    .status-chip.green strong { color: var(--green); }
+    .status-chip.rose strong { color: var(--rose); }
+    .status-chip.gold strong { color: var(--gold); }
     .controls {
       display: grid;
       grid-template-columns: minmax(180px, 1.2fr) repeat(3, minmax(120px, .8fr)) auto;
@@ -170,7 +124,7 @@
       border-radius: 8px;
       overflow: auto;
       background: var(--panel);
-      max-height: calc(100vh - 330px);
+      max-height: calc(100vh - 245px);
       min-height: 520px;
     }
     table {
@@ -196,8 +150,22 @@
       cursor: pointer;
       user-select: none;
     }
+    th.sorted-asc::after { content: " ↑"; color: var(--rose); }
+    th.sorted-desc::after { content: " ↓"; color: var(--rose); }
     tbody tr:nth-child(even) { background: #fafcff; }
     tbody tr:hover { background: #fff8e8; }
+    .group-row td {
+      position: sticky;
+      top: 35px;
+      z-index: 1;
+      padding: 7px 10px;
+      border-top: 2px solid #bfd5e8;
+      border-bottom: 1px solid #bfd5e8;
+      background: #f1f7fc;
+      color: #1d4f7d;
+      font-weight: 700;
+      text-align: center;
+    }
     td.name, td.industry {
       white-space: normal;
       min-width: 92px;
@@ -211,7 +179,7 @@
     }
     .num {
       font-variant-numeric: tabular-nums;
-      text-align: right;
+      text-align: center;
     }
     .strong { font-weight: 700; color: var(--rose); }
     .reason {
@@ -232,8 +200,6 @@
       .page { width: min(100vw - 18px, 1680px); padding-top: 10px; }
       header { align-items: flex-start; flex-direction: column; }
       .refresh-note { max-width: none; text-align: left; }
-      .metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .summaries { grid-template-columns: 1fr; }
       .controls { grid-template-columns: 1fr; }
       .table-wrap { max-height: none; }
     }
@@ -244,13 +210,18 @@
     <header>
       <div>
         <h1>2026-04-27 异动标的</h1>
-        <div class="meta">最近交易日 2026-04-27；工作簿保存 2026-04-27 16:53:20；生成 2026-04-27 16:58:24</div>
+        <div class="meta">最近交易日 2026-04-27；工作簿保存 2026-04-27 17:20:44；生成 2026-04-29 09:32:20</div>
         <div class="meta">涨幅阈值 9.5%；超额阈值 8.5%；成交阈值-5 1.5x；成交阈值-20 1.5x；PE阈值 25.0；PB阈值 2.5；YTD阈值 51.0%；924超额阈值 51.0%</div>
       </div>
       <div class="refresh-note">读取工作簿已保存缓存。</div>
     </header>
-    <section class="metrics"><div class="metric blue"><span>入选标的</span><strong>145</strong><small>筛选日期 2026-04-27</small></div><div class="metric gold"><span>多原因标的</span><strong>5</strong><small>仅按入选原因列拆分</small></div><div class="metric green"><span>A股/北交所</span><strong>145</strong><small>沪深北合计</small></div><div class="metric purple"><span>港股</span><strong>0</strong><small>HK 标的</small></div><div class="metric rose"><span>平均涨跌幅</span><strong>11.4%</strong><small>平均超额 11.4%</small></div></section>
-    <section class="summaries"><section class="summary-block blue"><h2>市场分布</h2><ul><li><span>沪市</span><strong>76</strong></li><li><span>深市</span><strong>68</strong></li><li><span>北交所</span><strong>1</strong></li></ul></section><section class="summary-block green"><h2>入选原因</h2><ul><li><span>上涨</span><strong>129</strong></li><li><span>放量</span><strong>11</strong></li><li><span>上涨 / 放量</span><strong>5</strong></li></ul></section><section class="summary-block purple"><h2>行业前列</h2><ul><li><span>硬件设备</span><strong>32</strong></li><li><span>半导体</span><strong>19</strong></li><li><span>化工</span><strong>11</strong></li><li><span>机械</span><strong>10</strong></li><li><span>电气设备</span><strong>10</strong></li><li><span>传媒</span><strong>6</strong></li><li><span>纺织服装Ⅱ</span><strong>6</strong></li><li><span>医药生物</span><strong>5</strong></li><li><span>耐用消费品</span><strong>5</strong></li><li><span>汽车与零配件</span><strong>5</strong></li><li><span>软件服务</span><strong>4</strong></li><li><span>家电Ⅱ</span><strong>4</strong></li></ul></section></section>
+    <section class="status-strip" aria-label="异动统计">
+      <span class="status-chip blue">入选标的 <strong>145</strong></span>
+      <span class="status-chip gold">多原因标的 <strong>5</strong></span>
+      <span class="status-chip rose">平均涨跌幅 <strong>11.4%</strong></span>
+      <span class="status-chip rose">平均超额 <strong>10.7%</strong></span>
+      <span class="status-chip green">入选原因：上涨 129；放量 11；上涨 / 放量 5</span>
+    </section>
     <section class="controls">
       <input id="searchBox" type="search" placeholder="代码 / 简称 / 行业 / 原因">
       <select id="marketFilter" aria-label="市场"><option value="全部">全部</option><option value="北交所">北交所</option><option value="沪市">沪市</option><option value="深市">深市</option></select>
@@ -278,12 +249,12 @@
           </tr>
         </thead>
         <tbody>
-      <tr data-market="沪市" data-reason="上涨 / 放量" data-industry="医药生物" data-q="688221.sh 前沿生物-u 沪市 医药生物 上涨 / 放量" data-change="0.19999999999999996" data-volume="1.7793846220262894">
+      <tr class="movement-row" data-reason-score="2" data-market="沪市" data-reason="上涨 / 放量" data-industry="医药生物" data-q="688221.sh 前沿生物-u 沪市 医药生物 上涨 / 放量" data-change="0.19999999999999996" data-volume="1.7793846220262894">
         <td class="code">688221.SH</td>
         <td class="name">前沿生物-U</td>
         <td><span class="reason reason-上涨 reason-放量">上涨 / 放量</span></td>
         <td class="num strong" data-sort="0.19999999999999996">20.0%</td>
-        <td class="num" data-sort="0.19999999999999996">20.0%</td>
+        <td class="num" data-sort="0.19966911764089204">20.0%</td>
         <td class="num" data-sort="0.2598337950138503">26.0%</td>
         <td class="num" data-sort="3.911447084233261">391.1%</td>
         <td class="num" data-sort="2460.233642578125">2,460.2</td>
@@ -293,12 +264,12 @@
         <td>沪市</td>
         <td class="industry">医药生物</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨 / 放量" data-industry="化工" data-q="688184.sh st帕瓦 沪市 化工 上涨 / 放量" data-change="0.1998031496062991" data-volume="2.320872454650057">
+      <tr class="movement-row" data-reason-score="2" data-market="沪市" data-reason="上涨 / 放量" data-industry="化工" data-q="688184.sh st帕瓦 沪市 化工 上涨 / 放量" data-change="0.1998031496062991" data-volume="2.320872454650057">
         <td class="code">688184.SH</td>
         <td class="name">ST帕瓦</td>
         <td><span class="reason reason-上涨 reason-放量">上涨 / 放量</span></td>
         <td class="num strong" data-sort="0.1998031496062991">20.0%</td>
-        <td class="num" data-sort="0.1998031496062991">20.0%</td>
+        <td class="num" data-sort="0.19947226724719117">19.9%</td>
         <td class="num" data-sort="0.3135775862068966">31.4%</td>
         <td class="num" data-sort="0.10316742081447948">10.3%</td>
         <td class="num" data-sort="-3.115562677383423">-3.1</td>
@@ -308,12 +279,12 @@
         <td>沪市</td>
         <td class="industry">化工</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨 / 放量" data-industry="传媒" data-q="300467.sz 迅游科技 深市 传媒 上涨 / 放量" data-change="0.17825255102040832" data-volume="1.633978614515986">
+      <tr class="movement-row" data-reason-score="2" data-market="深市" data-reason="上涨 / 放量" data-industry="传媒" data-q="300467.sz 迅游科技 深市 传媒 上涨 / 放量" data-change="0.17825255102040832" data-volume="1.633978614515986">
         <td class="code">300467.SZ</td>
         <td class="name">迅游科技</td>
         <td><span class="reason reason-上涨 reason-放量">上涨 / 放量</span></td>
         <td class="num strong" data-sort="0.17825255102040832">17.8%</td>
-        <td class="num" data-sort="0.17825255102040832">17.8%</td>
+        <td class="num" data-sort="0.17792166866130033">17.8%</td>
         <td class="num" data-sort="0.28745644599303155">28.7%</td>
         <td class="num" data-sort="2.0089576547231274">200.9%</td>
         <td class="num" data-sort="298.4169006347656">298.4</td>
@@ -323,27 +294,27 @@
         <td>深市</td>
         <td class="industry">传媒</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨 / 放量" data-industry="非银金融" data-q="600830.sh 香溢融通 沪市 非银金融 上涨 / 放量" data-change="0.10034602076124557" data-volume="1.769170717342874">
+      <tr class="movement-row" data-reason-score="2" data-market="沪市" data-reason="上涨 / 放量" data-industry="非银金融" data-q="600830.sh 香溢融通 沪市 非银金融 上涨 / 放量" data-change="0.10034602076124557" data-volume="1.769170717342874">
         <td class="code">600830.SH</td>
         <td class="name">香溢融通</td>
         <td><span class="reason reason-上涨 reason-放量">上涨 / 放量</span></td>
         <td class="num strong" data-sort="0.10034602076124557">10.0%</td>
-        <td class="num" data-sort="0.10034602076124557">10.0%</td>
+        <td class="num" data-sort="0.10001513840213772">10.0%</td>
         <td class="num" data-sort="-0.0031347962382446415">-0.3%</td>
         <td class="num" data-sort="0.1535277970736828">15.4%</td>
         <td class="num" data-sort="52.69026565551758">52.7</td>
         <td class="num" data-sort="1.9132499771920586">1.91</td>
         <td class="num" data-sort="75.6198347107438">76%</td>
-        <td class="num" data-sort="0.0">0.0</td>
+        <td class="num" data-sort="0.09917355371900846">0.1</td>
         <td>沪市</td>
         <td class="industry">非银金融</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨 / 放量" data-industry="纺织服装Ⅱ" data-q="002154.sz 报喜鸟 深市 纺织服装ⅱ 上涨 / 放量" data-change="0.09917355371900846" data-volume="1.5970499832264498">
+      <tr class="movement-row" data-reason-score="2" data-market="深市" data-reason="上涨 / 放量" data-industry="纺织服装Ⅱ" data-q="002154.sz 报喜鸟 深市 纺织服装ⅱ 上涨 / 放量" data-change="0.09917355371900846" data-volume="1.5970499832264498">
         <td class="code">002154.SZ</td>
         <td class="name">报喜鸟</td>
         <td><span class="reason reason-上涨 reason-放量">上涨 / 放量</span></td>
         <td class="num strong" data-sort="0.09917355371900846">9.9%</td>
-        <td class="num" data-sort="0.09917355371900846">9.9%</td>
+        <td class="num" data-sort="0.09884267135990044">9.9%</td>
         <td class="num" data-sort="0.036363636363636376">3.6%</td>
         <td class="num" data-sort="0.21783130726135957">21.8%</td>
         <td class="num" data-sort="14.262543678283691">14.3</td>
@@ -353,12 +324,12 @@
         <td>深市</td>
         <td class="industry">纺织服装Ⅱ</td>
       </tr>
-      <tr data-market="北交所" data-reason="上涨" data-industry="机械" data-q="920156.bj n海昌 北交所 机械 上涨" data-change="0.939799331103679" data-volume="0.0">
+      <tr class="movement-row" data-reason-score="1" data-market="北交所" data-reason="上涨" data-industry="机械" data-q="920156.bj n海昌 北交所 机械 上涨" data-change="0.939799331103679" data-volume="0.0">
         <td class="code">920156.BJ</td>
         <td class="name">N海昌</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.939799331103679">94.0%</td>
-        <td class="num" data-sort="0.939799331103679">94.0%</td>
+        <td class="num" data-sort="0.0">0.0%</td>
         <td class="num" data-sort="0.0">0.0%</td>
         <td class="num" data-sort="0.0">0.0%</td>
         <td class="num" data-sort="27.479557037353516">27.5</td>
@@ -368,12 +339,12 @@
         <td>北交所</td>
         <td class="industry">机械</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="半导体" data-q="688381.sh 帝奥微 沪市 半导体 上涨" data-change="0.20006816632583502" data-volume="0.19921660200398672">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="半导体" data-q="688381.sh 帝奥微 沪市 半导体 上涨" data-change="0.20006816632583502" data-volume="0.19921660200398672">
         <td class="code">688381.SH</td>
         <td class="name">帝奥微</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.20006816632583502">20.0%</td>
-        <td class="num" data-sort="0.20006816632583502">20.0%</td>
+        <td class="num" data-sort="0.19973728396672705">20.0%</td>
         <td class="num" data-sort="0.5436212187637002">54.4%</td>
         <td class="num" data-sort="1.411788403055935">141.2%</td>
         <td class="num" data-sort="-84.58600616455078">-84.6</td>
@@ -383,12 +354,12 @@
         <td>沪市</td>
         <td class="industry">半导体</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="硬件设备" data-q="688530.sh 欧莱新材 沪市 硬件设备 上涨" data-change="0.20000000000000018" data-volume="-0.2933139035266209">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="硬件设备" data-q="688530.sh 欧莱新材 沪市 硬件设备 上涨" data-change="0.20000000000000018" data-volume="-0.2933139035266209">
         <td class="code">688530.SH</td>
         <td class="name">欧莱新材</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.20000000000000018">20.0%</td>
-        <td class="num" data-sort="0.20000000000000018">20.0%</td>
+        <td class="num" data-sort="0.19966911764089226">20.0%</td>
         <td class="num" data-sort="1.8102189781021898">181.0%</td>
         <td class="num" data-sort="2.2372655292479116">223.7%</td>
         <td class="num" data-sort="3918.16259765625">3,918.2</td>
@@ -398,12 +369,12 @@
         <td>沪市</td>
         <td class="industry">硬件设备</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="半导体" data-q="300029.sz *st天龙 深市 半导体 上涨" data-change="0.20000000000000015" data-volume="0.21282615148816553">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="半导体" data-q="300029.sz *st天龙 深市 半导体 上涨" data-change="0.20000000000000015" data-volume="0.21282615148816553">
         <td class="code">300029.SZ</td>
         <td class="name">*ST天龙</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.20000000000000015">20.0%</td>
-        <td class="num" data-sort="0.20000000000000015">20.0%</td>
+        <td class="num" data-sort="0.19966911764089226">20.0%</td>
         <td class="num" data-sort="-0.03786191536748329">-3.8%</td>
         <td class="num" data-sort="0.13385826771653564">13.4%</td>
         <td class="num" data-sort="-23.502641677856445">-23.5</td>
@@ -413,12 +384,12 @@
         <td>深市</td>
         <td class="industry">半导体</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="硬件设备" data-q="688001.sh 华兴源创 沪市 硬件设备 上涨" data-change="0.2" data-volume="0.3381688376917069">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="硬件设备" data-q="688001.sh 华兴源创 沪市 硬件设备 上涨" data-change="0.2" data-volume="0.3381688376917069">
         <td class="code">688001.SH</td>
         <td class="name">华兴源创</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.2">20.0%</td>
-        <td class="num" data-sort="0.2">20.0%</td>
+        <td class="num" data-sort="0.19966911764089204">20.0%</td>
         <td class="num" data-sort="1.0099403578528823">101.0%</td>
         <td class="num" data-sort="1.817464003715745">181.7%</td>
         <td class="num" data-sort="334.7215881347656">334.7</td>
@@ -428,12 +399,12 @@
         <td>沪市</td>
         <td class="industry">硬件设备</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="医疗设备与服务" data-q="688677.sh 海泰新光 沪市 医疗设备与服务 上涨" data-change="0.19995958371223613" data-volume="-0.2690815890131729">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="医疗设备与服务" data-q="688677.sh 海泰新光 沪市 医疗设备与服务 上涨" data-change="0.19995958371223613" data-volume="-0.2690815890131729">
         <td class="code">688677.SH</td>
         <td class="name">海泰新光</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.19995958371223613">20.0%</td>
-        <td class="num" data-sort="0.19995958371223613">20.0%</td>
+        <td class="num" data-sort="0.19962870135312813">20.0%</td>
         <td class="num" data-sort="1.7516218721038004">175.2%</td>
         <td class="num" data-sort="3.6625524138296885">366.3%</td>
         <td class="num" data-sort="83.131103515625">83.1</td>
@@ -443,12 +414,12 @@
         <td>沪市</td>
         <td class="industry">医疗设备与服务</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="软件服务" data-q="301248.sz 杰创智能 深市 软件服务 上涨" data-change="0.19994128009395173" data-volume="0.19573859132737392">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="软件服务" data-q="301248.sz 杰创智能 深市 软件服务 上涨" data-change="0.19994128009395173" data-volume="0.19573859132737392">
         <td class="code">301248.SZ</td>
         <td class="name">杰创智能</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.19994128009395173">20.0%</td>
-        <td class="num" data-sort="0.19994128009395173">20.0%</td>
+        <td class="num" data-sort="0.1996103977348438">20.0%</td>
         <td class="num" data-sort="1.5400870105655686">154.0%</td>
         <td class="num" data-sort="5.6071415111940635">560.7%</td>
         <td class="num" data-sort="-885.6898803710938">-885.7</td>
@@ -458,12 +429,12 @@
         <td>深市</td>
         <td class="industry">软件服务</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="电气设备" data-q="300582.sz 英飞特 深市 电气设备 上涨" data-change="0.19984744469870333" data-volume="1.2324244380349794">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="电气设备" data-q="300582.sz 英飞特 深市 电气设备 上涨" data-change="0.19984744469870333" data-volume="1.2324244380349794">
         <td class="code">300582.SZ</td>
         <td class="name">英飞特</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.19984744469870333">20.0%</td>
-        <td class="num" data-sort="0.19984744469870333">20.0%</td>
+        <td class="num" data-sort="0.19951656233959533">20.0%</td>
         <td class="num" data-sort="-0.015028177833437795">-1.5%</td>
         <td class="num" data-sort="0.72509519765329">72.5%</td>
         <td class="num" data-sort="-9.55693531036377">-9.6</td>
@@ -473,12 +444,12 @@
         <td>深市</td>
         <td class="industry">电气设备</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="环保Ⅱ" data-q="301500.sz 飞南资源 深市 环保ⅱ 上涨" data-change="0.1998417095370004" data-volume="0.8166789057995243">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="环保Ⅱ" data-q="301500.sz 飞南资源 深市 环保ⅱ 上涨" data-change="0.1998417095370004" data-volume="0.8166789057995243">
         <td class="code">301500.SZ</td>
         <td class="name">飞南资源</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.1998417095370004">20.0%</td>
-        <td class="num" data-sort="0.1998417095370004">20.0%</td>
+        <td class="num" data-sort="0.19951082717789248">20.0%</td>
         <td class="num" data-sort="0.9324410452517529">93.2%</td>
         <td class="num" data-sort="1.6191643680981596">161.9%</td>
         <td class="num" data-sort="24.778884887695312">24.8</td>
@@ -488,12 +459,12 @@
         <td>深市</td>
         <td class="industry">环保Ⅱ</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="半导体" data-q="688037.sh 芯源微 沪市 半导体 上涨" data-change="0.1781050291747709" data-volume="0.8439236494898561">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="半导体" data-q="688037.sh 芯源微 沪市 半导体 上涨" data-change="0.1781050291747709" data-volume="0.8439236494898561">
         <td class="code">688037.SH</td>
         <td class="name">芯源微</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.1781050291747709">17.8%</td>
-        <td class="num" data-sort="0.1781050291747709">17.8%</td>
+        <td class="num" data-sort="0.17777414681566306">17.8%</td>
         <td class="num" data-sort="0.4275132987677599">42.8%</td>
         <td class="num" data-sort="2.6164915690868265">261.6%</td>
         <td class="num" data-sort="596.12158203125">596.1</td>
@@ -503,12 +474,12 @@
         <td>沪市</td>
         <td class="industry">半导体</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="环保Ⅱ" data-q="300854.sz 中兰环保 深市 环保ⅱ 上涨" data-change="0.17081604426002747" data-volume="0.6587839502928969">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="环保Ⅱ" data-q="300854.sz 中兰环保 深市 环保ⅱ 上涨" data-change="0.17081604426002747" data-volume="0.6587839502928969">
         <td class="code">300854.SZ</td>
         <td class="name">中兰环保</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.17081604426002747">17.1%</td>
-        <td class="num" data-sort="0.17081604426002747">17.1%</td>
+        <td class="num" data-sort="0.17048516190091953">17.0%</td>
         <td class="num" data-sort="1.0106888361045128">101.1%</td>
         <td class="num" data-sort="2.379222382514467">237.9%</td>
         <td class="num" data-sort="-160.6964111328125">-160.7</td>
@@ -518,12 +489,12 @@
         <td>深市</td>
         <td class="industry">环保Ⅱ</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="硬件设备" data-q="688020.sh 方邦股份 沪市 硬件设备 上涨" data-change="0.16278290025146697" data-volume="0.2724860241646849">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="硬件设备" data-q="688020.sh 方邦股份 沪市 硬件设备 上涨" data-change="0.16278290025146697" data-volume="0.2724860241646849">
         <td class="code">688020.SH</td>
         <td class="name">方邦股份</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.16278290025146697">16.3%</td>
-        <td class="num" data-sort="0.16278290025146697">16.3%</td>
+        <td class="num" data-sort="0.162452017892359">16.2%</td>
         <td class="num" data-sort="1.0394001764187006">103.9%</td>
         <td class="num" data-sort="4.064499852336433">406.4%</td>
         <td class="num" data-sort="-136.67398071289062">-136.7</td>
@@ -533,12 +504,12 @@
         <td>沪市</td>
         <td class="industry">硬件设备</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="半导体" data-q="688409.sh 富创精密 沪市 半导体 上涨" data-change="0.16033917903256886" data-volume="0.6633843924341161">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="半导体" data-q="688409.sh 富创精密 沪市 半导体 上涨" data-change="0.16033917903256886" data-volume="0.6633843924341161">
         <td class="code">688409.SH</td>
         <td class="name">富创精密</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.16033917903256886">16.0%</td>
-        <td class="num" data-sort="0.16033917903256886">16.0%</td>
+        <td class="num" data-sort="0.1600082966734608">16.0%</td>
         <td class="num" data-sort="0.7866468842729968">78.7%</td>
         <td class="num" data-sort="2.8710836267504005">287.1%</td>
         <td class="num" data-sort="-3947.57470703125">-3,947.6</td>
@@ -548,12 +519,12 @@
         <td>沪市</td>
         <td class="industry">半导体</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="机械" data-q="300853.sz 申昊科技 深市 机械 上涨" data-change="0.15944806439248765" data-volume="0.9278621132538234">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="机械" data-q="300853.sz 申昊科技 深市 机械 上涨" data-change="0.15944806439248765" data-volume="0.9278621132538234">
         <td class="code">300853.SZ</td>
         <td class="name">申昊科技</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.15944806439248765">15.9%</td>
-        <td class="num" data-sort="0.15944806439248765">15.9%</td>
+        <td class="num" data-sort="0.15911718203337966">15.9%</td>
         <td class="num" data-sort="0.4599420849420852">46.0%</td>
         <td class="num" data-sort="1.4046104928457874">140.5%</td>
         <td class="num" data-sort="-17.90842628479004">-17.9</td>
@@ -563,12 +534,12 @@
         <td>深市</td>
         <td class="industry">机械</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="电气设备" data-q="300477.sz st合纵 深市 电气设备 上涨" data-change="0.15865384615384612" data-volume="0.5489016956664563">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="电气设备" data-q="300477.sz st合纵 深市 电气设备 上涨" data-change="0.15865384615384612" data-volume="0.5489016956664563">
         <td class="code">300477.SZ</td>
         <td class="name">ST合纵</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.15865384615384612">15.9%</td>
-        <td class="num" data-sort="0.15865384615384612">15.9%</td>
+        <td class="num" data-sort="0.1583229637947381">15.8%</td>
         <td class="num" data-sort="-0.08015267175572516">-8.0%</td>
         <td class="num" data-sort="-0.004132231404958553">-0.4%</td>
         <td class="num" data-sort="-4.409836292266846">-4.4</td>
@@ -578,12 +549,12 @@
         <td>深市</td>
         <td class="industry">电气设备</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="化工" data-q="688323.sh 瑞华泰 沪市 化工 上涨" data-change="0.1522157996146434" data-volume="1.1100830186087052">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="化工" data-q="688323.sh 瑞华泰 沪市 化工 上涨" data-change="0.1522157996146434" data-volume="1.1100830186087052">
         <td class="code">688323.SH</td>
         <td class="name">瑞华泰</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.1522157996146434">15.2%</td>
-        <td class="num" data-sort="0.1522157996146434">15.2%</td>
+        <td class="num" data-sort="0.15188491725553543">15.2%</td>
         <td class="num" data-sort="0.06263882718791636">6.3%</td>
         <td class="num" data-sort="1.5971769815418022">159.7%</td>
         <td class="num" data-sort="-49.14258575439453">-49.1</td>
@@ -593,12 +564,12 @@
         <td>沪市</td>
         <td class="industry">化工</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="半导体" data-q="688693.sh 锴威特 沪市 半导体 上涨" data-change="0.14999400982388877" data-volume="0.4758677405904759">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="半导体" data-q="688693.sh 锴威特 沪市 半导体 上涨" data-change="0.14999400982388877" data-volume="0.4758677405904759">
         <td class="code">688693.SH</td>
         <td class="name">锴威特</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.14999400982388877">15.0%</td>
-        <td class="num" data-sort="0.14999400982388877">15.0%</td>
+        <td class="num" data-sort="0.14966312746478083">15.0%</td>
         <td class="num" data-sort="1.5638354700854702">156.4%</td>
         <td class="num" data-sort="3.2869894374511377">328.7%</td>
         <td class="num" data-sort="-77.91082763671875">-77.9</td>
@@ -608,12 +579,12 @@
         <td>沪市</td>
         <td class="industry">半导体</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="硬件设备" data-q="301176.sz 逸豪新材 深市 硬件设备 上涨" data-change="0.14792092706203128" data-volume="0.664732485980897">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="硬件设备" data-q="301176.sz 逸豪新材 深市 硬件设备 上涨" data-change="0.14792092706203128" data-volume="0.664732485980897">
         <td class="code">301176.SZ</td>
         <td class="name">逸豪新材</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.14792092706203128">14.8%</td>
-        <td class="num" data-sort="0.14792092706203128">14.8%</td>
+        <td class="num" data-sort="0.14759004470292325">14.8%</td>
         <td class="num" data-sort="0.3381009137862534">33.8%</td>
         <td class="num" data-sort="1.1155778894472363">111.6%</td>
         <td class="num" data-sort="-119.39720153808594">-119.4</td>
@@ -623,12 +594,12 @@
         <td>深市</td>
         <td class="industry">硬件设备</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="硬件设备" data-q="301391.sz 卡莱特 深市 硬件设备 上涨" data-change="0.14747736093143604" data-volume="0.7542646113614007">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="硬件设备" data-q="301391.sz 卡莱特 深市 硬件设备 上涨" data-change="0.14747736093143604" data-volume="0.7542646113614007">
         <td class="code">301391.SZ</td>
         <td class="name">卡莱特</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.14747736093143604">14.7%</td>
-        <td class="num" data-sort="0.14747736093143604">14.7%</td>
+        <td class="num" data-sort="0.147146478572328">14.7%</td>
         <td class="num" data-sort="0.04537418974661178">4.5%</td>
         <td class="num" data-sort="2.107038847184545">210.7%</td>
         <td class="num" data-sort="400.7682189941406">400.8</td>
@@ -638,12 +609,12 @@
         <td>深市</td>
         <td class="industry">硬件设备</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="房地产Ⅱ" data-q="300295.sz *st三六五 深市 房地产ⅱ 上涨" data-change="0.1449541284403669" data-volume="0.11918046395529647">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="房地产Ⅱ" data-q="300295.sz *st三六五 深市 房地产ⅱ 上涨" data-change="0.1449541284403669" data-volume="0.11918046395529647">
         <td class="code">300295.SZ</td>
         <td class="name">*ST三六五</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.1449541284403669">14.5%</td>
-        <td class="num" data-sort="0.1449541284403669">14.5%</td>
+        <td class="num" data-sort="0.14462324608125887">14.5%</td>
         <td class="num" data-sort="-0.003990422984836317">-0.4%</td>
         <td class="num" data-sort="0.13557779799818026">13.6%</td>
         <td class="num" data-sort="-49.28807067871094">-49.3</td>
@@ -653,12 +624,12 @@
         <td>深市</td>
         <td class="industry">房地产Ⅱ</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="半导体" data-q="300613.sz 富瀚微 深市 半导体 上涨" data-change="0.13908701854493605" data-volume="1.2287369293406423">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="半导体" data-q="300613.sz 富瀚微 深市 半导体 上涨" data-change="0.13908701854493605" data-volume="1.2287369293406423">
         <td class="code">300613.SZ</td>
         <td class="name">富瀚微</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.13908701854493605">13.9%</td>
-        <td class="num" data-sort="0.13908701854493605">13.9%</td>
+        <td class="num" data-sort="0.13875613618582805">13.9%</td>
         <td class="num" data-sort="0.3868866695614417">38.7%</td>
         <td class="num" data-sort="1.0593964014712638">105.9%</td>
         <td class="num" data-sort="69.04533386230469">69.0</td>
@@ -668,12 +639,12 @@
         <td>深市</td>
         <td class="industry">半导体</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="造纸与包装" data-q="300057.sz 万顺新材 深市 造纸与包装 上涨" data-change="0.1379746835443037" data-volume="0.31150136220266234">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="造纸与包装" data-q="300057.sz 万顺新材 深市 造纸与包装 上涨" data-change="0.1379746835443037" data-volume="0.31150136220266234">
         <td class="code">300057.SZ</td>
         <td class="name">万顺新材</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.1379746835443037">13.8%</td>
-        <td class="num" data-sort="0.1379746835443037">13.8%</td>
+        <td class="num" data-sort="0.1376438011851957">13.8%</td>
         <td class="num" data-sort="0.579964850615114">58.0%</td>
         <td class="num" data-sort="1.2635592693554698">126.4%</td>
         <td class="num" data-sort="-53.98942947387695">-54.0</td>
@@ -683,12 +654,12 @@
         <td>深市</td>
         <td class="industry">造纸与包装</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="软件服务" data-q="300469.sz 信息发展 深市 软件服务 上涨" data-change="0.1359427609427607" data-volume="0.31782960028917273">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="软件服务" data-q="300469.sz 信息发展 深市 软件服务 上涨" data-change="0.1359427609427607" data-volume="0.31782960028917273">
         <td class="code">300469.SZ</td>
         <td class="name">信息发展</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.1359427609427607">13.6%</td>
-        <td class="num" data-sort="0.1359427609427607">13.6%</td>
+        <td class="num" data-sort="0.13561187858365265">13.6%</td>
         <td class="num" data-sort="-0.12653721682847907">-12.7%</td>
         <td class="num" data-sort="2.528104575163398">252.8%</td>
         <td class="num" data-sort="-102.5865707397461">-102.6</td>
@@ -698,12 +669,12 @@
         <td>深市</td>
         <td class="industry">软件服务</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="硬件设备" data-q="688112.sh 鼎阳科技 沪市 硬件设备 上涨" data-change="0.1348666053357865" data-volume="0.3991980336682459">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="硬件设备" data-q="688112.sh 鼎阳科技 沪市 硬件设备 上涨" data-change="0.1348666053357865" data-volume="0.3991980336682459">
         <td class="code">688112.SH</td>
         <td class="name">鼎阳科技</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.1348666053357865">13.5%</td>
-        <td class="num" data-sort="0.1348666053357865">13.5%</td>
+        <td class="num" data-sort="0.1345357229766786">13.5%</td>
         <td class="num" data-sort="0.646995994659546">64.7%</td>
         <td class="num" data-sort="2.0671128821904103">206.7%</td>
         <td class="num" data-sort="70.19197082519531">70.2</td>
@@ -713,12 +684,12 @@
         <td>沪市</td>
         <td class="industry">硬件设备</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="硬件设备" data-q="301031.sz 中熔电气 深市 硬件设备 上涨" data-change="0.13093404285114138" data-volume="1.1375193506175312">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="硬件设备" data-q="301031.sz 中熔电气 深市 硬件设备 上涨" data-change="0.13093404285114138" data-volume="1.1375193506175312">
         <td class="code">301031.SZ</td>
         <td class="name">中熔电气</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.13093404285114138">13.1%</td>
-        <td class="num" data-sort="0.13093404285114138">13.1%</td>
+        <td class="num" data-sort="0.13060316049203347">13.1%</td>
         <td class="num" data-sort="0.4397005080666727">44.0%</td>
         <td class="num" data-sort="2.275033943169261">227.5%</td>
         <td class="num" data-sort="34.65981674194336">34.7</td>
@@ -728,12 +699,12 @@
         <td>深市</td>
         <td class="industry">硬件设备</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="半导体" data-q="300831.sz 派瑞股份 深市 半导体 上涨" data-change="0.12789351851851827" data-volume="0.9281611786843158">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="半导体" data-q="300831.sz 派瑞股份 深市 半导体 上涨" data-change="0.12789351851851827" data-volume="0.9281611786843158">
         <td class="code">300831.SZ</td>
         <td class="name">派瑞股份</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.12789351851851827">12.8%</td>
-        <td class="num" data-sort="0.12789351851851827">12.8%</td>
+        <td class="num" data-sort="0.12756263615941044">12.8%</td>
         <td class="num" data-sort="0.7686025408348458">76.9%</td>
         <td class="num" data-sort="0.7597948120809138">76.0%</td>
         <td class="num" data-sort="105.4516830444336">105.5</td>
@@ -743,12 +714,12 @@
         <td>深市</td>
         <td class="industry">半导体</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="硬件设备" data-q="300870.sz 欧陆通 深市 硬件设备 上涨" data-change="0.1268721198156682" data-volume="0.2879555957641995">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="硬件设备" data-q="300870.sz 欧陆通 深市 硬件设备 上涨" data-change="0.1268721198156682" data-volume="0.2879555957641995">
         <td class="code">300870.SZ</td>
         <td class="name">欧陆通</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.1268721198156682">12.7%</td>
-        <td class="num" data-sort="0.1268721198156682">12.7%</td>
+        <td class="num" data-sort="0.1265412374565602">12.7%</td>
         <td class="num" data-sort="0.7703619909502263">77.0%</td>
         <td class="num" data-sort="9.2003896335492">920.0%</td>
         <td class="num" data-sort="234.5272216796875">234.5</td>
@@ -758,12 +729,12 @@
         <td>深市</td>
         <td class="industry">硬件设备</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="纺织服装Ⅱ" data-q="300591.sz 万里马 深市 纺织服装ⅱ 上涨" data-change="0.12643678160919533" data-volume="1.3827036874318703">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="纺织服装Ⅱ" data-q="300591.sz 万里马 深市 纺织服装ⅱ 上涨" data-change="0.12643678160919533" data-volume="1.3827036874318703">
         <td class="code">300591.SZ</td>
         <td class="name">万里马</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.12643678160919533">12.6%</td>
-        <td class="num" data-sort="0.12643678160919533">12.6%</td>
+        <td class="num" data-sort="0.12610589925008742">12.6%</td>
         <td class="num" data-sort="-0.20967741935483875">-21.0%</td>
         <td class="num" data-sort="1.4810126582278478">148.1%</td>
         <td class="num" data-sort="-23.47344970703125">-23.5</td>
@@ -773,12 +744,12 @@
         <td>深市</td>
         <td class="industry">纺织服装Ⅱ</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="化工" data-q="688350.sh 富淼科技 沪市 化工 上涨" data-change="0.12459605026929993" data-volume="0.9710018533098213">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="化工" data-q="688350.sh 富淼科技 沪市 化工 上涨" data-change="0.12459605026929993" data-volume="0.9710018533098213">
         <td class="code">688350.SH</td>
         <td class="name">富淼科技</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.12459605026929993">12.5%</td>
-        <td class="num" data-sort="0.12459605026929993">12.5%</td>
+        <td class="num" data-sort="0.12426516791019206">12.4%</td>
         <td class="num" data-sort="0.21725612125923058">21.7%</td>
         <td class="num" data-sort="2.265901981230449">226.6%</td>
         <td class="num" data-sort="155.4508819580078">155.5</td>
@@ -788,12 +759,12 @@
         <td>沪市</td>
         <td class="industry">化工</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="半导体" data-q="688110.sh 东芯股份 沪市 半导体 上涨" data-change="0.12327841149133942" data-volume="0.7077832508051474">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="半导体" data-q="688110.sh 东芯股份 沪市 半导体 上涨" data-change="0.12327841149133942" data-volume="0.7077832508051474">
         <td class="code">688110.SH</td>
         <td class="name">东芯股份</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.12327841149133942">12.3%</td>
-        <td class="num" data-sort="0.12327841149133942">12.3%</td>
+        <td class="num" data-sort="0.12294752913223152">12.3%</td>
         <td class="num" data-sort="0.012105062809288247">1.2%</td>
         <td class="num" data-sort="8.401697312588402">840.2%</td>
         <td class="num" data-sort="-301.8203125">-301.8</td>
@@ -803,12 +774,12 @@
         <td>沪市</td>
         <td class="industry">半导体</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="耐用消费品" data-q="301193.sz 家联科技 深市 耐用消费品 上涨" data-change="0.12274201018990281" data-volume="0.4139242418388711">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="耐用消费品" data-q="301193.sz 家联科技 深市 耐用消费品 上涨" data-change="0.12274201018990281" data-volume="0.4139242418388711">
         <td class="code">301193.SZ</td>
         <td class="name">家联科技</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.12274201018990281">12.3%</td>
-        <td class="num" data-sort="0.12274201018990281">12.3%</td>
+        <td class="num" data-sort="0.12241112783079489">12.2%</td>
         <td class="num" data-sort="0.12378303198887351">12.4%</td>
         <td class="num" data-sort="0.8321995464852607">83.2%</td>
         <td class="num" data-sort="-63.90785598754883">-63.9</td>
@@ -818,12 +789,12 @@
         <td>深市</td>
         <td class="industry">耐用消费品</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="硬件设备" data-q="301511.sz 德福科技 深市 硬件设备 上涨" data-change="0.12014603385330233" data-volume="0.21103584746363757">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="硬件设备" data-q="301511.sz 德福科技 深市 硬件设备 上涨" data-change="0.12014603385330233" data-volume="0.21103584746363757">
         <td class="code">301511.SZ</td>
         <td class="name">德福科技</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.12014603385330233">12.0%</td>
-        <td class="num" data-sort="0.12014603385330233">12.0%</td>
+        <td class="num" data-sort="0.11981515149419432">12.0%</td>
         <td class="num" data-sort="0.8860016764459346">88.6%</td>
         <td class="num" data-sort="4.926251097453906">492.6%</td>
         <td class="num" data-sort="176.1415557861328">176.1</td>
@@ -833,12 +804,12 @@
         <td>深市</td>
         <td class="industry">硬件设备</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="电气设备" data-q="688719.sh 爱科赛博 沪市 电气设备 上涨" data-change="0.12003626473254769" data-volume="0.21837428968913097">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="电气设备" data-q="688719.sh 爱科赛博 沪市 电气设备 上涨" data-change="0.12003626473254769" data-volume="0.21837428968913097">
         <td class="code">688719.SH</td>
         <td class="name">爱科赛博</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.12003626473254769">12.0%</td>
-        <td class="num" data-sort="0.12003626473254769">12.0%</td>
+        <td class="num" data-sort="0.11970538237343975">12.0%</td>
         <td class="num" data-sort="0.39909399773499454">39.9%</td>
         <td class="num" data-sort="1.9976889203555173">199.8%</td>
         <td class="num" data-sort="-169.30511474609375">-169.3</td>
@@ -848,12 +819,12 @@
         <td>沪市</td>
         <td class="industry">电气设备</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="硬件设备" data-q="300570.sz 太辰光 深市 硬件设备 上涨" data-change="0.11722595078299776" data-volume="0.28418221703819135">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="硬件设备" data-q="300570.sz 太辰光 深市 硬件设备 上涨" data-change="0.11722595078299776" data-volume="0.28418221703819135">
         <td class="code">300570.SZ</td>
         <td class="name">太辰光</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.11722595078299776">11.7%</td>
-        <td class="num" data-sort="0.11722595078299776">11.7%</td>
+        <td class="num" data-sort="0.11689506842388984">11.7%</td>
         <td class="num" data-sort="0.2965815664214626">29.7%</td>
         <td class="num" data-sort="4.5020649222125275">450.2%</td>
         <td class="num" data-sort="119.24099731445312">119.2</td>
@@ -863,12 +834,12 @@
         <td>深市</td>
         <td class="industry">硬件设备</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="机械" data-q="301112.sz 信邦智能 深市 机械 上涨" data-change="0.11630769230769221" data-volume="0.7913293456115758">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="机械" data-q="301112.sz 信邦智能 深市 机械 上涨" data-change="0.11630769230769221" data-volume="0.7913293456115758">
         <td class="code">301112.SZ</td>
         <td class="name">信邦智能</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.11630769230769221">11.6%</td>
-        <td class="num" data-sort="0.11630769230769221">11.6%</td>
+        <td class="num" data-sort="0.11597680994858427">11.6%</td>
         <td class="num" data-sort="-0.07895404925107896">-7.9%</td>
         <td class="num" data-sort="0.9879392298790906">98.8%</td>
         <td class="num" data-sort="-57136.03125">-57,136.0</td>
@@ -878,12 +849,12 @@
         <td>深市</td>
         <td class="industry">机械</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="硬件设备" data-q="688721.sh 龙图光罩 沪市 硬件设备 上涨" data-change="0.11592858798979823" data-volume="0.7074966177386077">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="硬件设备" data-q="688721.sh 龙图光罩 沪市 硬件设备 上涨" data-change="0.11592858798979823" data-volume="0.7074966177386077">
         <td class="code">688721.SH</td>
         <td class="name">龙图光罩</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.11592858798979823">11.6%</td>
-        <td class="num" data-sort="0.11592858798979823">11.6%</td>
+        <td class="num" data-sort="0.11559770563069029">11.6%</td>
         <td class="num" data-sort="0.03438641736514092">3.4%</td>
         <td class="num" data-sort="0.9306196485089464">93.1%</td>
         <td class="num" data-sort="114.55738067626953">114.6</td>
@@ -893,12 +864,12 @@
         <td>沪市</td>
         <td class="industry">硬件设备</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="硬件设备" data-q="300710.sz 万隆光电 深市 硬件设备 上涨" data-change="0.1145390070921986" data-volume="1.0666026048839479">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="硬件设备" data-q="300710.sz 万隆光电 深市 硬件设备 上涨" data-change="0.1145390070921986" data-volume="1.0666026048839479">
         <td class="code">300710.SZ</td>
         <td class="name">万隆光电</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.1145390070921986">11.5%</td>
-        <td class="num" data-sort="0.1145390070921986">11.5%</td>
+        <td class="num" data-sort="0.11420812473309061">11.4%</td>
         <td class="num" data-sort="0.008988764044943753">0.9%</td>
         <td class="num" data-sort="1.095333333333333">109.5%</td>
         <td class="num" data-sort="-90.24020385742188">-90.2</td>
@@ -908,12 +879,12 @@
         <td>深市</td>
         <td class="industry">硬件设备</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="电气设备" data-q="301510.sz 固高科技 深市 电气设备 上涨" data-change="0.11191941801902645" data-volume="0.8199026507837266">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="电气设备" data-q="301510.sz 固高科技 深市 电气设备 上涨" data-change="0.11191941801902645" data-volume="0.8199026507837266">
         <td class="code">301510.SZ</td>
         <td class="name">固高科技</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.11191941801902645">11.2%</td>
-        <td class="num" data-sort="0.11191941801902645">11.2%</td>
+        <td class="num" data-sort="0.11158853565991844">11.2%</td>
         <td class="num" data-sort="0.06114819759679557">6.1%</td>
         <td class="num" data-sort="1.072591905206218">107.3%</td>
         <td class="num" data-sort="242.21078491210938">242.2</td>
@@ -923,12 +894,12 @@
         <td>深市</td>
         <td class="industry">电气设备</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="软件服务" data-q="688777.sh 中控技术 沪市 软件服务 上涨" data-change="0.11158925656625604" data-volume="0.7116383668560675">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="软件服务" data-q="688777.sh 中控技术 沪市 软件服务 上涨" data-change="0.11158925656625604" data-volume="0.7116383668560675">
         <td class="code">688777.SH</td>
         <td class="name">中控技术</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.11158925656625604">11.2%</td>
-        <td class="num" data-sort="0.11158925656625604">11.2%</td>
+        <td class="num" data-sort="0.111258374207148">11.1%</td>
         <td class="num" data-sort="0.5182407782732061">51.8%</td>
         <td class="num" data-sort="0.965375019189705">96.5%</td>
         <td class="num" data-sort="149.64064025878906">149.6</td>
@@ -938,12 +909,12 @@
         <td>沪市</td>
         <td class="industry">软件服务</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="医药生物" data-q="688114.sh 华大智造 沪市 医药生物 上涨" data-change="0.10952380952380966" data-volume="0.7678646803504094">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="医药生物" data-q="688114.sh 华大智造 沪市 医药生物 上涨" data-change="0.10952380952380966" data-volume="0.7678646803504094">
         <td class="code">688114.SH</td>
         <td class="name">华大智造</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.10952380952380966">11.0%</td>
-        <td class="num" data-sort="0.10952380952380966">11.0%</td>
+        <td class="num" data-sort="0.10919292716470164">10.9%</td>
         <td class="num" data-sort="-0.1180052666227781">-11.8%</td>
         <td class="num" data-sort="0.4902669632925472">49.0%</td>
         <td class="num" data-sort="-115.0473403930664">-115.0</td>
@@ -953,12 +924,12 @@
         <td>沪市</td>
         <td class="industry">医药生物</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="硬件设备" data-q="688170.sh 德龙激光 沪市 硬件设备 上涨" data-change="0.10876823053944835" data-volume="0.3886684206952853">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="硬件设备" data-q="688170.sh 德龙激光 沪市 硬件设备 上涨" data-change="0.10876823053944835" data-volume="0.3886684206952853">
         <td class="code">688170.SH</td>
         <td class="name">德龙激光</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.10876823053944835">10.9%</td>
-        <td class="num" data-sort="0.10876823053944835">10.9%</td>
+        <td class="num" data-sort="0.10843734818034045">10.8%</td>
         <td class="num" data-sort="1.0057215511760966">100.6%</td>
         <td class="num" data-sort="2.232581967213115">223.3%</td>
         <td class="num" data-sort="258.8841247558594">258.9</td>
@@ -968,12 +939,12 @@
         <td>沪市</td>
         <td class="industry">硬件设备</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="半导体" data-q="300604.sz 长川科技 深市 半导体 上涨" data-change="0.10772151898734177" data-volume="0.723063013914071">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="半导体" data-q="300604.sz 长川科技 深市 半导体 上涨" data-change="0.10772151898734177" data-volume="0.723063013914071">
         <td class="code">300604.SZ</td>
         <td class="name">长川科技</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.10772151898734177">10.8%</td>
-        <td class="num" data-sort="0.10772151898734177">10.8%</td>
+        <td class="num" data-sort="0.10739063662823378">10.7%</td>
         <td class="num" data-sort="0.7275688480900206">72.8%</td>
         <td class="num" data-sort="5.439455295482817">543.9%</td>
         <td class="num" data-sort="70.59211730957031">70.6</td>
@@ -983,12 +954,12 @@
         <td>深市</td>
         <td class="industry">半导体</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="家庭用品" data-q="300957.sz 贝泰妮 深市 家庭用品 上涨" data-change="0.10734757686294935" data-volume="0.8823127387663559">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="家庭用品" data-q="300957.sz 贝泰妮 深市 家庭用品 上涨" data-change="0.10734757686294935" data-volume="0.8823127387663559">
         <td class="code">300957.SZ</td>
         <td class="name">贝泰妮</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.10734757686294935">10.7%</td>
-        <td class="num" data-sort="0.10734757686294935">10.7%</td>
+        <td class="num" data-sort="0.10701669450384133">10.7%</td>
         <td class="num" data-sort="0.08048415411089337">8.0%</td>
         <td class="num" data-sort="0.10230731092927826">10.2%</td>
         <td class="num" data-sort="33.13365173339844">33.1</td>
@@ -998,12 +969,12 @@
         <td>深市</td>
         <td class="industry">家庭用品</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="半导体" data-q="688378.sh 奥来德 沪市 半导体 上涨" data-change="0.10422463951429296" data-volume="0.2989228864739324">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="半导体" data-q="688378.sh 奥来德 沪市 半导体 上涨" data-change="0.10422463951429296" data-volume="0.2989228864739324">
         <td class="code">688378.SH</td>
         <td class="name">奥来德</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.10422463951429296">10.4%</td>
-        <td class="num" data-sort="0.10422463951429296">10.4%</td>
+        <td class="num" data-sort="0.10389375715518501">10.4%</td>
         <td class="num" data-sort="0.598901098901099">59.9%</td>
         <td class="num" data-sort="2.9518834890305565">295.2%</td>
         <td class="num" data-sort="89.88911437988281">89.9</td>
@@ -1013,12 +984,12 @@
         <td>沪市</td>
         <td class="industry">半导体</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="半导体" data-q="688691.sh 灿芯股份 沪市 半导体 上涨" data-change="0.10400929692039515" data-volume="0.49191356183690993">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="半导体" data-q="688691.sh 灿芯股份 沪市 半导体 上涨" data-change="0.10400929692039515" data-volume="0.49191356183690993">
         <td class="code">688691.SH</td>
         <td class="name">灿芯股份</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.10400929692039515">10.4%</td>
-        <td class="num" data-sort="0.10400929692039515">10.4%</td>
+        <td class="num" data-sort="0.10367841456128725">10.4%</td>
         <td class="num" data-sort="0.11786624828397718">11.8%</td>
         <td class="num" data-sort="2.440770707468418">244.1%</td>
         <td class="num" data-sort="-124.00194549560547">-124.0</td>
@@ -1028,12 +999,12 @@
         <td>沪市</td>
         <td class="industry">半导体</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="硬件设备" data-q="300351.sz 永贵电器 深市 硬件设备 上涨" data-change="0.10176991150442478" data-volume="0.5594218891264626">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="硬件设备" data-q="300351.sz 永贵电器 深市 硬件设备 上涨" data-change="0.10176991150442478" data-volume="0.5594218891264626">
         <td class="code">300351.SZ</td>
         <td class="name">永贵电器</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.10176991150442478">10.2%</td>
-        <td class="num" data-sort="0.10176991150442478">10.2%</td>
+        <td class="num" data-sort="0.10143902914531688">10.1%</td>
         <td class="num" data-sort="0.24292845257903495">24.3%</td>
         <td class="num" data-sort="0.605935980083089">60.6%</td>
         <td class="num" data-sort="498.21417236328125">498.2</td>
@@ -1043,12 +1014,12 @@
         <td>深市</td>
         <td class="industry">硬件设备</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="化工" data-q="688129.sh 东来技术 沪市 化工 上涨" data-change="0.10172026925953631" data-volume="0.7564791893315677">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="化工" data-q="688129.sh 东来技术 沪市 化工 上涨" data-change="0.10172026925953631" data-volume="0.7564791893315677">
         <td class="code">688129.SH</td>
         <td class="name">东来技术</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.10172026925953631">10.2%</td>
-        <td class="num" data-sort="0.10172026925953631">10.2%</td>
+        <td class="num" data-sort="0.10138938690042831">10.1%</td>
         <td class="num" data-sort="0.45625308947108256">45.6%</td>
         <td class="num" data-sort="1.6377196065309758">163.8%</td>
         <td class="num" data-sort="35.28834915161133">35.3</td>
@@ -1058,12 +1029,12 @@
         <td>沪市</td>
         <td class="industry">化工</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="硬件设备" data-q="688808.sh c联讯 沪市 硬件设备 上涨" data-change="0.10137672090112641" data-volume="-0.35293249108843205">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="硬件设备" data-q="688808.sh c联讯 沪市 硬件设备 上涨" data-change="0.10137672090112641" data-volume="-0.35293249108843205">
         <td class="code">688808.SH</td>
         <td class="name">C联讯</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.10137672090112641">10.1%</td>
-        <td class="num" data-sort="0.10137672090112641">10.1%</td>
+        <td class="num" data-sort="0.10104583854201854">10.1%</td>
         <td class="num" data-sort="0.10137672090112648">10.1%</td>
         <td class="num" data-sort="0.10137672090112648">10.1%</td>
         <td class="num" data-sort="520.2755737304688">520.3</td>
@@ -1073,12 +1044,12 @@
         <td>沪市</td>
         <td class="industry">硬件设备</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="半导体" data-q="688361.sh 中科飞测 沪市 半导体 上涨" data-change="0.10112158453645131" data-volume="0.44830726387404285">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="半导体" data-q="688361.sh 中科飞测 沪市 半导体 上涨" data-change="0.10112158453645131" data-volume="0.44830726387404285">
         <td class="code">688361.SH</td>
         <td class="name">中科飞测</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.10112158453645131">10.1%</td>
-        <td class="num" data-sort="0.10112158453645131">10.1%</td>
+        <td class="num" data-sort="0.10079070217734332">10.1%</td>
         <td class="num" data-sort="0.20641872017778914">20.6%</td>
         <td class="num" data-sort="2.88732097725358">288.7%</td>
         <td class="num" data-sort="1101.906494140625">1,101.9</td>
@@ -1088,12 +1059,12 @@
         <td>沪市</td>
         <td class="industry">半导体</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="纺织服装Ⅱ" data-q="605138.sh 盛泰集团 沪市 纺织服装ⅱ 上涨" data-change="0.10074074074074071" data-volume="0.8140975764071954">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="纺织服装Ⅱ" data-q="605138.sh 盛泰集团 沪市 纺织服装ⅱ 上涨" data-change="0.10074074074074071" data-volume="0.8140975764071954">
         <td class="code">605138.SH</td>
         <td class="name">盛泰集团</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.10074074074074071">10.1%</td>
-        <td class="num" data-sort="0.10074074074074071">10.1%</td>
+        <td class="num" data-sort="0.10040985838163285">10.0%</td>
         <td class="num" data-sort="0.06752873563218387">6.8%</td>
         <td class="num" data-sort="0.555974332915484">55.6%</td>
         <td class="num" data-sort="23.536529541015625">23.5</td>
@@ -1103,12 +1074,12 @@
         <td>沪市</td>
         <td class="industry">纺织服装Ⅱ</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="机械" data-q="600815.sh 厦工股份 沪市 机械 上涨" data-change="0.10051546391752562" data-volume="-0.27691119582904633">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="机械" data-q="600815.sh 厦工股份 沪市 机械 上涨" data-change="0.10051546391752562" data-volume="-0.27691119582904633">
         <td class="code">600815.SH</td>
         <td class="name">厦工股份</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.10051546391752562">10.1%</td>
-        <td class="num" data-sort="0.10051546391752562">10.1%</td>
+        <td class="num" data-sort="0.10018458155841768">10.0%</td>
         <td class="num" data-sort="0.23768115942028967">23.8%</td>
         <td class="num" data-sort="1.14572864321608">114.6%</td>
         <td class="num" data-sort="-103.13064575195312">-103.1</td>
@@ -1118,12 +1089,12 @@
         <td>沪市</td>
         <td class="industry">机械</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="电气设备" data-q="002706.sz 良信股份 深市 电气设备 上涨" data-change="0.1004830917874397" data-volume="0.7702363786045863">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="电气设备" data-q="002706.sz 良信股份 深市 电气设备 上涨" data-change="0.1004830917874397" data-volume="0.7702363786045863">
         <td class="code">002706.SZ</td>
         <td class="name">良信股份</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.1004830917874397">10.0%</td>
-        <td class="num" data-sort="0.1004830917874397">10.0%</td>
+        <td class="num" data-sort="0.10015220942833179">10.0%</td>
         <td class="num" data-sort="0.05658627087198531">5.7%</td>
         <td class="num" data-sort="0.951300391544184">95.1%</td>
         <td class="num" data-sort="58.5280647277832">58.5</td>
@@ -1133,12 +1104,12 @@
         <td>深市</td>
         <td class="industry">电气设备</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="机械" data-q="002175.sz 东方智造 深市 机械 上涨" data-change="0.10041841004184081" data-volume="1.077151898936358">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="机械" data-q="002175.sz 东方智造 深市 机械 上涨" data-change="0.10041841004184081" data-volume="1.077151898936358">
         <td class="code">002175.SZ</td>
         <td class="name">东方智造</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.10041841004184081">10.0%</td>
-        <td class="num" data-sort="0.10041841004184081">10.0%</td>
+        <td class="num" data-sort="0.10008752768273288">10.0%</td>
         <td class="num" data-sort="-0.40632054176072235">-40.6%</td>
         <td class="num" data-sort="0.4775280898876402">47.8%</td>
         <td class="num" data-sort="-210.3302764892578">-210.3</td>
@@ -1148,12 +1119,12 @@
         <td>深市</td>
         <td class="industry">机械</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="环保Ⅱ" data-q="002210.sz 飞马国际 深市 环保ⅱ 上涨" data-change="0.1004016064257029" data-volume="0.22264880203554882">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="环保Ⅱ" data-q="002210.sz 飞马国际 深市 环保ⅱ 上涨" data-change="0.1004016064257029" data-volume="0.22264880203554882">
         <td class="code">002210.SZ</td>
         <td class="name">飞马国际</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.1004016064257029">10.0%</td>
-        <td class="num" data-sort="0.1004016064257029">10.0%</td>
+        <td class="num" data-sort="0.10007072406659502">10.0%</td>
         <td class="num" data-sort="-0.23888888888888893">-23.9%</td>
         <td class="num" data-sort="0.8145695364238412">81.5%</td>
         <td class="num" data-sort="262.4143371582031">262.4</td>
@@ -1163,12 +1134,12 @@
         <td>深市</td>
         <td class="industry">环保Ⅱ</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="硬件设备" data-q="600707.sh 彩虹股份 沪市 硬件设备 上涨" data-change="0.10037174721189607" data-volume="-0.0054331888023103625">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="硬件设备" data-q="600707.sh 彩虹股份 沪市 硬件设备 上涨" data-change="0.10037174721189607" data-volume="-0.0054331888023103625">
         <td class="code">600707.SH</td>
         <td class="name">彩虹股份</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.10037174721189607">10.0%</td>
-        <td class="num" data-sort="0.10037174721189607">10.0%</td>
+        <td class="num" data-sort="0.10004086485278817">10.0%</td>
         <td class="num" data-sort="0.36825885978428374">36.8%</td>
         <td class="num" data-sort="0.4924369747899162">49.2%</td>
         <td class="num" data-sort="85.14606475830078">85.1</td>
@@ -1178,12 +1149,12 @@
         <td>沪市</td>
         <td class="industry">硬件设备</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="硬件设备" data-q="002217.sz 合力泰 深市 硬件设备 上涨" data-change="0.10037174721189586" data-volume="-0.13250293218630615">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="硬件设备" data-q="002217.sz 合力泰 深市 硬件设备 上涨" data-change="0.10037174721189586" data-volume="-0.13250293218630615">
         <td class="code">002217.SZ</td>
         <td class="name">合力泰</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.10037174721189586">10.0%</td>
-        <td class="num" data-sort="0.10037174721189586">10.0%</td>
+        <td class="num" data-sort="0.10004086485278796">10.0%</td>
         <td class="num" data-sort="-0.02950819672131133">-3.0%</td>
         <td class="num" data-sort="1.3679999999999999">136.8%</td>
         <td class="num" data-sort="1137.3077392578125">1,137.3</td>
@@ -1193,12 +1164,12 @@
         <td>深市</td>
         <td class="industry">硬件设备</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="电气设备" data-q="002560.sz 通达股份 深市 电气设备 上涨" data-change="0.10035087719298247" data-volume="0.01753394632034344">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="电气设备" data-q="002560.sz 通达股份 深市 电气设备 上涨" data-change="0.10035087719298247" data-volume="0.01753394632034344">
         <td class="code">002560.SZ</td>
         <td class="name">通达股份</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.10035087719298247">10.0%</td>
-        <td class="num" data-sort="0.10035087719298247">10.0%</td>
+        <td class="num" data-sort="0.10001999483387447">10.0%</td>
         <td class="num" data-sort="0.5555555555555556">55.6%</td>
         <td class="num" data-sort="2.1022012748467276">210.2%</td>
         <td class="num" data-sort="51.07170486450195">51.1</td>
@@ -1208,12 +1179,12 @@
         <td>深市</td>
         <td class="industry">电气设备</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="电气设备" data-q="600152.sh 维科技术 沪市 电气设备 上涨" data-change="0.10030864197530862" data-volume="0.3035899317122215">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="电气设备" data-q="600152.sh 维科技术 沪市 电气设备 上涨" data-change="0.10030864197530862" data-volume="0.3035899317122215">
         <td class="code">600152.SH</td>
         <td class="name">维科技术</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.10030864197530862">10.0%</td>
-        <td class="num" data-sort="0.10030864197530862">10.0%</td>
+        <td class="num" data-sort="0.09997775961620059">10.0%</td>
         <td class="num" data-sort="0.9534246575342467">95.3%</td>
         <td class="num" data-sort="1.77431906614786">177.4%</td>
         <td class="num" data-sort="-78.02011108398438">-78.0</td>
@@ -1223,12 +1194,12 @@
         <td>沪市</td>
         <td class="industry">电气设备</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="传媒" data-q="600637.sh 东方明珠 沪市 传媒 上涨" data-change="0.10030395136778113" data-volume="0.1121318721348632">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="传媒" data-q="600637.sh 东方明珠 沪市 传媒 上涨" data-change="0.10030395136778113" data-volume="0.1121318721348632">
         <td class="code">600637.SH</td>
         <td class="name">东方明珠</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.10030395136778113">10.0%</td>
-        <td class="num" data-sort="0.10030395136778113">10.0%</td>
+        <td class="num" data-sort="0.0999730690086731">10.0%</td>
         <td class="num" data-sort="0.10253807106598976">10.3%</td>
         <td class="num" data-sort="0.7710113993715315">77.1%</td>
         <td class="num" data-sort="59.129798889160156">59.1</td>
@@ -1238,12 +1209,12 @@
         <td>沪市</td>
         <td class="industry">传媒</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="医药生物" data-q="000952.sz 广济药业 深市 医药生物 上涨" data-change="0.10029940119760469" data-volume="1.268959824348895">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="医药生物" data-q="000952.sz 广济药业 深市 医药生物 上涨" data-change="0.10029940119760469" data-volume="1.268959824348895">
         <td class="code">000952.SZ</td>
         <td class="name">广济药业</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.10029940119760469">10.0%</td>
-        <td class="num" data-sort="0.10029940119760469">10.0%</td>
+        <td class="num" data-sort="0.09996851883849667">10.0%</td>
         <td class="num" data-sort="0.045519203413940224">4.6%</td>
         <td class="num" data-sort="0.48185483870967727">48.2%</td>
         <td class="num" data-sort="-6.373579502105713">-6.4</td>
@@ -1253,12 +1224,12 @@
         <td>深市</td>
         <td class="industry">医药生物</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="硬件设备" data-q="603626.sh 科森科技 沪市 硬件设备 上涨" data-change="0.1002257336343117" data-volume="0.30332740567120897">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="硬件设备" data-q="603626.sh 科森科技 沪市 硬件设备 上涨" data-change="0.1002257336343117" data-volume="0.30332740567120897">
         <td class="code">603626.SH</td>
         <td class="name">科森科技</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.1002257336343117">10.0%</td>
-        <td class="num" data-sort="0.1002257336343117">10.0%</td>
+        <td class="num" data-sort="0.0998948512752038">10.0%</td>
         <td class="num" data-sort="0.16380133715377276">16.4%</td>
         <td class="num" data-sort="1.9792176039119806">197.9%</td>
         <td class="num" data-sort="105.81993865966797">105.8</td>
@@ -1268,12 +1239,12 @@
         <td>沪市</td>
         <td class="industry">硬件设备</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="可选消费零售" data-q="600693.sh 东百集团 沪市 可选消费零售 上涨" data-change="0.1001908396946564" data-volume="0.10152028657704215">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="可选消费零售" data-q="600693.sh 东百集团 沪市 可选消费零售 上涨" data-change="0.1001908396946564" data-volume="0.10152028657704215">
         <td class="code">600693.SH</td>
         <td class="name">东百集团</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.1001908396946564">10.0%</td>
-        <td class="num" data-sort="0.1001908396946564">10.0%</td>
+        <td class="num" data-sort="0.09985995733554853">10.0%</td>
         <td class="num" data-sort="-0.35297418630751975">-35.3%</td>
         <td class="num" data-sort="3.0466873501766516">304.7%</td>
         <td class="num" data-sort="195.9261932373047">195.9</td>
@@ -1283,12 +1254,12 @@
         <td>沪市</td>
         <td class="industry">可选消费零售</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="化工" data-q="603110.sh 东方材料 沪市 化工 上涨" data-change="0.10016787912702857" data-volume="1.3557329317695146">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="化工" data-q="603110.sh 东方材料 沪市 化工 上涨" data-change="0.10016787912702857" data-volume="1.3557329317695146">
         <td class="code">603110.SH</td>
         <td class="name">东方材料</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.10016787912702857">10.0%</td>
-        <td class="num" data-sort="0.10016787912702857">10.0%</td>
+        <td class="num" data-sort="0.0998369967679207">10.0%</td>
         <td class="num" data-sort="0.22415940224159403">22.4%</td>
         <td class="num" data-sort="1.188911693120939">118.9%</td>
         <td class="num" data-sort="888.436279296875">888.4</td>
@@ -1298,12 +1269,12 @@
         <td>沪市</td>
         <td class="industry">化工</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="家电Ⅱ" data-q="603579.sh 荣泰健康 沪市 家电ⅱ 上涨" data-change="0.10014947683109102" data-volume="0.5243183624482806">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="家电Ⅱ" data-q="603579.sh 荣泰健康 沪市 家电ⅱ 上涨" data-change="0.10014947683109102" data-volume="0.5243183624482806">
         <td class="code">603579.SH</td>
         <td class="name">荣泰健康</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.10014947683109102">10.0%</td>
-        <td class="num" data-sort="0.10014947683109102">10.0%</td>
+        <td class="num" data-sort="0.09981859447198316">10.0%</td>
         <td class="num" data-sort="-0.07265854682906348">-7.3%</td>
         <td class="num" data-sort="0.927143013208553">92.7%</td>
         <td class="num" data-sort="25.151124954223633">25.2</td>
@@ -1313,12 +1284,12 @@
         <td>沪市</td>
         <td class="industry">家电Ⅱ</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="造纸与包装" data-q="001211.sz 双枪科技 深市 造纸与包装 上涨" data-change="0.10014471780028954" data-volume="0.9147776694361283">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="造纸与包装" data-q="001211.sz 双枪科技 深市 造纸与包装 上涨" data-change="0.10014471780028954" data-volume="0.9147776694361283">
         <td class="code">001211.SZ</td>
         <td class="name">双枪科技</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.10014471780028954">10.0%</td>
-        <td class="num" data-sort="0.10014471780028954">10.0%</td>
+        <td class="num" data-sort="0.09981383544118151">10.0%</td>
         <td class="num" data-sort="0.43759455370650535">43.8%</td>
         <td class="num" data-sort="1.6849848645088423">168.5%</td>
         <td class="num" data-sort="120.51617431640625">120.5</td>
@@ -1328,12 +1299,12 @@
         <td>深市</td>
         <td class="industry">造纸与包装</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="化工" data-q="000565.sz 渝三峡a 深市 化工 上涨" data-change="0.1001371742112483" data-volume="1.4161247427458226">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="化工" data-q="000565.sz 渝三峡a 深市 化工 上涨" data-change="0.1001371742112483" data-volume="1.4161247427458226">
         <td class="code">000565.SZ</td>
         <td class="name">渝三峡A</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.1001371742112483">10.0%</td>
-        <td class="num" data-sort="0.1001371742112483">10.0%</td>
+        <td class="num" data-sort="0.0998062918521403">10.0%</td>
         <td class="num" data-sort="0.09863013698630141">9.9%</td>
         <td class="num" data-sort="0.845699778508977">84.6%</td>
         <td class="num" data-sort="125.57682037353516">125.6</td>
@@ -1343,12 +1314,12 @@
         <td>深市</td>
         <td class="industry">化工</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="交通运输" data-q="002120.sz 韵达股份 深市 交通运输 上涨" data-change="0.10013531799729382" data-volume="0.8553231539972246">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="交通运输" data-q="002120.sz 韵达股份 深市 交通运输 上涨" data-change="0.10013531799729382" data-volume="0.8553231539972246">
         <td class="code">002120.SZ</td>
         <td class="name">韵达股份</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.10013531799729382">10.0%</td>
-        <td class="num" data-sort="0.10013531799729382">10.0%</td>
+        <td class="num" data-sort="0.09980443563818599">10.0%</td>
         <td class="num" data-sort="0.20623145400593468">20.6%</td>
         <td class="num" data-sort="0.10307304610845947">10.3%</td>
         <td class="num" data-sort="17.62474250793457">17.6</td>
@@ -1358,12 +1329,12 @@
         <td>深市</td>
         <td class="industry">交通运输</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="有色金属" data-q="600338.sh 西藏珠峰 沪市 有色金属 上涨" data-change="0.10013291980505076" data-volume="0.04454902084172674">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="有色金属" data-q="600338.sh 西藏珠峰 沪市 有色金属 上涨" data-change="0.10013291980505076" data-volume="0.04454902084172674">
         <td class="code">600338.SH</td>
         <td class="name">西藏珠峰</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.10013291980505076">10.0%</td>
-        <td class="num" data-sort="0.10013291980505076">10.0%</td>
+        <td class="num" data-sort="0.09980203744594274">10.0%</td>
         <td class="num" data-sort="0.6509308510638295">65.1%</td>
         <td class="num" data-sort="1.769590478048643">177.0%</td>
         <td class="num" data-sort="40.11517333984375">40.1</td>
@@ -1373,12 +1344,12 @@
         <td>沪市</td>
         <td class="industry">有色金属</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="家电Ⅱ" data-q="603657.sh 春光科技 沪市 家电ⅱ 上涨" data-change="0.10011641443538995" data-volume="0.5950217234964426">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="家电Ⅱ" data-q="603657.sh 春光科技 沪市 家电ⅱ 上涨" data-change="0.10011641443538995" data-volume="0.5950217234964426">
         <td class="code">603657.SH</td>
         <td class="name">春光科技</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.10011641443538995">10.0%</td>
-        <td class="num" data-sort="0.10011641443538995">10.0%</td>
+        <td class="num" data-sort="0.09978553207628194">10.0%</td>
         <td class="num" data-sort="-0.04865771812080544">-4.9%</td>
         <td class="num" data-sort="1.7963306307412994">179.6%</td>
         <td class="num" data-sort="265.5841369628906">265.6</td>
@@ -1388,12 +1359,12 @@
         <td>沪市</td>
         <td class="industry">家电Ⅱ</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="硬件设备" data-q="605118.sh 力鼎光电 沪市 硬件设备 上涨" data-change="0.10011614401858304" data-volume="-0.04119327766987202">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="硬件设备" data-q="605118.sh 力鼎光电 沪市 硬件设备 上涨" data-change="0.10011614401858304" data-volume="-0.04119327766987202">
         <td class="code">605118.SH</td>
         <td class="name">力鼎光电</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.10011614401858304">10.0%</td>
-        <td class="num" data-sort="0.10011614401858304">10.0%</td>
+        <td class="num" data-sort="0.09978526165947521">10.0%</td>
         <td class="num" data-sort="0.5728993689804049">57.3%</td>
         <td class="num" data-sort="2.5291465947158462">252.9%</td>
         <td class="num" data-sort="74.90277862548828">74.9</td>
@@ -1403,12 +1374,12 @@
         <td>沪市</td>
         <td class="industry">硬件设备</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="家电Ⅱ" data-q="603726.sh 朗迪集团 沪市 家电ⅱ 上涨" data-change="0.10008936550491525" data-volume="0.7197353228223853">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="家电Ⅱ" data-q="603726.sh 朗迪集团 沪市 家电ⅱ 上涨" data-change="0.10008936550491525" data-volume="0.7197353228223853">
         <td class="code">603726.SH</td>
         <td class="name">朗迪集团</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.10008936550491525">10.0%</td>
-        <td class="num" data-sort="0.10008936550491525">10.0%</td>
+        <td class="num" data-sort="0.09975848314580738">10.0%</td>
         <td class="num" data-sort="0.017355371900826366">1.7%</td>
         <td class="num" data-sort="1.0348243118956728">103.5%</td>
         <td class="num" data-sort="25.77321434020996">25.8</td>
@@ -1418,12 +1389,12 @@
         <td>沪市</td>
         <td class="industry">家电Ⅱ</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="公用事业Ⅱ" data-q="603318.sh 水发燃气 沪市 公用事业ⅱ 上涨" data-change="0.10008779631255466" data-volume="0.7129669323608212">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="公用事业Ⅱ" data-q="603318.sh 水发燃气 沪市 公用事业ⅱ 上涨" data-change="0.10008779631255466" data-volume="0.7129669323608212">
         <td class="code">603318.SH</td>
         <td class="name">水发燃气</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.10008779631255466">10.0%</td>
-        <td class="num" data-sort="0.10008779631255466">10.0%</td>
+        <td class="num" data-sort="0.09975691395344667">10.0%</td>
         <td class="num" data-sort="0.870149253731343">87.0%</td>
         <td class="num" data-sort="1.248188221176005">124.8%</td>
         <td class="num" data-sort="-75.11235046386719">-75.1</td>
@@ -1433,12 +1404,12 @@
         <td>沪市</td>
         <td class="industry">公用事业Ⅱ</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="耐用消费品" data-q="603610.sh 麒盛科技 沪市 耐用消费品 上涨" data-change="0.10006583278472697" data-volume="0.7677500888780577">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="耐用消费品" data-q="603610.sh 麒盛科技 沪市 耐用消费品 上涨" data-change="0.10006583278472697" data-volume="0.7677500888780577">
         <td class="code">603610.SH</td>
         <td class="name">麒盛科技</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.10006583278472697">10.0%</td>
-        <td class="num" data-sort="0.10006583278472697">10.0%</td>
+        <td class="num" data-sort="0.0997349504256191">10.0%</td>
         <td class="num" data-sort="-0.12283464566929136">-12.3%</td>
         <td class="num" data-sort="1.1408733734260248">114.1%</td>
         <td class="num" data-sort="56.20779037475586">56.2</td>
@@ -1448,12 +1419,12 @@
         <td>沪市</td>
         <td class="industry">耐用消费品</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="耐用消费品" data-q="603272.sh 联翔股份 沪市 耐用消费品 上涨" data-change="0.10004526935264818" data-volume="-0.4681192264860584">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="耐用消费品" data-q="603272.sh 联翔股份 沪市 耐用消费品 上涨" data-change="0.10004526935264818" data-volume="-0.4681192264860584">
         <td class="code">603272.SH</td>
         <td class="name">联翔股份</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.10004526935264818">10.0%</td>
-        <td class="num" data-sort="0.10004526935264818">10.0%</td>
+        <td class="num" data-sort="0.0997143869935402">10.0%</td>
         <td class="num" data-sort="0.2083540527100944">20.8%</td>
         <td class="num" data-sort="1.8490151079199664">184.9%</td>
         <td class="num" data-sort="120.41957092285156">120.4</td>
@@ -1463,12 +1434,12 @@
         <td>沪市</td>
         <td class="industry">耐用消费品</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="汽车与零配件" data-q="603211.sh 晋拓股份 沪市 汽车与零配件 上涨" data-change="0.10004330879168459" data-volume="0.09650970081369703">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="汽车与零配件" data-q="603211.sh 晋拓股份 沪市 汽车与零配件 上涨" data-change="0.10004330879168459" data-volume="0.09650970081369703">
         <td class="code">603211.SH</td>
         <td class="name">晋拓股份</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.10004330879168459">10.0%</td>
-        <td class="num" data-sort="0.10004330879168459">10.0%</td>
+        <td class="num" data-sort="0.0997124264325766">10.0%</td>
         <td class="num" data-sort="0.12638580931263843">12.6%</td>
         <td class="num" data-sort="0.9321526166136296">93.2%</td>
         <td class="num" data-sort="100.30870819091797">100.3</td>
@@ -1478,12 +1449,12 @@
         <td>沪市</td>
         <td class="industry">汽车与零配件</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="建筑" data-q="605289.sh 罗曼股份 沪市 建筑 上涨" data-change="0.10003865481252415" data-volume="0.03945579041322289">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="建筑" data-q="605289.sh 罗曼股份 沪市 建筑 上涨" data-change="0.10003865481252415" data-volume="0.03945579041322289">
         <td class="code">605289.SH</td>
         <td class="name">罗曼股份</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.10003865481252415">10.0%</td>
-        <td class="num" data-sort="0.10003865481252415">10.0%</td>
+        <td class="num" data-sort="0.0997077724534161">10.0%</td>
         <td class="num" data-sort="1.1637773722627731">116.4%</td>
         <td class="num" data-sort="6.2009109311740875">620.1%</td>
         <td class="num" data-sort="285.2178955078125">285.2</td>
@@ -1493,12 +1464,12 @@
         <td>沪市</td>
         <td class="industry">建筑</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="机械" data-q="003036.sz 泰坦股份 深市 机械 上涨" data-change="0.1000297707651086" data-volume="-0.7697643853450236">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="机械" data-q="003036.sz 泰坦股份 深市 机械 上涨" data-change="0.1000297707651086" data-volume="-0.7697643853450236">
         <td class="code">003036.SZ</td>
         <td class="name">泰坦股份</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.1000297707651086">10.0%</td>
-        <td class="num" data-sort="0.1000297707651086">10.0%</td>
+        <td class="num" data-sort="0.09969888840600062">10.0%</td>
         <td class="num" data-sort="1.3869509043927648">138.7%</td>
         <td class="num" data-sort="3.771901481637985">377.2%</td>
         <td class="num" data-sort="163.4990234375">163.5</td>
@@ -1508,12 +1479,12 @@
         <td>深市</td>
         <td class="industry">机械</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="汽车与零配件" data-q="600418.sh 江淮汽车 沪市 汽车与零配件 上涨" data-change="0.10002247696111466" data-volume="1.02688085757429">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="汽车与零配件" data-q="600418.sh 江淮汽车 沪市 汽车与零配件 上涨" data-change="0.10002247696111466" data-volume="1.02688085757429">
         <td class="code">600418.SH</td>
         <td class="name">江淮汽车</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.10002247696111466">10.0%</td>
-        <td class="num" data-sort="0.10002247696111466">10.0%</td>
+        <td class="num" data-sort="0.09969159460200672">10.0%</td>
         <td class="num" data-sort="-0.011313131313131386">-1.1%</td>
         <td class="num" data-sort="1.2511499540018396">125.1%</td>
         <td class="num" data-sort="-64.79572296142578">-64.8</td>
@@ -1523,12 +1494,12 @@
         <td>沪市</td>
         <td class="industry">汽车与零配件</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="房地产Ⅱ" data-q="600246.sh 万通发展 沪市 房地产ⅱ 上涨" data-change="0.10000000000000014" data-volume="0.45063204878845564">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="房地产Ⅱ" data-q="600246.sh 万通发展 沪市 房地产ⅱ 上涨" data-change="0.10000000000000014" data-volume="0.45063204878845564">
         <td class="code">600246.SH</td>
         <td class="name">万通发展</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.10000000000000014">10.0%</td>
-        <td class="num" data-sort="0.10000000000000014">10.0%</td>
+        <td class="num" data-sort="0.09966911764089215">10.0%</td>
         <td class="num" data-sort="-0.13252032520325208">-13.3%</td>
         <td class="num" data-sort="0.7724252491694356">77.2%</td>
         <td class="num" data-sort="-57.458675384521484">-57.5</td>
@@ -1538,12 +1509,12 @@
         <td>沪市</td>
         <td class="industry">房地产Ⅱ</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="公用事业Ⅱ" data-q="600726.sh 华电能源 沪市 公用事业ⅱ 上涨" data-change="0.10000000000000013" data-volume="0.27212539832082117">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="公用事业Ⅱ" data-q="600726.sh 华电能源 沪市 公用事业ⅱ 上涨" data-change="0.10000000000000013" data-volume="0.27212539832082117">
         <td class="code">600726.SH</td>
         <td class="name">华电能源</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.10000000000000013">10.0%</td>
-        <td class="num" data-sort="0.10000000000000013">10.0%</td>
+        <td class="num" data-sort="0.09966911764089215">10.0%</td>
         <td class="num" data-sort="1.6694560669456067">166.9%</td>
         <td class="num" data-sort="2.206030150753769">220.6%</td>
         <td class="num" data-sort="155.3705291748047">155.4</td>
@@ -1553,12 +1524,12 @@
         <td>沪市</td>
         <td class="industry">公用事业Ⅱ</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="造纸与包装" data-q="600433.sh 冠豪高新 沪市 造纸与包装 上涨" data-change="0.1000000000000001" data-volume="0.3226488302464323">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="造纸与包装" data-q="600433.sh 冠豪高新 沪市 造纸与包装 上涨" data-change="0.1000000000000001" data-volume="0.3226488302464323">
         <td class="code">600433.SH</td>
         <td class="name">冠豪高新</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.1000000000000001">10.0%</td>
-        <td class="num" data-sort="0.1000000000000001">10.0%</td>
+        <td class="num" data-sort="0.09966911764089215">10.0%</td>
         <td class="num" data-sort="0.3414634146341464">34.1%</td>
         <td class="num" data-sort="0.6868905628475921">68.7%</td>
         <td class="num" data-sort="-61.98997116088867">-62.0</td>
@@ -1568,12 +1539,12 @@
         <td>沪市</td>
         <td class="industry">造纸与包装</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="电气设备" data-q="000925.sz 众合科技 深市 电气设备 上涨" data-change="0.10000000000000003" data-volume="-0.687272516759488">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="电气设备" data-q="000925.sz 众合科技 深市 电气设备 上涨" data-change="0.10000000000000003" data-volume="-0.687272516759488">
         <td class="code">000925.SZ</td>
         <td class="name">众合科技</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.10000000000000003">10.0%</td>
-        <td class="num" data-sort="0.10000000000000003">10.0%</td>
+        <td class="num" data-sort="0.09966911764089215">10.0%</td>
         <td class="num" data-sort="0.12694877505567925">12.7%</td>
         <td class="num" data-sort="0.8263832925430095">82.6%</td>
         <td class="num" data-sort="104.72854614257812">104.7</td>
@@ -1583,12 +1554,12 @@
         <td>深市</td>
         <td class="industry">电气设备</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="建筑" data-q="605287.sh 德才股份 沪市 建筑 上涨" data-change="0.10000000000000002" data-volume="0.5627399445154257">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="建筑" data-q="605287.sh 德才股份 沪市 建筑 上涨" data-change="0.10000000000000002" data-volume="0.5627399445154257">
         <td class="code">605287.SH</td>
         <td class="name">德才股份</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.10000000000000002">10.0%</td>
-        <td class="num" data-sort="0.10000000000000002">10.0%</td>
+        <td class="num" data-sort="0.09966911764089215">10.0%</td>
         <td class="num" data-sort="0.9012345679012346">90.1%</td>
         <td class="num" data-sort="3.614232209737828">361.4%</td>
         <td class="num" data-sort="-21.821029663085938">-21.8</td>
@@ -1598,12 +1569,12 @@
         <td>沪市</td>
         <td class="industry">建筑</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="硬件设备" data-q="603228.sh 景旺电子 沪市 硬件设备 上涨" data-change="0.1" data-volume="-0.2907194586631854">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="硬件设备" data-q="603228.sh 景旺电子 沪市 硬件设备 上涨" data-change="0.1" data-volume="-0.2907194586631854">
         <td class="code">603228.SH</td>
         <td class="name">景旺电子</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.1">10.0%</td>
-        <td class="num" data-sort="0.1">10.0%</td>
+        <td class="num" data-sort="0.09966911764089215">10.0%</td>
         <td class="num" data-sort="0.030920782596798313">3.1%</td>
         <td class="num" data-sort="2.377386004557658">237.7%</td>
         <td class="num" data-sort="65.15975189208984">65.2</td>
@@ -1613,12 +1584,12 @@
         <td>沪市</td>
         <td class="industry">硬件设备</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="建材Ⅱ" data-q="002785.sz 万里石 深市 建材ⅱ 上涨" data-change="0.09999999999999992" data-volume="0.8403024844395852">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="建材Ⅱ" data-q="002785.sz 万里石 深市 建材ⅱ 上涨" data-change="0.09999999999999992" data-volume="0.8403024844395852">
         <td class="code">002785.SZ</td>
         <td class="name">万里石</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.09999999999999992">10.0%</td>
-        <td class="num" data-sort="0.09999999999999992">10.0%</td>
+        <td class="num" data-sort="0.09966911764089191">10.0%</td>
         <td class="num" data-sort="0.26132502831257076">26.1%</td>
         <td class="num" data-sort="0.8021844660194175">80.2%</td>
         <td class="num" data-sort="-184.0130615234375">-184.0</td>
@@ -1628,12 +1599,12 @@
         <td>深市</td>
         <td class="industry">建材Ⅱ</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="公用事业Ⅱ" data-q="600396.sh 华电辽能 沪市 公用事业ⅱ 上涨" data-change="0.09999999999999985" data-volume="-0.18054375309851112">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="公用事业Ⅱ" data-q="600396.sh 华电辽能 沪市 公用事业ⅱ 上涨" data-change="0.09999999999999985" data-volume="-0.18054375309851112">
         <td class="code">600396.SH</td>
         <td class="name">华电辽能</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.09999999999999985">10.0%</td>
-        <td class="num" data-sort="0.09999999999999985">10.0%</td>
+        <td class="num" data-sort="0.09966911764089191">10.0%</td>
         <td class="num" data-sort="2.5508771929824556">255.1%</td>
         <td class="num" data-sort="3.458149779735682">345.8%</td>
         <td class="num" data-sort="233.49037170410156">233.5</td>
@@ -1643,12 +1614,12 @@
         <td>沪市</td>
         <td class="industry">公用事业Ⅱ</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="硬件设备" data-q="603773.sh 沃格光电 沪市 硬件设备 上涨" data-change="0.09999999999999981" data-volume="-0.4559117824196409">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="硬件设备" data-q="603773.sh 沃格光电 沪市 硬件设备 上涨" data-change="0.09999999999999981" data-volume="-0.4559117824196409">
         <td class="code">603773.SH</td>
         <td class="name">沃格光电</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.09999999999999981">10.0%</td>
-        <td class="num" data-sort="0.09999999999999981">10.0%</td>
+        <td class="num" data-sort="0.09966911764089191">10.0%</td>
         <td class="num" data-sort="0.8126059920859238">81.3%</td>
         <td class="num" data-sort="3.049330996809418">304.9%</td>
         <td class="num" data-sort="-77.73397827148438">-77.7</td>
@@ -1658,12 +1629,12 @@
         <td>沪市</td>
         <td class="industry">硬件设备</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="半导体" data-q="603501.sh 豪威集团 沪市 半导体 上涨" data-change="0.0999789739276701" data-volume="0.6903799064003575">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="半导体" data-q="603501.sh 豪威集团 沪市 半导体 上涨" data-change="0.0999789739276701" data-volume="0.6903799064003575">
         <td class="code">603501.SH</td>
         <td class="name">豪威集团</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.0999789739276701">10.0%</td>
-        <td class="num" data-sort="0.0999789739276701">10.0%</td>
+        <td class="num" data-sort="0.09964809156856225">10.0%</td>
         <td class="num" data-sort="-0.16894360603653702">-16.9%</td>
         <td class="num" data-sort="0.27447794931111535">27.4%</td>
         <td class="num" data-sort="32.618125915527344">32.6</td>
@@ -1673,12 +1644,12 @@
         <td>沪市</td>
         <td class="industry">半导体</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="机械" data-q="001332.sz 锡装股份 深市 机械 上涨" data-change="0.0999649859943979" data-volume="0.17101490725023138">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="机械" data-q="001332.sz 锡装股份 深市 机械 上涨" data-change="0.0999649859943979" data-volume="0.17101490725023138">
         <td class="code">001332.SZ</td>
         <td class="name">锡装股份</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.0999649859943979">10.0%</td>
-        <td class="num" data-sort="0.0999649859943979">10.0%</td>
+        <td class="num" data-sort="0.09963410363528992">10.0%</td>
         <td class="num" data-sort="0.11817049297027961">11.8%</td>
         <td class="num" data-sort="1.4459201506360357">144.6%</td>
         <td class="num" data-sort="25.502504348754883">25.5</td>
@@ -1688,12 +1659,12 @@
         <td>深市</td>
         <td class="industry">机械</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="硬件设备" data-q="002902.sz 铭普光磁 深市 硬件设备 上涨" data-change="0.09996155324875038" data-volume="-0.5182875336209366">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="硬件设备" data-q="002902.sz 铭普光磁 深市 硬件设备 上涨" data-change="0.09996155324875038" data-volume="-0.5182875336209366">
         <td class="code">002902.SZ</td>
         <td class="name">铭普光磁</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.09996155324875038">10.0%</td>
-        <td class="num" data-sort="0.09996155324875038">10.0%</td>
+        <td class="num" data-sort="0.09963067088964239">10.0%</td>
         <td class="num" data-sort="0.260907888937858">26.1%</td>
         <td class="num" data-sort="0.6780058651026392">67.8%</td>
         <td class="num" data-sort="-30.058618545532227">-30.1</td>
@@ -1703,12 +1674,12 @@
         <td>深市</td>
         <td class="industry">硬件设备</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="硬件设备" data-q="002134.sz 天津普林 深市 硬件设备 上涨" data-change="0.09995596653456622" data-volume="0.8405956840622633">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="硬件设备" data-q="002134.sz 天津普林 深市 硬件设备 上涨" data-change="0.09995596653456622" data-volume="0.8405956840622633">
         <td class="code">002134.SZ</td>
         <td class="name">天津普林</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.09995596653456622">10.0%</td>
-        <td class="num" data-sort="0.09995596653456622">10.0%</td>
+        <td class="num" data-sort="0.09962508417545823">10.0%</td>
         <td class="num" data-sort="-0.06756252332960044">-6.8%</td>
         <td class="num" data-sort="2.198463508322664">219.8%</td>
         <td class="num" data-sort="388.7441101074219">388.7</td>
@@ -1718,12 +1689,12 @@
         <td>深市</td>
         <td class="industry">硬件设备</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="硬件设备" data-q="002484.sz 江海股份 深市 硬件设备 上涨" data-change="0.09994155464640558" data-volume="0.1393572531280387">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="硬件设备" data-q="002484.sz 江海股份 深市 硬件设备 上涨" data-change="0.09994155464640558" data-volume="0.1393572531280387">
         <td class="code">002484.SZ</td>
         <td class="name">江海股份</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.09994155464640558">10.0%</td>
-        <td class="num" data-sort="0.09994155464640558">10.0%</td>
+        <td class="num" data-sort="0.09961067228729759">10.0%</td>
         <td class="num" data-sort="0.26734006734006743">26.7%</td>
         <td class="num" data-sort="2.0877619919778403">208.8%</td>
         <td class="num" data-sort="46.763912200927734">46.8</td>
@@ -1733,12 +1704,12 @@
         <td>深市</td>
         <td class="industry">硬件设备</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="家电Ⅱ" data-q="603486.sh 科沃斯 沪市 家电ⅱ 上涨" data-change="0.09993510707332903" data-volume="0.6763867723566834">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="家电Ⅱ" data-q="603486.sh 科沃斯 沪市 家电ⅱ 上涨" data-change="0.09993510707332903" data-volume="0.6763867723566834">
         <td class="code">603486.SH</td>
         <td class="name">科沃斯</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.09993510707332903">10.0%</td>
-        <td class="num" data-sort="0.09993510707332903">10.0%</td>
+        <td class="num" data-sort="0.09960422471422105">10.0%</td>
         <td class="num" data-sort="-0.15964303420922166">-16.0%</td>
         <td class="num" data-sort="0.6225009155917216">62.3%</td>
         <td class="num" data-sort="23.24730682373047">23.2</td>
@@ -1748,12 +1719,12 @@
         <td>沪市</td>
         <td class="industry">家电Ⅱ</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="建材Ⅱ" data-q="605006.sh 山东玻纤 沪市 建材ⅱ 上涨" data-change="0.09990300678952466" data-volume="-0.476832567122051">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="建材Ⅱ" data-q="605006.sh 山东玻纤 沪市 建材ⅱ 上涨" data-change="0.09990300678952466" data-volume="-0.476832567122051">
         <td class="code">605006.SH</td>
         <td class="name">山东玻纤</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.09990300678952466">10.0%</td>
-        <td class="num" data-sort="0.09990300678952466">10.0%</td>
+        <td class="num" data-sort="0.09957212443041664">10.0%</td>
         <td class="num" data-sort="0.5534246575342465">55.3%</td>
         <td class="num" data-sort="1.7325301204819277">173.3%</td>
         <td class="num" data-sort="-506.5870056152344">-506.6</td>
@@ -1763,12 +1734,12 @@
         <td>沪市</td>
         <td class="industry">建材Ⅱ</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="机械" data-q="603095.sh 越剑智能 沪市 机械 上涨" data-change="0.09988452655889155" data-volume="0.8583099311971374">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="机械" data-q="603095.sh 越剑智能 沪市 机械 上涨" data-change="0.09988452655889155" data-volume="0.8583099311971374">
         <td class="code">603095.SH</td>
         <td class="name">越剑智能</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.09988452655889155">10.0%</td>
-        <td class="num" data-sort="0.09988452655889155">10.0%</td>
+        <td class="num" data-sort="0.09955364419978352">10.0%</td>
         <td class="num" data-sort="0.06782511210762343">6.8%</td>
         <td class="num" data-sort="1.0494905989457326">104.9%</td>
         <td class="num" data-sort="74.27372741699219">74.3</td>
@@ -1778,12 +1749,12 @@
         <td>沪市</td>
         <td class="industry">机械</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="硬件设备" data-q="000062.sz 深圳华强 深市 硬件设备 上涨" data-change="0.09988351776354105" data-volume="0.16547775478222704">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="硬件设备" data-q="000062.sz 深圳华强 深市 硬件设备 上涨" data-change="0.09988351776354105" data-volume="0.16547775478222704">
         <td class="code">000062.SZ</td>
         <td class="name">深圳华强</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.09988351776354105">10.0%</td>
-        <td class="num" data-sort="0.09988351776354105">10.0%</td>
+        <td class="num" data-sort="0.09955263540443315">10.0%</td>
         <td class="num" data-sort="0.5341186027619822">53.4%</td>
         <td class="num" data-sort="0.2239496416504536">22.4%</td>
         <td class="num" data-sort="85.33306884765625">85.3</td>
@@ -1793,12 +1764,12 @@
         <td>深市</td>
         <td class="industry">硬件设备</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="化工" data-q="603931.sh 格林达 沪市 化工 上涨" data-change="0.09987236758136564" data-volume="0.21567430733053383">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="化工" data-q="603931.sh 格林达 沪市 化工 上涨" data-change="0.09987236758136564" data-volume="0.21567430733053383">
         <td class="code">603931.SH</td>
         <td class="name">格林达</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.09987236758136564">10.0%</td>
-        <td class="num" data-sort="0.09987236758136564">10.0%</td>
+        <td class="num" data-sort="0.09954148522225781">10.0%</td>
         <td class="num" data-sort="0.09151361621279296">9.2%</td>
         <td class="num" data-sort="1.0501935903302746">105.0%</td>
         <td class="num" data-sort="57.31941223144531">57.3</td>
@@ -1808,12 +1779,12 @@
         <td>沪市</td>
         <td class="industry">化工</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="公用事业Ⅱ" data-q="000593.sz 德龙汇能 深市 公用事业ⅱ 上涨" data-change="0.09985734664764616" data-volume="-0.32415857238513757">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="公用事业Ⅱ" data-q="000593.sz 德龙汇能 深市 公用事业ⅱ 上涨" data-change="0.09985734664764616" data-volume="-0.32415857238513757">
         <td class="code">000593.SZ</td>
         <td class="name">德龙汇能</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.09985734664764616">10.0%</td>
-        <td class="num" data-sort="0.09985734664764616">10.0%</td>
+        <td class="num" data-sort="0.09952646428853829">10.0%</td>
         <td class="num" data-sort="1.0651785714285715">106.5%</td>
         <td class="num" data-sort="4.072368421052632">407.2%</td>
         <td class="num" data-sort="262.075439453125">262.1</td>
@@ -1823,12 +1794,12 @@
         <td>深市</td>
         <td class="industry">公用事业Ⅱ</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="化工" data-q="603125.sh 常青科技 沪市 化工 上涨" data-change="0.09984639016897078" data-volume="0.42723104836656356">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="化工" data-q="603125.sh 常青科技 沪市 化工 上涨" data-change="0.09984639016897078" data-volume="0.42723104836656356">
         <td class="code">603125.SH</td>
         <td class="name">常青科技</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.09984639016897078">10.0%</td>
-        <td class="num" data-sort="0.09984639016897078">10.0%</td>
+        <td class="num" data-sort="0.09951550780986285">10.0%</td>
         <td class="num" data-sort="0.2725118483412323">27.3%</td>
         <td class="num" data-sort="1.1088227508845594">110.9%</td>
         <td class="num" data-sort="42.61601257324219">42.6</td>
@@ -1838,12 +1809,12 @@
         <td>沪市</td>
         <td class="industry">化工</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="传媒" data-q="002115.sz 三维通信 深市 传媒 上涨" data-change="0.0998349834983498" data-volume="0.13442287393354468">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="传媒" data-q="002115.sz 三维通信 深市 传媒 上涨" data-change="0.0998349834983498" data-volume="0.13442287393354468">
         <td class="code">002115.SZ</td>
         <td class="name">三维通信</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.0998349834983498">10.0%</td>
-        <td class="num" data-sort="0.0998349834983498">10.0%</td>
+        <td class="num" data-sort="0.09950410113924191">10.0%</td>
         <td class="num" data-sort="0.046310832025117765">4.6%</td>
         <td class="num" data-sort="1.910480349344978">191.0%</td>
         <td class="num" data-sort="1521.21826171875">1,521.2</td>
@@ -1853,12 +1824,12 @@
         <td>深市</td>
         <td class="industry">传媒</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="硬件设备" data-q="002741.sz 光华科技 深市 硬件设备 上涨" data-change="0.09980237154150215" data-volume="0.5459546202438006">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="硬件设备" data-q="002741.sz 光华科技 深市 硬件设备 上涨" data-change="0.09980237154150215" data-volume="0.5459546202438006">
         <td class="code">002741.SZ</td>
         <td class="name">光华科技</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.09980237154150215">10.0%</td>
-        <td class="num" data-sort="0.09980237154150215">10.0%</td>
+        <td class="num" data-sort="0.09947148918239422">9.9%</td>
         <td class="num" data-sort="0.10967098703888345">11.0%</td>
         <td class="num" data-sort="1.0036003600360037">100.4%</td>
         <td class="num" data-sort="86.3785629272461">86.4</td>
@@ -1868,12 +1839,12 @@
         <td>深市</td>
         <td class="industry">硬件设备</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="纺织服装Ⅱ" data-q="002029.sz 七匹狼 深市 纺织服装ⅱ 上涨" data-change="0.09980237154150207" data-volume="0.4113289452771318">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="纺织服装Ⅱ" data-q="002029.sz 七匹狼 深市 纺织服装ⅱ 上涨" data-change="0.09980237154150207" data-volume="0.4113289452771318">
         <td class="code">002029.SZ</td>
         <td class="name">七匹狼</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.09980237154150207">10.0%</td>
-        <td class="num" data-sort="0.09980237154150207">10.0%</td>
+        <td class="num" data-sort="0.09947148918239401">9.9%</td>
         <td class="num" data-sort="0.009066183136899442">0.9%</td>
         <td class="num" data-sort="1.2731631175466642">127.3%</td>
         <td class="num" data-sort="33.68215560913086">33.7</td>
@@ -1883,12 +1854,12 @@
         <td>深市</td>
         <td class="industry">纺织服装Ⅱ</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="传媒" data-q="002181.sz 粤传媒 深市 传媒 上涨" data-change="0.09969325153374245" data-volume="0.03598228131751546">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="传媒" data-q="002181.sz 粤传媒 深市 传媒 上涨" data-change="0.09969325153374245" data-volume="0.03598228131751546">
         <td class="code">002181.SZ</td>
         <td class="name">粤传媒</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.09969325153374245">10.0%</td>
-        <td class="num" data-sort="0.09969325153374245">10.0%</td>
+        <td class="num" data-sort="0.09936236917463459">9.9%</td>
         <td class="num" data-sort="0.6635730858468678">66.4%</td>
         <td class="num" data-sort="3.414994009195394">341.5%</td>
         <td class="num" data-sort="180.82025146484375">180.8</td>
@@ -1898,12 +1869,12 @@
         <td>深市</td>
         <td class="industry">传媒</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="有色金属" data-q="688456.sh 有研粉材 沪市 有色金属 上涨" data-change="0.09969272789347908" data-volume="1.0599568109756516">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="有色金属" data-q="688456.sh 有研粉材 沪市 有色金属 上涨" data-change="0.09969272789347908" data-volume="1.0599568109756516">
         <td class="code">688456.SH</td>
         <td class="name">有研粉材</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.09969272789347908">10.0%</td>
-        <td class="num" data-sort="0.09969272789347908">10.0%</td>
+        <td class="num" data-sort="0.0993618455343712">9.9%</td>
         <td class="num" data-sort="-0.17091377091377102">-17.1%</td>
         <td class="num" data-sort="1.4349053032188928">143.5%</td>
         <td class="num" data-sort="74.29234313964844">74.3</td>
@@ -1913,12 +1884,12 @@
         <td>沪市</td>
         <td class="industry">有色金属</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="纺织服装Ⅱ" data-q="600400.sh 红豆股份 沪市 纺织服装ⅱ 上涨" data-change="0.0995475113122174" data-volume="0.6074313046331692">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="纺织服装Ⅱ" data-q="600400.sh 红豆股份 沪市 纺织服装ⅱ 上涨" data-change="0.0995475113122174" data-volume="0.6074313046331692">
         <td class="code">600400.SH</td>
         <td class="name">红豆股份</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.0995475113122174">10.0%</td>
-        <td class="num" data-sort="0.0995475113122174">10.0%</td>
+        <td class="num" data-sort="0.09921662895310958">9.9%</td>
         <td class="num" data-sort="0.021008403361344685">2.1%</td>
         <td class="num" data-sort="0.17391304347826123">17.4%</td>
         <td class="num" data-sort="-12.100104331970215">-12.1</td>
@@ -1928,12 +1899,12 @@
         <td>沪市</td>
         <td class="industry">纺织服装Ⅱ</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="半导体" data-q="688702.sh 盛科通信-u 沪市 半导体 上涨" data-change="0.09593345656192233" data-volume="-0.03228356857041015">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="半导体" data-q="688702.sh 盛科通信-u 沪市 半导体 上涨" data-change="0.09593345656192233" data-volume="-0.03228356857041015">
         <td class="code">688702.SH</td>
         <td class="name">盛科通信-U</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.09593345656192233">9.6%</td>
-        <td class="num" data-sort="0.09593345656192233">9.6%</td>
+        <td class="num" data-sort="0.09560257420281436">9.6%</td>
         <td class="num" data-sort="1.0922436304608651">109.2%</td>
         <td class="num" data-sort="7.9833333333333325">798.3%</td>
         <td class="num" data-sort="-800.8134155273438">-800.8</td>
@@ -1943,12 +1914,12 @@
         <td>沪市</td>
         <td class="industry">半导体</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="半导体" data-q="688593.sh 新相微 沪市 半导体 上涨" data-change="0.09561880396546202" data-volume="0.6818943321449196">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="半导体" data-q="688593.sh 新相微 沪市 半导体 上涨" data-change="0.09561880396546202" data-volume="0.6818943321449196">
         <td class="code">688593.SH</td>
         <td class="name">新相微</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.09561880396546202">9.6%</td>
-        <td class="num" data-sort="0.09561880396546202">9.6%</td>
+        <td class="num" data-sort="0.09528792160635403">9.5%</td>
         <td class="num" data-sort="0.6977205153617441">69.8%</td>
         <td class="num" data-sort="2.503067484662576">250.3%</td>
         <td class="num" data-sort="1282.9671630859375">1,283.0</td>
@@ -1958,12 +1929,12 @@
         <td>沪市</td>
         <td class="industry">半导体</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="化工" data-q="300876.sz 蒙泰高新 深市 化工 上涨" data-change="0.09532572690467418" data-volume="1.1545625837002822">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="化工" data-q="300876.sz 蒙泰高新 深市 化工 上涨" data-change="0.09532572690467418" data-volume="1.1545625837002822">
         <td class="code">300876.SZ</td>
         <td class="name">蒙泰高新</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.09532572690467418">9.5%</td>
-        <td class="num" data-sort="0.09532572690467418">9.5%</td>
+        <td class="num" data-sort="0.09499484454556617">9.5%</td>
         <td class="num" data-sort="-0.1562234193365467">-15.6%</td>
         <td class="num" data-sort="1.1675163874726877">116.8%</td>
         <td class="num" data-sort="-54.46122741699219">-54.5</td>
@@ -1973,12 +1944,12 @@
         <td>深市</td>
         <td class="industry">化工</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="硬件设备" data-q="688183.sh 生益电子 沪市 硬件设备 上涨" data-change="0.0950825621484304" data-volume="0.2237297803435634">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="硬件设备" data-q="688183.sh 生益电子 沪市 硬件设备 上涨" data-change="0.0950825621484304" data-volume="0.2237297803435634">
         <td class="code">688183.SH</td>
         <td class="name">生益电子</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.0950825621484304">9.5%</td>
-        <td class="num" data-sort="0.0950825621484304">9.5%</td>
+        <td class="num" data-sort="0.09475167978932243">9.5%</td>
         <td class="num" data-sort="0.2613648239105444">26.1%</td>
         <td class="num" data-sort="6.180978958573568">618.1%</td>
         <td class="num" data-sort="68.15388488769531">68.2</td>
@@ -1988,12 +1959,12 @@
         <td>沪市</td>
         <td class="industry">硬件设备</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="企业服务" data-q="301027.sz 华蓝集团 深市 企业服务 上涨" data-change="0.09467951403435268" data-volume="0.5578872696149115">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="企业服务" data-q="301027.sz 华蓝集团 深市 企业服务 上涨" data-change="0.09467951403435268" data-volume="0.5578872696149115">
         <td class="code">301027.SZ</td>
         <td class="name">华蓝集团</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.09467951403435268">9.5%</td>
-        <td class="num" data-sort="0.09467951403435268">9.5%</td>
+        <td class="num" data-sort="0.09434863167524465">9.4%</td>
         <td class="num" data-sort="0.4193373166757197">41.9%</td>
         <td class="num" data-sort="2.4156862745098033">241.6%</td>
         <td class="num" data-sort="-112.29104614257812">-112.3</td>
@@ -2003,12 +1974,12 @@
         <td>深市</td>
         <td class="industry">企业服务</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="化工" data-q="000782.sz 恒申新材 深市 化工 上涨" data-change="0.09354838709677411" data-volume="1.1032591539014711">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="化工" data-q="000782.sz 恒申新材 深市 化工 上涨" data-change="0.09354838709677411" data-volume="1.1032591539014711">
         <td class="code">000782.SZ</td>
         <td class="name">恒申新材</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.09354838709677411">9.4%</td>
-        <td class="num" data-sort="0.09354838709677411">9.4%</td>
+        <td class="num" data-sort="0.09321750473766623">9.3%</td>
         <td class="num" data-sort="0.36693548387096775">36.7%</td>
         <td class="num" data-sort="0.6740740740740744">67.4%</td>
         <td class="num" data-sort="-30.343061447143555">-30.3</td>
@@ -2018,12 +1989,12 @@
         <td>深市</td>
         <td class="industry">化工</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="传媒" data-q="300031.sz 宝通科技 深市 传媒 上涨" data-change="0.09292248435243124" data-volume="1.2100592253099363">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="传媒" data-q="300031.sz 宝通科技 深市 传媒 上涨" data-change="0.09292248435243124" data-volume="1.2100592253099363">
         <td class="code">300031.SZ</td>
         <td class="name">宝通科技</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.09292248435243124">9.3%</td>
-        <td class="num" data-sort="0.09292248435243124">9.3%</td>
+        <td class="num" data-sort="0.09259160199332328">9.3%</td>
         <td class="num" data-sort="-0.0013198416190058904">-0.1%</td>
         <td class="num" data-sort="0.5941019921693282">59.4%</td>
         <td class="num" data-sort="52.50702667236328">52.5</td>
@@ -2033,12 +2004,12 @@
         <td>深市</td>
         <td class="industry">传媒</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="半导体" data-q="002371.sz 北方华创 深市 半导体 上涨" data-change="0.0921303152104929" data-volume="0.3490234681899269">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="半导体" data-q="002371.sz 北方华创 深市 半导体 上涨" data-change="0.0921303152104929" data-volume="0.3490234681899269">
         <td class="code">002371.SZ</td>
         <td class="name">北方华创</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.0921303152104929">9.2%</td>
-        <td class="num" data-sort="0.0921303152104929">9.2%</td>
+        <td class="num" data-sort="0.09179943285138492">9.2%</td>
         <td class="num" data-sort="0.1245316720397318">12.5%</td>
         <td class="num" data-sort="1.4611641313331227">146.1%</td>
         <td class="num" data-sort="67.76445007324219">67.8</td>
@@ -2048,12 +2019,12 @@
         <td>深市</td>
         <td class="industry">半导体</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="医药生物" data-q="300683.sz 海特生物 深市 医药生物 上涨" data-change="0.0919610231425089" data-volume="0.9285969384009798">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="医药生物" data-q="300683.sz 海特生物 深市 医药生物 上涨" data-change="0.0919610231425089" data-volume="0.9285969384009798">
         <td class="code">300683.SZ</td>
         <td class="name">海特生物</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.0919610231425089">9.2%</td>
-        <td class="num" data-sort="0.0919610231425089">9.2%</td>
+        <td class="num" data-sort="0.09163014078340102">9.2%</td>
         <td class="num" data-sort="0.29318427695636506">29.3%</td>
         <td class="num" data-sort="0.7630023129413879">76.3%</td>
         <td class="num" data-sort="-19.52675437927246">-19.5</td>
@@ -2063,12 +2034,12 @@
         <td>深市</td>
         <td class="industry">医药生物</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="硬件设备" data-q="301217.sz 铜冠铜箔 深市 硬件设备 上涨" data-change="0.09170212765957456" data-volume="0.18466193732179792">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="硬件设备" data-q="301217.sz 铜冠铜箔 深市 硬件设备 上涨" data-change="0.09170212765957456" data-volume="0.18466193732179792">
         <td class="code">301217.SZ</td>
         <td class="name">铜冠铜箔</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.09170212765957456">9.2%</td>
-        <td class="num" data-sort="0.09170212765957456">9.2%</td>
+        <td class="num" data-sort="0.0913712453004667">9.1%</td>
         <td class="num" data-sort="0.4967911318553093">49.7%</td>
         <td class="num" data-sort="4.92179771486074">492.2%</td>
         <td class="num" data-sort="678.9605102539062">679.0</td>
@@ -2078,12 +2049,12 @@
         <td>深市</td>
         <td class="industry">硬件设备</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="建筑" data-q="605178.sh 时空科技 沪市 建筑 上涨" data-change="0.09153846153846149" data-volume="-0.1871558421691979">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="建筑" data-q="605178.sh 时空科技 沪市 建筑 上涨" data-change="0.09153846153846149" data-volume="-0.1871558421691979">
         <td class="code">605178.SH</td>
         <td class="name">时空科技</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.09153846153846149">9.2%</td>
-        <td class="num" data-sort="0.09153846153846149">9.2%</td>
+        <td class="num" data-sort="0.09120757917935363">9.1%</td>
         <td class="num" data-sort="0.36995558988221666">37.0%</td>
         <td class="num" data-sort="3.7017892644135184">370.2%</td>
         <td class="num" data-sort="-28.763751983642578">-28.8</td>
@@ -2093,12 +2064,12 @@
         <td>沪市</td>
         <td class="industry">建筑</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="电气设备" data-q="301222.sz 浙江恒威 深市 电气设备 上涨" data-change="0.09137291280148432" data-volume="0.16703307126450628">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="电气设备" data-q="301222.sz 浙江恒威 深市 电气设备 上涨" data-change="0.09137291280148432" data-volume="0.16703307126450628">
         <td class="code">301222.SZ</td>
         <td class="name">浙江恒威</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.09137291280148432">9.1%</td>
-        <td class="num" data-sort="0.09137291280148432">9.1%</td>
+        <td class="num" data-sort="0.09104203044237646">9.1%</td>
         <td class="num" data-sort="0.650070126227209">65.0%</td>
         <td class="num" data-sort="1.4266794560031293">142.7%</td>
         <td class="num" data-sort="53.418235778808594">53.4</td>
@@ -2108,12 +2079,12 @@
         <td>深市</td>
         <td class="industry">电气设备</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="半导体" data-q="300672.sz 国科微 深市 半导体 上涨" data-change="0.09130982367758174" data-volume="0.5324118766981425">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="半导体" data-q="300672.sz 国科微 深市 半导体 上涨" data-change="0.09130982367758174" data-volume="0.5324118766981425">
         <td class="code">300672.SZ</td>
         <td class="name">国科微</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.09130982367758174">9.1%</td>
-        <td class="num" data-sort="0.09130982367758174">9.1%</td>
+        <td class="num" data-sort="0.09097894131847385">9.1%</td>
         <td class="num" data-sort="0.6102954841107602">61.0%</td>
         <td class="num" data-sort="3.1316866833977297">313.2%</td>
         <td class="num" data-sort="1089.3255615234375">1,089.3</td>
@@ -2123,12 +2094,12 @@
         <td>深市</td>
         <td class="industry">半导体</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="耐用消费品" data-q="002862.sz 实丰文化 深市 耐用消费品 上涨" data-change="0.09054441260744982" data-volume="0.9506419255776246">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="耐用消费品" data-q="002862.sz 实丰文化 深市 耐用消费品 上涨" data-change="0.09054441260744982" data-volume="0.9506419255776246">
         <td class="code">002862.SZ</td>
         <td class="name">实丰文化</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.09054441260744982">9.1%</td>
-        <td class="num" data-sort="0.09054441260744982">9.1%</td>
+        <td class="num" data-sort="0.09021353024834179">9.0%</td>
         <td class="num" data-sort="-0.02560163850486441">-2.6%</td>
         <td class="num" data-sort="0.8373606708703294">83.7%</td>
         <td class="num" data-sort="-18.772483825683594">-18.8</td>
@@ -2138,12 +2109,12 @@
         <td>深市</td>
         <td class="industry">耐用消费品</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="硬件设备" data-q="002475.sz 立讯精密 深市 硬件设备 上涨" data-change="0.09045454545454543" data-volume="0.23699638524410416">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="硬件设备" data-q="002475.sz 立讯精密 深市 硬件设备 上涨" data-change="0.09045454545454543" data-volume="0.23699638524410416">
         <td class="code">002475.SZ</td>
         <td class="name">立讯精密</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.09045454545454543">9.0%</td>
-        <td class="num" data-sort="0.09045454545454543">9.0%</td>
+        <td class="num" data-sort="0.0901236630954374">9.0%</td>
         <td class="num" data-sort="0.2730705754077616">27.3%</td>
         <td class="num" data-sort="0.99018317375326">99.0%</td>
         <td class="num" data-sort="31.58913230895996">31.6</td>
@@ -2153,12 +2124,12 @@
         <td>深市</td>
         <td class="industry">硬件设备</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="化工" data-q="301588.sz 美新科技 深市 化工 上涨" data-change="0.09044368600682585" data-volume="0.04616710265330237">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="化工" data-q="301588.sz 美新科技 深市 化工 上涨" data-change="0.09044368600682585" data-volume="0.04616710265330237">
         <td class="code">301588.SZ</td>
         <td class="name">美新科技</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.09044368600682585">9.0%</td>
-        <td class="num" data-sort="0.09044368600682585">9.0%</td>
+        <td class="num" data-sort="0.09011280364771791">9.0%</td>
         <td class="num" data-sort="0.7583929554210234">75.8%</td>
         <td class="num" data-sort="0.8599295215126791">86.0%</td>
         <td class="num" data-sort="83.55146026611328">83.6</td>
@@ -2168,12 +2139,12 @@
         <td>深市</td>
         <td class="industry">化工</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="汽车与零配件" data-q="603655.sh 朗博科技 沪市 汽车与零配件 上涨" data-change="0.09006734006734" data-volume="0.5806477571708513">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="汽车与零配件" data-q="603655.sh 朗博科技 沪市 汽车与零配件 上涨" data-change="0.09006734006734" data-volume="0.5806477571708513">
         <td class="code">603655.SH</td>
         <td class="name">朗博科技</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.09006734006734">9.0%</td>
-        <td class="num" data-sort="0.09006734006734">9.0%</td>
+        <td class="num" data-sort="0.08973645770823202">9.0%</td>
         <td class="num" data-sort="0.23923444976076547">23.9%</td>
         <td class="num" data-sort="3.0270380902018585">302.7%</td>
         <td class="num" data-sort="133.2157745361328">133.2</td>
@@ -2183,12 +2154,12 @@
         <td>沪市</td>
         <td class="industry">汽车与零配件</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="半导体" data-q="688008.sh 澜起科技 沪市 半导体 上涨" data-change="0.08923547400611613" data-volume="0.246234214599252">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="半导体" data-q="688008.sh 澜起科技 沪市 半导体 上涨" data-change="0.08923547400611613" data-volume="0.246234214599252">
         <td class="code">688008.SH</td>
         <td class="name">澜起科技</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.08923547400611613">8.9%</td>
-        <td class="num" data-sort="0.08923547400611613">8.9%</td>
+        <td class="num" data-sort="0.08890459164700815">8.9%</td>
         <td class="num" data-sort="0.5117996604414261">51.2%</td>
         <td class="num" data-sort="2.695740767763106">269.6%</td>
         <td class="num" data-sort="97.3629150390625">97.4</td>
@@ -2198,12 +2169,12 @@
         <td>沪市</td>
         <td class="industry">半导体</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="建材Ⅱ" data-q="688398.sh 赛特新材 沪市 建材ⅱ 上涨" data-change="0.08857336037863452" data-volume="0.37302584240653025">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="建材Ⅱ" data-q="688398.sh 赛特新材 沪市 建材ⅱ 上涨" data-change="0.08857336037863452" data-volume="0.37302584240653025">
         <td class="code">688398.SH</td>
         <td class="name">赛特新材</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.08857336037863452">8.9%</td>
-        <td class="num" data-sort="0.08857336037863452">8.9%</td>
+        <td class="num" data-sort="0.08824247801952657">8.8%</td>
         <td class="num" data-sort="0.8941176470588239">89.4%</td>
         <td class="num" data-sort="1.8271747346585077">182.7%</td>
         <td class="num" data-sort="364.89630126953125">364.9</td>
@@ -2213,12 +2184,12 @@
         <td>沪市</td>
         <td class="industry">建材Ⅱ</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="半导体" data-q="688012.sh 中微公司 沪市 半导体 上涨" data-change="0.08853361370523849" data-volume="0.4855156326699297">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="半导体" data-q="688012.sh 中微公司 沪市 半导体 上涨" data-change="0.08853361370523849" data-volume="0.4855156326699297">
         <td class="code">688012.SH</td>
         <td class="name">中微公司</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.08853361370523849">8.9%</td>
-        <td class="num" data-sort="0.08853361370523849">8.9%</td>
+        <td class="num" data-sort="0.08820273134613066">8.8%</td>
         <td class="num" data-sort="0.29073775300674676">29.1%</td>
         <td class="num" data-sort="2.005883069308863">200.6%</td>
         <td class="num" data-sort="104.51535034179688">104.5</td>
@@ -2228,12 +2199,12 @@
         <td>沪市</td>
         <td class="industry">半导体</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="有色金属" data-q="688379.sh 华光新材 沪市 有色金属 上涨" data-change="0.08834679413219051" data-volume="0.1205154410195064">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="有色金属" data-q="688379.sh 华光新材 沪市 有色金属 上涨" data-change="0.08834679413219051" data-volume="0.1205154410195064">
         <td class="code">688379.SH</td>
         <td class="name">华光新材</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.08834679413219051">8.8%</td>
-        <td class="num" data-sort="0.08834679413219051">8.8%</td>
+        <td class="num" data-sort="0.08801591177308256">8.8%</td>
         <td class="num" data-sort="0.19923719578641474">19.9%</td>
         <td class="num" data-sort="3.7852902579592023">378.5%</td>
         <td class="num" data-sort="33.345333099365234">33.3</td>
@@ -2243,12 +2214,12 @@
         <td>沪市</td>
         <td class="industry">有色金属</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="硬件设备" data-q="300136.sz 信维通信 深市 硬件设备 上涨" data-change="0.08806888068880692" data-volume="0.05793837771079624">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="硬件设备" data-q="300136.sz 信维通信 深市 硬件设备 上涨" data-change="0.08806888068880692" data-volume="0.05793837771079624">
         <td class="code">300136.SZ</td>
         <td class="name">信维通信</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.08806888068880692">8.8%</td>
-        <td class="num" data-sort="0.08806888068880692">8.8%</td>
+        <td class="num" data-sort="0.08773799832969888">8.8%</td>
         <td class="num" data-sort="0.426774193548387">42.7%</td>
         <td class="num" data-sort="3.9586458805009657">395.9%</td>
         <td class="num" data-sort="116.27913665771484">116.3</td>
@@ -2258,12 +2229,12 @@
         <td>深市</td>
         <td class="industry">硬件设备</td>
       </tr>
-      <tr data-market="深市" data-reason="上涨" data-industry="硬件设备" data-q="300504.sz 天邑股份 深市 硬件设备 上涨" data-change="0.08711885500933397" data-volume="0.9389104311363949">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="硬件设备" data-q="300504.sz 天邑股份 深市 硬件设备 上涨" data-change="0.08711885500933397" data-volume="0.9389104311363949">
         <td class="code">300504.SZ</td>
         <td class="name">天邑股份</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.08711885500933397">8.7%</td>
-        <td class="num" data-sort="0.08711885500933397">8.7%</td>
+        <td class="num" data-sort="0.08678797265022607">8.7%</td>
         <td class="num" data-sort="0.17327065144392192">17.3%</td>
         <td class="num" data-sort="0.39203187250995986">39.2%</td>
         <td class="num" data-sort="-82.25627899169922">-82.3</td>
@@ -2273,12 +2244,12 @@
         <td>深市</td>
         <td class="industry">硬件设备</td>
       </tr>
-      <tr data-market="沪市" data-reason="上涨" data-industry="石油石化" data-q="603800.sh 洪田股份 沪市 石油石化 上涨" data-change="0.08535300316122227" data-volume="0.33091613085144767">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="石油石化" data-q="603800.sh 洪田股份 沪市 石油石化 上涨" data-change="0.08535300316122227" data-volume="0.33091613085144767">
         <td class="code">603800.SH</td>
         <td class="name">洪田股份</td>
         <td><span class="reason reason-上涨">上涨</span></td>
         <td class="num strong" data-sort="0.08535300316122227">8.5%</td>
-        <td class="num" data-sort="0.08535300316122227">8.5%</td>
+        <td class="num" data-sort="0.08502212080211423">8.5%</td>
         <td class="num" data-sort="0.05597703506253837">5.6%</td>
         <td class="num" data-sort="2.1861817280989695">218.6%</td>
         <td class="num" data-sort="113.60382843017578">113.6</td>
@@ -2288,12 +2259,12 @@
         <td>沪市</td>
         <td class="industry">石油石化</td>
       </tr>
-      <tr data-market="深市" data-reason="放量" data-industry="医药生物" data-q="300406.sz 九强生物 深市 医药生物 放量" data-change="0.08098891730605279" data-volume="1.8484693020109169">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="放量" data-industry="医药生物" data-q="300406.sz 九强生物 深市 医药生物 放量" data-change="0.08098891730605279" data-volume="1.8484693020109169">
         <td class="code">300406.SZ</td>
         <td class="name">九强生物</td>
         <td><span class="reason reason-放量">放量</span></td>
         <td class="num strong" data-sort="0.08098891730605279">8.1%</td>
-        <td class="num" data-sort="0.08098891730605279">8.1%</td>
+        <td class="num" data-sort="0.0806580349469448">8.1%</td>
         <td class="num" data-sort="-0.029839326702371882">-3.0%</td>
         <td class="num" data-sort="0.20862589208992469">20.9%</td>
         <td class="num" data-sort="35.0308723449707">35.0</td>
@@ -2303,12 +2274,12 @@
         <td>深市</td>
         <td class="industry">医药生物</td>
       </tr>
-      <tr data-market="深市" data-reason="放量" data-industry="传媒" data-q="002425.sz 凯撒文化 深市 传媒 放量" data-change="0.07523510971786834" data-volume="1.5855438106026307">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="放量" data-industry="传媒" data-q="002425.sz 凯撒文化 深市 传媒 放量" data-change="0.07523510971786834" data-volume="1.5855438106026307">
         <td class="code">002425.SZ</td>
         <td class="name">凯撒文化</td>
         <td><span class="reason reason-放量">放量</span></td>
         <td class="num strong" data-sort="0.07523510971786834">7.5%</td>
-        <td class="num" data-sort="0.07523510971786834">7.5%</td>
+        <td class="num" data-sort="0.07490422735876034">7.5%</td>
         <td class="num" data-sort="-0.031073446327683496">-3.1%</td>
         <td class="num" data-sort="0.511013215859031">51.1%</td>
         <td class="num" data-sort="-5.969738960266113">-6.0</td>
@@ -2318,12 +2289,12 @@
         <td>深市</td>
         <td class="industry">传媒</td>
       </tr>
-      <tr data-market="沪市" data-reason="放量" data-industry="耐用消费品" data-q="603600.sh 永艺股份 沪市 耐用消费品 放量" data-change="0.06781193490054248" data-volume="1.8132719282749479">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="放量" data-industry="耐用消费品" data-q="603600.sh 永艺股份 沪市 耐用消费品 放量" data-change="0.06781193490054248" data-volume="1.8132719282749479">
         <td class="code">603600.SH</td>
         <td class="name">永艺股份</td>
         <td><span class="reason reason-放量">放量</span></td>
         <td class="num strong" data-sort="0.06781193490054248">6.8%</td>
-        <td class="num" data-sort="0.06781193490054248">6.8%</td>
+        <td class="num" data-sort="0.06748105254143444">6.7%</td>
         <td class="num" data-sort="-0.005054759898904693">-0.5%</td>
         <td class="num" data-sort="0.2985894303204484">29.9%</td>
         <td class="num" data-sort="15.782209396362305">15.8</td>
@@ -2333,12 +2304,12 @@
         <td>沪市</td>
         <td class="industry">耐用消费品</td>
       </tr>
-      <tr data-market="沪市" data-reason="放量" data-industry="汽车与零配件" data-q="600148.sh 长春一东 沪市 汽车与零配件 放量" data-change="0.06204583566238118" data-volume="1.53933610821917">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="放量" data-industry="汽车与零配件" data-q="600148.sh 长春一东 沪市 汽车与零配件 放量" data-change="0.06204583566238118" data-volume="1.53933610821917">
         <td class="code">600148.SH</td>
         <td class="name">长春一东</td>
         <td><span class="reason reason-放量">放量</span></td>
         <td class="num strong" data-sort="0.06204583566238118">6.2%</td>
-        <td class="num" data-sort="0.06204583566238118">6.2%</td>
+        <td class="num" data-sort="0.06171495330327326">6.2%</td>
         <td class="num" data-sort="-0.029126213592232997">-2.9%</td>
         <td class="num" data-sort="0.25082290980908484">25.1%</td>
         <td class="num" data-sort="162.94361877441406">162.9</td>
@@ -2348,12 +2319,12 @@
         <td>沪市</td>
         <td class="industry">汽车与零配件</td>
       </tr>
-      <tr data-market="沪市" data-reason="放量" data-industry="电气设备" data-q="603109.sh 神驰机电 沪市 电气设备 放量" data-change="0.0486985726280438" data-volume="1.5769572640637821">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="放量" data-industry="电气设备" data-q="603109.sh 神驰机电 沪市 电气设备 放量" data-change="0.0486985726280438" data-volume="1.5769572640637821">
         <td class="code">603109.SH</td>
         <td class="name">神驰机电</td>
         <td><span class="reason reason-放量">放量</span></td>
         <td class="num strong" data-sort="0.0486985726280438">4.9%</td>
-        <td class="num" data-sort="0.0486985726280438">4.9%</td>
+        <td class="num" data-sort="0.04836769026893584">4.8%</td>
         <td class="num" data-sort="-0.031407522295463286">-3.1%</td>
         <td class="num" data-sort="0.9711056461079097">97.1%</td>
         <td class="num" data-sort="38.997711181640625">39.0</td>
@@ -2363,12 +2334,12 @@
         <td>沪市</td>
         <td class="industry">电气设备</td>
       </tr>
-      <tr data-market="沪市" data-reason="放量" data-industry="机械" data-q="600243.sh *st海华 沪市 机械 放量" data-change="0.03703703703703725" data-volume="1.8139781391008922">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="放量" data-industry="机械" data-q="600243.sh *st海华 沪市 机械 放量" data-change="0.03703703703703725" data-volume="1.8139781391008922">
         <td class="code">600243.SH</td>
         <td class="name">*ST海华</td>
         <td><span class="reason reason-放量">放量</span></td>
         <td class="num strong" data-sort="0.03703703703703725">3.7%</td>
-        <td class="num" data-sort="0.03703703703703725">3.7%</td>
+        <td class="num" data-sort="0.03670615467792926">3.7%</td>
         <td class="num" data-sort="-0.31320754716981114">-31.3%</td>
         <td class="num" data-sort="0.022471910112359605">2.2%</td>
         <td class="num" data-sort="-20.29461669921875">-20.3</td>
@@ -2378,12 +2349,12 @@
         <td>沪市</td>
         <td class="industry">机械</td>
       </tr>
-      <tr data-market="沪市" data-reason="放量" data-industry="机械" data-q="603066.sh 音飞储存 沪市 机械 放量" data-change="0.02248201438848919" data-volume="1.7363887152537734">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="放量" data-industry="机械" data-q="603066.sh 音飞储存 沪市 机械 放量" data-change="0.02248201438848919" data-volume="1.7363887152537734">
         <td class="code">603066.SH</td>
         <td class="name">音飞储存</td>
         <td><span class="reason reason-放量">放量</span></td>
         <td class="num strong" data-sort="0.02248201438848919">2.2%</td>
-        <td class="num" data-sort="0.02248201438848919">2.2%</td>
+        <td class="num" data-sort="0.022151132029381237">2.2%</td>
         <td class="num" data-sort="0.057674418604650945">5.8%</td>
         <td class="num" data-sort="0.2559219954373495">25.6%</td>
         <td class="num" data-sort="26.689105987548828">26.7</td>
@@ -2393,12 +2364,12 @@
         <td>沪市</td>
         <td class="industry">机械</td>
       </tr>
-      <tr data-market="沪市" data-reason="放量" data-industry="纺织服装Ⅱ" data-q="603365.sh 水星家纺 沪市 纺织服装ⅱ 放量" data-change="-0.0048140043763677766" data-volume="1.6926322374622629">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="放量" data-industry="纺织服装Ⅱ" data-q="603365.sh 水星家纺 沪市 纺织服装ⅱ 放量" data-change="-0.0048140043763677766" data-volume="1.6926322374622629">
         <td class="code">603365.SH</td>
         <td class="name">水星家纺</td>
         <td><span class="reason reason-放量">放量</span></td>
         <td class="num strong" data-sort="-0.0048140043763677766">-0.5%</td>
-        <td class="num" data-sort="-0.0048140043763677766">-0.5%</td>
+        <td class="num" data-sort="-0.005144886735475751">-0.5%</td>
         <td class="num" data-sort="0.0913997040602963">9.1%</td>
         <td class="num" data-sort="1.124781059990883">112.5%</td>
         <td class="num" data-sort="14.139232635498047">14.1</td>
@@ -2408,12 +2379,12 @@
         <td>沪市</td>
         <td class="industry">纺织服装Ⅱ</td>
       </tr>
-      <tr data-market="沪市" data-reason="放量" data-industry="汽车与零配件" data-q="603982.sh 泉峰汽车 沪市 汽车与零配件 放量" data-change="-0.039743589743589706" data-volume="1.5616155244947136">
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="放量" data-industry="汽车与零配件" data-q="603982.sh 泉峰汽车 沪市 汽车与零配件 放量" data-change="-0.039743589743589706" data-volume="1.5616155244947136">
         <td class="code">603982.SH</td>
         <td class="name">泉峰汽车</td>
         <td><span class="reason reason-放量">放量</span></td>
         <td class="num strong" data-sort="-0.039743589743589706">-4.0%</td>
-        <td class="num" data-sort="-0.039743589743589706">-4.0%</td>
+        <td class="num" data-sort="-0.04007447210269765">-4.0%</td>
         <td class="num" data-sort="-0.10513739545997591">-10.5%</td>
         <td class="num" data-sort="0.03453038674033149">3.5%</td>
         <td class="num" data-sort="-7.992248058319092">-8.0</td>
@@ -2423,12 +2394,12 @@
         <td>沪市</td>
         <td class="industry">汽车与零配件</td>
       </tr>
-      <tr data-market="深市" data-reason="放量" data-industry="硬件设备" data-q="002808.sz *st恒久 深市 硬件设备 放量" data-change="-0.048991354466858865" data-volume="2.4466850131077655">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="放量" data-industry="硬件设备" data-q="002808.sz *st恒久 深市 硬件设备 放量" data-change="-0.048991354466858865" data-volume="2.4466850131077655">
         <td class="code">002808.SZ</td>
         <td class="name">*ST恒久</td>
         <td><span class="reason reason-放量">放量</span></td>
         <td class="num strong" data-sort="-0.048991354466858865">-4.9%</td>
-        <td class="num" data-sort="-0.048991354466858865">-4.9%</td>
+        <td class="num" data-sort="-0.04932223682596682">-4.9%</td>
         <td class="num" data-sort="-0.34262948207171307">-34.3%</td>
         <td class="num" data-sort="0.6836734693877551">68.4%</td>
         <td class="num" data-sort="-16.214452743530273">-16.2</td>
@@ -2438,12 +2409,12 @@
         <td>深市</td>
         <td class="industry">硬件设备</td>
       </tr>
-      <tr data-market="深市" data-reason="放量" data-industry="软件服务" data-q="300605.sz 恒锋信息 深市 软件服务 放量" data-change="-0.05920577617328525" data-volume="1.5921859521435615">
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="放量" data-industry="软件服务" data-q="300605.sz 恒锋信息 深市 软件服务 放量" data-change="-0.05920577617328525" data-volume="1.5921859521435615">
         <td class="code">300605.SZ</td>
         <td class="name">恒锋信息</td>
         <td><span class="reason reason-放量">放量</span></td>
         <td class="num strong" data-sort="-0.05920577617328525">-5.9%</td>
-        <td class="num" data-sort="-0.05920577617328525">-5.9%</td>
+        <td class="num" data-sort="-0.0595366585323932">-6.0%</td>
         <td class="num" data-sort="-0.16741214057507992">-16.7%</td>
         <td class="num" data-sort="0.2724609374999998">27.2%</td>
         <td class="num" data-sort="-41.5794563293457">-41.6</td>
@@ -2459,7 +2430,8 @@
   </div>
   <script>
     (() => {
-      const rows = Array.from(document.querySelectorAll('#movementTable tbody tr'));
+      const body = document.querySelector('#movementTable tbody');
+      const rows = Array.from(document.querySelectorAll('#movementTable tbody tr.movement-row'));
       const searchBox = document.getElementById('searchBox');
       const marketFilter = document.getElementById('marketFilter');
       const reasonFilter = document.getElementById('reasonFilter');
@@ -2471,43 +2443,68 @@
         const market = marketFilter.value;
         const reason = reasonFilter.value;
         const industry = industryFilter.value;
-        let count = 0;
-        rows.forEach((row) => {
-          const ok = (!query || row.dataset.q.includes(query))
-            && (market === '全部' || row.dataset.market === market)
-            && (reason === '全部' || row.dataset.reason === reason)
-            && (industry === '全部' || row.dataset.industry === industry);
-          row.hidden = !ok;
-          if (ok) count += 1;
-        });
-        visibleCount.textContent = String(count);
+        return rows.filter((row) => (!query || row.dataset.q.includes(query))
+          && (market === '全部' || row.dataset.market === market)
+          && (reason === '全部' || row.dataset.reason === reason)
+          && (industry === '全部' || row.dataset.industry === industry));
       };
-      filters.forEach((item) => item.addEventListener('input', applyFilters));
-
+      const compareRows = (index, type, direction) => (a, b) => {
+        const av = a.children[index].dataset.sort || a.children[index].textContent.trim();
+        const bv = b.children[index].dataset.sort || b.children[index].textContent.trim();
+        let result;
+        if (type === 'num') {
+          const an = Number(av);
+          const bn = Number(bv);
+          result = (Number.isFinite(an) ? an : -Infinity) - (Number.isFinite(bn) ? bn : -Infinity);
+        } else {
+          result = av.localeCompare(bv, 'zh-Hans-CN');
+        }
+        return direction === 'asc' ? result : -result;
+      };
+      const groupOrder = (a, b) => {
+        if (activeSort && activeSort.index === 2) {
+          const result = a.dataset.reason.localeCompare(b.dataset.reason, 'zh-Hans-CN');
+          return activeSort.direction === 'asc' ? result : -result;
+        }
+        const scoreDiff = Number(b.dataset.reasonScore || 0) - Number(a.dataset.reasonScore || 0);
+        if (scoreDiff) return scoreDiff;
+        return a.dataset.reason.localeCompare(b.dataset.reason, 'zh-Hans-CN');
+      };
+      const renderRows = () => {
+        const visibleRows = applyFilters();
+        const grouped = new Map();
+        visibleRows.forEach((row) => {
+          const key = row.dataset.reason || '未分类';
+          if (!grouped.has(key)) grouped.set(key, []);
+          grouped.get(key).push(row);
+        });
+        body.textContent = '';
+        const reasonKeys = Array.from(grouped.keys()).sort((a, b) => groupOrder(grouped.get(a)[0], grouped.get(b)[0]));
+        reasonKeys.forEach((key) => {
+          const groupRows = grouped.get(key);
+          if (activeSort) groupRows.sort(compareRows(activeSort.index, activeSort.type, activeSort.direction));
+          const group = document.createElement('tr');
+          group.className = 'group-row';
+          group.innerHTML = `<td colspan="13">${key} · ${groupRows.length}</td>`;
+          body.appendChild(group);
+          groupRows.forEach((row) => body.appendChild(row));
+        });
+        visibleCount.textContent = String(visibleRows.length);
+      };
       const table = document.getElementById('movementTable');
-      const body = table.tBodies[0];
       let activeSort = null;
       table.querySelectorAll('th').forEach((th, index) => {
         th.addEventListener('click', () => {
           const type = th.dataset.sortType || 'text';
           const direction = activeSort && activeSort.index === index && activeSort.direction === 'desc' ? 'asc' : 'desc';
-          activeSort = { index, direction };
-          const sorted = rows.slice().sort((a, b) => {
-            const av = a.children[index].dataset.sort || a.children[index].textContent.trim();
-            const bv = b.children[index].dataset.sort || b.children[index].textContent.trim();
-            let result;
-            if (type === 'num') {
-              const an = Number(av);
-              const bn = Number(bv);
-              result = (Number.isFinite(an) ? an : -Infinity) - (Number.isFinite(bn) ? bn : -Infinity);
-            } else {
-              result = av.localeCompare(bv, 'zh-Hans-CN');
-            }
-            return direction === 'asc' ? result : -result;
-          });
-          sorted.forEach((row) => body.appendChild(row));
+          activeSort = { index, type, direction };
+          table.querySelectorAll('th').forEach((item) => item.classList.remove('sorted-asc', 'sorted-desc'));
+          th.classList.add(direction === 'asc' ? 'sorted-asc' : 'sorted-desc');
+          renderRows();
         });
       });
+      filters.forEach((item) => item.addEventListener('input', renderRows));
+      renderRows();
     })();
   </script>
 </body>
