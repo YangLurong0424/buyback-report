@@ -100,6 +100,27 @@
     .cell-missing { color: var(--muted); font-size: 12px; }
     .source-link { color: var(--blue); text-decoration: none; font-weight: 600; display: inline-block; }
     .source-link:hover { text-decoration: underline; }
+    .hover-tooltip {
+      position: fixed;
+      z-index: 9999;
+      max-width: min(720px, calc(100vw - 32px));
+      padding: 8px 10px;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      background: #ffffff;
+      color: var(--text);
+      box-shadow: 0 10px 28px rgba(31,45,61,.18);
+      font-size: 13px;
+      line-height: 1.55;
+      white-space: normal;
+      text-align: left;
+      word-break: break-word;
+      pointer-events: none;
+      opacity: 0;
+      transform: translateY(4px);
+      transition: opacity .08s ease, transform .08s ease;
+    }
+    .hover-tooltip.visible { opacity: 1; transform: translateY(0); }
     .source-note { color: var(--muted); font-size: 12px; }
     .title-details { margin: 0 auto; }
     .title-details summary { list-style: none; cursor: pointer; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--purple); font-weight: 600; text-align: center; }
@@ -128,6 +149,52 @@
   </div>
   <script>
     (() => {
+      const setupTableTooltips = () => {
+        const targets = Array.from(document.querySelectorAll('td .cell-text[title], td .title-details summary[title]'));
+        if (!targets.length) return;
+        const tooltip = document.createElement('div');
+        tooltip.className = 'hover-tooltip';
+        document.body.appendChild(tooltip);
+        const fullText = (target) => target.dataset.tooltipTitle || target.getAttribute('title') || '';
+        const shouldShow = (target, text) => {
+          const visibleText = (target.textContent || '').trim();
+          return Boolean(text) && (target.scrollWidth > target.clientWidth + 1 || visibleText.includes('...') || visibleText.includes('…') || text !== visibleText);
+        };
+        const place = (target) => {
+          const rect = target.getBoundingClientRect();
+          const pad = 12;
+          const width = tooltip.offsetWidth;
+          const height = tooltip.offsetHeight;
+          let left = rect.left + rect.width / 2 - width / 2;
+          left = Math.max(pad, Math.min(left, window.innerWidth - width - pad));
+          let top = rect.bottom + 8;
+          if (top + height > window.innerHeight - pad) top = Math.max(pad, rect.top - height - 8);
+          tooltip.style.left = `${left}px`;
+          tooltip.style.top = `${top}px`;
+        };
+        const show = (target) => {
+          const text = fullText(target);
+          if (!shouldShow(target, text)) return;
+          target.dataset.tooltipTitle = text;
+          target.removeAttribute('title');
+          tooltip.textContent = text;
+          tooltip.classList.add('visible');
+          place(target);
+        };
+        const hide = (target) => {
+          tooltip.classList.remove('visible');
+          tooltip.textContent = '';
+          if (target.dataset.tooltipTitle) target.setAttribute('title', target.dataset.tooltipTitle);
+        };
+        targets.forEach((target) => {
+          target.addEventListener('mouseenter', () => show(target));
+          target.addEventListener('focus', () => show(target));
+          target.addEventListener('mousemove', () => { if (tooltip.classList.contains('visible')) place(target); });
+          target.addEventListener('mouseleave', () => hide(target));
+          target.addEventListener('blur', () => hide(target));
+        });
+      };
+      setupTableTooltips();
       const parseValue = (text, type) => {
         const value = (text || '').trim();
         if (type === 'number') {
