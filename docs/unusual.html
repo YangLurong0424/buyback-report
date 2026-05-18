@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>2026-05-14 异动标的</title>
+  <title>2026-05-18 异动标的</title>
   <style>
     :root {
       --bg: #f6f8fb;
@@ -209,25 +209,25 @@
   <div class="page">
     <header>
       <div>
-        <h1>2026-05-14 异动标的</h1>
-        <div class="meta">最近交易日 2026-05-14；工作簿保存 2026-05-14 19:04:34；生成 2026-05-14 23:34:35</div>
+        <h1>2026-05-18 异动标的</h1>
+        <div class="meta">最近交易日 2026-05-18；工作簿保存 2026-05-18 23:06:41；生成 2026-05-18 23:06:47</div>
         <div class="meta">涨幅阈值 9.5%；超额阈值 8.5%；成交阈值-5 1.5x；成交阈值-20 1.5x；PE阈值 25.0；PB阈值 2.5；YTD阈值 51.0%；924超额阈值 51.0%</div>
       </div>
-      <div class="refresh-note">Excel/Wind 实时刷新失败，已使用工作簿已保存的当日缓存。</div>
+      <div class="refresh-note">已自动打开 Excel/Wind 刷新公式并保存。</div>
     </header>
     <section class="status-strip" aria-label="异动统计">
-      <span class="status-chip blue">入选标的 <strong>23</strong></span>
-      <span class="status-chip gold">多原因标的 <strong>4</strong></span>
-      <span class="status-chip rose">平均涨跌幅 <strong>9.0%</strong></span>
-      <span class="status-chip rose">平均超额 <strong>10.6%</strong></span>
-      <span class="status-chip green">入选原因：上涨 16；上涨 / 放量 4；放量 3</span>
+      <span class="status-chip blue">入选标的 <strong>79</strong></span>
+      <span class="status-chip gold">多原因标的 <strong>8</strong></span>
+      <span class="status-chip rose">平均涨跌幅 <strong>5.7%</strong></span>
+      <span class="status-chip rose">平均超额 <strong>6.2%</strong></span>
+      <span class="status-chip green">入选原因：上涨 44；放量 27；上涨 / 放量 8</span>
     </section>
     <section class="controls">
       <input id="searchBox" type="search" placeholder="代码 / 简称 / 行业 / 原因">
-      <select id="marketFilter" aria-label="市场"><option value="全部">全部</option><option value="北交所">北交所</option><option value="沪市">沪市</option><option value="深市">深市</option></select>
+      <select id="marketFilter" aria-label="市场"><option value="全部">全部</option><option value="北交所">北交所</option><option value="沪市">沪市</option><option value="深市">深市</option><option value="港股">港股</option></select>
       <select id="reasonFilter" aria-label="入选原因"><option value="全部">全部</option><option value="上涨">上涨</option><option value="上涨 / 放量">上涨 / 放量</option><option value="放量">放量</option></select>
-      <select id="industryFilter" aria-label="行业"><option value="全部">全部</option><option value="公用事业Ⅱ">公用事业Ⅱ</option><option value="化工">化工</option><option value="可选消费零售">可选消费零售</option><option value="建材Ⅱ">建材Ⅱ</option><option value="建筑">建筑</option><option value="机械">机械</option><option value="煤炭Ⅱ">煤炭Ⅱ</option><option value="环保Ⅱ">环保Ⅱ</option><option value="电气设备">电气设备</option><option value="石油石化">石油石化</option><option value="耐用消费品">耐用消费品</option><option value="食品饮料">食品饮料</option></select>
-      <div class="visible-count"><strong id="visibleCount">23</strong> / 23</div>
+      <select id="industryFilter" aria-label="行业"><option value="全部">全部</option><option value="交通运输">交通运输</option><option value="企业服务">企业服务</option><option value="传媒">传媒</option><option value="公用事业Ⅱ">公用事业Ⅱ</option><option value="化工">化工</option><option value="医疗设备与服务">医疗设备与服务</option><option value="医药生物">医药生物</option><option value="可选消费零售">可选消费零售</option><option value="家电Ⅱ">家电Ⅱ</option><option value="建材Ⅱ">建材Ⅱ</option><option value="建筑">建筑</option><option value="房地产Ⅱ">房地产Ⅱ</option><option value="日常消费零售">日常消费零售</option><option value="机械">机械</option><option value="汽车与零配件">汽车与零配件</option><option value="消费者服务">消费者服务</option><option value="煤炭Ⅱ">煤炭Ⅱ</option><option value="环保Ⅱ">环保Ⅱ</option><option value="电气设备">电气设备</option><option value="石油石化">石油石化</option><option value="硬件设备">硬件设备</option><option value="纺织服装Ⅱ">纺织服装Ⅱ</option><option value="软件服务">软件服务</option><option value="造纸与包装">造纸与包装</option><option value="钢铁Ⅱ">钢铁Ⅱ</option><option value="非银金融">非银金融</option><option value="食品饮料">食品饮料</option></select>
+      <div class="visible-count"><strong id="visibleCount">79</strong> / 79</div>
     </section>
     <div class="table-wrap">
       <table id="movementTable">
@@ -249,350 +249,1190 @@
           </tr>
         </thead>
         <tbody>
-      <tr class="movement-row" data-reason-score="2" data-market="深市" data-reason="上涨 / 放量" data-industry="电气设备" data-q="300080.sz 易成新能 深市 电气设备 上涨 / 放量" data-change="0.1133333333333332" data-volume="1.8207149023247822">
-        <td class="code">300080.SZ</td>
-        <td class="name">易成新能</td>
+      <tr class="movement-row" data-reason-score="2" data-market="港股" data-reason="上涨 / 放量" data-industry="房地产Ⅱ" data-q="0199.hk 德祥地产 港股 房地产ⅱ 上涨 / 放量" data-change="0.24999999999999992" data-volume="2.0970258958667256">
+        <td class="code">0199.HK</td>
+        <td class="name">德祥地产</td>
         <td><span class="reason reason-上涨 reason-放量">上涨 / 放量</span></td>
-        <td class="num strong" data-sort="0.1133333333333332">11.3%</td>
-        <td class="num" data-sort="0.13008781012310533">13.0%</td>
-        <td class="num" data-sort="0.030864197530864113">3.1%</td>
-        <td class="num" data-sort="0.7517482517482518">75.2%</td>
-        <td class="num" data-sort="-12.639583587646484">-12.6</td>
-        <td class="num" data-sort="2.18386149633835">2.18</td>
-        <td class="num" data-sort="75.78512396694215">76%</td>
-        <td class="num" data-sort="93.85635984359999">93.9</td>
-        <td>深市</td>
-        <td class="industry">电气设备</td>
+        <td class="num strong" data-sort="0.24999999999999992">25.0%</td>
+        <td class="num" data-sort="0.25536444134505354">25.5%</td>
+        <td class="num" data-sort="0.23809523809523814">23.8%</td>
+        <td class="num" data-sort="2.421052631578948">242.1%</td>
+        <td class="num" data-sort="-3.296175718307495">-3.3</td>
+        <td class="num" data-sort="0.6890023936394215">0.69</td>
+        <td class="num" data-sort="99.673735725938">100%</td>
+        <td class="num" data-sort="12.370238184919682">12.4</td>
+        <td>港股</td>
+        <td class="industry">房地产Ⅱ</td>
       </tr>
-      <tr class="movement-row" data-reason-score="2" data-market="北交所" data-reason="上涨 / 放量" data-industry="食品饮料" data-q="920429.bj 康比特 北交所 食品饮料 上涨 / 放量" data-change="0.10342019543973961" data-volume="2.388459292355987">
-        <td class="code">920429.BJ</td>
-        <td class="name">康比特</td>
+      <tr class="movement-row" data-reason-score="2" data-market="港股" data-reason="上涨 / 放量" data-industry="造纸与包装" data-q="8191.hk 鸿伟亚洲 港股 造纸与包装 上涨 / 放量" data-change="0.21925133689839568" data-volume="1.5925845147219193">
+        <td class="code">8191.HK</td>
+        <td class="name">鸿伟亚洲</td>
         <td><span class="reason reason-上涨 reason-放量">上涨 / 放量</span></td>
-        <td class="num strong" data-sort="0.10342019543973961">10.3%</td>
-        <td class="num" data-sort="0.12017467222951161">12.0%</td>
-        <td class="num" data-sort="-0.11147540983606552">-11.1%</td>
-        <td class="num" data-sort="0.4416418803565971">44.2%</td>
-        <td class="num" data-sort="86.73690795898438">86.7</td>
-        <td class="num" data-sort="2.016814876937986">2.02</td>
-        <td class="num" data-sort="57.17761557177615">57%</td>
-        <td class="num" data-sort="16.866498">16.9</td>
-        <td>北交所</td>
-        <td class="industry">食品饮料</td>
+        <td class="num strong" data-sort="0.21925133689839568">21.9%</td>
+        <td class="num" data-sort="0.22461577824344922">22.5%</td>
+        <td class="num" data-sort="0.30285714285714294">30.3%</td>
+        <td class="num" data-sort="0.32558139534883734">32.6%</td>
+        <td class="num" data-sort="-0.12142433971166611">-0.1</td>
+        <td class="num" data-sort="0.25560084619361906">0.26</td>
+        <td class="num" data-sort="91.76182707993475">92%</td>
+        <td class="num" data-sort="0.14691362212091522">0.1</td>
+        <td>港股</td>
+        <td class="industry">造纸与包装</td>
       </tr>
-      <tr class="movement-row" data-reason-score="2" data-market="沪市" data-reason="上涨 / 放量" data-industry="电气设备" data-q="601908.sh 京运通 沪市 电气设备 上涨 / 放量" data-change="0.08353221957040562" data-volume="1.6233034095574568">
-        <td class="code">601908.SH</td>
-        <td class="name">京运通</td>
+      <tr class="movement-row" data-reason-score="2" data-market="港股" data-reason="上涨 / 放量" data-industry="建筑" data-q="1372.hk 中国碳中和 港股 建筑 上涨 / 放量" data-change="0.21649484536082464" data-volume="1.8438018286200295">
+        <td class="code">1372.HK</td>
+        <td class="name">中国碳中和</td>
         <td><span class="reason reason-上涨 reason-放量">上涨 / 放量</span></td>
-        <td class="num strong" data-sort="0.08353221957040562">8.4%</td>
-        <td class="num" data-sort="0.1002866963601776">10.0%</td>
-        <td class="num" data-sort="0.16112531969309463">16.1%</td>
-        <td class="num" data-sort="1.1314553990610334">113.1%</td>
-        <td class="num" data-sort="-7.125332355499268">-7.1</td>
-        <td class="num" data-sort="1.4806687123590891">1.48</td>
-        <td class="num" data-sort="70.99173553719008">71%</td>
-        <td class="num" data-sort="109.62296988940001">109.6</td>
-        <td>沪市</td>
-        <td class="industry">电气设备</td>
-      </tr>
-      <tr class="movement-row" data-reason-score="2" data-market="深市" data-reason="上涨 / 放量" data-industry="化工" data-q="300121.sz 阳谷华泰 深市 化工 上涨 / 放量" data-change="0.0764940239043825" data-volume="1.552380778562009">
-        <td class="code">300121.SZ</td>
-        <td class="name">阳谷华泰</td>
-        <td><span class="reason reason-上涨 reason-放量">上涨 / 放量</span></td>
-        <td class="num strong" data-sort="0.0764940239043825">7.6%</td>
-        <td class="num" data-sort="0.09324850069415458">9.3%</td>
-        <td class="num" data-sort="0.0705229793977813">7.1%</td>
-        <td class="num" data-sort="0.9848388757152857">98.5%</td>
-        <td class="num" data-sort="30.877674102783203">30.9</td>
-        <td class="num" data-sort="1.6744923920052253">1.67</td>
-        <td class="num" data-sort="42.561983471074385">43%</td>
-        <td class="num" data-sort="60.1514656057">60.2</td>
-        <td>深市</td>
-        <td class="industry">化工</td>
-      </tr>
-      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="食品饮料" data-q="300761.sz 立华股份 深市 食品饮料 上涨" data-change="0.11127237542331868" data-volume="0.9119841921786798">
-        <td class="code">300761.SZ</td>
-        <td class="name">立华股份</td>
-        <td><span class="reason reason-上涨">上涨</span></td>
-        <td class="num strong" data-sort="0.11127237542331868">11.1%</td>
-        <td class="num" data-sort="0.12802685221309074">12.8%</td>
-        <td class="num" data-sort="0.10698795180722896">10.7%</td>
-        <td class="num" data-sort="0.3557622921880803">35.6%</td>
-        <td class="num" data-sort="36.522369384765625">36.5</td>
-        <td class="num" data-sort="2.0256583543690145">2.03</td>
-        <td class="num" data-sort="49.75206611570248">50%</td>
-        <td class="num" data-sort="192.32083653770002">192.3</td>
-        <td>深市</td>
-        <td class="industry">食品饮料</td>
-      </tr>
-      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="石油石化" data-q="000159.sz 国际实业 深市 石油石化 上涨" data-change="0.1006389776357827" data-volume="1.0345793600351367">
-        <td class="code">000159.SZ</td>
-        <td class="name">国际实业</td>
-        <td><span class="reason reason-上涨">上涨</span></td>
-        <td class="num strong" data-sort="0.1006389776357827">10.1%</td>
-        <td class="num" data-sort="0.11739345442555482">11.7%</td>
-        <td class="num" data-sort="0.1920415224913492">19.2%</td>
-        <td class="num" data-sort="0.1483333333333332">14.8%</td>
-        <td class="num" data-sort="90.248291015625">90.2</td>
-        <td class="num" data-sort="1.606619240199822">1.61</td>
-        <td class="num" data-sort="85.04132231404958">85%</td>
-        <td class="num" data-sort="33.1192649177">33.1</td>
-        <td>深市</td>
-        <td class="industry">石油石化</td>
-      </tr>
-      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="食品饮料" data-q="002840.sz 华统股份 深市 食品饮料 上涨" data-change="0.10039370078740159" data-volume="-0.007000154167616568">
-        <td class="code">002840.SZ</td>
-        <td class="name">华统股份</td>
-        <td><span class="reason reason-上涨">上涨</span></td>
-        <td class="num strong" data-sort="0.10039370078740159">10.0%</td>
-        <td class="num" data-sort="0.11714817757717366">11.7%</td>
-        <td class="num" data-sort="0.16216216216216228">16.2%</td>
-        <td class="num" data-sort="0.13043478260869557">13.0%</td>
-        <td class="num" data-sort="-21.831039428710938">-21.8</td>
-        <td class="num" data-sort="2.4937695429335944">2.49</td>
-        <td class="num" data-sort="24.21487603305785">24%</td>
-        <td class="num" data-sort="89.6822027374">89.7</td>
-        <td>深市</td>
-        <td class="industry">食品饮料</td>
-      </tr>
-      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="公用事业Ⅱ" data-q="600578.sh 京能电力 沪市 公用事业ⅱ 上涨" data-change="0.1001727115716752" data-volume="1.1094457743909834">
-        <td class="code">600578.SH</td>
-        <td class="name">京能电力</td>
-        <td><span class="reason reason-上涨">上涨</span></td>
-        <td class="num strong" data-sort="0.1001727115716752">10.0%</td>
-        <td class="num" data-sort="0.11692718836144732">11.7%</td>
-        <td class="num" data-sort="0.24901960784313726">24.9%</td>
-        <td class="num" data-sort="1.0805685889680499">108.1%</td>
-        <td class="num" data-sort="11.952688217163086">12.0</td>
-        <td class="num" data-sort="1.6912699640096005">1.69</td>
-        <td class="num" data-sort="100.0">100%</td>
-        <td class="num" data-sort="426.4473586555">426.4</td>
-        <td>沪市</td>
-        <td class="industry">公用事业Ⅱ</td>
-      </tr>
-      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="公用事业Ⅱ" data-q="600509.sh 天富能源 沪市 公用事业ⅱ 上涨" data-change="0.10010649627263046" data-volume="0.2843537819124935">
-        <td class="code">600509.SH</td>
-        <td class="name">天富能源</td>
-        <td><span class="reason reason-上涨">上涨</span></td>
-        <td class="num strong" data-sort="0.10010649627263046">10.0%</td>
-        <td class="num" data-sort="0.11686097306240238">11.7%</td>
-        <td class="num" data-sort="0.2506053268765134">25.1%</td>
-        <td class="num" data-sort="1.0825280435597526">108.3%</td>
-        <td class="num" data-sort="63.19424819946289">63.2</td>
-        <td class="num" data-sort="1.826730967884817">1.83</td>
-        <td class="num" data-sort="100.0">100%</td>
-        <td class="num" data-sort="141.9752521431">142.0</td>
-        <td>沪市</td>
-        <td class="industry">公用事业Ⅱ</td>
-      </tr>
-      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="建材Ⅱ" data-q="600449.sh 宁夏建材 沪市 建材ⅱ 上涨" data-change="0.10007147962830609" data-volume="1.1965405642303635">
-        <td class="code">600449.SH</td>
-        <td class="name">宁夏建材</td>
-        <td><span class="reason reason-上涨">上涨</span></td>
-        <td class="num strong" data-sort="0.10007147962830609">10.0%</td>
-        <td class="num" data-sort="0.11682595641807801">11.7%</td>
-        <td class="num" data-sort="0.2451456310679614">24.5%</td>
-        <td class="num" data-sort="0.46448696409138424">46.4%</td>
-        <td class="num" data-sort="39.566925048828125">39.6</td>
-        <td class="num" data-sort="0.9986367335544238">1.00</td>
-        <td class="num" data-sort="75.04132231404958">75%</td>
-        <td class="num" data-sort="73.5920623638">73.6</td>
-        <td>沪市</td>
-        <td class="industry">建材Ⅱ</td>
-      </tr>
-      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="环保Ⅱ" data-q="002973.sz 侨银股份 深市 环保ⅱ 上涨" data-change="0.10000000000000009" data-volume="1.0501689870670496">
-        <td class="code">002973.SZ</td>
-        <td class="name">侨银股份</td>
-        <td><span class="reason reason-上涨">上涨</span></td>
-        <td class="num strong" data-sort="0.10000000000000009">10.0%</td>
-        <td class="num" data-sort="0.11675447678977215">11.7%</td>
-        <td class="num" data-sort="0.02194586686174116">2.2%</td>
-        <td class="num" data-sort="0.8301117765832302">83.0%</td>
-        <td class="num" data-sort="37.7635612487793">37.8</td>
-        <td class="num" data-sort="2.206520309824818">2.21</td>
-        <td class="num" data-sort="35.37190082644628">35%</td>
-        <td class="num" data-sort="57.09059829">57.1</td>
-        <td>深市</td>
-        <td class="industry">环保Ⅱ</td>
-      </tr>
-      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="建筑" data-q="002918.sz 蒙娜丽莎 深市 建筑 上涨" data-change="0.10000000000000002" data-volume="0.2610872917976037">
-        <td class="code">002918.SZ</td>
-        <td class="name">蒙娜丽莎</td>
-        <td><span class="reason reason-上涨">上涨</span></td>
-        <td class="num strong" data-sort="0.10000000000000002">10.0%</td>
-        <td class="num" data-sort="0.11675447678977215">11.7%</td>
-        <td class="num" data-sort="0.19044272663387218">19.0%</td>
-        <td class="num" data-sort="1.4134446460760075">141.3%</td>
-        <td class="num" data-sort="73.9993896484375">74.0</td>
-        <td class="num" data-sort="2.143600005226062">2.14</td>
-        <td class="num" data-sort="65.0413223140496">65%</td>
-        <td class="num" data-sort="69.2518260126">69.3</td>
-        <td>深市</td>
+        <td class="num strong" data-sort="0.21649484536082464">21.6%</td>
+        <td class="num" data-sort="0.2218592867058782">22.2%</td>
+        <td class="num" data-sort="-0.23870967741935487">-23.9%</td>
+        <td class="num" data-sort="2.420289855072464">242.0%</td>
+        <td class="num" data-sort="23.372526168823242">23.4</td>
+        <td class="num" data-sort="22.38401102913625">22.38</td>
+        <td class="num" data-sort="73.78768020969856">74%</td>
+        <td class="num" data-sort="9.085592395254528">9.1</td>
+        <td>港股</td>
         <td class="industry">建筑</td>
       </tr>
-      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="环保Ⅱ" data-q="603903.sh 中持股份 沪市 环保ⅱ 上涨" data-change="0.09991941982272363" data-volume="0.8560275030222493">
-        <td class="code">603903.SH</td>
-        <td class="name">中持股份</td>
-        <td><span class="reason reason-上涨">上涨</span></td>
-        <td class="num strong" data-sort="0.09991941982272363">10.0%</td>
-        <td class="num" data-sort="0.11667389661249562">11.7%</td>
-        <td class="num" data-sort="-0.061855670103092786">-6.2%</td>
-        <td class="num" data-sort="1.472826086956522">147.3%</td>
-        <td class="num" data-sort="-38.020347595214844">-38.0</td>
-        <td class="num" data-sort="2.4386607481312614">2.44</td>
-        <td class="num" data-sort="97.10743801652893">97%</td>
-        <td class="num" data-sort="34.85110902">34.9</td>
-        <td>沪市</td>
-        <td class="industry">环保Ⅱ</td>
+      <tr class="movement-row" data-reason-score="2" data-market="港股" data-reason="上涨 / 放量" data-industry="软件服务" data-q="1450.hk 交个朋友控股 港股 软件服务 上涨 / 放量" data-change="0.17333333333333328" data-volume="2.3488432989081534">
+        <td class="code">1450.HK</td>
+        <td class="name">交个朋友控股</td>
+        <td><span class="reason reason-上涨 reason-放量">上涨 / 放量</span></td>
+        <td class="num strong" data-sort="0.17333333333333328">17.3%</td>
+        <td class="num" data-sort="0.17869777467838688">17.9%</td>
+        <td class="num" data-sort="-0.2413793103448275">-24.1%</td>
+        <td class="num" data-sort="-0.33834586466165406">-33.8%</td>
+        <td class="num" data-sort="12.396700859069824">12.4</td>
+        <td class="num" data-sort="2.103267384707208">2.10</td>
+        <td class="num" data-sort="4.32300163132137">4%</td>
+        <td class="num" data-sort="10.824071638292352">10.8</td>
+        <td>港股</td>
+        <td class="industry">软件服务</td>
       </tr>
-      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="建材Ⅱ" data-q="600819.sh 耀皮玻璃 沪市 建材ⅱ 上涨" data-change="0.09986130374479889" data-volume="0.35740948422860663">
-        <td class="code">600819.SH</td>
-        <td class="name">耀皮玻璃</td>
-        <td><span class="reason reason-上涨">上涨</span></td>
-        <td class="num strong" data-sort="0.09986130374479889">10.0%</td>
-        <td class="num" data-sort="0.11661578053457088">11.7%</td>
-        <td class="num" data-sort="-0.01856435643564358">-1.9%</td>
-        <td class="num" data-sort="0.8059148098908737">80.6%</td>
-        <td class="num" data-sort="66.11949920654297">66.1</td>
-        <td class="num" data-sort="1.999387867853734">2.00</td>
-        <td class="num" data-sort="90.99173553719008">91%</td>
-        <td class="num" data-sort="66.98712508972308">67.0</td>
-        <td>沪市</td>
-        <td class="industry">建材Ⅱ</td>
+      <tr class="movement-row" data-reason-score="2" data-market="港股" data-reason="上涨 / 放量" data-industry="硬件设备" data-q="3268.hk 美格智能 港股 硬件设备 上涨 / 放量" data-change="0.1263250883392226" data-volume="1.9015757458571607">
+        <td class="code">3268.HK</td>
+        <td class="name">美格智能</td>
+        <td><span class="reason reason-上涨 reason-放量">上涨 / 放量</span></td>
+        <td class="num strong" data-sort="0.1263250883392226">12.6%</td>
+        <td class="num" data-sort="0.13168952968427616">13.2%</td>
+        <td class="num" data-sort="-0.12969283276450516">-13.0%</td>
+        <td class="num" data-sort="-0.12969283276450516">-13.0%</td>
+        <td class="num" data-sort="47.52706527709961">47.5</td>
+        <td class="num" data-sort="2.4942827964700784">2.49</td>
+        <td class="num" data-sort="22.22222222222222">22%</td>
+        <td class="num" data-sort="125.81997588">125.8</td>
+        <td>港股</td>
+        <td class="industry">硬件设备</td>
       </tr>
-      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="耐用消费品" data-q="603610.sh 麒盛科技 沪市 耐用消费品 上涨" data-change="0.0998248686514887" data-volume="1.4161957279441832">
-        <td class="code">603610.SH</td>
-        <td class="name">麒盛科技</td>
-        <td><span class="reason reason-上涨">上涨</span></td>
-        <td class="num strong" data-sort="0.0998248686514887">10.0%</td>
-        <td class="num" data-sort="0.11657934544126068">11.7%</td>
-        <td class="num" data-sort="-0.011023622047244164">-1.1%</td>
-        <td class="num" data-sort="1.4137674659094137">141.4%</td>
-        <td class="num" data-sort="70.61363220214844">70.6</td>
-        <td class="num" data-sort="2.1371166415007257">2.14</td>
-        <td class="num" data-sort="89.33884297520662">89%</td>
-        <td class="num" data-sort="66.5036213964">66.5</td>
-        <td>沪市</td>
-        <td class="industry">耐用消费品</td>
+      <tr class="movement-row" data-reason-score="2" data-market="港股" data-reason="上涨 / 放量" data-industry="消费者服务" data-q="2255.hk 海昌海洋公园 港股 消费者服务 上涨 / 放量" data-change="0.1142857142857144" data-volume="2.4199675989445577">
+        <td class="code">2255.HK</td>
+        <td class="name">海昌海洋公园</td>
+        <td><span class="reason reason-上涨 reason-放量">上涨 / 放量</span></td>
+        <td class="num strong" data-sort="0.1142857142857144">11.4%</td>
+        <td class="num" data-sort="0.11965015563076786">12.0%</td>
+        <td class="num" data-sort="-0.1428571428571429">-14.3%</td>
+        <td class="num" data-sort="-0.44285714285714284">-44.3%</td>
+        <td class="num" data-sort="-4.869578838348389">-4.9</td>
+        <td class="num" data-sort="1.696369449631841">1.70</td>
+        <td class="num" data-sort="8.482871125611746">8%</td>
+        <td class="num" data-sort="45.045369985823996">45.0</td>
+        <td>港股</td>
+        <td class="industry">消费者服务</td>
       </tr>
-      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="化工" data-q="002809.sz 红墙股份 深市 化工 上涨" data-change="0.09980806142034564" data-volume="1.3930031049056666">
-        <td class="code">002809.SZ</td>
-        <td class="name">红墙股份</td>
-        <td><span class="reason reason-上涨">上涨</span></td>
-        <td class="num strong" data-sort="0.09980806142034564">10.0%</td>
-        <td class="num" data-sort="0.11656253821011762">11.7%</td>
-        <td class="num" data-sort="0.07202993451824136">7.2%</td>
-        <td class="num" data-sort="0.7639845708505812">76.4%</td>
-        <td class="num" data-sort="-52.645751953125">-52.6</td>
-        <td class="num" data-sort="1.6662049775319012">1.67</td>
-        <td class="num" data-sort="68.55371900826445">69%</td>
-        <td class="num" data-sort="27.5338204098">27.5</td>
-        <td>深市</td>
-        <td class="industry">化工</td>
+      <tr class="movement-row" data-reason-score="2" data-market="港股" data-reason="上涨 / 放量" data-industry="传媒" data-q="1046.hk 寰宇娱乐文化 港股 传媒 上涨 / 放量" data-change="0.09375" data-volume="1.677478336910724">
+        <td class="code">1046.HK</td>
+        <td class="name">寰宇娱乐文化</td>
+        <td><span class="reason reason-上涨 reason-放量">上涨 / 放量</span></td>
+        <td class="num strong" data-sort="0.09375">9.4%</td>
+        <td class="num" data-sort="0.09911444134505354">9.9%</td>
+        <td class="num" data-sort="-0.11392405063291144">-11.4%</td>
+        <td class="num" data-sort="0.14754098360655732">14.8%</td>
+        <td class="num" data-sort="263.3371887207031">263.3</td>
+        <td class="num" data-sort="1.3707301860059264">1.37</td>
+        <td class="num" data-sort="84.09461663947798">84%</td>
+        <td class="num" data-sort="2.7736419893212796">2.8</td>
+        <td>港股</td>
+        <td class="industry">传媒</td>
       </tr>
-      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="化工" data-q="605399.sh 晨光新材 沪市 化工 上涨" data-change="0.09971098265895958" data-volume="0.8152993439982812">
-        <td class="code">605399.SH</td>
-        <td class="name">晨光新材</td>
-        <td><span class="reason reason-上涨">上涨</span></td>
-        <td class="num strong" data-sort="0.09971098265895958">10.0%</td>
-        <td class="num" data-sort="0.11646545944873153">11.6%</td>
-        <td class="num" data-sort="0.12573964497041423">12.6%</td>
-        <td class="num" data-sort="0.5515686935930055">55.2%</td>
-        <td class="num" data-sort="-43.53411865234375">-43.5</td>
-        <td class="num" data-sort="2.3076524166536037">2.31</td>
-        <td class="num" data-sort="52.80991735537191">53%</td>
-        <td class="num" data-sort="47.5176509216">47.5</td>
-        <td>沪市</td>
-        <td class="industry">化工</td>
+      <tr class="movement-row" data-reason-score="2" data-market="北交所" data-reason="上涨 / 放量" data-industry="机械" data-q="920718.bj 合肥高科 北交所 机械 上涨 / 放量" data-change="0.09243027888446222" data-volume="2.1980253858944527">
+        <td class="code">920718.BJ</td>
+        <td class="name">合肥高科</td>
+        <td><span class="reason reason-上涨 reason-放量">上涨 / 放量</span></td>
+        <td class="num strong" data-sort="0.09243027888446222">9.2%</td>
+        <td class="num" data-sort="0.09779472022951576">9.8%</td>
+        <td class="num" data-sort="-0.09384108835980054">-9.4%</td>
+        <td class="num" data-sort="0.6780401169140207">67.8%</td>
+        <td class="num" data-sort="55.318023681640625">55.3</td>
+        <td class="num" data-sort="2.131511699452424">2.13</td>
+        <td class="num" data-sort="57.14285714285714">57%</td>
+        <td class="num" data-sort="12.43040457">12.4</td>
+        <td>北交所</td>
+        <td class="industry">机械</td>
       </tr>
-      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="化工" data-q="002254.sz 泰和新材 深市 化工 上涨" data-change="0.09970457902511094" data-volume="0.3028534035660999">
-        <td class="code">002254.SZ</td>
-        <td class="name">泰和新材</td>
+      <tr class="movement-row" data-reason-score="1" data-market="港股" data-reason="上涨" data-industry="非银金融" data-q="1835.hk 瑞威资管 港股 非银金融 上涨" data-change="0.3166666666666668" data-volume="-0.45744680851063835">
+        <td class="code">1835.HK</td>
+        <td class="name">瑞威资管</td>
         <td><span class="reason reason-上涨">上涨</span></td>
-        <td class="num strong" data-sort="0.09970457902511094">10.0%</td>
-        <td class="num" data-sort="0.11645905581488304">11.6%</td>
-        <td class="num" data-sort="0.4860279441117765">48.6%</td>
-        <td class="num" data-sort="0.8291210871925385">82.9%</td>
-        <td class="num" data-sort="279.2193908691406">279.2</td>
-        <td class="num" data-sort="1.8037162187914362">1.80</td>
-        <td class="num" data-sort="47.603305785123965">48%</td>
-        <td class="num" data-sort="127.6158145487">127.6</td>
-        <td>深市</td>
-        <td class="industry">化工</td>
+        <td class="num strong" data-sort="0.3166666666666668">31.7%</td>
+        <td class="num" data-sort="0.32203110801172036">32.2%</td>
+        <td class="num" data-sort="0.5047619047619047">50.5%</td>
+        <td class="num" data-sort="-0.11731843575418989">-11.7%</td>
+        <td class="num" data-sort="-8.100000381469727">-8.1</td>
+        <td class="num" data-sort="0.9409840836278885">0.94</td>
+        <td class="num" data-sort="33.686786296900486">34%</td>
+        <td class="num" data-sort="2.1176965497599998">2.1</td>
+        <td>港股</td>
+        <td class="industry">非银金融</td>
       </tr>
-      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="可选消费零售" data-q="002277.sz 友阿股份 深市 可选消费零售 上涨" data-change="0.09951060358890712" data-volume="1.19854353790496">
-        <td class="code">002277.SZ</td>
-        <td class="name">友阿股份</td>
+      <tr class="movement-row" data-reason-score="1" data-market="港股" data-reason="上涨" data-industry="传媒" data-q="3700.hk 映宇宙 港股 传媒 上涨" data-change="0.19999999999999984" data-volume="1.6355361596009974">
+        <td class="code">3700.HK</td>
+        <td class="name">映宇宙</td>
         <td><span class="reason reason-上涨">上涨</span></td>
-        <td class="num strong" data-sort="0.09951060358890712">10.0%</td>
-        <td class="num" data-sort="0.11626508037867911">11.6%</td>
-        <td class="num" data-sort="-0.03160919540229867">-3.2%</td>
-        <td class="num" data-sort="2.036036036036036">203.6%</td>
-        <td class="num" data-sort="-28.578872680664062">-28.6</td>
-        <td class="num" data-sort="1.4697783649926381">1.47</td>
-        <td class="num" data-sort="94.46280991735537">94%</td>
-        <td class="num" data-sort="93.96724672">94.0</td>
-        <td>深市</td>
-        <td class="industry">可选消费零售</td>
+        <td class="num strong" data-sort="0.19999999999999984">20.0%</td>
+        <td class="num" data-sort="0.20536444134505324">20.5%</td>
+        <td class="num" data-sort="-0.12727272727272743">-12.7%</td>
+        <td class="num" data-sort="0.11627906976744186">11.6%</td>
+        <td class="num" data-sort="6.965036392211914">7.0</td>
+        <td class="num" data-sort="0.36449311130926565">0.36</td>
+        <td class="num" data-sort="28.548123980424144">29%</td>
+        <td class="num" data-sort="16.257401312256">16.3</td>
+        <td>港股</td>
+        <td class="industry">传媒</td>
       </tr>
-      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="化工" data-q="603948.sh 建业股份 沪市 化工 上涨" data-change="0.0701819532120313" data-volume="1.4484247260696108">
-        <td class="code">603948.SH</td>
-        <td class="name">建业股份</td>
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="机械" data-q="300259.sz 新天科技 深市 机械 上涨" data-change="0.19318181818181812" data-volume="0.9789284824755744">
+        <td class="code">300259.SZ</td>
+        <td class="name">新天科技</td>
         <td><span class="reason reason-上涨">上涨</span></td>
-        <td class="num strong" data-sort="0.0701819532120313">7.0%</td>
-        <td class="num" data-sort="0.08693643000180341">8.7%</td>
-        <td class="num" data-sort="0.0556776556776557">5.6%</td>
-        <td class="num" data-sort="0.9701714680838139">97.0%</td>
-        <td class="num" data-sort="20.0750732421875">20.1</td>
-        <td class="num" data-sort="2.118285121982536">2.12</td>
-        <td class="num" data-sort="66.77685950413223">67%</td>
-        <td class="num" data-sort="46.829377929399996">46.8</td>
-        <td>沪市</td>
-        <td class="industry">化工</td>
-      </tr>
-      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="放量" data-industry="机械" data-q="301129.sz 瑞纳智能 深市 机械 放量" data-change="0.06768558951965062" data-volume="1.5473486269428443">
-        <td class="code">301129.SZ</td>
-        <td class="name">瑞纳智能</td>
-        <td><span class="reason reason-放量">放量</span></td>
-        <td class="num strong" data-sort="0.06768558951965062">6.8%</td>
-        <td class="num" data-sort="0.08444006630942269">8.4%</td>
-        <td class="num" data-sort="0.23018867924528297">23.0%</td>
-        <td class="num" data-sort="0.662431039510035">66.2%</td>
-        <td class="num" data-sort="36.65923309326172">36.7</td>
-        <td class="num" data-sort="2.1893483581663093">2.19</td>
-        <td class="num" data-sort="43.43065693430657">43%</td>
-        <td class="num" data-sort="39.87229716">39.9</td>
+        <td class="num strong" data-sort="0.19318181818181812">19.3%</td>
+        <td class="num" data-sort="0.19854625952687166">19.9%</td>
+        <td class="num" data-sort="0.4519699541958748">45.2%</td>
+        <td class="num" data-sort="1.6496827964944165">165.0%</td>
+        <td class="num" data-sort="30.344484329223633">30.3</td>
+        <td class="num" data-sort="2.3985902004253017">2.40</td>
+        <td class="num" data-sort="100.0">100%</td>
+        <td class="num" data-sort="73.697495508">73.7</td>
         <td>深市</td>
         <td class="industry">机械</td>
       </tr>
-      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="放量" data-industry="煤炭Ⅱ" data-q="600758.sh 辽宁能源 沪市 煤炭ⅱ 放量" data-change="0.03563474387527841" data-volume="1.6158803516867675">
+      <tr class="movement-row" data-reason-score="1" data-market="港股" data-reason="上涨" data-industry="房地产Ⅱ" data-q="0202.hk 润中国际控股 港股 房地产ⅱ 上涨" data-change="0.16216216216216212" data-volume="-0.8623751387347391">
+        <td class="code">0202.HK</td>
+        <td class="name">润中国际控股</td>
+        <td><span class="reason reason-上涨">上涨</span></td>
+        <td class="num strong" data-sort="0.16216216216216212">16.2%</td>
+        <td class="num" data-sort="0.16752660350721563">16.8%</td>
+        <td class="num" data-sort="-0.32283464566929143">-32.3%</td>
+        <td class="num" data-sort="-0.2773109243697479">-27.7%</td>
+        <td class="num" data-sort="160.56201171875">160.6</td>
+        <td class="num" data-sort="0.5950046335952437">0.60</td>
+        <td class="num" data-sort="17.33278955954323">17%</td>
+        <td class="num" data-sort="5.483241640617494">5.5</td>
+        <td>港股</td>
+        <td class="industry">房地产Ⅱ</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="港股" data-reason="上涨" data-industry="医药生物" data-q="1244.hk 思路迪医药股份 港股 医药生物 上涨" data-change="0.16151202749140883" data-volume="1.2517245867499676">
+        <td class="code">1244.HK</td>
+        <td class="name">思路迪医药股份</td>
+        <td><span class="reason reason-上涨">上涨</span></td>
+        <td class="num strong" data-sort="0.16151202749140883">16.2%</td>
+        <td class="num" data-sort="0.16687646883646232">16.7%</td>
+        <td class="num" data-sort="-0.36585365853658536">-36.6%</td>
+        <td class="num" data-sort="0.6095238095238094">61.0%</td>
+        <td class="num" data-sort="-4.439699649810791">-4.4</td>
+        <td class="num" data-sort="1.3208479757831904">1.32</td>
+        <td class="num" data-sort="35.294117647058826">35%</td>
+        <td class="num" data-sort="7.627556503008">7.6</td>
+        <td>港股</td>
+        <td class="industry">医药生物</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="港股" data-reason="上涨" data-industry="建筑" data-q="1459.hk 巨匠建设 港股 建筑 上涨" data-change="0.13488372093023246" data-volume="1.1293706293706296">
+        <td class="code">1459.HK</td>
+        <td class="name">巨匠建设</td>
+        <td><span class="reason reason-上涨">上涨</span></td>
+        <td class="num strong" data-sort="0.13488372093023246">13.5%</td>
+        <td class="num" data-sort="0.14024816227528603">14.0%</td>
+        <td class="num" data-sort="-0.008130081300813052">-0.8%</td>
+        <td class="num" data-sort="-0.09629629629629644">-9.6%</td>
+        <td class="num" data-sort="-2.047499656677246">-2.0</td>
+        <td class="num" data-sort="0.07597850809673184">0.08</td>
+        <td class="num" data-sort="9.176182707993474">9%</td>
+        <td class="num" data-sort="1.137526313472">1.1</td>
+        <td>港股</td>
+        <td class="industry">建筑</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="港股" data-reason="上涨" data-industry="非银金融" data-q="8030.hk 丰银禾控股 港股 非银金融 上涨" data-change="0.12765957446808526" data-volume="0.5027211964227118">
+        <td class="code">8030.HK</td>
+        <td class="name">丰银禾控股</td>
+        <td><span class="reason reason-上涨">上涨</span></td>
+        <td class="num strong" data-sort="0.12765957446808526">12.8%</td>
+        <td class="num" data-sort="0.13302401581313883">13.3%</td>
+        <td class="num" data-sort="-0.905693950177936">-90.6%</td>
+        <td class="num" data-sort="1.985915492957747">198.6%</td>
+        <td class="num" data-sort="7.041018962860107">7.0</td>
+        <td class="num" data-sort="1.3866723254757194">1.39</td>
+        <td class="num" data-sort="36.7862969004894">37%</td>
+        <td class="num" data-sort="3.2367875195808">3.2</td>
+        <td>港股</td>
+        <td class="industry">非银金融</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="港股" data-reason="上涨" data-industry="建筑" data-q="8445.hk 怡康泰工程集团 港股 建筑 上涨" data-change="0.12318840579710132" data-volume="0.0">
+        <td class="code">8445.HK</td>
+        <td class="name">怡康泰工程集团</td>
+        <td><span class="reason reason-上涨">上涨</span></td>
+        <td class="num strong" data-sort="0.12318840579710132">12.3%</td>
+        <td class="num" data-sort="0.12855284714215487">12.9%</td>
+        <td class="num" data-sort="0.019736842105263053">2.0%</td>
+        <td class="num" data-sort="-0.20918367346938782">-20.9%</td>
+        <td class="num" data-sort="-4.798801422119141">-4.8</td>
+        <td class="num" data-sort="0.5742787817041128">0.57</td>
+        <td class="num" data-sort="30.99510603588907">31%</td>
+        <td class="num" data-sort="0.37444625711999996">0.4</td>
+        <td>港股</td>
+        <td class="industry">建筑</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="港股" data-reason="上涨" data-industry="机械" data-q="0840.hk 天业节水 港股 机械 上涨" data-change="0.12222222222222237" data-volume="0.9251870324189526">
+        <td class="code">0840.HK</td>
+        <td class="name">天业节水</td>
+        <td><span class="reason reason-上涨">上涨</span></td>
+        <td class="num strong" data-sort="0.12222222222222237">12.2%</td>
+        <td class="num" data-sort="0.127586663567276">12.8%</td>
+        <td class="num" data-sort="0.12222222222222247">12.2%</td>
+        <td class="num" data-sort="0.0631578947368423">6.3%</td>
+        <td class="num" data-sort="-1.7289029359817505">-1.7</td>
+        <td class="num" data-sort="0.2899921767204037">0.29</td>
+        <td class="num" data-sort="94.86133768352364">95%</td>
+        <td class="num" data-sort="0.917288878432896">0.9</td>
+        <td>港股</td>
+        <td class="industry">机械</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="港股" data-reason="上涨" data-industry="钢铁Ⅱ" data-q="1894.hk 恒益控股 港股 钢铁ⅱ 上涨" data-change="0.11392405063291142" data-volume="-0.5036901282876814">
+        <td class="code">1894.HK</td>
+        <td class="name">恒益控股</td>
+        <td><span class="reason reason-上涨">上涨</span></td>
+        <td class="num strong" data-sort="0.11392405063291142">11.4%</td>
+        <td class="num" data-sort="0.11928849197796486">11.9%</td>
+        <td class="num" data-sort="-0.05387861084063639">-5.4%</td>
+        <td class="num" data-sort="0.06952852687580235">7.0%</td>
+        <td class="num" data-sort="-5.310997009277344">-5.3</td>
+        <td class="num" data-sort="0.733827267789245">0.73</td>
+        <td class="num" data-sort="42.82218597063622">43%</td>
+        <td class="num" data-sort="0.88564582656">0.9</td>
+        <td>港股</td>
+        <td class="industry">钢铁Ⅱ</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="港股" data-reason="上涨" data-industry="软件服务" data-q="1087.hk 威讯控股 港股 软件服务 上涨" data-change="0.11290322580645147" data-volume="-0.22399742389338873">
+        <td class="code">1087.HK</td>
+        <td class="name">威讯控股</td>
+        <td><span class="reason reason-上涨">上涨</span></td>
+        <td class="num strong" data-sort="0.11290322580645147">11.3%</td>
+        <td class="num" data-sort="0.11826766715150505">11.8%</td>
+        <td class="num" data-sort="-0.4051724137931034">-40.5%</td>
+        <td class="num" data-sort="1.0294117647058818">102.9%</td>
+        <td class="num" data-sort="-2.5245630741119385">-2.5</td>
+        <td class="num" data-sort="0.7539463726829269">0.75</td>
+        <td class="num" data-sort="87.39804241435563">87%</td>
+        <td class="num" data-sort="1.205554910976">1.2</td>
+        <td>港股</td>
+        <td class="industry">软件服务</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="港股" data-reason="上涨" data-industry="纺织服装Ⅱ" data-q="0311.hk 联泰控股 港股 纺织服装ⅱ 上涨" data-change="0.10714285714285693" data-volume="0.6439560439560439">
+        <td class="code">0311.HK</td>
+        <td class="name">联泰控股</td>
+        <td><span class="reason reason-上涨">上涨</span></td>
+        <td class="num strong" data-sort="0.10714285714285693">10.7%</td>
+        <td class="num" data-sort="0.11250729848791051">11.3%</td>
+        <td class="num" data-sort="0.40909090909090895">40.9%</td>
+        <td class="num" data-sort="0.6402116402116402">64.0%</td>
+        <td class="num" data-sort="9.123976707458496">9.1</td>
+        <td class="num" data-sort="0.259545194579758">0.26</td>
+        <td class="num" data-sort="61.419249592169656">61%</td>
+        <td class="num" data-sort="2.802081317201568">2.8</td>
+        <td>港股</td>
+        <td class="industry">纺织服装Ⅱ</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="港股" data-reason="上涨" data-industry="非银金融" data-q="0629.hk 悦达国际控股 港股 非银金融 上涨" data-change="0.10526315789473692" data-volume="0.2841726618705036">
+        <td class="code">0629.HK</td>
+        <td class="name">悦达国际控股</td>
+        <td><span class="reason reason-上涨">上涨</span></td>
+        <td class="num strong" data-sort="0.10526315789473692">10.5%</td>
+        <td class="num" data-sort="0.1106275992397905">11.1%</td>
+        <td class="num" data-sort="-0.01562500000000011">-1.6%</td>
+        <td class="num" data-sort="0.6089439655172413">60.9%</td>
+        <td class="num" data-sort="17.842283248901367">17.8</td>
+        <td class="num" data-sort="0.7270803924835967">0.73</td>
+        <td class="num" data-sort="84.74714518760196">85%</td>
+        <td class="num" data-sort="3.2176401550816323">3.2</td>
+        <td>港股</td>
+        <td class="industry">非银金融</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="港股" data-reason="上涨" data-industry="消费者服务" data-q="8096.hk 赏之味 港股 消费者服务 上涨" data-change="0.10344827586206916" data-volume="1.585858585858586">
+        <td class="code">8096.HK</td>
+        <td class="name">赏之味</td>
+        <td><span class="reason reason-上涨">上涨</span></td>
+        <td class="num strong" data-sort="0.10344827586206916">10.3%</td>
+        <td class="num" data-sort="0.10881271720712272">10.9%</td>
+        <td class="num" data-sort="0.21212121212121215">21.2%</td>
+        <td class="num" data-sort="0.4545454545454546">45.5%</td>
+        <td class="num" data-sort="-6.844444274902344">-6.8</td>
+        <td class="num" data-sort="2.1597363438749038">2.16</td>
+        <td class="num" data-sort="47.75693311582382">48%</td>
+        <td class="num" data-sort="0.26921664">0.3</td>
+        <td>港股</td>
+        <td class="industry">消费者服务</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="港股" data-reason="上涨" data-industry="建筑" data-q="8021.hk 汇隆控股 港股 建筑 上涨" data-change="0.10344827586206912" data-volume="2.017301038062284">
+        <td class="code">8021.HK</td>
+        <td class="name">汇隆控股</td>
+        <td><span class="reason reason-上涨">上涨</span></td>
+        <td class="num strong" data-sort="0.10344827586206912">10.3%</td>
+        <td class="num" data-sort="0.10881271720712272">10.9%</td>
+        <td class="num" data-sort="-0.2000000000000014">-20.0%</td>
+        <td class="num" data-sort="-0.6666666666666672">-66.7%</td>
+        <td class="num" data-sort="5.949880123138428">5.9</td>
+        <td class="num" data-sort="0.5066621188357116">0.51</td>
+        <td class="num" data-sort="8.564437194127244">9%</td>
+        <td class="num" data-sort="2.009279308326912">2.0</td>
+        <td>港股</td>
+        <td class="industry">建筑</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="港股" data-reason="上涨" data-industry="石油石化" data-q="1938.hk 珠江钢管 港股 石油石化 上涨" data-change="0.103448275862069" data-volume="-0.1355311355311355">
+        <td class="code">1938.HK</td>
+        <td class="name">珠江钢管</td>
+        <td><span class="reason reason-上涨">上涨</span></td>
+        <td class="num strong" data-sort="0.103448275862069">10.3%</td>
+        <td class="num" data-sort="0.10881271720712249">10.9%</td>
+        <td class="num" data-sort="0.10344827586206895">10.3%</td>
+        <td class="num" data-sort="0.7582417582417582">75.8%</td>
+        <td class="num" data-sort="1.1865063905715942">1.2</td>
+        <td class="num" data-sort="0.1954811544071602">0.20</td>
+        <td class="num" data-sort="55.70962479608483">56%</td>
+        <td class="num" data-sort="2.828220797952">2.8</td>
+        <td>港股</td>
+        <td class="industry">石油石化</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="港股" data-reason="上涨" data-industry="非银金融" data-q="8350.hk 立桥证券控股 港股 非银金融 上涨" data-change="0.10112359550561804" data-volume="0.1276864728192162">
+        <td class="code">8350.HK</td>
+        <td class="name">立桥证券控股</td>
+        <td><span class="reason reason-上涨">上涨</span></td>
+        <td class="num strong" data-sort="0.10112359550561804">10.1%</td>
+        <td class="num" data-sort="0.10648803685067154">10.6%</td>
+        <td class="num" data-sort="0.36111111111111116">36.1%</td>
+        <td class="num" data-sort="1.606382978723404">160.6%</td>
+        <td class="num" data-sort="8.906054496765137">8.9</td>
+        <td class="num" data-sort="3.306947119778412">3.31</td>
+        <td class="num" data-sort="11.061946902654867">11%</td>
+        <td class="num" data-sort="4.11167232">4.1</td>
+        <td>港股</td>
+        <td class="industry">非银金融</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="煤炭Ⅱ" data-q="600758.sh 辽宁能源 沪市 煤炭ⅱ 上涨" data-change="0.10070257611241235" data-volume="-0.409987044561249">
         <td class="code">600758.SH</td>
         <td class="name">辽宁能源</td>
-        <td><span class="reason reason-放量">放量</span></td>
-        <td class="num strong" data-sort="0.03563474387527841">3.6%</td>
-        <td class="num" data-sort="0.05238922066505047">5.2%</td>
-        <td class="num" data-sort="0.2774725274725276">27.7%</td>
-        <td class="num" data-sort="0.6945871591250805">69.5%</td>
-        <td class="num" data-sort="-12.70351791381836">-12.7</td>
-        <td class="num" data-sort="1.152044122057936">1.15</td>
-        <td class="num" data-sort="96.44628099173553">96%</td>
-        <td class="num" data-sort="61.473808821000006">61.5</td>
+        <td><span class="reason reason-上涨">上涨</span></td>
+        <td class="num strong" data-sort="0.10070257611241235">10.1%</td>
+        <td class="num" data-sort="0.10606701745746581">10.6%</td>
+        <td class="num" data-sort="0.2912087912087913">29.1%</td>
+        <td class="num" data-sort="0.7128085264275006">71.3%</td>
+        <td class="num" data-sort="-12.840115547180176">-12.8</td>
+        <td class="num" data-sort="1.16443169326286">1.16</td>
+        <td class="num" data-sort="97.02479338842976">97%</td>
+        <td class="num" data-sort="62.134817518">62.1</td>
         <td>沪市</td>
         <td class="industry">煤炭Ⅱ</td>
       </tr>
-      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="放量" data-industry="可选消费零售" data-q="601010.sh 文峰股份 沪市 可选消费零售 放量" data-change="0.0" data-volume="1.5754269294329224">
-        <td class="code">601010.SH</td>
-        <td class="name">文峰股份</td>
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="可选消费零售" data-q="000417.sz 合百集团 深市 可选消费零售 上涨" data-change="0.10069930069930078" data-volume="-0.769735800683976">
+        <td class="code">000417.SZ</td>
+        <td class="name">合百集团</td>
+        <td><span class="reason reason-上涨">上涨</span></td>
+        <td class="num strong" data-sort="0.10069930069930078">10.1%</td>
+        <td class="num" data-sort="0.1060637420443542">10.6%</td>
+        <td class="num" data-sort="-0.02839506172839501">-2.8%</td>
+        <td class="num" data-sort="0.8967426056215413">89.7%</td>
+        <td class="num" data-sort="41.125640869140625">41.1</td>
+        <td class="num" data-sort="1.2881832532574187">1.29</td>
+        <td class="num" data-sort="95.9504132231405">96%</td>
+        <td class="num" data-sort="61.37688654">61.4</td>
+        <td>深市</td>
+        <td class="industry">可选消费零售</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="汽车与零配件" data-q="600676.sh 交运股份 沪市 汽车与零配件 上涨" data-change="0.1006802721088436" data-volume="0.25846565134637345">
+        <td class="code">600676.SH</td>
+        <td class="name">交运股份</td>
+        <td><span class="reason reason-上涨">上涨</span></td>
+        <td class="num strong" data-sort="0.1006802721088436">10.1%</td>
+        <td class="num" data-sort="0.1060447134538971">10.6%</td>
+        <td class="num" data-sort="0.37585034013605445">37.6%</td>
+        <td class="num" data-sort="1.5360501567398124">153.6%</td>
+        <td class="num" data-sort="-24.64368438720703">-24.6</td>
+        <td class="num" data-sort="1.7446184461359109">1.74</td>
+        <td class="num" data-sort="99.0495867768595">99%</td>
+        <td class="num" data-sort="83.2050791696">83.2</td>
+        <td>沪市</td>
+        <td class="industry">汽车与零配件</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="公用事业Ⅱ" data-q="000685.sz 中山公用 深市 公用事业ⅱ 上涨" data-change="0.10027100271002717" data-volume="1.3572401367272153">
+        <td class="code">000685.SZ</td>
+        <td class="name">中山公用</td>
+        <td><span class="reason reason-上涨">上涨</span></td>
+        <td class="num strong" data-sort="0.10027100271002717">10.0%</td>
+        <td class="num" data-sort="0.10563544405508063">10.6%</td>
+        <td class="num" data-sort="0.0454935622317596">4.5%</td>
+        <td class="num" data-sort="0.7672703494143356">76.7%</td>
+        <td class="num" data-sort="8.325385093688965">8.3</td>
+        <td class="num" data-sort="0.9338838622942709">0.93</td>
+        <td class="num" data-sort="89.25619834710744">89%</td>
+        <td class="num" data-sort="179.6685625518">179.7</td>
+        <td>深市</td>
+        <td class="industry">公用事业Ⅱ</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="家电Ⅱ" data-q="002635.sz 安洁科技 深市 家电ⅱ 上涨" data-change="0.10023866348448679" data-volume="0.4493876160222996">
+        <td class="code">002635.SZ</td>
+        <td class="name">安洁科技</td>
+        <td><span class="reason reason-上涨">上涨</span></td>
+        <td class="num strong" data-sort="0.10023866348448679">10.0%</td>
+        <td class="num" data-sort="0.10560310482954029">10.6%</td>
+        <td class="num" data-sort="0.34259389419204633">34.3%</td>
+        <td class="num" data-sort="0.45702260643982373">45.7%</td>
+        <td class="num" data-sort="105.87602996826172">105.9</td>
+        <td class="num" data-sort="2.0835652053657636">2.08</td>
+        <td class="num" data-sort="98.92561983471074">99%</td>
+        <td class="num" data-sort="121.6462414944">121.6</td>
+        <td>深市</td>
+        <td class="industry">家电Ⅱ</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="建材Ⅱ" data-q="000672.sz 上峰水泥 深市 建材ⅱ 上涨" data-change="0.10011641443538984" data-volume="-0.5414915346537035">
+        <td class="code">000672.SZ</td>
+        <td class="name">上峰水泥</td>
+        <td><span class="reason reason-上涨">上涨</span></td>
+        <td class="num strong" data-sort="0.10011641443538984">10.0%</td>
+        <td class="num" data-sort="0.10548085578044342">10.5%</td>
+        <td class="num" data-sort="0.45496535796766735">45.5%</td>
+        <td class="num" data-sort="2.3277442968498043">232.8%</td>
+        <td class="num" data-sort="31.073719024658203">31.1</td>
+        <td class="num" data-sort="2.01614968075963">2.02</td>
+        <td class="num" data-sort="83.88429752066115">84%</td>
+        <td class="num" data-sort="183.21574005">183.2</td>
+        <td>深市</td>
+        <td class="industry">建材Ⅱ</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="港股" data-reason="上涨" data-industry="食品饮料" data-q="0682.hk 超大现代 港股 食品饮料 上涨" data-change="0.1000000000000001" data-volume="-0.7891566265060241">
+        <td class="code">0682.HK</td>
+        <td class="name">超大现代</td>
+        <td><span class="reason reason-上涨">上涨</span></td>
+        <td class="num strong" data-sort="0.1000000000000001">10.0%</td>
+        <td class="num" data-sort="0.10536444134505363">10.5%</td>
+        <td class="num" data-sort="-0.03508771929824539">-3.5%</td>
+        <td class="num" data-sort="-0.37500000000000033">-37.5%</td>
+        <td class="num" data-sort="-2.7167301177978516">-2.7</td>
+        <td class="num" data-sort="0.2798671544291144">0.28</td>
+        <td class="num" data-sort="40.45676998368678">40%</td>
+        <td class="num" data-sort="0.47528544994127997">0.5</td>
+        <td>港股</td>
+        <td class="industry">食品饮料</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="硬件设备" data-q="603989.sh 艾华集团 沪市 硬件设备 上涨" data-change="0.10000000000000005" data-volume="0.632046567808247">
+        <td class="code">603989.SH</td>
+        <td class="name">艾华集团</td>
+        <td><span class="reason reason-上涨">上涨</span></td>
+        <td class="num strong" data-sort="0.10000000000000005">10.0%</td>
+        <td class="num" data-sort="0.10536444134505363">10.5%</td>
+        <td class="num" data-sort="0.3110846245530394">31.1%</td>
+        <td class="num" data-sort="0.8378705419361374">83.8%</td>
+        <td class="num" data-sort="33.447391510009766">33.4</td>
+        <td class="num" data-sort="2.2198659040085977">2.22</td>
+        <td class="num" data-sort="46.19834710743802">46%</td>
+        <td class="num" data-sort="87.7315692">87.7</td>
+        <td>沪市</td>
+        <td class="industry">硬件设备</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="家电Ⅱ" data-q="603726.sh 朗迪集团 沪市 家电ⅱ 上涨" data-change="0.09996351696461131" data-volume="-0.24477144785941862">
+        <td class="code">603726.SH</td>
+        <td class="name">朗迪集团</td>
+        <td><span class="reason reason-上涨">上涨</span></td>
+        <td class="num strong" data-sort="0.09996351696461131">10.0%</td>
+        <td class="num" data-sort="0.1053279583096649">10.5%</td>
+        <td class="num" data-sort="0.24586776859504123">24.6%</td>
+        <td class="num" data-sort="1.491874614283287">149.2%</td>
+        <td class="num" data-sort="24.61884880065918">24.6</td>
+        <td class="num" data-sort="3.7417140961454853">3.74</td>
+        <td class="num" data-sort="99.83471074380165">100%</td>
+        <td class="num" data-sort="55.9738368">56.0</td>
+        <td>沪市</td>
+        <td class="industry">家电Ⅱ</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="钢铁Ⅱ" data-q="600992.sh 贵绳股份 沪市 钢铁ⅱ 上涨" data-change="0.09983079526226714" data-volume="0.8136836422205491">
+        <td class="code">600992.SH</td>
+        <td class="name">贵绳股份</td>
+        <td><span class="reason reason-上涨">上涨</span></td>
+        <td class="num strong" data-sort="0.09983079526226714">10.0%</td>
+        <td class="num" data-sort="0.10519523660732079">10.5%</td>
+        <td class="num" data-sort="-0.04200442151805472">-4.2%</td>
+        <td class="num" data-sort="-0.07547772389661012">-7.5%</td>
+        <td class="num" data-sort="-1082.770263671875">-1,082.8</td>
+        <td class="num" data-sort="2.229072755704239">2.23</td>
+        <td class="num" data-sort="31.65289256198347">32%</td>
+        <td class="num" data-sort="31.8617">31.9</td>
+        <td>沪市</td>
+        <td class="industry">钢铁Ⅱ</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="化工" data-q="601678.sh 滨化股份 沪市 化工 上涨" data-change="0.09982788296041303" data-volume="0.9627219795778057">
+        <td class="code">601678.SH</td>
+        <td class="name">滨化股份</td>
+        <td><span class="reason reason-上涨">上涨</span></td>
+        <td class="num strong" data-sort="0.09982788296041303">10.0%</td>
+        <td class="num" data-sort="0.10519232430546666">10.5%</td>
+        <td class="num" data-sort="0.507075471698113">50.7%</td>
+        <td class="num" data-sort="1.021592127667709">102.2%</td>
+        <td class="num" data-sort="47.66765213012695">47.7</td>
+        <td class="num" data-sort="1.1243840204641997">1.12</td>
+        <td class="num" data-sort="76.69421487603306">77%</td>
+        <td class="num" data-sort="131.4318380364">131.4</td>
+        <td>沪市</td>
+        <td class="industry">化工</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="非银金融" data-q="600909.sh 华安证券 沪市 非银金融 上涨" data-change="0.09982486865148854" data-volume="0.9797002053453867">
+        <td class="code">600909.SH</td>
+        <td class="name">华安证券</td>
+        <td><span class="reason reason-上涨">上涨</span></td>
+        <td class="num strong" data-sort="0.09982486865148854">10.0%</td>
+        <td class="num" data-sort="0.10518930999654218">10.5%</td>
+        <td class="num" data-sort="-0.07374631268436571">-7.4%</td>
+        <td class="num" data-sort="0.46050660398002763">46.1%</td>
+        <td class="num" data-sort="15.64273452758789">15.6</td>
+        <td class="num" data-sort="1.1960652627473896">1.20</td>
+        <td class="num" data-sort="51.404958677685954">51%</td>
+        <td class="num" data-sort="315.5203426584">315.5</td>
+        <td>沪市</td>
+        <td class="industry">非银金融</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="公用事业Ⅱ" data-q="603693.sh 江苏新能 沪市 公用事业ⅱ 上涨" data-change="0.09973226238286477" data-volume="-0.2746015247999374">
+        <td class="code">603693.SH</td>
+        <td class="name">江苏新能</td>
+        <td><span class="reason reason-上涨">上涨</span></td>
+        <td class="num strong" data-sort="0.09973226238286477">10.0%</td>
+        <td class="num" data-sort="0.10509670372791824">10.5%</td>
+        <td class="num" data-sort="0.38532883642495763">38.5%</td>
+        <td class="num" data-sort="0.9785385865750752">97.9%</td>
+        <td class="num" data-sort="32.31455612182617">32.3</td>
+        <td class="num" data-sort="2.039018754088849">2.04</td>
+        <td class="num" data-sort="79.75206611570248">80%</td>
+        <td class="num" data-sort="146.469487084">146.5</td>
+        <td>沪市</td>
+        <td class="industry">公用事业Ⅱ</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="医药生物" data-q="002030.sz 达安基因 深市 医药生物 上涨" data-change="0.09933774834437088" data-volume="-0.43618849351560995">
+        <td class="code">002030.SZ</td>
+        <td class="name">达安基因</td>
+        <td><span class="reason reason-上涨">上涨</span></td>
+        <td class="num strong" data-sort="0.09933774834437088">9.9%</td>
+        <td class="num" data-sort="0.10470218968942445">10.5%</td>
+        <td class="num" data-sort="0.11409395973154357">11.4%</td>
+        <td class="num" data-sort="0.3096646942800787">31.0%</td>
+        <td class="num" data-sort="-10.406832695007324">-10.4</td>
+        <td class="num" data-sort="1.3237676077757394">1.32</td>
+        <td class="num" data-sort="44.09090909090909">44%</td>
+        <td class="num" data-sort="93.18881652479999">93.2</td>
+        <td>深市</td>
+        <td class="industry">医药生物</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="沪市" data-reason="上涨" data-industry="石油石化" data-q="600339.sh 中油工程 沪市 石油石化 上涨" data-change="0.09921671018276769" data-volume="1.0791776338876806">
+        <td class="code">600339.SH</td>
+        <td class="name">中油工程</td>
+        <td><span class="reason reason-上涨">上涨</span></td>
+        <td class="num strong" data-sort="0.09921671018276769">9.9%</td>
+        <td class="num" data-sort="0.10458115152782123">10.5%</td>
+        <td class="num" data-sort="0.25671641791044775">25.7%</td>
+        <td class="num" data-sort="0.473736781047186">47.4%</td>
+        <td class="num" data-sort="63.081512451171875">63.1</td>
+        <td class="num" data-sort="0.8735679364672456">0.87</td>
+        <td class="num" data-sort="93.05785123966942">93%</td>
+        <td class="num" data-sort="235.0505085291">235.1</td>
+        <td>沪市</td>
+        <td class="industry">石油石化</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="港股" data-reason="上涨" data-industry="硬件设备" data-q="2369.hk 酷派集团 港股 硬件设备 上涨" data-change="0.09859154929577478" data-volume="0.49868880191359133">
+        <td class="code">2369.HK</td>
+        <td class="name">酷派集团</td>
+        <td><span class="reason reason-上涨">上涨</span></td>
+        <td class="num strong" data-sort="0.09859154929577478">9.9%</td>
+        <td class="num" data-sort="0.10395599064082829">10.4%</td>
+        <td class="num" data-sort="-0.1875">-18.8%</td>
+        <td class="num" data-sort="-0.675">-67.5%</td>
+        <td class="num" data-sort="-2.3328607082366943">-2.3</td>
+        <td class="num" data-sort="0.1535611025082888">0.15</td>
+        <td class="num" data-sort="6.688417618270799">7%</td>
+        <td class="num" data-sort="2.263041670249152">2.3</td>
+        <td>港股</td>
+        <td class="industry">硬件设备</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="港股" data-reason="上涨" data-industry="房地产Ⅱ" data-q="0147.hk 国际商业结算 港股 房地产ⅱ 上涨" data-change="0.09836065573770501" data-volume="0.24251178348791247">
+        <td class="code">0147.HK</td>
+        <td class="name">国际商业结算</td>
+        <td><span class="reason reason-上涨">上涨</span></td>
+        <td class="num strong" data-sort="0.09836065573770501">9.8%</td>
+        <td class="num" data-sort="0.10372509708275857">10.4%</td>
+        <td class="num" data-sort="-0.6127167630057803">-61.3%</td>
+        <td class="num" data-sort="0.9142857142857143">91.4%</td>
+        <td class="num" data-sort="-6.095837116241455">-6.1</td>
+        <td class="num" data-sort="2.1261957396794346">2.13</td>
+        <td class="num" data-sort="27.52854812398042">28%</td>
+        <td class="num" data-sort="13.528957405709951">13.5</td>
+        <td>港股</td>
+        <td class="industry">房地产Ⅱ</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="深市" data-reason="上涨" data-industry="日常消费零售" data-q="300755.sz 华致酒行 深市 日常消费零售 上涨" data-change="0.09786354238456224" data-volume="0.37552163424756424">
+        <td class="code">300755.SZ</td>
+        <td class="name">华致酒行</td>
+        <td><span class="reason reason-上涨">上涨</span></td>
+        <td class="num strong" data-sort="0.09786354238456224">9.8%</td>
+        <td class="num" data-sort="0.10322798372961574">10.3%</td>
+        <td class="num" data-sort="-0.09591373439273564">-9.6%</td>
+        <td class="num" data-sort="0.42488704824214674">42.5%</td>
+        <td class="num" data-sort="-16.551786422729492">-16.6</td>
+        <td class="num" data-sort="2.365897959851275">2.37</td>
+        <td class="num" data-sort="38.18181818181819">38%</td>
+        <td class="num" data-sort="66.39598512">66.4</td>
+        <td>深市</td>
+        <td class="industry">日常消费零售</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="港股" data-reason="上涨" data-industry="传媒" data-q="8282.hk 智傲控股 港股 传媒 上涨" data-change="0.09523809523809516" data-volume="-0.536764705882353">
+        <td class="code">8282.HK</td>
+        <td class="name">智傲控股</td>
+        <td><span class="reason reason-上涨">上涨</span></td>
+        <td class="num strong" data-sort="0.09523809523809516">9.5%</td>
+        <td class="num" data-sort="0.10060253658314865">10.1%</td>
+        <td class="num" data-sort="0.11290322580645151">11.3%</td>
+        <td class="num" data-sort="0.5075123525259657">50.8%</td>
+        <td class="num" data-sort="60.882354736328125">60.9</td>
+        <td class="num" data-sort="1.1065781329131732">1.11</td>
+        <td class="num" data-sort="36.215334420880914">36%</td>
+        <td class="num" data-sort="0.343775664">0.3</td>
+        <td>港股</td>
+        <td class="industry">传媒</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="港股" data-reason="上涨" data-industry="软件服务" data-q="1147.hk 伊登软件 港股 软件服务 上涨" data-change="0.09090909090909095" data-volume="0.40188772975658216">
+        <td class="code">1147.HK</td>
+        <td class="name">伊登软件</td>
+        <td><span class="reason reason-上涨">上涨</span></td>
+        <td class="num strong" data-sort="0.09090909090909095">9.1%</td>
+        <td class="num" data-sort="0.09627353225414458">9.6%</td>
+        <td class="num" data-sort="0.07586206896551717">7.6%</td>
+        <td class="num" data-sort="1.4830607476635516">148.3%</td>
+        <td class="num" data-sort="27.69224739074707">27.7</td>
+        <td class="num" data-sort="1.3921248539347462">1.39</td>
+        <td class="num" data-sort="94.61663947797716">95%</td>
+        <td class="num" data-sort="2.78841822431328">2.8</td>
+        <td>港股</td>
+        <td class="industry">软件服务</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="港股" data-reason="上涨" data-industry="医疗设备与服务" data-q="2251.hk 鹰瞳科技-b 港股 医疗设备与服务 上涨" data-change="0.09090909090909091" data-volume="1.2460292743693557">
+        <td class="code">2251.HK</td>
+        <td class="name">鹰瞳科技-B</td>
+        <td><span class="reason reason-上涨">上涨</span></td>
+        <td class="num strong" data-sort="0.09090909090909091">9.1%</td>
+        <td class="num" data-sort="0.09627353225414437">9.6%</td>
+        <td class="num" data-sort="0.04986876640419946">5.0%</td>
+        <td class="num" data-sort="0.09090909090909083">9.1%</td>
+        <td class="num" data-sort="-44.94640350341797">-44.9</td>
+        <td class="num" data-sort="0.9143171379603364">0.91</td>
+        <td class="num" data-sort="73.51351351351352">74%</td>
+        <td class="num" data-sort="10.8632074563648">10.9</td>
+        <td>港股</td>
+        <td class="industry">医疗设备与服务</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="港股" data-reason="上涨" data-industry="可选消费零售" data-q="8179.hk 百利达集团控股 港股 可选消费零售 上涨" data-change="0.09090909090909088" data-volume="0.40437377948284703">
+        <td class="code">8179.HK</td>
+        <td class="name">百利达集团控股</td>
+        <td><span class="reason reason-上涨">上涨</span></td>
+        <td class="num strong" data-sort="0.09090909090909088">9.1%</td>
+        <td class="num" data-sort="0.09627353225414437">9.6%</td>
+        <td class="num" data-sort="0.0">0.0%</td>
+        <td class="num" data-sort="-0.8755555555555555">-87.6%</td>
+        <td class="num" data-sort="-0.23353645205497742">-0.2</td>
+        <td class="num" data-sort="0.06723399672252471">0.07</td>
+        <td class="num" data-sort="16.557911908646002">17%</td>
+        <td class="num" data-sort="0.2001081978405504">0.2</td>
+        <td>港股</td>
+        <td class="industry">可选消费零售</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="港股" data-reason="上涨" data-industry="房地产Ⅱ" data-q="2080.hk 奥克斯国际 港股 房地产ⅱ 上涨" data-change="0.09090909090909084" data-volume="0.043050430504305126">
+        <td class="code">2080.HK</td>
+        <td class="name">奥克斯国际</td>
+        <td><span class="reason reason-上涨">上涨</span></td>
+        <td class="num strong" data-sort="0.09090909090909084">9.1%</td>
+        <td class="num" data-sort="0.09627353225414437">9.6%</td>
+        <td class="num" data-sort="0.16666666666666674">16.7%</td>
+        <td class="num" data-sort="1.0999999999999996">110.0%</td>
+        <td class="num" data-sort="7.465145587921143">7.5</td>
+        <td class="num" data-sort="0.7582147356086129">0.76</td>
+        <td class="num" data-sort="53.384991843393145">53%</td>
+        <td class="num" data-sort="1.809811309824">1.8</td>
+        <td>港股</td>
+        <td class="industry">房地产Ⅱ</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="港股" data-reason="上涨" data-industry="造纸与包装" data-q="1822.hk 中木国际 港股 造纸与包装 上涨" data-change="0.08333333333333325" data-volume="-0.5">
+        <td class="code">1822.HK</td>
+        <td class="name">中木国际</td>
+        <td><span class="reason reason-上涨">上涨</span></td>
+        <td class="num strong" data-sort="0.08333333333333325">8.3%</td>
+        <td class="num" data-sort="0.08869777467838678">8.9%</td>
+        <td class="num" data-sort="-0.15032679738562094">-15.0%</td>
+        <td class="num" data-sort="-0.38083444465612554">-38.1%</td>
+        <td class="num" data-sort="-4.170220375061035">-4.2</td>
+        <td class="num" data-sort="1.783584891286215">1.78</td>
+        <td class="num" data-sort="37.54385964912281">38%</td>
+        <td class="num" data-sort="1.12141691767872">1.1</td>
+        <td>港股</td>
+        <td class="industry">造纸与包装</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="港股" data-reason="上涨" data-industry="消费者服务" data-q="1620.hk 富盈环球集团 港股 消费者服务 上涨" data-change="0.08196721311475404" data-volume="1.8571428571428572">
+        <td class="code">1620.HK</td>
+        <td class="name">富盈环球集团</td>
+        <td><span class="reason reason-上涨">上涨</span></td>
+        <td class="num strong" data-sort="0.08196721311475404">8.2%</td>
+        <td class="num" data-sort="0.0873316544598075">8.7%</td>
+        <td class="num" data-sort="0.306930693069307">30.7%</td>
+        <td class="num" data-sort="1.8085106382978724">180.9%</td>
+        <td class="num" data-sort="14.415726661682129">14.4</td>
+        <td class="num" data-sort="13.946117274167987">13.95</td>
+        <td class="num" data-sort="90.38817005545286">90%</td>
+        <td class="num" data-sort="1.38454272">1.4</td>
+        <td>港股</td>
+        <td class="industry">消费者服务</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="港股" data-reason="上涨" data-industry="硬件设备" data-q="1206.hk 同方泰德 港股 硬件设备 上涨" data-change="0.08080808080808072" data-volume="-0.8401880141010576">
+        <td class="code">1206.HK</td>
+        <td class="name">同方泰德</td>
+        <td><span class="reason reason-上涨">上涨</span></td>
+        <td class="num strong" data-sort="0.08080808080808072">8.1%</td>
+        <td class="num" data-sort="0.08617252215313419">8.6%</td>
+        <td class="num" data-sort="-0.3971830985915494">-39.7%</td>
+        <td class="num" data-sort="-0.27457627118644057">-27.5%</td>
+        <td class="num" data-sort="-0.3061532974243164">-0.3</td>
+        <td class="num" data-sort="0.07132925736555275">0.07</td>
+        <td class="num" data-sort="18.107667210440457">18%</td>
+        <td class="num" data-sort="1.4631148939207967">1.5</td>
+        <td>港股</td>
+        <td class="industry">硬件设备</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="港股" data-reason="上涨" data-industry="软件服务" data-q="1204.hk 博维智慧 港股 软件服务 上涨" data-change="0.08000000000000007" data-volume="-0.8301886792452831">
+        <td class="code">1204.HK</td>
+        <td class="name">博维智慧</td>
+        <td><span class="reason reason-上涨">上涨</span></td>
+        <td class="num strong" data-sort="0.08000000000000007">8.0%</td>
+        <td class="num" data-sort="0.08536444134505361">8.5%</td>
+        <td class="num" data-sort="-0.18999999999999992">-19.0%</td>
+        <td class="num" data-sort="-0.4617940199335548">-46.2%</td>
+        <td class="num" data-sort="99.49637603759766">99.5</td>
+        <td class="num" data-sort="2.3473770235259344">2.35</td>
+        <td class="num" data-sort="12.114771519659936">12%</td>
+        <td class="num" data-sort="7.080048">7.1</td>
+        <td>港股</td>
+        <td class="industry">软件服务</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="港股" data-reason="放量" data-industry="消费者服务" data-q="0308.hk 香港中旅 港股 消费者服务 放量" data-change="0.051282051282051315" data-volume="2.1999624297211144">
+        <td class="code">0308.HK</td>
+        <td class="name">香港中旅</td>
+        <td><span class="reason reason-放量">放量</span></td>
+        <td class="num strong" data-sort="0.051282051282051315">5.1%</td>
+        <td class="num" data-sort="0.05664649262710486">5.7%</td>
+        <td class="num" data-sort="-0.04651162790697672">-4.7%</td>
+        <td class="num" data-sort="0.28125">28.1%</td>
+        <td class="num" data-sort="-24.14315414428711">-24.1</td>
+        <td class="num" data-sort="0.6042632451235006">0.60</td>
+        <td class="num" data-sort="97.96084828711255">98%</td>
+        <td class="num" data-sort="59.52536774606145">59.5</td>
+        <td>港股</td>
+        <td class="industry">消费者服务</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="港股" data-reason="放量" data-industry="医药生物" data-q="6955.hk 博安生物 港股 医药生物 放量" data-change="0.050167224080267525" data-volume="2.2454774590817728">
+        <td class="code">6955.HK</td>
+        <td class="name">博安生物</td>
+        <td><span class="reason reason-放量">放量</span></td>
+        <td class="num strong" data-sort="0.050167224080267525">5.0%</td>
+        <td class="num" data-sort="0.055531665425321064">5.6%</td>
+        <td class="num" data-sort="-0.2646370023419202">-26.5%</td>
+        <td class="num" data-sort="-0.3151581243184296">-31.5%</td>
+        <td class="num" data-sort="494.12298583984375">494.1</td>
+        <td class="num" data-sort="1.2883796381071884">1.29</td>
+        <td class="num" data-sort="0.6060606060606061">1%</td>
+        <td class="num" data-sort="34.161280533795455">34.2</td>
+        <td>港股</td>
+        <td class="industry">医药生物</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="港股" data-reason="放量" data-industry="医疗设备与服务" data-q="2291.hk 心泰医疗 港股 医疗设备与服务 放量" data-change="0.045248868778280486" data-volume="1.8683146010963658">
+        <td class="code">2291.HK</td>
+        <td class="name">心泰医疗</td>
+        <td><span class="reason reason-放量">放量</span></td>
+        <td class="num strong" data-sort="0.045248868778280486">4.5%</td>
+        <td class="num" data-sort="0.05061331012333392">5.1%</td>
+        <td class="num" data-sort="-0.28171641791044766">-28.2%</td>
+        <td class="num" data-sort="-0.1310968230383469">-13.1%</td>
+        <td class="num" data-sort="15.089448928833008">15.1</td>
+        <td class="num" data-sort="1.7758709938003217">1.78</td>
+        <td class="num" data-sort="1.2775842044134729">1%</td>
+        <td class="num" data-sort="35.00657591713128">35.0</td>
+        <td>港股</td>
+        <td class="industry">医疗设备与服务</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="港股" data-reason="放量" data-industry="硬件设备" data-q="0438.hk 彩虹新能源 港股 硬件设备 放量" data-change="0.012422360248447046" data-volume="1.9600709849157054">
+        <td class="code">0438.HK</td>
+        <td class="name">彩虹新能源</td>
+        <td><span class="reason reason-放量">放量</span></td>
+        <td class="num strong" data-sort="0.012422360248447046">1.2%</td>
+        <td class="num" data-sort="0.017786801593500545">1.8%</td>
+        <td class="num" data-sort="-0.15104166666666674">-15.1%</td>
+        <td class="num" data-sort="-0.33469387755102054">-33.5%</td>
+        <td class="num" data-sort="-0.4632721245288849">-0.5</td>
+        <td class="num" data-sort="0.3084094117134078">0.31</td>
+        <td class="num" data-sort="41.068515497553015">41%</td>
+        <td class="num" data-sort="2.5121493976132796">2.5</td>
+        <td>港股</td>
+        <td class="industry">硬件设备</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="港股" data-reason="放量" data-industry="钢铁Ⅱ" data-q="1053.hk 重庆钢铁股份 港股 钢铁ⅱ 放量" data-change="0.009259259259259167" data-volume="1.7188554894711463">
+        <td class="code">1053.HK</td>
+        <td class="name">重庆钢铁股份</td>
+        <td><span class="reason reason-放量">放量</span></td>
+        <td class="num strong" data-sort="0.009259259259259167">0.9%</td>
+        <td class="num" data-sort="0.014623700604312617">1.5%</td>
+        <td class="num" data-sort="-0.07627118644067798">-7.6%</td>
+        <td class="num" data-sort="0.7868852459016393">78.7%</td>
+        <td class="num" data-sort="-3.038651704788208">-3.0</td>
+        <td class="num" data-sort="0.620803318794079">0.62</td>
+        <td class="num" data-sort="81.6884176182708">82%</td>
+        <td class="num" data-sort="119.02381279833841">119.0</td>
+        <td>港股</td>
+        <td class="industry">钢铁Ⅱ</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="港股" data-reason="放量" data-industry="钢铁Ⅱ" data-q="1001.hk 沪港联合 港股 钢铁ⅱ 放量" data-change="0.0" data-volume="2.286103542234332">
+        <td class="code">1001.HK</td>
+        <td class="name">沪港联合</td>
         <td><span class="reason reason-放量">放量</span></td>
         <td class="num strong" data-sort="0.0">0.0%</td>
-        <td class="num" data-sort="0.016754476789772044">1.7%</td>
-        <td class="num" data-sort="-0.336996336996337">-33.7%</td>
-        <td class="num" data-sort="0.09622727626309935">9.6%</td>
-        <td class="num" data-sort="-31.414762496948242">-31.4</td>
-        <td class="num" data-sort="0.8099879548908859">0.81</td>
-        <td class="num" data-sort="6.900826446280991">7%</td>
-        <td class="num" data-sort="33.4488">33.4</td>
-        <td>沪市</td>
-        <td class="industry">可选消费零售</td>
+        <td class="num" data-sort="0.005364441345053539">0.5%</td>
+        <td class="num" data-sort="-0.050000000000000044">-5.0%</td>
+        <td class="num" data-sort="0.7618646953321557">76.2%</td>
+        <td class="num" data-sort="2.7614874839782715">2.8</td>
+        <td class="num" data-sort="0.2265714315020758">0.23</td>
+        <td class="num" data-sort="39.151712887438826">39%</td>
+        <td class="num" data-sort="2.11416491430576">2.1</td>
+        <td>港股</td>
+        <td class="industry">钢铁Ⅱ</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="港股" data-reason="放量" data-industry="企业服务" data-q="1127.hk 狮子山集团 港股 企业服务 放量" data-change="0.0" data-volume="2.011764705882353">
+        <td class="code">1127.HK</td>
+        <td class="name">狮子山集团</td>
+        <td><span class="reason reason-放量">放量</span></td>
+        <td class="num strong" data-sort="0.0">0.0%</td>
+        <td class="num" data-sort="0.005364441345053539">0.5%</td>
+        <td class="num" data-sort="-0.006732854045418013">-0.7%</td>
+        <td class="num" data-sort="0.13573874924697504">13.6%</td>
+        <td class="num" data-sort="5.251827716827393">5.3</td>
+        <td class="num" data-sort="0.5984744245695125">0.60</td>
+        <td class="num" data-sort="32.46329526916802">32%</td>
+        <td class="num" data-sort="8.61493248">8.6</td>
+        <td>港股</td>
+        <td class="industry">企业服务</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="港股" data-reason="放量" data-industry="消费者服务" data-q="0037.hk 远东酒店实业 港股 消费者服务 放量" data-change="0.0" data-volume="1.5019505851755524">
+        <td class="code">0037.HK</td>
+        <td class="name">远东酒店实业</td>
+        <td><span class="reason reason-放量">放量</span></td>
+        <td class="num strong" data-sort="0.0">0.0%</td>
+        <td class="num" data-sort="0.005364441345053539">0.5%</td>
+        <td class="num" data-sort="0.2045454545454546">20.5%</td>
+        <td class="num" data-sort="0.019230769230769162">1.9%</td>
+        <td class="num" data-sort="-19.46849250793457">-19.5</td>
+        <td class="num" data-sort="1.3623066986170735">1.36</td>
+        <td class="num" data-sort="73.36867862969005">73%</td>
+        <td class="num" data-sort="3.48618765852144">3.5</td>
+        <td>港股</td>
+        <td class="industry">消费者服务</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="港股" data-reason="放量" data-industry="环保Ⅱ" data-q="0587.hk 海螺环保 港股 环保ⅱ 放量" data-change="-0.021978021978021917" data-volume="2.350253807106599">
+        <td class="code">0587.HK</td>
+        <td class="name">海螺环保</td>
+        <td><span class="reason reason-放量">放量</span></td>
+        <td class="num strong" data-sort="-0.021978021978021917">-2.2%</td>
+        <td class="num" data-sort="-0.01661358063296836">-1.7%</td>
+        <td class="num" data-sort="-0.2053571428571429">-20.5%</td>
+        <td class="num" data-sort="-0.3642857142857142">-36.4%</td>
+        <td class="num" data-sort="-3.214317798614502">-3.2</td>
+        <td class="num" data-sort="0.2699844341266896">0.27</td>
+        <td class="num" data-sort="0.0">0%</td>
+        <td class="num" data-sort="7.105487672329703">7.1</td>
+        <td>港股</td>
+        <td class="industry">环保Ⅱ</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="港股" data-reason="放量" data-industry="石油石化" data-q="0166.hk 新时代集团控股 港股 石油石化 放量" data-change="-0.02564102564102564" data-volume="1.5731803797468351">
+        <td class="code">0166.HK</td>
+        <td class="name">新时代集团控股</td>
+        <td><span class="reason reason-放量">放量</span></td>
+        <td class="num strong" data-sort="-0.02564102564102564">-2.6%</td>
+        <td class="num" data-sort="-0.020276584295972122">-2.0%</td>
+        <td class="num" data-sort="-0.02564102564102566">-2.6%</td>
+        <td class="num" data-sort="-0.07317073170731703">-7.3%</td>
+        <td class="num" data-sort="-0.42736077308654785">-0.4</td>
+        <td class="num" data-sort="0.3370409147159091">0.34</td>
+        <td class="num" data-sort="1.0603588907014683">1%</td>
+        <td class="num" data-sort="2.903584723274995">2.9</td>
+        <td>港股</td>
+        <td class="industry">石油石化</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="港股" data-reason="放量" data-industry="消费者服务" data-q="0069.hk 香格里拉(亚洲) 港股 消费者服务 放量" data-change="-0.0270270270270271" data-volume="1.5253605372824728">
+        <td class="code">0069.HK</td>
+        <td class="name">香格里拉(亚洲)</td>
+        <td><span class="reason reason-放量">放量</span></td>
+        <td class="num strong" data-sort="-0.0270270270270271">-2.7%</td>
+        <td class="num" data-sort="-0.021662585681973545">-2.2%</td>
+        <td class="num" data-sort="-0.09052631578947368">-9.1%</td>
+        <td class="num" data-sort="-0.06314918484179166">-6.3%</td>
+        <td class="num" data-sort="17.725404739379883">17.7</td>
+        <td class="num" data-sort="0.37383144378570465">0.37</td>
+        <td class="num" data-sort="1.5497553017944536">2%</td>
+        <td class="num" data-sort="135.39034400897432">135.4</td>
+        <td>港股</td>
+        <td class="industry">消费者服务</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="港股" data-reason="放量" data-industry="钢铁Ⅱ" data-q="0893.hk 中国铁钛 港股 钢铁ⅱ 放量" data-change="-0.02816901408450692" data-volume="2.378723404255319">
+        <td class="code">0893.HK</td>
+        <td class="name">中国铁钛</td>
+        <td><span class="reason reason-放量">放量</span></td>
+        <td class="num strong" data-sort="-0.02816901408450692">-2.8%</td>
+        <td class="num" data-sort="-0.022804572739453355">-2.3%</td>
+        <td class="num" data-sort="-0.13750000000000007">-13.8%</td>
+        <td class="num" data-sort="0.2777777777777779">27.8%</td>
+        <td class="num" data-sort="-987.0671997070312">-987.1</td>
+        <td class="num" data-sort="0.2240845526972182">0.22</td>
+        <td class="num" data-sort="34.135399673735726">34%</td>
+        <td class="num" data-sort="1.356415378805232">1.4</td>
+        <td>港股</td>
+        <td class="industry">钢铁Ⅱ</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="港股" data-reason="放量" data-industry="传媒" data-q="1060.hk 大麦娱乐 港股 传媒 放量" data-change="-0.04545454545454539" data-volume="1.6989913574307383">
+        <td class="code">1060.HK</td>
+        <td class="name">大麦娱乐</td>
+        <td><span class="reason reason-放量">放量</span></td>
+        <td class="num strong" data-sort="-0.04545454545454539">-4.5%</td>
+        <td class="num" data-sort="-0.040090104109491875">-4.0%</td>
+        <td class="num" data-sort="-0.33684210526315783">-33.7%</td>
+        <td class="num" data-sort="0.7027027027027029">70.3%</td>
+        <td class="num" data-sort="31.549083709716797">31.5</td>
+        <td class="num" data-sort="1.033760060613631">1.03</td>
+        <td class="num" data-sort="57.95269168026101">58%</td>
+        <td class="num" data-sort="165.07312396190278">165.1</td>
+        <td>港股</td>
+        <td class="industry">传媒</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="港股" data-reason="放量" data-industry="非银金融" data-q="1543.hk 中盈盛达融资担保 港股 非银金融 放量" data-change="-0.0588235294117649" data-volume="2.281061519903498">
+        <td class="code">1543.HK</td>
+        <td class="name">中盈盛达融资担保</td>
+        <td><span class="reason reason-放量">放量</span></td>
+        <td class="num strong" data-sort="-0.0588235294117649">-5.9%</td>
+        <td class="num" data-sort="-0.0534590880667114">-5.3%</td>
+        <td class="num" data-sort="-0.432258064516129">-43.2%</td>
+        <td class="num" data-sort="-0.7160145219846713">-71.6%</td>
+        <td class="num" data-sort="23.900789260864258">23.9</td>
+        <td class="num" data-sort="0.12315836046983986">0.12</td>
+        <td class="num" data-sort="0.48939641109298526">0%</td>
+        <td class="num" data-sort="2.4010935024612095">2.4</td>
+        <td>港股</td>
+        <td class="industry">非银金融</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="港股" data-reason="放量" data-industry="建筑" data-q="8152.hk 明梁控股 港股 建筑 放量" data-change="-0.06493506493506486" data-volume="1.8571428571428572">
+        <td class="code">8152.HK</td>
+        <td class="name">明梁控股</td>
+        <td><span class="reason reason-放量">放量</span></td>
+        <td class="num strong" data-sort="-0.06493506493506486">-6.5%</td>
+        <td class="num" data-sort="-0.05957062359001131">-6.0%</td>
+        <td class="num" data-sort="0.0">0.0%</td>
+        <td class="num" data-sort="0.43999999999999995">44.0%</td>
+        <td class="num" data-sort="4.583067893981934">4.6</td>
+        <td class="num" data-sort="0.3854080239809437">0.39</td>
+        <td class="num" data-sort="51.264274061990214">51%</td>
+        <td class="num" data-sort="0.37760256">0.4</td>
+        <td>港股</td>
+        <td class="industry">建筑</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="港股" data-reason="放量" data-industry="石油石化" data-q="3303.hk 巨涛海洋石油服务 港股 石油石化 放量" data-change="-0.06666666666666655" data-volume="1.9180424985708626">
+        <td class="code">3303.HK</td>
+        <td class="name">巨涛海洋石油服务</td>
+        <td><span class="reason reason-放量">放量</span></td>
+        <td class="num strong" data-sort="-0.06666666666666655">-6.7%</td>
+        <td class="num" data-sort="-0.061302225321612995">-6.1%</td>
+        <td class="num" data-sort="0.22004357298474986">22.0%</td>
+        <td class="num" data-sort="0.1636363636363638">16.4%</td>
+        <td class="num" data-sort="27.463258743286133">27.5</td>
+        <td class="num" data-sort="0.5754134852874041">0.58</td>
+        <td class="num" data-sort="59.46166394779772">59%</td>
+        <td class="num" data-sort="12.182470426901377">12.2</td>
+        <td>港股</td>
+        <td class="industry">石油石化</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="港股" data-reason="放量" data-industry="交通运输" data-q="0862.hk 远见控股 港股 交通运输 放量" data-change="-0.074074074074074" data-volume="2.180722891566265">
+        <td class="code">0862.HK</td>
+        <td class="name">远见控股</td>
+        <td><span class="reason reason-放量">放量</span></td>
+        <td class="num strong" data-sort="-0.074074074074074">-7.4%</td>
+        <td class="num" data-sort="-0.06870963272902042">-6.9%</td>
+        <td class="num" data-sort="0.06382978723404276">6.4%</td>
+        <td class="num" data-sort="1.0">100.0%</td>
+        <td class="num" data-sort="-3.61130690574646">-3.6</td>
+        <td class="num" data-sort="1.6617223089366173">1.66</td>
+        <td class="num" data-sort="69.29037520391516">69%</td>
+        <td class="num" data-sort="1.71502820169768">1.7</td>
+        <td>港股</td>
+        <td class="industry">交通运输</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="港股" data-reason="放量" data-industry="造纸与包装" data-q="1820.hk 济丰包装 港股 造纸与包装 放量" data-change="-0.07480314960629925" data-volume="1.825581395348837">
+        <td class="code">1820.HK</td>
+        <td class="name">济丰包装</td>
+        <td><span class="reason reason-放量">放量</span></td>
+        <td class="num strong" data-sort="-0.07480314960629925">-7.5%</td>
+        <td class="num" data-sort="-0.06943870826124565">-6.9%</td>
+        <td class="num" data-sort="-0.05999999999999995">-6.0%</td>
+        <td class="num" data-sort="-0.6132284493972848">-61.3%</td>
+        <td class="num" data-sort="-14.454245567321777">-14.5</td>
+        <td class="num" data-sort="1.3573549444262454">1.36</td>
+        <td class="num" data-sort="2.202283849918434">2%</td>
+        <td class="num" data-sort="6.175245836159999">6.2</td>
+        <td>港股</td>
+        <td class="industry">造纸与包装</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="港股" data-reason="放量" data-industry="日常消费零售" data-q="2411.hk 百果园集团 港股 日常消费零售 放量" data-change="-0.07643312101910828" data-volume="2.2149418248622164">
+        <td class="code">2411.HK</td>
+        <td class="name">百果园集团</td>
+        <td><span class="reason reason-放量">放量</span></td>
+        <td class="num strong" data-sort="-0.07643312101910828">-7.6%</td>
+        <td class="num" data-sort="-0.07106867967405472">-7.1%</td>
+        <td class="num" data-sort="-0.15697674418604646">-15.7%</td>
+        <td class="num" data-sort="-0.0672806246576737">-6.7%</td>
+        <td class="num" data-sort="-8.253196716308594">-8.3</td>
+        <td class="num" data-sort="0.9772163818871406">0.98</td>
+        <td class="num" data-sort="30.920245398773005">31%</td>
+        <td class="num" data-sort="25.3574612379">25.4</td>
+        <td>港股</td>
+        <td class="industry">日常消费零售</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="港股" data-reason="放量" data-industry="房地产Ⅱ" data-q="0485.hk 中国华星 港股 房地产ⅱ 放量" data-change="-0.09210526315789483" data-volume="1.8687564142969122">
+        <td class="code">0485.HK</td>
+        <td class="name">中国华星</td>
+        <td><span class="reason reason-放量">放量</span></td>
+        <td class="num strong" data-sort="-0.09210526315789483">-9.2%</td>
+        <td class="num" data-sort="-0.08674082181284126">-8.7%</td>
+        <td class="num" data-sort="-0.19767441860465118">-19.8%</td>
+        <td class="num" data-sort="1.6538461538461533">165.4%</td>
+        <td class="num" data-sort="-4.080749988555908">-4.1</td>
+        <td class="num" data-sort="0.503673630447361">0.50</td>
+        <td class="num" data-sort="90.86460032626428">91%</td>
+        <td class="num" data-sort="0.768489019939728">0.8</td>
+        <td>港股</td>
+        <td class="industry">房地产Ⅱ</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="港股" data-reason="放量" data-industry="非银金融" data-q="0510.hk 时富金融服务集团 港股 非银金融 放量" data-change="-0.09574468085106388" data-volume="1.6119402985074625">
+        <td class="code">0510.HK</td>
+        <td class="name">时富金融服务集团</td>
+        <td><span class="reason reason-放量">放量</span></td>
+        <td class="num strong" data-sort="-0.09574468085106388">-9.6%</td>
+        <td class="num" data-sort="-0.09038023950601037">-9.0%</td>
+        <td class="num" data-sort="-0.10526315789473673">-10.5%</td>
+        <td class="num" data-sort="1.9109589041095894">191.1%</td>
+        <td class="num" data-sort="-4.756262302398682">-4.8</td>
+        <td class="num" data-sort="1.0168087952225058">1.02</td>
+        <td class="num" data-sort="86.05220228384992">86%</td>
+        <td class="num" data-sort="1.6017453160203596">1.6</td>
+        <td>港股</td>
+        <td class="industry">非银金融</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="港股" data-reason="放量" data-industry="消费者服务" data-q="1569.hk 民生教育 港股 消费者服务 放量" data-change="-0.11111111111111124" data-volume="2.1252204585537915">
+        <td class="code">1569.HK</td>
+        <td class="name">民生教育</td>
+        <td><span class="reason reason-放量">放量</span></td>
+        <td class="num strong" data-sort="-0.11111111111111124">-11.1%</td>
+        <td class="num" data-sort="-0.10574666976605773">-10.6%</td>
+        <td class="num" data-sort="-0.31818181818181823">-31.8%</td>
+        <td class="num" data-sort="-0.3142857142857143">-31.4%</td>
+        <td class="num" data-sort="-0.6142139434814453">-0.6</td>
+        <td class="num" data-sort="0.10576421127971776">0.11</td>
+        <td class="num" data-sort="1.0603588907014683">1%</td>
+        <td class="num" data-sort="4.42394963712">4.4</td>
+        <td>港股</td>
+        <td class="industry">消费者服务</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="港股" data-reason="放量" data-industry="食品饮料" data-q="0389.hk 通天酒业 港股 食品饮料 放量" data-change="-0.13076923076923083" data-volume="1.6707650178563758">
+        <td class="code">0389.HK</td>
+        <td class="name">通天酒业</td>
+        <td><span class="reason reason-放量">放量</span></td>
+        <td class="num strong" data-sort="-0.13076923076923083">-13.1%</td>
+        <td class="num" data-sort="-0.12540478942417732">-12.5%</td>
+        <td class="num" data-sort="-0.47441860465116276">-47.4%</td>
+        <td class="num" data-sort="-0.47441860465116276">-47.4%</td>
+        <td class="num" data-sort="-73.02149963378906">-73.0</td>
+        <td class="num" data-sort="0.671039338446988">0.67</td>
+        <td class="num" data-sort="77.73246329526917">78%</td>
+        <td class="num" data-sort="0.59571145220544">0.6</td>
+        <td>港股</td>
+        <td class="industry">食品饮料</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="港股" data-reason="放量" data-industry="建筑" data-q="1718.hk 宏基集团控股 港股 建筑 放量" data-change="-0.1527777777777778" data-volume="2.5245603395997573">
+        <td class="code">1718.HK</td>
+        <td class="name">宏基集团控股</td>
+        <td><span class="reason reason-放量">放量</span></td>
+        <td class="num strong" data-sort="-0.1527777777777778">-15.3%</td>
+        <td class="num" data-sort="-0.14741333643272425">-14.7%</td>
+        <td class="num" data-sort="0.1090909090909089">10.9%</td>
+        <td class="num" data-sort="0.2944297082228118">29.4%</td>
+        <td class="num" data-sort="-2.33134388923645">-2.3</td>
+        <td class="num" data-sort="1.1748480089168103">1.17</td>
+        <td class="num" data-sort="80.50570962479608">81%</td>
+        <td class="num" data-sort="0.8107668892800001">0.8</td>
+        <td>港股</td>
+        <td class="industry">建筑</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="港股" data-reason="放量" data-industry="房地产Ⅱ" data-q="1778.hk 彩生活 港股 房地产ⅱ 放量" data-change="-0.16666666666666663" data-volume="1.9079004262153316">
+        <td class="code">1778.HK</td>
+        <td class="name">彩生活</td>
+        <td><span class="reason reason-放量">放量</span></td>
+        <td class="num strong" data-sort="-0.16666666666666663">-16.7%</td>
+        <td class="num" data-sort="-0.16130222532161312">-16.1%</td>
+        <td class="num" data-sort="-0.0119760479041916">-1.2%</td>
+        <td class="num" data-sort="-0.13095275417750885">-13.1%</td>
+        <td class="num" data-sort="11.552502632141113">11.6</td>
+        <td class="num" data-sort="0.0636515609014425">0.06</td>
+        <td class="num" data-sort="14.070146818923329">14%</td>
+        <td class="num" data-sort="2.681696553332544">2.7</td>
+        <td>港股</td>
+        <td class="industry">房地产Ⅱ</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="港股" data-reason="放量" data-industry="建筑" data-q="1413.hk 铸帝控股 港股 建筑 放量" data-change="-0.28571428571428564" data-volume="2.7268439582825885">
+        <td class="code">1413.HK</td>
+        <td class="name">铸帝控股</td>
+        <td><span class="reason reason-放量">放量</span></td>
+        <td class="num strong" data-sort="-0.28571428571428564">-28.6%</td>
+        <td class="num" data-sort="-0.28034984436923216">-28.0%</td>
+        <td class="num" data-sort="-0.3848190261262041">-38.5%</td>
+        <td class="num" data-sort="-0.7050009365049634">-70.5%</td>
+        <td class="num" data-sort="-1.0901463031768799">-1.1</td>
+        <td class="num" data-sort="0.5292270034851534">0.53</td>
+        <td class="num" data-sort="16.884176182707993">17%</td>
+        <td class="num" data-sort="0.96760656">1.0</td>
+        <td>港股</td>
+        <td class="industry">建筑</td>
+      </tr>
+      <tr class="movement-row" data-reason-score="1" data-market="港股" data-reason="放量" data-industry="电气设备" data-q="1608.hk 伟能集团 港股 电气设备 放量" data-change="-0.32926829268292684" data-volume="1.5503493629264282">
+        <td class="code">1608.HK</td>
+        <td class="name">伟能集团</td>
+        <td><span class="reason reason-放量">放量</span></td>
+        <td class="num strong" data-sort="-0.32926829268292684">-32.9%</td>
+        <td class="num" data-sort="-0.3239038513378734">-32.4%</td>
+        <td class="num" data-sort="-0.6014492753623188">-60.1%</td>
+        <td class="num" data-sort="-0.8">-80.0%</td>
+        <td class="num" data-sort="-1.82457435131073">-1.8</td>
+        <td class="num" data-sort="0.26175511073416396">0.26</td>
+        <td class="num" data-sort="2.691680261011419">3%</td>
+        <td class="num" data-sort="3.2128845155098555">3.2</td>
+        <td>港股</td>
+        <td class="industry">电气设备</td>
       </tr>
         </tbody>
       </table>
