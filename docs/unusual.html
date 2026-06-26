@@ -91,6 +91,90 @@
     .status-chip.green strong { color: var(--green); }
     .status-chip.rose strong { color: var(--rose); }
     .status-chip.gold strong { color: var(--gold); }
+    .rule-panel {
+      margin: 0 0 10px;
+      padding: 12px 14px 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+    }
+    .rule-panel-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+    .rule-panel h2 {
+      margin: 0 0 3px;
+      color: #1d4f7d;
+      font-size: 16px;
+      line-height: 1.3;
+    }
+    .rule-layout {
+      display: grid;
+      grid-template-columns: minmax(360px, 1.45fr) minmax(260px, .85fr) minmax(210px, .7fr);
+      gap: 12px;
+      align-items: start;
+    }
+    .rule-block { min-width: 0; }
+    .rule-block h3 {
+      margin: 0 0 7px;
+      color: var(--text);
+      font-size: 13px;
+      line-height: 1.3;
+    }
+    .rule-list {
+      display: grid;
+      gap: 6px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .rule-list li {
+      display: grid;
+      grid-template-columns: 86px minmax(0, 1fr);
+      gap: 9px;
+      padding: 7px 8px;
+      border: 1px solid #e4ebf3;
+      border-radius: 6px;
+      background: #fbfdff;
+      line-height: 1.45;
+    }
+    .rule-term {
+      color: var(--blue);
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .rule-desc { color: var(--muted); }
+    .threshold-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 6px;
+    }
+    .threshold-chip {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      min-height: 34px;
+      padding: 6px 8px;
+      border: 1px solid #e4ebf3;
+      border-radius: 6px;
+      background: #fbfdff;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.3;
+    }
+    .threshold-chip strong {
+      color: var(--text);
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+    .date-grid { grid-template-columns: 1fr; }
+
     .controls {
       display: grid;
       grid-template-columns: minmax(180px, 1.2fr) repeat(3, minmax(120px, .8fr)) auto;
@@ -365,6 +449,9 @@
       header { align-items: flex-start; flex-direction: column; }
       .refresh-note { max-width: none; text-align: left; }
       .controls { grid-template-columns: 1fr; }
+      .rule-layout { grid-template-columns: 1fr; }
+      .rule-list li { grid-template-columns: 1fr; }
+      .threshold-grid { grid-template-columns: 1fr; }
       .reason-section-head { align-items: flex-start; flex-direction: column; }
       .section-summary { justify-content: flex-start; white-space: normal; }
       .detail-float {
@@ -381,8 +468,8 @@
     <header>
       <div>
         <h1>2026-06-26 异动标的</h1>
-        <div class="meta">最近交易日 2026-06-26；工作簿保存 2026-06-26 21:55:24；生成 2026-06-26 21:56:02</div>
-        <div class="meta">涨幅阈值 9.5%；超额阈值 8.5%；成交阈值-5 1.5x；成交阈值-20 1.8x；PE阈值 25.0；PB阈值 2.5；YTD阈值 51.0%</div>
+        <div class="meta">最近交易日 2026-06-26；工作簿保存 2026-06-26 21:55:24；生成 2026-06-26 22:15:13</div>
+        <div class="meta">涨幅阈值 9.5%；超额阈值 8.5%；成交阈值-5 1.5x；成交阈值-20 1.8x；PE阈值 25.0；PB阈值 2.5；YTD阈值 51.0%；最近一季超额阈值 51.0%；3日涨幅 18.0%；3日超额 17.0%；5日涨幅 25.0%；5日超额 24.0%</div>
       </div>
       <div class="refresh-note">读取工作簿已保存缓存。</div>
     </header>
@@ -392,6 +479,29 @@
       <span class="status-chip rose">平均涨跌幅 <strong>0.7%</strong></span>
       <span class="status-chip rose">平均超额 <strong>3.4%</strong></span>
       <span class="status-chip green">入选原因：持续放量 45；日涨/超额 26；当日放量 19；3D价强 / 持续放量 8；3Y新高 6；3D价强 5；日涨/超额 / 当日放量 3；日涨/超额 / 持续放量 2；等 23 类原因</span>
+    </section>
+    
+    <section class="rule-panel" aria-label="筛选规则">
+      <div class="rule-panel-head">
+        <div>
+          <h2>筛选规则</h2>
+          <div>来自 Excel 第一页“阈值设置”；相对指数口径按表内条件定义执行。</div>
+        </div>
+      </div>
+      <div class="rule-layout">
+        <div class="rule-block rule-block-wide">
+          <h3>条件定义</h3>
+          <ul class="rule-list"><li><span class="rule-term">日涨/超额</span><span class="rule-desc">当日涨幅超过9.5%，或当日相对指数的涨幅超过8.5%（A股对应沪深300，港股对应恒生指数）</span></li><li><span class="rule-term">3D价强</span><span class="rule-desc">过去3日累计涨幅超过18%，或过去3天相对指数的涨幅累计超过17%</span></li><li><span class="rule-term">5D价强</span><span class="rule-desc">过去5日累计涨幅超过25%，或过去3天相对指数的涨幅累计超过24%</span></li><li><span class="rule-term">持续放量</span><span class="rule-desc">同时满足①近5日有效放量天数（单日成交量 &gt; 起爆前20日均量 × 2）超过2.5天，②近5日均量是前20日均量的至少3倍，③当日未明显缩量（今日成交量 ≥ 近5日均量 × 60%）</span></li><li><span class="rule-term">当日放量</span><span class="rule-desc">同时满足①当日成交量是过去5日均量（不含当日）的2.5倍，②当日成交量是过去20日均量（不含当日）的2.8倍，③不符合持续放量（已有放量的情况）</span></li><li><span class="rule-term">3Y新高</span><span class="rule-desc">当日收盘价超过过去3年最高收盘价（不含当日）</span></li><li><span class="rule-term">120D新高</span><span class="rule-desc">当日收盘价超过过去120日最高收盘价（不含当日）</span></li><li><span class="rule-term">60D新高</span><span class="rule-desc">当日收盘价超过过去60日最高收盘价（不含当日）</span></li></ul>
+        </div>
+        <div class="rule-block">
+          <h3>阈值设置</h3>
+          <div class="threshold-grid"><span class="threshold-chip"><span>涨幅阈值</span><strong>9.5%</strong></span><span class="threshold-chip"><span>超额阈值</span><strong>8.5%</strong></span><span class="threshold-chip"><span>3日涨幅</span><strong>18.0%</strong></span><span class="threshold-chip"><span>3日超额</span><strong>17.0%</strong></span><span class="threshold-chip"><span>5日涨幅</span><strong>25.0%</strong></span><span class="threshold-chip"><span>5日超额</span><strong>24.0%</strong></span><span class="threshold-chip"><span>成交阈值-5</span><strong>1.5x</strong></span><span class="threshold-chip"><span>成交阈值-20</span><strong>1.8x</strong></span><span class="threshold-chip"><span>PE阈值</span><strong>25.0</strong></span><span class="threshold-chip"><span>PB阈值</span><strong>2.5</strong></span><span class="threshold-chip"><span>YTD阈值</span><strong>51.0%</strong></span><span class="threshold-chip"><span>最近一季超额阈值</span><strong>51.0%</strong></span></div>
+        </div>
+        <div class="rule-block">
+          <h3>日期口径</h3>
+          <div class="threshold-grid date-grid"><span class="threshold-chip"><span>最近交易日</span><strong>2026-06-26</strong></span><span class="threshold-chip"><span>前1交易日</span><strong>2026-06-25</strong></span><span class="threshold-chip"><span>前5交易日</span><strong>2026-06-18</strong></span><span class="threshold-chip"><span>前20交易日</span><strong>2026-05-28</strong></span><span class="threshold-chip"><span>最近一季</span><strong>2026-03-26</strong></span><span class="threshold-chip"><span>过去三年</span><strong>2023-06-26</strong></span></div>
+        </div>
+      </div>
     </section>
     <section class="controls">
       <label class="control-field"><span>名称 / 代码</span><input id="searchBox" type="search" placeholder="代码 / 简称 / 行业 / 原因"></label>
