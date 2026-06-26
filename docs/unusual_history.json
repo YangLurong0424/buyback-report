@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-26T22:32:05",
+  "generated_at": "2026-06-26T22:38:56",
   "window_days": 7,
   "latest_date": "2026-06-26",
   "dates": [
@@ -44,7 +44,7 @@
         {
           "code": "300505.SZ",
           "name": "川金诺",
-          "market": "深市",
+          "market": "A股",
           "industry": "化工",
           "reason": "上涨 / 放量",
           "condition_tags": [
@@ -58,7 +58,7 @@
         {
           "code": "300289.SZ",
           "name": "利德曼",
-          "market": "深市",
+          "market": "A股",
           "industry": "医药生物",
           "reason": "上涨 / 放量",
           "condition_tags": [
@@ -170,7 +170,7 @@
         {
           "code": "001239.SZ",
           "name": "永达股份",
-          "market": "深市",
+          "market": "A股",
           "industry": "机械",
           "reason": "上涨 / 放量",
           "condition_tags": [
@@ -238,7 +238,7 @@
         {
           "code": "300481.SZ",
           "name": "濮阳惠成",
-          "market": "深市",
+          "market": "A股",
           "industry": "化工",
           "reason": "上涨",
           "condition_tags": [
@@ -498,7 +498,7 @@
         {
           "code": "600067.SH",
           "name": "冠城新材",
-          "market": "沪市",
+          "market": "A股",
           "industry": "电气设备",
           "reason": "上涨",
           "condition_tags": [
@@ -511,7 +511,7 @@
         {
           "code": "600470.SH",
           "name": "六国化工",
-          "market": "沪市",
+          "market": "A股",
           "industry": "化工",
           "reason": "上涨",
           "condition_tags": [
@@ -524,7 +524,7 @@
         {
           "code": "600108.SH",
           "name": "亚盛集团",
-          "market": "沪市",
+          "market": "A股",
           "industry": "食品饮料",
           "reason": "上涨",
           "condition_tags": [
@@ -537,7 +537,7 @@
         {
           "code": "601137.SH",
           "name": "博威合金",
-          "market": "沪市",
+          "market": "A股",
           "industry": "有色金属",
           "reason": "上涨",
           "condition_tags": [
@@ -550,7 +550,7 @@
         {
           "code": "600141.SH",
           "name": "兴发集团",
-          "market": "沪市",
+          "market": "A股",
           "industry": "化工",
           "reason": "上涨",
           "condition_tags": [
@@ -563,7 +563,7 @@
         {
           "code": "601958.SH",
           "name": "金钼股份",
-          "market": "沪市",
+          "market": "A股",
           "industry": "有色金属",
           "reason": "上涨",
           "condition_tags": [
@@ -576,7 +576,7 @@
         {
           "code": "603014.SH",
           "name": "威高血净",
-          "market": "沪市",
+          "market": "A股",
           "industry": "医疗设备与服务",
           "reason": "上涨",
           "condition_tags": [
@@ -589,7 +589,7 @@
         {
           "code": "600665.SH",
           "name": "天地源",
-          "market": "沪市",
+          "market": "A股",
           "industry": "房地产Ⅱ",
           "reason": "上涨",
           "condition_tags": [
@@ -602,7 +602,7 @@
         {
           "code": "002469.SZ",
           "name": "三维化学",
-          "market": "深市",
+          "market": "A股",
           "industry": "化工",
           "reason": "上涨",
           "condition_tags": [
@@ -615,7 +615,7 @@
         {
           "code": "600178.SH",
           "name": "东安动力",
-          "market": "沪市",
+          "market": "A股",
           "industry": "汽车与零配件",
           "reason": "上涨",
           "condition_tags": [
@@ -628,7 +628,7 @@
         {
           "code": "002965.SZ",
           "name": "祥鑫科技",
-          "market": "深市",
+          "market": "A股",
           "industry": "汽车与零配件",
           "reason": "上涨",
           "condition_tags": [
@@ -641,7 +641,7 @@
         {
           "code": "000921.SZ",
           "name": "海信家电",
-          "market": "深市",
+          "market": "A股",
           "industry": "家电Ⅱ",
           "reason": "上涨",
           "condition_tags": [
@@ -654,7 +654,7 @@
         {
           "code": "600979.SH",
           "name": "广安爱众",
-          "market": "沪市",
+          "market": "A股",
           "industry": "公用事业Ⅱ",
           "reason": "上涨",
           "condition_tags": [
@@ -667,7 +667,7 @@
         {
           "code": "000631.SZ",
           "name": "顺发恒能",
-          "market": "深市",
+          "market": "A股",
           "industry": "房地产Ⅱ",
           "reason": "上涨",
           "condition_tags": [
@@ -745,7 +745,7 @@
         {
           "code": "300401.SZ",
           "name": "花园生物",
-          "market": "深市",
+          "market": "A股",
           "industry": "医药生物",
           "reason": "上涨",
           "condition_tags": [
@@ -758,7 +758,7 @@
         {
           "code": "000422.SZ",
           "name": "湖北宜化",
-          "market": "深市",
+          "market": "A股",
           "industry": "化工",
           "reason": "上涨",
           "condition_tags": [
@@ -784,7 +784,7 @@
         {
           "code": "688303.SH",
           "name": "大全能源",
-          "market": "沪市",
+          "market": "A股",
           "industry": "电气设备",
           "reason": "上涨",
           "condition_tags": [
@@ -849,7 +849,7 @@
         {
           "code": "600060.SH",
           "name": "海信视像",
-          "market": "沪市",
+          "market": "A股",
           "industry": "家电Ⅱ",
           "reason": "上涨",
           "condition_tags": [
@@ -953,7 +953,7 @@
         {
           "code": "003032.SZ",
           "name": "*ST传智",
-          "market": "深市",
+          "market": "A股",
           "industry": "消费者服务",
           "reason": "放量",
           "condition_tags": [
@@ -992,7 +992,7 @@
         {
           "code": "001322.SZ",
           "name": "箭牌家居",
-          "market": "深市",
+          "market": "A股",
           "industry": "耐用消费品",
           "reason": "放量",
           "condition_tags": [
@@ -1005,7 +1005,7 @@
         {
           "code": "600983.SH",
           "name": "惠而浦",
-          "market": "沪市",
+          "market": "A股",
           "industry": "家电Ⅱ",
           "reason": "放量",
           "condition_tags": [
@@ -1252,7 +1252,7 @@
         {
           "code": "600058.SH",
           "name": "五矿发展",
-          "market": "沪市",
+          "market": "A股",
           "industry": "工业贸易与综合",
           "reason": "放量",
           "condition_tags": [
@@ -1291,7 +1291,7 @@
         {
           "code": "600229.SH",
           "name": "城市传媒",
-          "market": "沪市",
+          "market": "A股",
           "industry": "传媒",
           "reason": "放量",
           "condition_tags": [
@@ -1304,7 +1304,7 @@
         {
           "code": "920112.BJ",
           "name": "巴兰仕",
-          "market": "北交所",
+          "market": "A股",
           "industry": "机械",
           "reason": "放量",
           "condition_tags": [
@@ -1373,7 +1373,7 @@
         {
           "code": "300244.SZ",
           "name": "迪安诊断",
-          "market": "深市",
+          "market": "A股",
           "industry": "医疗设备与服务",
           "reason": "上涨 / 放量",
           "condition_tags": [
@@ -1485,7 +1485,7 @@
         {
           "code": "600067.SH",
           "name": "冠城新材",
-          "market": "沪市",
+          "market": "A股",
           "industry": "电气设备",
           "reason": "上涨 / 放量",
           "condition_tags": [
@@ -1499,7 +1499,7 @@
         {
           "code": "601696.SH",
           "name": "中银证券",
-          "market": "沪市",
+          "market": "A股",
           "industry": "非银金融",
           "reason": "上涨 / 放量",
           "condition_tags": [
@@ -1513,7 +1513,7 @@
         {
           "code": "603180.SH",
           "name": "金牌家居",
-          "market": "沪市",
+          "market": "A股",
           "industry": "耐用消费品",
           "reason": "上涨 / 放量",
           "condition_tags": [
@@ -1541,7 +1541,7 @@
         {
           "code": "603519.SH",
           "name": "立霸股份",
-          "market": "沪市",
+          "market": "A股",
           "industry": "家电Ⅱ",
           "reason": "上涨 / 放量",
           "condition_tags": [
@@ -1555,7 +1555,7 @@
         {
           "code": "603014.SH",
           "name": "威高血净",
-          "market": "沪市",
+          "market": "A股",
           "industry": "医疗设备与服务",
           "reason": "上涨 / 放量",
           "condition_tags": [
@@ -1569,7 +1569,7 @@
         {
           "code": "600711.SH",
           "name": "盛屯矿业",
-          "market": "沪市",
+          "market": "A股",
           "industry": "工业贸易与综合",
           "reason": "上涨 / 放量",
           "condition_tags": [
@@ -1726,7 +1726,7 @@
         {
           "code": "301276.SZ",
           "name": "嘉曼服饰",
-          "market": "深市",
+          "market": "A股",
           "industry": "纺织服装Ⅱ",
           "reason": "上涨",
           "condition_tags": [
@@ -1908,7 +1908,7 @@
         {
           "code": "601996.SH",
           "name": "丰林集团",
-          "market": "沪市",
+          "market": "A股",
           "industry": "造纸与包装",
           "reason": "上涨",
           "condition_tags": [
@@ -1921,7 +1921,7 @@
         {
           "code": "600906.SH",
           "name": "财达证券",
-          "market": "沪市",
+          "market": "A股",
           "industry": "非银金融",
           "reason": "上涨",
           "condition_tags": [
@@ -1934,7 +1934,7 @@
         {
           "code": "603020.SH",
           "name": "爱普股份",
-          "market": "沪市",
+          "market": "A股",
           "industry": "食品饮料",
           "reason": "上涨",
           "condition_tags": [
@@ -1947,7 +1947,7 @@
         {
           "code": "002345.SZ",
           "name": "潮宏基",
-          "market": "深市",
+          "market": "A股",
           "industry": "纺织服装Ⅱ",
           "reason": "上涨",
           "condition_tags": [
@@ -1960,7 +1960,7 @@
         {
           "code": "001206.SZ",
           "name": "依依股份",
-          "market": "深市",
+          "market": "A股",
           "industry": "家庭用品",
           "reason": "上涨",
           "condition_tags": [
@@ -1973,7 +1973,7 @@
         {
           "code": "002457.SZ",
           "name": "青龙管业",
-          "market": "深市",
+          "market": "A股",
           "industry": "建筑",
           "reason": "上涨",
           "condition_tags": [
@@ -1986,7 +1986,7 @@
         {
           "code": "000151.SZ",
           "name": "中成股份",
-          "market": "深市",
+          "market": "A股",
           "industry": "工业贸易与综合",
           "reason": "上涨",
           "condition_tags": [
@@ -1999,7 +1999,7 @@
         {
           "code": "603993.SH",
           "name": "洛阳钼业",
-          "market": "沪市",
+          "market": "A股",
           "industry": "有色金属",
           "reason": "上涨",
           "condition_tags": [
@@ -2012,7 +2012,7 @@
         {
           "code": "002200.SZ",
           "name": "*ST交投",
-          "market": "深市",
+          "market": "A股",
           "industry": "建筑",
           "reason": "上涨",
           "condition_tags": [
@@ -2025,7 +2025,7 @@
         {
           "code": "601233.SH",
           "name": "桐昆股份",
-          "market": "沪市",
+          "market": "A股",
           "industry": "化工",
           "reason": "上涨",
           "condition_tags": [
@@ -2038,7 +2038,7 @@
         {
           "code": "600531.SH",
           "name": "豫光金铅",
-          "market": "沪市",
+          "market": "A股",
           "industry": "有色金属",
           "reason": "上涨",
           "condition_tags": [
@@ -2064,7 +2064,7 @@
         {
           "code": "001233.SZ",
           "name": "海安集团",
-          "market": "深市",
+          "market": "A股",
           "industry": "汽车与零配件",
           "reason": "上涨",
           "condition_tags": [
@@ -2077,7 +2077,7 @@
         {
           "code": "002997.SZ",
           "name": "瑞鹄模具",
-          "market": "深市",
+          "market": "A股",
           "industry": "汽车与零配件",
           "reason": "上涨",
           "condition_tags": [
@@ -2090,7 +2090,7 @@
         {
           "code": "002190.SZ",
           "name": "成飞集成",
-          "market": "深市",
+          "market": "A股",
           "industry": "汽车与零配件",
           "reason": "上涨",
           "condition_tags": [
@@ -2103,7 +2103,7 @@
         {
           "code": "001378.SZ",
           "name": "德冠新材",
-          "market": "深市",
+          "market": "A股",
           "industry": "化工",
           "reason": "上涨",
           "condition_tags": [
@@ -2116,7 +2116,7 @@
         {
           "code": "601609.SH",
           "name": "金田股份",
-          "market": "沪市",
+          "market": "A股",
           "industry": "有色金属",
           "reason": "上涨",
           "condition_tags": [
@@ -2129,7 +2129,7 @@
         {
           "code": "002597.SZ",
           "name": "金禾实业",
-          "market": "深市",
+          "market": "A股",
           "industry": "食品饮料",
           "reason": "上涨",
           "condition_tags": [
@@ -2142,7 +2142,7 @@
         {
           "code": "002215.SZ",
           "name": "诺普信",
-          "market": "深市",
+          "market": "A股",
           "industry": "化工",
           "reason": "上涨",
           "condition_tags": [
@@ -2155,7 +2155,7 @@
         {
           "code": "603225.SH",
           "name": "新凤鸣",
-          "market": "沪市",
+          "market": "A股",
           "industry": "化工",
           "reason": "上涨",
           "condition_tags": [
@@ -2168,7 +2168,7 @@
         {
           "code": "000099.SZ",
           "name": "中信海直",
-          "market": "深市",
+          "market": "A股",
           "industry": "交通运输",
           "reason": "上涨",
           "condition_tags": [
@@ -2181,7 +2181,7 @@
         {
           "code": "002637.SZ",
           "name": "赞宇科技",
-          "market": "深市",
+          "market": "A股",
           "industry": "化工",
           "reason": "上涨",
           "condition_tags": [
@@ -2194,7 +2194,7 @@
         {
           "code": "603036.SH",
           "name": "如通股份",
-          "market": "沪市",
+          "market": "A股",
           "industry": "石油石化",
           "reason": "上涨",
           "condition_tags": [
@@ -2220,7 +2220,7 @@
         {
           "code": "603815.SH",
           "name": "交建股份",
-          "market": "沪市",
+          "market": "A股",
           "industry": "建筑",
           "reason": "上涨",
           "condition_tags": [
@@ -2233,7 +2233,7 @@
         {
           "code": "000758.SZ",
           "name": "中色股份",
-          "market": "深市",
+          "market": "A股",
           "industry": "有色金属",
           "reason": "上涨",
           "condition_tags": [
@@ -2246,7 +2246,7 @@
         {
           "code": "002088.SZ",
           "name": "鲁阳节能",
-          "market": "深市",
+          "market": "A股",
           "industry": "建材Ⅱ",
           "reason": "上涨",
           "condition_tags": [
@@ -2259,7 +2259,7 @@
         {
           "code": "600229.SH",
           "name": "城市传媒",
-          "market": "沪市",
+          "market": "A股",
           "industry": "传媒",
           "reason": "上涨",
           "condition_tags": [
@@ -2272,7 +2272,7 @@
         {
           "code": "000751.SZ",
           "name": "锌业股份",
-          "market": "深市",
+          "market": "A股",
           "industry": "有色金属",
           "reason": "上涨",
           "condition_tags": [
@@ -2285,7 +2285,7 @@
         {
           "code": "600567.SH",
           "name": "山鹰国际",
-          "market": "沪市",
+          "market": "A股",
           "industry": "造纸与包装",
           "reason": "上涨",
           "condition_tags": [
@@ -2298,7 +2298,7 @@
         {
           "code": "600163.SH",
           "name": "中闽能源",
-          "market": "沪市",
+          "market": "A股",
           "industry": "公用事业Ⅱ",
           "reason": "上涨",
           "condition_tags": [
@@ -2337,7 +2337,7 @@
         {
           "code": "301309.SZ",
           "name": "万得凯",
-          "market": "深市",
+          "market": "A股",
           "industry": "机械",
           "reason": "上涨",
           "condition_tags": [
@@ -2363,7 +2363,7 @@
         {
           "code": "000809.SZ",
           "name": "和展能源",
-          "market": "深市",
+          "market": "A股",
           "industry": "机械",
           "reason": "上涨",
           "condition_tags": [
@@ -2441,7 +2441,7 @@
         {
           "code": "601999.SH",
           "name": "出版传媒",
-          "market": "沪市",
+          "market": "A股",
           "industry": "传媒",
           "reason": "放量",
           "condition_tags": [
@@ -2467,7 +2467,7 @@
         {
           "code": "600470.SH",
           "name": "六国化工",
-          "market": "沪市",
+          "market": "A股",
           "industry": "化工",
           "reason": "放量",
           "condition_tags": [
@@ -2480,7 +2480,7 @@
         {
           "code": "601236.SH",
           "name": "红塔证券",
-          "market": "沪市",
+          "market": "A股",
           "industry": "非银金融",
           "reason": "放量",
           "condition_tags": [
@@ -2506,7 +2506,7 @@
         {
           "code": "600141.SH",
           "name": "兴发集团",
-          "market": "沪市",
+          "market": "A股",
           "industry": "化工",
           "reason": "放量",
           "condition_tags": [
@@ -2519,7 +2519,7 @@
         {
           "code": "600221.SH",
           "name": "海航控股",
-          "market": "沪市",
+          "market": "A股",
           "industry": "交通运输",
           "reason": "放量",
           "condition_tags": [
@@ -2558,7 +2558,7 @@
         {
           "code": "002252.SZ",
           "name": "上海莱士",
-          "market": "深市",
+          "market": "A股",
           "industry": "医药生物",
           "reason": "放量",
           "condition_tags": [
@@ -2597,7 +2597,7 @@
         {
           "code": "603382.SH",
           "name": "海阳科技",
-          "market": "沪市",
+          "market": "A股",
           "industry": "化工",
           "reason": "放量",
           "condition_tags": [
@@ -2649,7 +2649,7 @@
         {
           "code": "300505.SZ",
           "name": "川金诺",
-          "market": "深市",
+          "market": "A股",
           "industry": "化工",
           "reason": "放量",
           "condition_tags": [
@@ -2662,7 +2662,7 @@
         {
           "code": "601456.SH",
           "name": "国联民生",
-          "market": "沪市",
+          "market": "A股",
           "industry": "非银金融",
           "reason": "放量",
           "condition_tags": [
@@ -2779,7 +2779,7 @@
         {
           "code": "600108.SH",
           "name": "亚盛集团",
-          "market": "沪市",
+          "market": "A股",
           "industry": "食品饮料",
           "reason": "放量",
           "condition_tags": [
@@ -2831,7 +2831,7 @@
         {
           "code": "002602.SZ",
           "name": "世纪华通",
-          "market": "深市",
+          "market": "A股",
           "industry": "传媒",
           "reason": "放量",
           "condition_tags": [
@@ -2844,7 +2844,7 @@
         {
           "code": "600178.SH",
           "name": "东安动力",
-          "market": "沪市",
+          "market": "A股",
           "industry": "汽车与零配件",
           "reason": "放量",
           "condition_tags": [
@@ -3046,7 +3046,7 @@
         {
           "code": "601022.SH",
           "name": "宁波远洋",
-          "market": "沪市",
+          "market": "A股",
           "industry": "交通运输",
           "reason": "上涨 / 放量",
           "condition_tags": [
@@ -3060,7 +3060,7 @@
         {
           "code": "300239.SZ",
           "name": "东宝生物",
-          "market": "深市",
+          "market": "A股",
           "industry": "医药生物",
           "reason": "上涨 / 放量",
           "condition_tags": [
@@ -3126,7 +3126,7 @@
         {
           "code": "301276.SZ",
           "name": "嘉曼服饰",
-          "market": "深市",
+          "market": "A股",
           "industry": "纺织服装Ⅱ",
           "reason": "上涨",
           "condition_tags": [
@@ -3204,7 +3204,7 @@
         {
           "code": "688598.SH",
           "name": "金博股份",
-          "market": "沪市",
+          "market": "A股",
           "industry": "有色金属",
           "reason": "上涨",
           "condition_tags": [
@@ -3217,7 +3217,7 @@
         {
           "code": "688332.SH",
           "name": "中科蓝讯",
-          "market": "沪市",
+          "market": "A股",
           "industry": "半导体",
           "reason": "上涨",
           "condition_tags": [
@@ -3321,7 +3321,7 @@
         {
           "code": "300259.SZ",
           "name": "新天科技",
-          "market": "深市",
+          "market": "A股",
           "industry": "机械",
           "reason": "上涨",
           "condition_tags": [
@@ -3373,7 +3373,7 @@
         {
           "code": "300375.SZ",
           "name": "鹏翎股份",
-          "market": "深市",
+          "market": "A股",
           "industry": "汽车与零配件",
           "reason": "上涨",
           "condition_tags": [
@@ -3451,7 +3451,7 @@
         {
           "code": "300193.SZ",
           "name": "佳士科技",
-          "market": "深市",
+          "market": "A股",
           "industry": "机械",
           "reason": "上涨",
           "condition_tags": [
@@ -3503,7 +3503,7 @@
         {
           "code": "300481.SZ",
           "name": "濮阳惠成",
-          "market": "深市",
+          "market": "A股",
           "industry": "化工",
           "reason": "上涨",
           "condition_tags": [
@@ -3581,7 +3581,7 @@
         {
           "code": "002613.SZ",
           "name": "北玻股份",
-          "market": "深市",
+          "market": "A股",
           "industry": "机械",
           "reason": "上涨",
           "condition_tags": [
@@ -3594,7 +3594,7 @@
         {
           "code": "002301.SZ",
           "name": "齐心集团",
-          "market": "深市",
+          "market": "A股",
           "industry": "企业服务",
           "reason": "上涨",
           "condition_tags": [
@@ -3607,7 +3607,7 @@
         {
           "code": "002051.SZ",
           "name": "中工国际",
-          "market": "深市",
+          "market": "A股",
           "industry": "建筑",
           "reason": "上涨",
           "condition_tags": [
@@ -3620,7 +3620,7 @@
         {
           "code": "603137.SH",
           "name": "恒尚节能",
-          "market": "沪市",
+          "market": "A股",
           "industry": "建筑",
           "reason": "上涨",
           "condition_tags": [
@@ -3633,7 +3633,7 @@
         {
           "code": "002440.SZ",
           "name": "闰土股份",
-          "market": "深市",
+          "market": "A股",
           "industry": "化工",
           "reason": "上涨",
           "condition_tags": [
@@ -3646,7 +3646,7 @@
         {
           "code": "002106.SZ",
           "name": "莱宝高科",
-          "market": "深市",
+          "market": "A股",
           "industry": "硬件设备",
           "reason": "上涨",
           "condition_tags": [
@@ -3659,7 +3659,7 @@
         {
           "code": "002664.SZ",
           "name": "信质集团",
-          "market": "深市",
+          "market": "A股",
           "industry": "汽车与零配件",
           "reason": "上涨",
           "condition_tags": [
@@ -3672,7 +3672,7 @@
         {
           "code": "002635.SZ",
           "name": "安洁科技",
-          "market": "深市",
+          "market": "A股",
           "industry": "家电Ⅱ",
           "reason": "上涨",
           "condition_tags": [
@@ -3685,7 +3685,7 @@
         {
           "code": "002040.SZ",
           "name": "南京港",
-          "market": "深市",
+          "market": "A股",
           "industry": "交通运输",
           "reason": "上涨",
           "condition_tags": [
@@ -3698,7 +3698,7 @@
         {
           "code": "603458.SH",
           "name": "勘设股份",
-          "market": "沪市",
+          "market": "A股",
           "industry": "企业服务",
           "reason": "上涨",
           "condition_tags": [
@@ -3711,7 +3711,7 @@
         {
           "code": "000823.SZ",
           "name": "超声电子",
-          "market": "深市",
+          "market": "A股",
           "industry": "硬件设备",
           "reason": "上涨",
           "condition_tags": [
@@ -3724,7 +3724,7 @@
         {
           "code": "002174.SZ",
           "name": "游族网络",
-          "market": "深市",
+          "market": "A股",
           "industry": "传媒",
           "reason": "上涨",
           "condition_tags": [
@@ -3737,7 +3737,7 @@
         {
           "code": "600362.SH",
           "name": "江西铜业",
-          "market": "沪市",
+          "market": "A股",
           "industry": "有色金属",
           "reason": "上涨",
           "condition_tags": [
@@ -3750,7 +3750,7 @@
         {
           "code": "000411.SZ",
           "name": "英特集团",
-          "market": "深市",
+          "market": "A股",
           "industry": "医疗设备与服务",
           "reason": "上涨",
           "condition_tags": [
@@ -3763,7 +3763,7 @@
         {
           "code": "000733.SZ",
           "name": "振华科技",
-          "market": "深市",
+          "market": "A股",
           "industry": "硬件设备",
           "reason": "上涨",
           "condition_tags": [
@@ -3776,7 +3776,7 @@
         {
           "code": "603979.SH",
           "name": "金诚信",
-          "market": "沪市",
+          "market": "A股",
           "industry": "有色金属",
           "reason": "上涨",
           "condition_tags": [
@@ -3789,7 +3789,7 @@
         {
           "code": "600696.SH",
           "name": "*ST岩石",
-          "market": "沪市",
+          "market": "A股",
           "industry": "食品饮料",
           "reason": "上涨",
           "condition_tags": [
@@ -3802,7 +3802,7 @@
         {
           "code": "603681.SH",
           "name": "永冠新材",
-          "market": "沪市",
+          "market": "A股",
           "industry": "化工",
           "reason": "上涨",
           "condition_tags": [
@@ -3815,7 +3815,7 @@
         {
           "code": "603726.SH",
           "name": "朗迪集团",
-          "market": "沪市",
+          "market": "A股",
           "industry": "家电Ⅱ",
           "reason": "上涨",
           "condition_tags": [
@@ -3841,7 +3841,7 @@
         {
           "code": "002961.SZ",
           "name": "瑞达期货",
-          "market": "深市",
+          "market": "A股",
           "industry": "非银金融",
           "reason": "上涨",
           "condition_tags": [
@@ -3854,7 +3854,7 @@
         {
           "code": "603727.SH",
           "name": "博迈科",
-          "market": "沪市",
+          "market": "A股",
           "industry": "石油石化",
           "reason": "上涨",
           "condition_tags": [
@@ -3867,7 +3867,7 @@
         {
           "code": "603093.SH",
           "name": "南华期货",
-          "market": "沪市",
+          "market": "A股",
           "industry": "非银金融",
           "reason": "上涨",
           "condition_tags": [
@@ -3880,7 +3880,7 @@
         {
           "code": "600703.SH",
           "name": "三安光电",
-          "market": "沪市",
+          "market": "A股",
           "industry": "半导体",
           "reason": "上涨",
           "condition_tags": [
@@ -3893,7 +3893,7 @@
         {
           "code": "601636.SH",
           "name": "旗滨集团",
-          "market": "沪市",
+          "market": "A股",
           "industry": "建材Ⅱ",
           "reason": "上涨",
           "condition_tags": [
@@ -3906,7 +3906,7 @@
         {
           "code": "002745.SZ",
           "name": "木林森",
-          "market": "深市",
+          "market": "A股",
           "industry": "半导体",
           "reason": "上涨",
           "condition_tags": [
@@ -3919,7 +3919,7 @@
         {
           "code": "601696.SH",
           "name": "中银证券",
-          "market": "沪市",
+          "market": "A股",
           "industry": "非银金融",
           "reason": "上涨",
           "condition_tags": [
@@ -3945,7 +3945,7 @@
         {
           "code": "000887.SZ",
           "name": "中鼎股份",
-          "market": "深市",
+          "market": "A股",
           "industry": "汽车与零配件",
           "reason": "上涨",
           "condition_tags": [
@@ -3958,7 +3958,7 @@
         {
           "code": "600375.SH",
           "name": "汉马科技",
-          "market": "沪市",
+          "market": "A股",
           "industry": "机械",
           "reason": "上涨",
           "condition_tags": [
@@ -3971,7 +3971,7 @@
         {
           "code": "600636.SH",
           "name": "*ST国化",
-          "market": "沪市",
+          "market": "A股",
           "industry": "消费者服务",
           "reason": "上涨",
           "condition_tags": [
@@ -4036,7 +4036,7 @@
         {
           "code": "603586.SH",
           "name": "金麒麟",
-          "market": "沪市",
+          "market": "A股",
           "industry": "汽车与零配件",
           "reason": "放量",
           "condition_tags": [
@@ -4344,7 +4344,7 @@
         {
           "code": "002303.SZ",
           "name": "美盈森",
-          "market": "深市",
+          "market": "A股",
           "industry": "造纸与包装",
           "reason": "上涨 / 放量",
           "condition_tags": [
@@ -4437,7 +4437,7 @@
         {
           "code": "688189.SH",
           "name": "南新制药",
-          "market": "沪市",
+          "market": "A股",
           "industry": "医药生物",
           "reason": "上涨",
           "condition_tags": [
@@ -4632,7 +4632,7 @@
         {
           "code": "600696.SH",
           "name": "*ST岩石",
-          "market": "沪市",
+          "market": "A股",
           "industry": "食品饮料",
           "reason": "上涨",
           "condition_tags": [
@@ -4645,7 +4645,7 @@
         {
           "code": "000564.SZ",
           "name": "供销大集",
-          "market": "深市",
+          "market": "A股",
           "industry": "可选消费零售",
           "reason": "上涨",
           "condition_tags": [
@@ -4671,7 +4671,7 @@
         {
           "code": "600052.SH",
           "name": "东望时代",
-          "market": "沪市",
+          "market": "A股",
           "industry": "环保Ⅱ",
           "reason": "上涨",
           "condition_tags": [
@@ -4684,7 +4684,7 @@
         {
           "code": "002160.SZ",
           "name": "常铝股份",
-          "market": "深市",
+          "market": "A股",
           "industry": "有色金属",
           "reason": "上涨",
           "condition_tags": [
@@ -4697,7 +4697,7 @@
         {
           "code": "601636.SH",
           "name": "旗滨集团",
-          "market": "沪市",
+          "market": "A股",
           "industry": "建材Ⅱ",
           "reason": "上涨",
           "condition_tags": [
@@ -4710,7 +4710,7 @@
         {
           "code": "603191.SH",
           "name": "望变电气",
-          "market": "沪市",
+          "market": "A股",
           "industry": "电气设备",
           "reason": "上涨",
           "condition_tags": [
@@ -4723,7 +4723,7 @@
         {
           "code": "002058.SZ",
           "name": "*ST威尔",
-          "market": "深市",
+          "market": "A股",
           "industry": "机械",
           "reason": "上涨",
           "condition_tags": [
@@ -4736,7 +4736,7 @@
         {
           "code": "605166.SH",
           "name": "聚合顺",
-          "market": "沪市",
+          "market": "A股",
           "industry": "化工",
           "reason": "上涨",
           "condition_tags": [
@@ -4749,7 +4749,7 @@
         {
           "code": "000034.SZ",
           "name": "神州数码",
-          "market": "深市",
+          "market": "A股",
           "industry": "硬件设备",
           "reason": "上涨",
           "condition_tags": [
@@ -4762,7 +4762,7 @@
         {
           "code": "603861.SH",
           "name": "白云电器",
-          "market": "沪市",
+          "market": "A股",
           "industry": "电气设备",
           "reason": "上涨",
           "condition_tags": [
@@ -4775,7 +4775,7 @@
         {
           "code": "002910.SZ",
           "name": "庄园牧场",
-          "market": "深市",
+          "market": "A股",
           "industry": "食品饮料",
           "reason": "上涨",
           "condition_tags": [
@@ -4788,7 +4788,7 @@
         {
           "code": "603260.SH",
           "name": "合盛硅业",
-          "market": "沪市",
+          "market": "A股",
           "industry": "化工",
           "reason": "上涨",
           "condition_tags": [
@@ -4801,7 +4801,7 @@
         {
           "code": "001283.SZ",
           "name": "豪鹏科技",
-          "market": "深市",
+          "market": "A股",
           "industry": "硬件设备",
           "reason": "上涨",
           "condition_tags": [
@@ -4814,7 +4814,7 @@
         {
           "code": "002734.SZ",
           "name": "利民股份",
-          "market": "深市",
+          "market": "A股",
           "industry": "化工",
           "reason": "上涨",
           "condition_tags": [
@@ -4827,7 +4827,7 @@
         {
           "code": "600458.SH",
           "name": "时代新材",
-          "market": "沪市",
+          "market": "A股",
           "industry": "化工",
           "reason": "上涨",
           "condition_tags": [
@@ -4840,7 +4840,7 @@
         {
           "code": "603271.SH",
           "name": "永杰新材",
-          "market": "沪市",
+          "market": "A股",
           "industry": "有色金属",
           "reason": "上涨",
           "condition_tags": [
@@ -4853,7 +4853,7 @@
         {
           "code": "600703.SH",
           "name": "三安光电",
-          "market": "沪市",
+          "market": "A股",
           "industry": "半导体",
           "reason": "上涨",
           "condition_tags": [
@@ -4866,7 +4866,7 @@
         {
           "code": "601020.SH",
           "name": "华钰矿业",
-          "market": "沪市",
+          "market": "A股",
           "industry": "有色金属",
           "reason": "上涨",
           "condition_tags": [
@@ -4879,7 +4879,7 @@
         {
           "code": "000012.SZ",
           "name": "南玻A",
-          "market": "深市",
+          "market": "A股",
           "industry": "建材Ⅱ",
           "reason": "上涨",
           "condition_tags": [
@@ -4892,7 +4892,7 @@
         {
           "code": "001387.SZ",
           "name": "雪祺电气",
-          "market": "深市",
+          "market": "A股",
           "industry": "家电Ⅱ",
           "reason": "上涨",
           "condition_tags": [
@@ -4905,7 +4905,7 @@
         {
           "code": "000791.SZ",
           "name": "甘肃能源",
-          "market": "深市",
+          "market": "A股",
           "industry": "公用事业Ⅱ",
           "reason": "上涨",
           "condition_tags": [
@@ -4918,7 +4918,7 @@
         {
           "code": "002449.SZ",
           "name": "国星光电",
-          "market": "深市",
+          "market": "A股",
           "industry": "半导体",
           "reason": "上涨",
           "condition_tags": [
@@ -4931,7 +4931,7 @@
         {
           "code": "000541.SZ",
           "name": "佛山照明",
-          "market": "深市",
+          "market": "A股",
           "industry": "家电Ⅱ",
           "reason": "上涨",
           "condition_tags": [
@@ -4944,7 +4944,7 @@
         {
           "code": "002051.SZ",
           "name": "中工国际",
-          "market": "深市",
+          "market": "A股",
           "industry": "建筑",
           "reason": "上涨",
           "condition_tags": [
@@ -4957,7 +4957,7 @@
         {
           "code": "002672.SZ",
           "name": "东江环保",
-          "market": "深市",
+          "market": "A股",
           "industry": "环保Ⅱ",
           "reason": "上涨",
           "condition_tags": [
@@ -4983,7 +4983,7 @@
         {
           "code": "300320.SZ",
           "name": "海达股份",
-          "market": "深市",
+          "market": "A股",
           "industry": "化工",
           "reason": "上涨",
           "condition_tags": [
@@ -4996,7 +4996,7 @@
         {
           "code": "300482.SZ",
           "name": "万孚生物",
-          "market": "深市",
+          "market": "A股",
           "industry": "医药生物",
           "reason": "上涨",
           "condition_tags": [
@@ -5022,7 +5022,7 @@
         {
           "code": "688061.SH",
           "name": "灿瑞科技",
-          "market": "沪市",
+          "market": "A股",
           "industry": "半导体",
           "reason": "上涨",
           "condition_tags": [
@@ -5035,7 +5035,7 @@
         {
           "code": "300214.SZ",
           "name": "日科化学",
-          "market": "深市",
+          "market": "A股",
           "industry": "化工",
           "reason": "上涨",
           "condition_tags": [
@@ -5074,7 +5074,7 @@
         {
           "code": "301151.SZ",
           "name": "冠龙节能",
-          "market": "深市",
+          "market": "A股",
           "industry": "机械",
           "reason": "上涨",
           "condition_tags": [
@@ -5087,7 +5087,7 @@
         {
           "code": "000733.SZ",
           "name": "振华科技",
-          "market": "深市",
+          "market": "A股",
           "industry": "硬件设备",
           "reason": "上涨",
           "condition_tags": [
@@ -5113,7 +5113,7 @@
         {
           "code": "300430.SZ",
           "name": "诚益通",
-          "market": "深市",
+          "market": "A股",
           "industry": "机械",
           "reason": "上涨",
           "condition_tags": [
@@ -5646,7 +5646,7 @@
         {
           "code": "002303.SZ",
           "name": "美盈森",
-          "market": "深市",
+          "market": "A股",
           "industry": "造纸与包装",
           "reason": "当日上涨/超额 / 5日加速上涨 / 持续放量 / 60日新高",
           "condition_tags": [
@@ -5662,7 +5662,7 @@
         {
           "code": "002367.SZ",
           "name": "康力电梯",
-          "market": "深市",
+          "market": "A股",
           "industry": "机械",
           "reason": "当日上涨/超额 / 3日加速上涨 / 5日加速上涨 / 持续放量",
           "condition_tags": [
@@ -5678,7 +5678,7 @@
         {
           "code": "603339.SH",
           "name": "四方科技",
-          "market": "沪市",
+          "market": "A股",
           "industry": "机械",
           "reason": "3日加速上涨 / 5日加速上涨 / 持续放量 / 120日新高",
           "condition_tags": [
@@ -5694,7 +5694,7 @@
         {
           "code": "688026.SH",
           "name": "洁特生物",
-          "market": "沪市",
+          "market": "A股",
           "industry": "医药生物",
           "reason": "3日加速上涨 / 5日加速上涨 / 持续放量 / 60日新高",
           "condition_tags": [
@@ -5755,7 +5755,7 @@
         {
           "code": "300195.SZ",
           "name": "长荣股份",
-          "market": "深市",
+          "market": "A股",
           "industry": "机械",
           "reason": "当日上涨/超额 / 3日加速上涨 / 首日放量",
           "condition_tags": [
@@ -5770,7 +5770,7 @@
         {
           "code": "603713.SH",
           "name": "密尔克卫",
-          "market": "沪市",
+          "market": "A股",
           "industry": "交通运输",
           "reason": "当日上涨/超额 / 3日加速上涨 / 60日新高",
           "condition_tags": [
@@ -5785,7 +5785,7 @@
         {
           "code": "600141.SH",
           "name": "兴发集团",
-          "market": "沪市",
+          "market": "A股",
           "industry": "化工",
           "reason": "当日上涨/超额 / 3日加速上涨 / 60日新高",
           "condition_tags": [
@@ -5800,7 +5800,7 @@
         {
           "code": "002687.SZ",
           "name": "乔治白",
-          "market": "深市",
+          "market": "A股",
           "industry": "纺织服装Ⅱ",
           "reason": "当日上涨/超额 / 3日加速上涨 / 首日放量",
           "condition_tags": [
@@ -5815,7 +5815,7 @@
         {
           "code": "002643.SZ",
           "name": "万润股份",
-          "market": "深市",
+          "market": "A股",
           "industry": "化工",
           "reason": "当日上涨/超额 / 5日加速上涨 / 三年新高",
           "condition_tags": [
@@ -5830,7 +5830,7 @@
         {
           "code": "002550.SZ",
           "name": "千红制药",
-          "market": "深市",
+          "market": "A股",
           "industry": "医药生物",
           "reason": "当日上涨/超额 / 3日加速上涨 / 首日放量",
           "condition_tags": [
@@ -5845,7 +5845,7 @@
         {
           "code": "300412.SZ",
           "name": "迦南科技",
-          "market": "深市",
+          "market": "A股",
           "industry": "机械",
           "reason": "当日上涨/超额 / 3日加速上涨 / 首日放量",
           "condition_tags": [
@@ -5890,7 +5890,7 @@
         {
           "code": "002346.SZ",
           "name": "柘中股份",
-          "market": "深市",
+          "market": "A股",
           "industry": "电气设备",
           "reason": "3日加速上涨 / 5日加速上涨 / 三年新高",
           "condition_tags": [
@@ -5905,7 +5905,7 @@
         {
           "code": "000050.SZ",
           "name": "深天马A",
-          "market": "深市",
+          "market": "A股",
           "industry": "硬件设备",
           "reason": "3日加速上涨 / 5日加速上涨 / 120日新高",
           "condition_tags": [
@@ -5920,7 +5920,7 @@
         {
           "code": "688671.SH",
           "name": "碧兴物联",
-          "market": "沪市",
+          "market": "A股",
           "industry": "机械",
           "reason": "3日加速上涨 / 5日加速上涨 / 120日新高",
           "condition_tags": [
@@ -5935,7 +5935,7 @@
         {
           "code": "002083.SZ",
           "name": "孚日股份",
-          "market": "深市",
+          "market": "A股",
           "industry": "纺织服装Ⅱ",
           "reason": "3日加速上涨 / 5日加速上涨 / 持续放量",
           "condition_tags": [
@@ -5965,7 +5965,7 @@
         {
           "code": "300592.SZ",
           "name": "华凯易佰",
-          "market": "深市",
+          "market": "A股",
           "industry": "工业贸易与综合",
           "reason": "3日加速上涨 / 5日加速上涨 / 120日新高",
           "condition_tags": [
@@ -5980,7 +5980,7 @@
         {
           "code": "920009.BJ",
           "name": "丹娜生物",
-          "market": "北交所",
+          "market": "A股",
           "industry": "医疗设备与服务",
           "reason": "3日加速上涨 / 5日加速上涨 / 持续放量",
           "condition_tags": [
@@ -5995,7 +5995,7 @@
         {
           "code": "301211.SZ",
           "name": "亨迪药业",
-          "market": "深市",
+          "market": "A股",
           "industry": "医药生物",
           "reason": "3日加速上涨 / 5日加速上涨 / 首日放量",
           "condition_tags": [
@@ -6052,7 +6052,7 @@
         {
           "code": "688408.SH",
           "name": "中信博",
-          "market": "沪市",
+          "market": "A股",
           "industry": "电气设备",
           "reason": "当日上涨/超额 / 首日放量",
           "condition_tags": [
@@ -6108,7 +6108,7 @@
         {
           "code": "300446.SZ",
           "name": "航天智造",
-          "market": "深市",
+          "market": "A股",
           "industry": "汽车与零配件",
           "reason": "当日上涨/超额 / 首日放量",
           "condition_tags": [
@@ -6122,7 +6122,7 @@
         {
           "code": "301305.SZ",
           "name": "朗坤科技",
-          "market": "深市",
+          "market": "A股",
           "industry": "环保Ⅱ",
           "reason": "当日上涨/超额 / 三年新高",
           "condition_tags": [
@@ -6164,7 +6164,7 @@
         {
           "code": "688789.SH",
           "name": "宏华数科",
-          "market": "沪市",
+          "market": "A股",
           "industry": "机械",
           "reason": "当日上涨/超额 / 3日加速上涨",
           "condition_tags": [
@@ -6178,7 +6178,7 @@
         {
           "code": "605020.SH",
           "name": "永和股份",
-          "market": "沪市",
+          "market": "A股",
           "industry": "化工",
           "reason": "当日上涨/超额 / 三年新高",
           "condition_tags": [
@@ -6192,7 +6192,7 @@
         {
           "code": "605151.SH",
           "name": "西上海",
-          "market": "沪市",
+          "market": "A股",
           "industry": "汽车与零配件",
           "reason": "当日上涨/超额 / 3日加速上涨",
           "condition_tags": [
@@ -6206,7 +6206,7 @@
         {
           "code": "600596.SH",
           "name": "新安股份",
-          "market": "沪市",
+          "market": "A股",
           "industry": "化工",
           "reason": "当日上涨/超额 / 三年新高",
           "condition_tags": [
@@ -6220,7 +6220,7 @@
         {
           "code": "002452.SZ",
           "name": "长高电新",
-          "market": "深市",
+          "market": "A股",
           "industry": "电气设备",
           "reason": "当日上涨/超额 / 首日放量",
           "condition_tags": [
@@ -6234,7 +6234,7 @@
         {
           "code": "300120.SZ",
           "name": "经纬辉开",
-          "market": "深市",
+          "market": "A股",
           "industry": "硬件设备",
           "reason": "当日上涨/超额 / 120日新高",
           "condition_tags": [
@@ -6248,7 +6248,7 @@
         {
           "code": "600531.SH",
           "name": "豫光金铅",
-          "market": "沪市",
+          "market": "A股",
           "industry": "有色金属",
           "reason": "当日上涨/超额 / 3日加速上涨",
           "condition_tags": [
@@ -6262,7 +6262,7 @@
         {
           "code": "603259.SH",
           "name": "药明康德",
-          "market": "沪市",
+          "market": "A股",
           "industry": "医药生物",
           "reason": "3日加速上涨 / 三年新高",
           "condition_tags": [
@@ -6276,7 +6276,7 @@
         {
           "code": "002191.SZ",
           "name": "劲嘉股份",
-          "market": "深市",
+          "market": "A股",
           "industry": "造纸与包装",
           "reason": "首日放量 / 60日新高",
           "condition_tags": [
@@ -6290,7 +6290,7 @@
         {
           "code": "920188.BJ",
           "name": "悦龙科技",
-          "market": "北交所",
+          "market": "A股",
           "industry": "机械",
           "reason": "3日加速上涨 / 首日放量",
           "condition_tags": [
@@ -6304,7 +6304,7 @@
         {
           "code": "605369.SH",
           "name": "拱东医疗",
-          "market": "沪市",
+          "market": "A股",
           "industry": "医疗设备与服务",
           "reason": "3日加速上涨 / 首日放量",
           "condition_tags": [
@@ -6318,7 +6318,7 @@
         {
           "code": "688426.SH",
           "name": "康为世纪",
-          "market": "沪市",
+          "market": "A股",
           "industry": "医药生物",
           "reason": "3日加速上涨 / 首日放量",
           "condition_tags": [
@@ -6332,7 +6332,7 @@
         {
           "code": "000756.SZ",
           "name": "新华制药",
-          "market": "深市",
+          "market": "A股",
           "industry": "医药生物",
           "reason": "3日加速上涨 / 首日放量",
           "condition_tags": [
@@ -6346,7 +6346,7 @@
         {
           "code": "300435.SZ",
           "name": "中泰股份",
-          "market": "深市",
+          "market": "A股",
           "industry": "公用事业Ⅱ",
           "reason": "3日加速上涨 / 5日加速上涨",
           "condition_tags": [
@@ -6360,7 +6360,7 @@
         {
           "code": "688199.SH",
           "name": "久日新材",
-          "market": "沪市",
+          "market": "A股",
           "industry": "化工",
           "reason": "3日加速上涨 / 三年新高",
           "condition_tags": [
@@ -6374,7 +6374,7 @@
         {
           "code": "002038.SZ",
           "name": "双鹭药业",
-          "market": "深市",
+          "market": "A股",
           "industry": "医药生物",
           "reason": "3日加速上涨 / 首日放量",
           "condition_tags": [
@@ -6402,7 +6402,7 @@
         {
           "code": "603223.SH",
           "name": "恒通股份",
-          "market": "沪市",
+          "market": "A股",
           "industry": "石油石化",
           "reason": "3日加速上涨 / 5日加速上涨",
           "condition_tags": [
@@ -6430,7 +6430,7 @@
         {
           "code": "603980.SH",
           "name": "吉华集团",
-          "market": "沪市",
+          "market": "A股",
           "industry": "化工",
           "reason": "3日加速上涨 / 60日新高",
           "condition_tags": [
@@ -6458,7 +6458,7 @@
         {
           "code": "002648.SZ",
           "name": "卫星化学",
-          "market": "深市",
+          "market": "A股",
           "industry": "化工",
           "reason": "3日加速上涨 / 首日放量",
           "condition_tags": [
@@ -6472,7 +6472,7 @@
         {
           "code": "603380.SH",
           "name": "易德龙",
-          "market": "沪市",
+          "market": "A股",
           "industry": "硬件设备",
           "reason": "3日加速上涨 / 5日加速上涨",
           "condition_tags": [
@@ -6514,7 +6514,7 @@
         {
           "code": "002734.SZ",
           "name": "利民股份",
-          "market": "深市",
+          "market": "A股",
           "industry": "化工",
           "reason": "3日加速上涨 / 5日加速上涨",
           "condition_tags": [
@@ -6528,7 +6528,7 @@
         {
           "code": "688105.SH",
           "name": "诺唯赞",
-          "market": "沪市",
+          "market": "A股",
           "industry": "医药生物",
           "reason": "3日加速上涨 / 5日加速上涨",
           "condition_tags": [
@@ -6542,7 +6542,7 @@
         {
           "code": "603727.SH",
           "name": "博迈科",
-          "market": "沪市",
+          "market": "A股",
           "industry": "石油石化",
           "reason": "3日加速上涨 / 5日加速上涨",
           "condition_tags": [
@@ -6556,7 +6556,7 @@
         {
           "code": "000783.SZ",
           "name": "长江证券",
-          "market": "深市",
+          "market": "A股",
           "industry": "非银金融",
           "reason": "3日加速上涨 / 首日放量",
           "condition_tags": [
@@ -6584,7 +6584,7 @@
         {
           "code": "300485.SZ",
           "name": "赛升药业",
-          "market": "深市",
+          "market": "A股",
           "industry": "医药生物",
           "reason": "3日加速上涨 / 首日放量",
           "condition_tags": [
@@ -6612,7 +6612,7 @@
         {
           "code": "920035.BJ",
           "name": "精创电气",
-          "market": "北交所",
+          "market": "A股",
           "industry": "硬件设备",
           "reason": "3日加速上涨 / 首日放量",
           "condition_tags": [
@@ -6808,7 +6808,7 @@
         {
           "code": "000925.SZ",
           "name": "众合科技",
-          "market": "深市",
+          "market": "A股",
           "industry": "电气设备",
           "reason": "当日上涨/超额",
           "condition_tags": [
@@ -6821,7 +6821,7 @@
         {
           "code": "002497.SZ",
           "name": "雅化集团",
-          "market": "深市",
+          "market": "A股",
           "industry": "有色金属",
           "reason": "当日上涨/超额",
           "condition_tags": [
@@ -6834,7 +6834,7 @@
         {
           "code": "603948.SH",
           "name": "建业股份",
-          "market": "沪市",
+          "market": "A股",
           "industry": "化工",
           "reason": "当日上涨/超额",
           "condition_tags": [
@@ -6860,7 +6860,7 @@
         {
           "code": "603317.SH",
           "name": "天味食品",
-          "market": "沪市",
+          "market": "A股",
           "industry": "食品饮料",
           "reason": "当日上涨/超额",
           "condition_tags": [
@@ -6873,7 +6873,7 @@
         {
           "code": "605277.SH",
           "name": "新亚电子",
-          "market": "沪市",
+          "market": "A股",
           "industry": "硬件设备",
           "reason": "当日上涨/超额",
           "condition_tags": [
@@ -6886,7 +6886,7 @@
         {
           "code": "000967.SZ",
           "name": "盈峰环境",
-          "market": "深市",
+          "market": "A股",
           "industry": "环保Ⅱ",
           "reason": "当日上涨/超额",
           "condition_tags": [
@@ -6925,7 +6925,7 @@
         {
           "code": "000703.SZ",
           "name": "恒逸石化",
-          "market": "深市",
+          "market": "A股",
           "industry": "化工",
           "reason": "3日加速上涨",
           "condition_tags": [
@@ -6938,7 +6938,7 @@
         {
           "code": "300978.SZ",
           "name": "东箭科技",
-          "market": "深市",
+          "market": "A股",
           "industry": "汽车与零配件",
           "reason": "首日放量",
           "condition_tags": [
@@ -6964,7 +6964,7 @@
         {
           "code": "600160.SH",
           "name": "巨化股份",
-          "market": "沪市",
+          "market": "A股",
           "industry": "化工",
           "reason": "三年新高",
           "condition_tags": [
@@ -6977,7 +6977,7 @@
         {
           "code": "920119.BJ",
           "name": "美德乐",
-          "market": "北交所",
+          "market": "A股",
           "industry": "机械",
           "reason": "首日放量",
           "condition_tags": [
@@ -6990,7 +6990,7 @@
         {
           "code": "603281.SH",
           "name": "江瀚新材",
-          "market": "沪市",
+          "market": "A股",
           "industry": "化工",
           "reason": "三年新高",
           "condition_tags": [
@@ -7003,7 +7003,7 @@
         {
           "code": "300363.SZ",
           "name": "博腾股份",
-          "market": "深市",
+          "market": "A股",
           "industry": "医药生物",
           "reason": "首日放量",
           "condition_tags": [
@@ -7081,7 +7081,7 @@
         {
           "code": "688578.SH",
           "name": "艾力斯",
-          "market": "沪市",
+          "market": "A股",
           "industry": "医药生物",
           "reason": "3日加速上涨",
           "condition_tags": [
@@ -7094,7 +7094,7 @@
         {
           "code": "600096.SH",
           "name": "云天化",
-          "market": "沪市",
+          "market": "A股",
           "industry": "化工",
           "reason": "3日加速上涨",
           "condition_tags": [
@@ -7120,7 +7120,7 @@
         {
           "code": "300016.SZ",
           "name": "北陆药业",
-          "market": "深市",
+          "market": "A股",
           "industry": "医药生物",
           "reason": "首日放量",
           "condition_tags": [
@@ -7133,7 +7133,7 @@
         {
           "code": "920086.BJ",
           "name": "科马材料",
-          "market": "北交所",
+          "market": "A股",
           "industry": "汽车与零配件",
           "reason": "首日放量",
           "condition_tags": [
@@ -7146,7 +7146,7 @@
         {
           "code": "601233.SH",
           "name": "桐昆股份",
-          "market": "沪市",
+          "market": "A股",
           "industry": "化工",
           "reason": "60日新高",
           "condition_tags": [
@@ -7172,7 +7172,7 @@
         {
           "code": "002819.SZ",
           "name": "东方中科",
-          "market": "深市",
+          "market": "A股",
           "industry": "硬件设备",
           "reason": "首日放量",
           "condition_tags": [
@@ -7198,7 +7198,7 @@
         {
           "code": "002745.SZ",
           "name": "木林森",
-          "market": "深市",
+          "market": "A股",
           "industry": "半导体",
           "reason": "三年新高",
           "condition_tags": [
@@ -7211,7 +7211,7 @@
         {
           "code": "603887.SH",
           "name": "城地香江",
-          "market": "沪市",
+          "market": "A股",
           "industry": "软件服务",
           "reason": "首日放量",
           "condition_tags": [
@@ -7250,7 +7250,7 @@
         {
           "code": "002440.SZ",
           "name": "闰土股份",
-          "market": "深市",
+          "market": "A股",
           "industry": "化工",
           "reason": "3日加速上涨",
           "condition_tags": [
@@ -7263,7 +7263,7 @@
         {
           "code": "002950.SZ",
           "name": "奥美医疗",
-          "market": "深市",
+          "market": "A股",
           "industry": "医疗设备与服务",
           "reason": "3日加速上涨",
           "condition_tags": [
@@ -7276,7 +7276,7 @@
         {
           "code": "002986.SZ",
           "name": "宇新股份",
-          "market": "深市",
+          "market": "A股",
           "industry": "化工",
           "reason": "3日加速上涨",
           "condition_tags": [
@@ -7289,7 +7289,7 @@
         {
           "code": "001206.SZ",
           "name": "依依股份",
-          "market": "深市",
+          "market": "A股",
           "industry": "家庭用品",
           "reason": "首日放量",
           "condition_tags": [
@@ -7315,7 +7315,7 @@
         {
           "code": "002925.SZ",
           "name": "盈趣科技",
-          "market": "深市",
+          "market": "A股",
           "industry": "硬件设备",
           "reason": "三年新高",
           "condition_tags": [
@@ -7341,7 +7341,7 @@
         {
           "code": "300596.SZ",
           "name": "利安隆",
-          "market": "深市",
+          "market": "A股",
           "industry": "化工",
           "reason": "5日加速上涨",
           "condition_tags": [
@@ -7354,7 +7354,7 @@
         {
           "code": "603006.SH",
           "name": "联明股份",
-          "market": "沪市",
+          "market": "A股",
           "industry": "汽车与零配件",
           "reason": "3日加速上涨",
           "condition_tags": [
@@ -7406,7 +7406,7 @@
         {
           "code": "002601.SZ",
           "name": "龙佰集团",
-          "market": "深市",
+          "market": "A股",
           "industry": "化工",
           "reason": "3日加速上涨",
           "condition_tags": [
@@ -7419,7 +7419,7 @@
         {
           "code": "603856.SH",
           "name": "东宏股份",
-          "market": "沪市",
+          "market": "A股",
           "industry": "建筑",
           "reason": "60日新高",
           "condition_tags": [
@@ -7458,7 +7458,7 @@
         {
           "code": "301584.SZ",
           "name": "建发致新",
-          "market": "深市",
+          "market": "A股",
           "industry": "医疗设备与服务",
           "reason": "首日放量",
           "condition_tags": [
@@ -7471,7 +7471,7 @@
         {
           "code": "002312.SZ",
           "name": "川发龙蟒",
-          "market": "深市",
+          "market": "A股",
           "industry": "化工",
           "reason": "3日加速上涨",
           "condition_tags": [
@@ -7523,7 +7523,7 @@
         {
           "code": "002592.SZ",
           "name": "ST八菱",
-          "market": "深市",
+          "market": "A股",
           "industry": "汽车与零配件",
           "reason": "首日放量",
           "condition_tags": [
@@ -7575,7 +7575,7 @@
         {
           "code": "603519.SH",
           "name": "立霸股份",
-          "market": "沪市",
+          "market": "A股",
           "industry": "家电Ⅱ",
           "reason": "120日新高",
           "condition_tags": [
@@ -7601,7 +7601,7 @@
         {
           "code": "688391.SH",
           "name": "钜泉科技",
-          "market": "沪市",
+          "market": "A股",
           "industry": "半导体",
           "reason": "60日新高",
           "condition_tags": [
@@ -7614,7 +7614,7 @@
         {
           "code": "600708.SH",
           "name": "光明地产",
-          "market": "沪市",
+          "market": "A股",
           "industry": "房地产Ⅱ",
           "reason": "3日加速上涨",
           "condition_tags": [
@@ -7640,7 +7640,7 @@
         {
           "code": "605305.SH",
           "name": "中际联合",
-          "market": "沪市",
+          "market": "A股",
           "industry": "机械",
           "reason": "3日加速上涨",
           "condition_tags": [
@@ -7653,7 +7653,7 @@
         {
           "code": "603020.SH",
           "name": "爱普股份",
-          "market": "沪市",
+          "market": "A股",
           "industry": "食品饮料",
           "reason": "5日加速上涨",
           "condition_tags": [
@@ -7731,7 +7731,7 @@
         {
           "code": "600777.SH",
           "name": "*ST新潮",
-          "market": "沪市",
+          "market": "A股",
           "industry": "石油石化",
           "reason": "3日加速上涨",
           "condition_tags": [
@@ -7744,7 +7744,7 @@
         {
           "code": "301122.SZ",
           "name": "采纳股份",
-          "market": "深市",
+          "market": "A股",
           "industry": "医疗设备与服务",
           "reason": "3日加速上涨",
           "condition_tags": [
@@ -7770,7 +7770,7 @@
         {
           "code": "301233.SZ",
           "name": "盛帮股份",
-          "market": "深市",
+          "market": "A股",
           "industry": "汽车与零配件",
           "reason": "3日加速上涨",
           "condition_tags": [
@@ -7783,7 +7783,7 @@
         {
           "code": "600999.SH",
           "name": "招商证券",
-          "market": "沪市",
+          "market": "A股",
           "industry": "非银金融",
           "reason": "120日新高",
           "condition_tags": [
@@ -7809,7 +7809,7 @@
         {
           "code": "000833.SZ",
           "name": "粤桂股份",
-          "market": "深市",
+          "market": "A股",
           "industry": "工业贸易与综合",
           "reason": "3日加速上涨",
           "condition_tags": [
@@ -7835,7 +7835,7 @@
         {
           "code": "300643.SZ",
           "name": "万通智控",
-          "market": "深市",
+          "market": "A股",
           "industry": "汽车与零配件",
           "reason": "60日新高",
           "condition_tags": [
@@ -7848,7 +7848,7 @@
         {
           "code": "920030.BJ",
           "name": "德众汽车",
-          "market": "北交所",
+          "market": "A股",
           "industry": "可选消费零售",
           "reason": "首日放量",
           "condition_tags": [
@@ -7874,7 +7874,7 @@
         {
           "code": "301356.SZ",
           "name": "天振股份",
-          "market": "深市",
+          "market": "A股",
           "industry": "造纸与包装",
           "reason": "3日加速上涨",
           "condition_tags": [
@@ -7939,7 +7939,7 @@
         {
           "code": "605377.SH",
           "name": "华旺科技",
-          "market": "沪市",
+          "market": "A股",
           "industry": "造纸与包装",
           "reason": "3日加速上涨",
           "condition_tags": [
@@ -8069,7 +8069,7 @@
         {
           "code": "002728.SZ",
           "name": "特一药业",
-          "market": "深市",
+          "market": "A股",
           "industry": "医药生物",
           "reason": "首日放量",
           "condition_tags": [
@@ -8121,7 +8121,7 @@
         {
           "code": "002392.SZ",
           "name": "北京利尔",
-          "market": "深市",
+          "market": "A股",
           "industry": "建材Ⅱ",
           "reason": "3日加速上涨",
           "condition_tags": [
@@ -8147,7 +8147,7 @@
         {
           "code": "920039.BJ",
           "name": "国义招标",
-          "market": "北交所",
+          "market": "A股",
           "industry": "企业服务",
           "reason": "持续放量",
           "condition_tags": [
@@ -8212,7 +8212,7 @@
         {
           "code": "603166.SH",
           "name": "福达股份",
-          "market": "沪市",
+          "market": "A股",
           "industry": "汽车与零配件",
           "reason": "持续放量",
           "condition_tags": [
@@ -8238,7 +8238,7 @@
         {
           "code": "600470.SH",
           "name": "六国化工",
-          "market": "沪市",
+          "market": "A股",
           "industry": "化工",
           "reason": "3日加速上涨",
           "condition_tags": [
@@ -8251,7 +8251,7 @@
         {
           "code": "603725.SH",
           "name": "天安新材",
-          "market": "沪市",
+          "market": "A股",
           "industry": "建筑",
           "reason": "3日加速上涨",
           "condition_tags": [
@@ -8290,7 +8290,7 @@
         {
           "code": "688065.SH",
           "name": "凯赛生物",
-          "market": "沪市",
+          "market": "A股",
           "industry": "医药生物",
           "reason": "3日加速上涨",
           "condition_tags": [
@@ -8329,7 +8329,7 @@
         {
           "code": "002910.SZ",
           "name": "庄园牧场",
-          "market": "深市",
+          "market": "A股",
           "industry": "食品饮料",
           "reason": "持续放量",
           "condition_tags": [
@@ -8368,7 +8368,7 @@
         {
           "code": "603271.SH",
           "name": "永杰新材",
-          "market": "沪市",
+          "market": "A股",
           "industry": "有色金属",
           "reason": "持续放量",
           "condition_tags": [
@@ -8381,7 +8381,7 @@
         {
           "code": "000882.SZ",
           "name": "华联股份",
-          "market": "深市",
+          "market": "A股",
           "industry": "企业服务",
           "reason": "首日放量",
           "condition_tags": [
@@ -8472,7 +8472,7 @@
         {
           "code": "001296.SZ",
           "name": "长江材料",
-          "market": "深市",
+          "market": "A股",
           "industry": "建材Ⅱ",
           "reason": "持续放量",
           "condition_tags": [
@@ -8550,7 +8550,7 @@
         {
           "code": "603630.SH",
           "name": "拉芳家化",
-          "market": "沪市",
+          "market": "A股",
           "industry": "家庭用品",
           "reason": "首日放量",
           "condition_tags": [
@@ -8576,7 +8576,7 @@
         {
           "code": "603116.SH",
           "name": "红蜻蜓",
-          "market": "沪市",
+          "market": "A股",
           "industry": "纺织服装Ⅱ",
           "reason": "首日放量",
           "condition_tags": [
@@ -8589,7 +8589,7 @@
         {
           "code": "002014.SZ",
           "name": "永新股份",
-          "market": "深市",
+          "market": "A股",
           "industry": "造纸与包装",
           "reason": "首日放量",
           "condition_tags": [
@@ -8602,7 +8602,7 @@
         {
           "code": "002788.SZ",
           "name": "鹭燕医药",
-          "market": "深市",
+          "market": "A股",
           "industry": "医疗设备与服务",
           "reason": "首日放量",
           "condition_tags": [
@@ -8654,7 +8654,7 @@
         {
           "code": "688576.SH",
           "name": "西山科技",
-          "market": "沪市",
+          "market": "A股",
           "industry": "医疗设备与服务",
           "reason": "首日放量",
           "condition_tags": [
@@ -8732,7 +8732,7 @@
         {
           "code": "688338.SH",
           "name": "赛科希德",
-          "market": "沪市",
+          "market": "A股",
           "industry": "医疗设备与服务",
           "reason": "3日加速上涨",
           "condition_tags": [
@@ -8745,7 +8745,7 @@
         {
           "code": "600876.SH",
           "name": "凯盛新能",
-          "market": "沪市",
+          "market": "A股",
           "industry": "电气设备",
           "reason": "持续放量",
           "condition_tags": [
@@ -8810,7 +8810,7 @@
         {
           "code": "600598.SH",
           "name": "北大荒",
-          "market": "沪市",
+          "market": "A股",
           "industry": "食品饮料",
           "reason": "首日放量",
           "condition_tags": [
@@ -9081,7 +9081,7 @@
         {
           "code": "000783.SZ",
           "name": "长江证券",
-          "market": "深市",
+          "market": "A股",
           "industry": "非银金融",
           "reason": "日涨/超额 / 3D价强 / 5D价强 / 持续放量 / 3Y新高",
           "condition_tags": [
@@ -9098,7 +9098,7 @@
         {
           "code": "002303.SZ",
           "name": "美盈森",
-          "market": "深市",
+          "market": "A股",
           "industry": "造纸与包装",
           "reason": "日涨/超额 / 3D价强 / 持续放量 / 60D新高",
           "condition_tags": [
@@ -9114,7 +9114,7 @@
         {
           "code": "600531.SH",
           "name": "豫光金铅",
-          "market": "沪市",
+          "market": "A股",
           "industry": "有色金属",
           "reason": "3D价强 / 持续放量 / 60D新高",
           "condition_tags": [
@@ -9129,7 +9129,7 @@
         {
           "code": "300195.SZ",
           "name": "长荣股份",
-          "market": "深市",
+          "market": "A股",
           "industry": "机械",
           "reason": "日涨/超额 / 3D价强 / 5D价强 / 持续放量",
           "condition_tags": [
@@ -9145,7 +9145,7 @@
         {
           "code": "002367.SZ",
           "name": "康力电梯",
-          "market": "深市",
+          "market": "A股",
           "industry": "机械",
           "reason": "3D价强 / 5D价强 / 持续放量",
           "condition_tags": [
@@ -9160,7 +9160,7 @@
         {
           "code": "300650.SZ",
           "name": "太龙股份",
-          "market": "深市",
+          "market": "A股",
           "industry": "家电Ⅱ",
           "reason": "日涨/超额 / 3D价强 / 当日放量",
           "condition_tags": [
@@ -9175,7 +9175,7 @@
         {
           "code": "688093.SH",
           "name": "世华科技",
-          "market": "沪市",
+          "market": "A股",
           "industry": "硬件设备",
           "reason": "日涨/超额 / 3D价强 / 当日放量",
           "condition_tags": [
@@ -9190,7 +9190,7 @@
         {
           "code": "301376.SZ",
           "name": "致欧科技",
-          "market": "深市",
+          "market": "A股",
           "industry": "耐用消费品",
           "reason": "日涨/超额 / 3D价强 / 当日放量",
           "condition_tags": [
@@ -9205,7 +9205,7 @@
         {
           "code": "002312.SZ",
           "name": "川发龙蟒",
-          "market": "深市",
+          "market": "A股",
           "industry": "化工",
           "reason": "3D价强 / 持续放量",
           "condition_tags": [
@@ -9219,7 +9219,7 @@
         {
           "code": "301211.SZ",
           "name": "亨迪药业",
-          "market": "深市",
+          "market": "A股",
           "industry": "医药生物",
           "reason": "3D价强 / 持续放量",
           "condition_tags": [
@@ -9233,7 +9233,7 @@
         {
           "code": "301356.SZ",
           "name": "天振股份",
-          "market": "深市",
+          "market": "A股",
           "industry": "造纸与包装",
           "reason": "3D价强 / 持续放量",
           "condition_tags": [
@@ -9247,7 +9247,7 @@
         {
           "code": "001206.SZ",
           "name": "依依股份",
-          "market": "深市",
+          "market": "A股",
           "industry": "家庭用品",
           "reason": "3D价强 / 持续放量",
           "condition_tags": [
@@ -9261,7 +9261,7 @@
         {
           "code": "600470.SH",
           "name": "六国化工",
-          "market": "沪市",
+          "market": "A股",
           "industry": "化工",
           "reason": "3D价强 / 持续放量",
           "condition_tags": [
@@ -9275,7 +9275,7 @@
         {
           "code": "920035.BJ",
           "name": "精创电气",
-          "market": "北交所",
+          "market": "A股",
           "industry": "硬件设备",
           "reason": "3D价强 / 持续放量",
           "condition_tags": [
@@ -9289,7 +9289,7 @@
         {
           "code": "603980.SH",
           "name": "吉华集团",
-          "market": "沪市",
+          "market": "A股",
           "industry": "化工",
           "reason": "3D价强 / 持续放量",
           "condition_tags": [
@@ -9303,7 +9303,7 @@
         {
           "code": "300592.SZ",
           "name": "华凯易佰",
-          "market": "深市",
+          "market": "A股",
           "industry": "工业贸易与综合",
           "reason": "3D价强 / 持续放量",
           "condition_tags": [
@@ -9317,7 +9317,7 @@
         {
           "code": "605377.SH",
           "name": "华旺科技",
-          "market": "沪市",
+          "market": "A股",
           "industry": "造纸与包装",
           "reason": "3D价强 / 持续放量",
           "condition_tags": [
@@ -9331,7 +9331,7 @@
         {
           "code": "688026.SH",
           "name": "洁特生物",
-          "market": "沪市",
+          "market": "A股",
           "industry": "医药生物",
           "reason": "5D价强 / 持续放量",
           "condition_tags": [
@@ -9345,7 +9345,7 @@
         {
           "code": "603898.SH",
           "name": "好莱客",
-          "market": "沪市",
+          "market": "A股",
           "industry": "耐用消费品",
           "reason": "3D价强 / 当日放量",
           "condition_tags": [
@@ -9359,7 +9359,7 @@
         {
           "code": "688136.SH",
           "name": "科兴制药",
-          "market": "沪市",
+          "market": "A股",
           "industry": "医药生物",
           "reason": "日涨/超额 / 当日放量",
           "condition_tags": [
@@ -9373,7 +9373,7 @@
         {
           "code": "600668.SH",
           "name": "尖峰集团",
-          "market": "沪市",
+          "market": "A股",
           "industry": "工业贸易与综合",
           "reason": "日涨/超额 / 当日放量",
           "condition_tags": [
@@ -9387,7 +9387,7 @@
         {
           "code": "601901.SH",
           "name": "方正证券",
-          "market": "沪市",
+          "market": "A股",
           "industry": "非银金融",
           "reason": "当日放量 / 60D新高",
           "condition_tags": [
@@ -9401,7 +9401,7 @@
         {
           "code": "603713.SH",
           "name": "密尔克卫",
-          "market": "沪市",
+          "market": "A股",
           "industry": "交通运输",
           "reason": "日涨/超额 / 3D价强 / 5D价强 / 120D新高",
           "condition_tags": [
@@ -9417,7 +9417,7 @@
         {
           "code": "600141.SH",
           "name": "兴发集团",
-          "market": "沪市",
+          "market": "A股",
           "industry": "化工",
           "reason": "日涨/超额 / 3D价强 / 3Y新高",
           "condition_tags": [
@@ -9432,7 +9432,7 @@
         {
           "code": "603223.SH",
           "name": "恒通股份",
-          "market": "沪市",
+          "market": "A股",
           "industry": "石油石化",
           "reason": "3D价强 / 5D价强 / 120D新高",
           "condition_tags": [
@@ -9447,7 +9447,7 @@
         {
           "code": "600516.SH",
           "name": "方大炭素",
-          "market": "沪市",
+          "market": "A股",
           "industry": "有色金属",
           "reason": "日涨/超额 / 3D价强 / 60D新高",
           "condition_tags": [
@@ -9477,7 +9477,7 @@
         {
           "code": "002925.SZ",
           "name": "盈趣科技",
-          "market": "深市",
+          "market": "A股",
           "industry": "硬件设备",
           "reason": "3D价强 / 3Y新高",
           "condition_tags": [
@@ -9491,7 +9491,7 @@
         {
           "code": "603259.SH",
           "name": "药明康德",
-          "market": "沪市",
+          "market": "A股",
           "industry": "医药生物",
           "reason": "3D价强 / 3Y新高",
           "condition_tags": [
@@ -9505,7 +9505,7 @@
         {
           "code": "600160.SH",
           "name": "巨化股份",
-          "market": "沪市",
+          "market": "A股",
           "industry": "化工",
           "reason": "3D价强 / 3Y新高",
           "condition_tags": [
@@ -9519,7 +9519,7 @@
         {
           "code": "601066.SH",
           "name": "中信建投",
-          "market": "沪市",
+          "market": "A股",
           "industry": "非银金融",
           "reason": "3D价强 / 120D新高",
           "condition_tags": [
@@ -9533,7 +9533,7 @@
         {
           "code": "601233.SH",
           "name": "桐昆股份",
-          "market": "沪市",
+          "market": "A股",
           "industry": "化工",
           "reason": "3D价强 / 60D新高",
           "condition_tags": [
@@ -9561,7 +9561,7 @@
         {
           "code": "301418.SZ",
           "name": "协昌科技",
-          "market": "深市",
+          "market": "A股",
           "industry": "硬件设备",
           "reason": "日涨/超额 / 120D新高",
           "condition_tags": [
@@ -9575,7 +9575,7 @@
         {
           "code": "000100.SZ",
           "name": "TCL科技",
-          "market": "深市",
+          "market": "A股",
           "industry": "硬件设备",
           "reason": "日涨/超额 / 120D新高",
           "condition_tags": [
@@ -9589,7 +9589,7 @@
         {
           "code": "300105.SZ",
           "name": "龙源技术",
-          "market": "深市",
+          "market": "A股",
           "industry": "电气设备",
           "reason": "日涨/超额 / 60D新高",
           "condition_tags": [
@@ -9603,7 +9603,7 @@
         {
           "code": "002662.SZ",
           "name": "峰璟股份",
-          "market": "深市",
+          "market": "A股",
           "industry": "汽车与零配件",
           "reason": "持续放量",
           "condition_tags": [
@@ -9616,7 +9616,7 @@
         {
           "code": "601162.SH",
           "name": "天风证券",
-          "market": "沪市",
+          "market": "A股",
           "industry": "非银金融",
           "reason": "持续放量",
           "condition_tags": [
@@ -9629,7 +9629,7 @@
         {
           "code": "688336.SH",
           "name": "三生国健",
-          "market": "沪市",
+          "market": "A股",
           "industry": "医药生物",
           "reason": "持续放量",
           "condition_tags": [
@@ -9642,7 +9642,7 @@
         {
           "code": "002672.SZ",
           "name": "东江环保",
-          "market": "深市",
+          "market": "A股",
           "industry": "环保Ⅱ",
           "reason": "持续放量",
           "condition_tags": [
@@ -9655,7 +9655,7 @@
         {
           "code": "000776.SZ",
           "name": "广发证券",
-          "market": "深市",
+          "market": "A股",
           "industry": "非银金融",
           "reason": "持续放量",
           "condition_tags": [
@@ -9668,7 +9668,7 @@
         {
           "code": "001296.SZ",
           "name": "长江材料",
-          "market": "深市",
+          "market": "A股",
           "industry": "建材Ⅱ",
           "reason": "持续放量",
           "condition_tags": [
@@ -9681,7 +9681,7 @@
         {
           "code": "603567.SH",
           "name": "珍宝岛",
-          "market": "沪市",
+          "market": "A股",
           "industry": "医药生物",
           "reason": "持续放量",
           "condition_tags": [
@@ -9694,7 +9694,7 @@
         {
           "code": "000931.SZ",
           "name": "中关村",
-          "market": "深市",
+          "market": "A股",
           "industry": "医药生物",
           "reason": "持续放量",
           "condition_tags": [
@@ -9707,7 +9707,7 @@
         {
           "code": "002083.SZ",
           "name": "孚日股份",
-          "market": "深市",
+          "market": "A股",
           "industry": "纺织服装Ⅱ",
           "reason": "持续放量",
           "condition_tags": [
@@ -9720,7 +9720,7 @@
         {
           "code": "300485.SZ",
           "name": "赛升药业",
-          "market": "深市",
+          "market": "A股",
           "industry": "医药生物",
           "reason": "持续放量",
           "condition_tags": [
@@ -9733,7 +9733,7 @@
         {
           "code": "688338.SH",
           "name": "赛科希德",
-          "market": "沪市",
+          "market": "A股",
           "industry": "医疗设备与服务",
           "reason": "持续放量",
           "condition_tags": [
@@ -9746,7 +9746,7 @@
         {
           "code": "300891.SZ",
           "name": "惠云钛业",
-          "market": "深市",
+          "market": "A股",
           "industry": "化工",
           "reason": "持续放量",
           "condition_tags": [
@@ -9759,7 +9759,7 @@
         {
           "code": "688426.SH",
           "name": "康为世纪",
-          "market": "沪市",
+          "market": "A股",
           "industry": "医药生物",
           "reason": "持续放量",
           "condition_tags": [
@@ -9772,7 +9772,7 @@
         {
           "code": "001216.SZ",
           "name": "华瓷股份",
-          "market": "深市",
+          "market": "A股",
           "industry": "耐用消费品",
           "reason": "持续放量",
           "condition_tags": [
@@ -9785,7 +9785,7 @@
         {
           "code": "603339.SH",
           "name": "四方科技",
-          "market": "沪市",
+          "market": "A股",
           "industry": "机械",
           "reason": "持续放量",
           "condition_tags": [
@@ -9798,7 +9798,7 @@
         {
           "code": "002950.SZ",
           "name": "奥美医疗",
-          "market": "深市",
+          "market": "A股",
           "industry": "医疗设备与服务",
           "reason": "持续放量",
           "condition_tags": [
@@ -9811,7 +9811,7 @@
         {
           "code": "688119.SH",
           "name": "中钢洛耐",
-          "market": "沪市",
+          "market": "A股",
           "industry": "建材Ⅱ",
           "reason": "持续放量",
           "condition_tags": [
@@ -9824,7 +9824,7 @@
         {
           "code": "002014.SZ",
           "name": "永新股份",
-          "market": "深市",
+          "market": "A股",
           "industry": "造纸与包装",
           "reason": "持续放量",
           "condition_tags": [
@@ -9837,7 +9837,7 @@
         {
           "code": "600976.SH",
           "name": "健民集团",
-          "market": "沪市",
+          "market": "A股",
           "industry": "医药生物",
           "reason": "持续放量",
           "condition_tags": [
@@ -9850,7 +9850,7 @@
         {
           "code": "000756.SZ",
           "name": "新华制药",
-          "market": "深市",
+          "market": "A股",
           "industry": "医药生物",
           "reason": "持续放量",
           "condition_tags": [
@@ -9863,7 +9863,7 @@
         {
           "code": "688105.SH",
           "name": "诺唯赞",
-          "market": "沪市",
+          "market": "A股",
           "industry": "医药生物",
           "reason": "持续放量",
           "condition_tags": [
@@ -9876,7 +9876,7 @@
         {
           "code": "002910.SZ",
           "name": "庄园牧场",
-          "market": "深市",
+          "market": "A股",
           "industry": "食品饮料",
           "reason": "持续放量",
           "condition_tags": [
@@ -9889,7 +9889,7 @@
         {
           "code": "688755.SH",
           "name": "汉邦科技",
-          "market": "沪市",
+          "market": "A股",
           "industry": "机械",
           "reason": "持续放量",
           "condition_tags": [
@@ -9902,7 +9902,7 @@
         {
           "code": "920009.BJ",
           "name": "丹娜生物",
-          "market": "北交所",
+          "market": "A股",
           "industry": "医疗设备与服务",
           "reason": "持续放量",
           "condition_tags": [
@@ -9915,7 +9915,7 @@
         {
           "code": "301399.SZ",
           "name": "英特科技",
-          "market": "深市",
+          "market": "A股",
           "industry": "机械",
           "reason": "持续放量",
           "condition_tags": [
@@ -9928,7 +9928,7 @@
         {
           "code": "603166.SH",
           "name": "福达股份",
-          "market": "沪市",
+          "market": "A股",
           "industry": "汽车与零配件",
           "reason": "持续放量",
           "condition_tags": [
@@ -9941,7 +9941,7 @@
         {
           "code": "300412.SZ",
           "name": "迦南科技",
-          "market": "深市",
+          "market": "A股",
           "industry": "机械",
           "reason": "持续放量",
           "condition_tags": [
@@ -9954,7 +9954,7 @@
         {
           "code": "002392.SZ",
           "name": "北京利尔",
-          "market": "深市",
+          "market": "A股",
           "industry": "建材Ⅱ",
           "reason": "持续放量",
           "condition_tags": [
@@ -9967,7 +9967,7 @@
         {
           "code": "003013.SZ",
           "name": "地铁设计",
-          "market": "深市",
+          "market": "A股",
           "industry": "建筑",
           "reason": "持续放量",
           "condition_tags": [
@@ -9980,7 +9980,7 @@
         {
           "code": "002687.SZ",
           "name": "乔治白",
-          "market": "深市",
+          "market": "A股",
           "industry": "纺织服装Ⅱ",
           "reason": "持续放量",
           "condition_tags": [
@@ -9993,7 +9993,7 @@
         {
           "code": "301119.SZ",
           "name": "正强股份",
-          "market": "深市",
+          "market": "A股",
           "industry": "汽车与零配件",
           "reason": "持续放量",
           "condition_tags": [
@@ -10006,7 +10006,7 @@
         {
           "code": "920029.BJ",
           "name": "开发科技",
-          "market": "北交所",
+          "market": "A股",
           "industry": "电气设备",
           "reason": "当日放量",
           "condition_tags": [
@@ -10019,7 +10019,7 @@
         {
           "code": "002444.SZ",
           "name": "巨星科技",
-          "market": "深市",
+          "market": "A股",
           "industry": "机械",
           "reason": "当日放量",
           "condition_tags": [
@@ -10032,7 +10032,7 @@
         {
           "code": "605183.SH",
           "name": "确成股份",
-          "market": "沪市",
+          "market": "A股",
           "industry": "化工",
           "reason": "当日放量",
           "condition_tags": [
@@ -10045,7 +10045,7 @@
         {
           "code": "600960.SH",
           "name": "渤海汽车",
-          "market": "沪市",
+          "market": "A股",
           "industry": "汽车与零配件",
           "reason": "当日放量",
           "condition_tags": [
@@ -10058,7 +10058,7 @@
         {
           "code": "600796.SH",
           "name": "钱江生化",
-          "market": "沪市",
+          "market": "A股",
           "industry": "化工",
           "reason": "当日放量",
           "condition_tags": [
@@ -10071,7 +10071,7 @@
         {
           "code": "603848.SH",
           "name": "好太太",
-          "market": "沪市",
+          "market": "A股",
           "industry": "耐用消费品",
           "reason": "当日放量",
           "condition_tags": [
@@ -10084,7 +10084,7 @@
         {
           "code": "603948.SH",
           "name": "建业股份",
-          "market": "沪市",
+          "market": "A股",
           "industry": "化工",
           "reason": "当日放量",
           "condition_tags": [
@@ -10097,7 +10097,7 @@
         {
           "code": "600598.SH",
           "name": "北大荒",
-          "market": "沪市",
+          "market": "A股",
           "industry": "食品饮料",
           "reason": "当日放量",
           "condition_tags": [
@@ -10110,7 +10110,7 @@
         {
           "code": "603317.SH",
           "name": "天味食品",
-          "market": "沪市",
+          "market": "A股",
           "industry": "食品饮料",
           "reason": "当日放量",
           "condition_tags": [
@@ -10123,7 +10123,7 @@
         {
           "code": "605151.SH",
           "name": "西上海",
-          "market": "沪市",
+          "market": "A股",
           "industry": "汽车与零配件",
           "reason": "当日放量",
           "condition_tags": [
@@ -10136,7 +10136,7 @@
         {
           "code": "688576.SH",
           "name": "西山科技",
-          "market": "沪市",
+          "market": "A股",
           "industry": "医疗设备与服务",
           "reason": "当日放量",
           "condition_tags": [
@@ -10205,7 +10205,7 @@
         {
           "code": "603661.SH",
           "name": "恒林股份",
-          "market": "沪市",
+          "market": "A股",
           "industry": "耐用消费品",
           "reason": "日涨/超额 / 3D价强",
           "condition_tags": [
@@ -10219,7 +10219,7 @@
         {
           "code": "002558.SZ",
           "name": "巨人网络",
-          "market": "深市",
+          "market": "A股",
           "industry": "传媒",
           "reason": "日涨/超额 / 3D价强",
           "condition_tags": [
@@ -10247,7 +10247,7 @@
         {
           "code": "002346.SZ",
           "name": "柘中股份",
-          "market": "深市",
+          "market": "A股",
           "industry": "电气设备",
           "reason": "3D价强 / 5D价强",
           "condition_tags": [
@@ -10261,7 +10261,7 @@
         {
           "code": "600708.SH",
           "name": "光明地产",
-          "market": "沪市",
+          "market": "A股",
           "industry": "房地产Ⅱ",
           "reason": "3D价强",
           "condition_tags": [
@@ -10274,7 +10274,7 @@
         {
           "code": "300533.SZ",
           "name": "冰川网络",
-          "market": "深市",
+          "market": "A股",
           "industry": "传媒",
           "reason": "3D价强",
           "condition_tags": [
@@ -10287,7 +10287,7 @@
         {
           "code": "688408.SH",
           "name": "中信博",
-          "market": "沪市",
+          "market": "A股",
           "industry": "电气设备",
           "reason": "3D价强",
           "condition_tags": [
@@ -10300,7 +10300,7 @@
         {
           "code": "000703.SZ",
           "name": "恒逸石化",
-          "market": "深市",
+          "market": "A股",
           "industry": "化工",
           "reason": "3D价强",
           "condition_tags": [
@@ -10313,7 +10313,7 @@
         {
           "code": "605369.SH",
           "name": "拱东医疗",
-          "market": "沪市",
+          "market": "A股",
           "industry": "医疗设备与服务",
           "reason": "3D价强",
           "condition_tags": [
@@ -10326,7 +10326,7 @@
         {
           "code": "300059.SZ",
           "name": "东方财富",
-          "market": "深市",
+          "market": "A股",
           "industry": "非银金融",
           "reason": "3D价强",
           "condition_tags": [
@@ -10339,7 +10339,7 @@
         {
           "code": "600352.SH",
           "name": "浙江龙盛",
-          "market": "沪市",
+          "market": "A股",
           "industry": "化工",
           "reason": "3D价强",
           "condition_tags": [
@@ -10352,7 +10352,7 @@
         {
           "code": "300363.SZ",
           "name": "博腾股份",
-          "market": "深市",
+          "market": "A股",
           "industry": "医药生物",
           "reason": "3D价强",
           "condition_tags": [
@@ -10365,7 +10365,7 @@
         {
           "code": "002546.SZ",
           "name": "新联电子",
-          "market": "深市",
+          "market": "A股",
           "industry": "电气设备",
           "reason": "3D价强",
           "condition_tags": [
@@ -10378,7 +10378,7 @@
         {
           "code": "601108.SH",
           "name": "财通证券",
-          "market": "沪市",
+          "market": "A股",
           "industry": "非银金融",
           "reason": "3D价强",
           "condition_tags": [
@@ -10391,7 +10391,7 @@
         {
           "code": "300505.SZ",
           "name": "川金诺",
-          "market": "深市",
+          "market": "A股",
           "industry": "化工",
           "reason": "3D价强",
           "condition_tags": [
@@ -10404,7 +10404,7 @@
         {
           "code": "600843.SH",
           "name": "上工申贝",
-          "market": "沪市",
+          "market": "A股",
           "industry": "机械",
           "reason": "3D价强",
           "condition_tags": [
@@ -10417,7 +10417,7 @@
         {
           "code": "603727.SH",
           "name": "博迈科",
-          "market": "沪市",
+          "market": "A股",
           "industry": "石油石化",
           "reason": "3D价强",
           "condition_tags": [
@@ -10430,7 +10430,7 @@
         {
           "code": "002648.SZ",
           "name": "卫星化学",
-          "market": "深市",
+          "market": "A股",
           "industry": "化工",
           "reason": "3D价强",
           "condition_tags": [
@@ -10456,7 +10456,7 @@
         {
           "code": "002064.SZ",
           "name": "华峰化学",
-          "market": "深市",
+          "market": "A股",
           "industry": "化工",
           "reason": "3D价强",
           "condition_tags": [
@@ -10469,7 +10469,7 @@
         {
           "code": "605020.SH",
           "name": "永和股份",
-          "market": "沪市",
+          "market": "A股",
           "industry": "化工",
           "reason": "3D价强",
           "condition_tags": [
@@ -10482,7 +10482,7 @@
         {
           "code": "605305.SH",
           "name": "中际联合",
-          "market": "沪市",
+          "market": "A股",
           "industry": "机械",
           "reason": "3D价强",
           "condition_tags": [
@@ -10495,7 +10495,7 @@
         {
           "code": "000050.SZ",
           "name": "深天马A",
-          "market": "深市",
+          "market": "A股",
           "industry": "硬件设备",
           "reason": "3D价强",
           "condition_tags": [
@@ -10534,7 +10534,7 @@
         {
           "code": "603313.SH",
           "name": "梦百合",
-          "market": "沪市",
+          "market": "A股",
           "industry": "耐用消费品",
           "reason": "日涨/超额",
           "condition_tags": [
@@ -10547,7 +10547,7 @@
         {
           "code": "605300.SH",
           "name": "佳禾食品",
-          "market": "沪市",
+          "market": "A股",
           "industry": "食品饮料",
           "reason": "日涨/超额",
           "condition_tags": [
@@ -10560,7 +10560,7 @@
         {
           "code": "002928.SZ",
           "name": "华夏航空",
-          "market": "深市",
+          "market": "A股",
           "industry": "交通运输",
           "reason": "日涨/超额",
           "condition_tags": [
@@ -10573,7 +10573,7 @@
         {
           "code": "603500.SH",
           "name": "祥和实业",
-          "market": "沪市",
+          "market": "A股",
           "industry": "机械",
           "reason": "日涨/超额",
           "condition_tags": [
@@ -10586,7 +10586,7 @@
         {
           "code": "600458.SH",
           "name": "时代新材",
-          "market": "沪市",
+          "market": "A股",
           "industry": "化工",
           "reason": "日涨/超额",
           "condition_tags": [
@@ -10599,7 +10599,7 @@
         {
           "code": "603527.SH",
           "name": "众源新材",
-          "market": "沪市",
+          "market": "A股",
           "industry": "有色金属",
           "reason": "日涨/超额",
           "condition_tags": [
@@ -10612,7 +10612,7 @@
         {
           "code": "603733.SH",
           "name": "仙鹤股份",
-          "market": "沪市",
+          "market": "A股",
           "industry": "造纸与包装",
           "reason": "日涨/超额",
           "condition_tags": [
@@ -10625,7 +10625,7 @@
         {
           "code": "601798.SH",
           "name": "蓝科高新",
-          "market": "沪市",
+          "market": "A股",
           "industry": "石油石化",
           "reason": "日涨/超额",
           "condition_tags": [
@@ -10638,7 +10638,7 @@
         {
           "code": "603956.SH",
           "name": "威派格",
-          "market": "沪市",
+          "market": "A股",
           "industry": "机械",
           "reason": "日涨/超额",
           "condition_tags": [
@@ -10651,7 +10651,7 @@
         {
           "code": "601636.SH",
           "name": "旗滨集团",
-          "market": "沪市",
+          "market": "A股",
           "industry": "建材Ⅱ",
           "reason": "日涨/超额",
           "condition_tags": [
@@ -10729,7 +10729,7 @@
         {
           "code": "002745.SZ",
           "name": "木林森",
-          "market": "深市",
+          "market": "A股",
           "industry": "半导体",
           "reason": "3Y新高",
           "condition_tags": [
@@ -10755,7 +10755,7 @@
         {
           "code": "603020.SH",
           "name": "爱普股份",
-          "market": "沪市",
+          "market": "A股",
           "industry": "食品饮料",
           "reason": "3Y新高",
           "condition_tags": [
@@ -10768,7 +10768,7 @@
         {
           "code": "000733.SZ",
           "name": "振华科技",
-          "market": "深市",
+          "market": "A股",
           "industry": "硬件设备",
           "reason": "120D新高",
           "condition_tags": [
@@ -10781,7 +10781,7 @@
         {
           "code": "600906.SH",
           "name": "财达证券",
-          "market": "沪市",
+          "market": "A股",
           "industry": "非银金融",
           "reason": "120D新高",
           "condition_tags": [
@@ -10794,7 +10794,7 @@
         {
           "code": "603380.SH",
           "name": "易德龙",
-          "market": "沪市",
+          "market": "A股",
           "industry": "硬件设备",
           "reason": "120D新高",
           "condition_tags": [
@@ -10807,7 +10807,7 @@
         {
           "code": "600999.SH",
           "name": "招商证券",
-          "market": "沪市",
+          "market": "A股",
           "industry": "非银金融",
           "reason": "120D新高",
           "condition_tags": [
@@ -10820,7 +10820,7 @@
         {
           "code": "600030.SH",
           "name": "中信证券",
-          "market": "沪市",
+          "market": "A股",
           "industry": "非银金融",
           "reason": "60D新高",
           "condition_tags": [
@@ -10833,7 +10833,7 @@
         {
           "code": "601995.SH",
           "name": "中金公司",
-          "market": "沪市",
+          "market": "A股",
           "industry": "非银金融",
           "reason": "60D新高",
           "condition_tags": [
@@ -10846,7 +10846,7 @@
         {
           "code": "601198.SH",
           "name": "东兴证券",
-          "market": "沪市",
+          "market": "A股",
           "industry": "非银金融",
           "reason": "60D新高",
           "condition_tags": [
@@ -10872,7 +10872,7 @@
         {
           "code": "000012.SZ",
           "name": "南玻A",
-          "market": "深市",
+          "market": "A股",
           "industry": "建材Ⅱ",
           "reason": "60D新高",
           "condition_tags": [
@@ -10885,7 +10885,7 @@
         {
           "code": "601688.SH",
           "name": "华泰证券",
-          "market": "沪市",
+          "market": "A股",
           "industry": "非银金融",
           "reason": "60D新高",
           "condition_tags": [
@@ -10898,7 +10898,7 @@
         {
           "code": "002145.SZ",
           "name": "钛能化学",
-          "market": "深市",
+          "market": "A股",
           "industry": "化工",
           "reason": "60D新高",
           "condition_tags": [
@@ -10911,7 +10911,7 @@
         {
           "code": "603225.SH",
           "name": "新凤鸣",
-          "market": "沪市",
+          "market": "A股",
           "industry": "化工",
           "reason": "60D新高",
           "condition_tags": [
@@ -10924,7 +10924,7 @@
         {
           "code": "300873.SZ",
           "name": "海晨股份",
-          "market": "深市",
+          "market": "A股",
           "industry": "交通运输",
           "reason": "60D新高",
           "condition_tags": [
@@ -10937,7 +10937,7 @@
         {
           "code": "603181.SH",
           "name": "皇马科技",
-          "market": "沪市",
+          "market": "A股",
           "industry": "化工",
           "reason": "60D新高",
           "condition_tags": [
@@ -10950,7 +10950,7 @@
         {
           "code": "300643.SZ",
           "name": "万通智控",
-          "market": "深市",
+          "market": "A股",
           "industry": "汽车与零配件",
           "reason": "60D新高",
           "condition_tags": [
@@ -10965,7 +10965,7 @@
     {
       "date": "2026-06-26",
       "latest_trade_date": "2026-06-26",
-      "generated_at": "2026-06-26T22:32:05",
+      "generated_at": "2026-06-26T22:38:56",
       "total": 136,
       "reason_counts": {
         "持续放量": 45,
@@ -11006,7 +11006,7 @@
         {
           "code": "688093.SH",
           "name": "世华科技",
-          "market": "沪市",
+          "market": "A股",
           "industry": "硬件设备",
           "reason": "3D价强 / 当日放量 / 60D新高",
           "condition_tags": [
@@ -11021,7 +11021,7 @@
         {
           "code": "300446.SZ",
           "name": "航天智造",
-          "market": "深市",
+          "market": "A股",
           "industry": "汽车与零配件",
           "reason": "3D价强 / 持续放量",
           "condition_tags": [
@@ -11035,7 +11035,7 @@
         {
           "code": "603898.SH",
           "name": "好莱客",
-          "market": "沪市",
+          "market": "A股",
           "industry": "耐用消费品",
           "reason": "3D价强 / 持续放量",
           "condition_tags": [
@@ -11049,7 +11049,7 @@
         {
           "code": "300363.SZ",
           "name": "博腾股份",
-          "market": "深市",
+          "market": "A股",
           "industry": "医药生物",
           "reason": "3D价强 / 持续放量",
           "condition_tags": [
@@ -11063,7 +11063,7 @@
         {
           "code": "002303.SZ",
           "name": "美盈森",
-          "market": "深市",
+          "market": "A股",
           "industry": "造纸与包装",
           "reason": "3D价强 / 持续放量",
           "condition_tags": [
@@ -11077,7 +11077,7 @@
         {
           "code": "000783.SZ",
           "name": "长江证券",
-          "market": "深市",
+          "market": "A股",
           "industry": "非银金融",
           "reason": "3D价强 / 持续放量",
           "condition_tags": [
@@ -11091,7 +11091,7 @@
         {
           "code": "605369.SH",
           "name": "拱东医疗",
-          "market": "沪市",
+          "market": "A股",
           "industry": "医疗设备与服务",
           "reason": "3D价强 / 持续放量",
           "condition_tags": [
@@ -11119,7 +11119,7 @@
         {
           "code": "300195.SZ",
           "name": "长荣股份",
-          "market": "深市",
+          "market": "A股",
           "industry": "机械",
           "reason": "3D价强 / 持续放量",
           "condition_tags": [
@@ -11133,7 +11133,7 @@
         {
           "code": "002367.SZ",
           "name": "康力电梯",
-          "market": "深市",
+          "market": "A股",
           "industry": "机械",
           "reason": "5D价强 / 持续放量",
           "condition_tags": [
@@ -11147,7 +11147,7 @@
         {
           "code": "002910.SZ",
           "name": "庄园牧场",
-          "market": "深市",
+          "market": "A股",
           "industry": "食品饮料",
           "reason": "日涨/超额 / 持续放量",
           "condition_tags": [
@@ -11161,7 +11161,7 @@
         {
           "code": "688426.SH",
           "name": "康为世纪",
-          "market": "沪市",
+          "market": "A股",
           "industry": "医药生物",
           "reason": "日涨/超额 / 持续放量",
           "condition_tags": [
@@ -11189,7 +11189,7 @@
         {
           "code": "688349.SH",
           "name": "三一重能",
-          "market": "沪市",
+          "market": "A股",
           "industry": "电气设备",
           "reason": "日涨/超额 / 当日放量",
           "condition_tags": [
@@ -11203,7 +11203,7 @@
         {
           "code": "601226.SH",
           "name": "华电科工",
-          "market": "沪市",
+          "market": "A股",
           "industry": "建筑",
           "reason": "日涨/超额 / 当日放量",
           "condition_tags": [
@@ -11217,7 +11217,7 @@
         {
           "code": "601066.SH",
           "name": "中信建投",
-          "market": "沪市",
+          "market": "A股",
           "industry": "非银金融",
           "reason": "持续放量 / 120D新高",
           "condition_tags": [
@@ -11231,7 +11231,7 @@
         {
           "code": "000551.SZ",
           "name": "创元科技",
-          "market": "深市",
+          "market": "A股",
           "industry": "环保Ⅱ",
           "reason": "日涨/超额 / 3D价强 / 3Y新高",
           "condition_tags": [
@@ -11246,7 +11246,7 @@
         {
           "code": "600141.SH",
           "name": "兴发集团",
-          "market": "沪市",
+          "market": "A股",
           "industry": "化工",
           "reason": "3D价强 / 5D价强 / 3Y新高",
           "condition_tags": [
@@ -11261,7 +11261,7 @@
         {
           "code": "603713.SH",
           "name": "密尔克卫",
-          "market": "沪市",
+          "market": "A股",
           "industry": "交通运输",
           "reason": "3D价强 / 5D价强 / 120D新高",
           "condition_tags": [
@@ -11276,7 +11276,7 @@
         {
           "code": "603223.SH",
           "name": "恒通股份",
-          "market": "沪市",
+          "market": "A股",
           "industry": "石油石化",
           "reason": "3D价强 / 5D价强 / 120D新高",
           "condition_tags": [
@@ -11305,7 +11305,7 @@
         {
           "code": "603380.SH",
           "name": "易德龙",
-          "market": "沪市",
+          "market": "A股",
           "industry": "硬件设备",
           "reason": "5D价强 / 120D新高",
           "condition_tags": [
@@ -11319,7 +11319,7 @@
         {
           "code": "002106.SZ",
           "name": "莱宝高科",
-          "market": "深市",
+          "market": "A股",
           "industry": "硬件设备",
           "reason": "日涨/超额 / 3Y新高",
           "condition_tags": [
@@ -11333,7 +11333,7 @@
         {
           "code": "002635.SZ",
           "name": "安洁科技",
-          "market": "深市",
+          "market": "A股",
           "industry": "家电Ⅱ",
           "reason": "日涨/超额 / 3Y新高",
           "condition_tags": [
@@ -11347,7 +11347,7 @@
         {
           "code": "603661.SH",
           "name": "恒林股份",
-          "market": "沪市",
+          "market": "A股",
           "industry": "耐用消费品",
           "reason": "日涨/超额 / 120D新高",
           "condition_tags": [
@@ -11361,7 +11361,7 @@
         {
           "code": "002668.SZ",
           "name": "TCL智家",
-          "market": "深市",
+          "market": "A股",
           "industry": "家电Ⅱ",
           "reason": "日涨/超额 / 120D新高",
           "condition_tags": [
@@ -11375,7 +11375,7 @@
         {
           "code": "002129.SZ",
           "name": "TCL中环",
-          "market": "深市",
+          "market": "A股",
           "industry": "电气设备",
           "reason": "日涨/超额 / 60D新高",
           "condition_tags": [
@@ -11402,7 +11402,7 @@
         {
           "code": "603848.SH",
           "name": "好太太",
-          "market": "沪市",
+          "market": "A股",
           "industry": "耐用消费品",
           "reason": "持续放量",
           "condition_tags": [
@@ -11428,7 +11428,7 @@
         {
           "code": "002546.SZ",
           "name": "新联电子",
-          "market": "深市",
+          "market": "A股",
           "industry": "电气设备",
           "reason": "持续放量",
           "condition_tags": [
@@ -11441,7 +11441,7 @@
         {
           "code": "003013.SZ",
           "name": "地铁设计",
-          "market": "深市",
+          "market": "A股",
           "industry": "建筑",
           "reason": "持续放量",
           "condition_tags": [
@@ -11454,7 +11454,7 @@
         {
           "code": "600598.SH",
           "name": "北大荒",
-          "market": "沪市",
+          "market": "A股",
           "industry": "食品饮料",
           "reason": "持续放量",
           "condition_tags": [
@@ -11493,7 +11493,7 @@
         {
           "code": "301399.SZ",
           "name": "英特科技",
-          "market": "深市",
+          "market": "A股",
           "industry": "机械",
           "reason": "持续放量",
           "condition_tags": [
@@ -11506,7 +11506,7 @@
         {
           "code": "002687.SZ",
           "name": "乔治白",
-          "market": "深市",
+          "market": "A股",
           "industry": "纺织服装Ⅱ",
           "reason": "持续放量",
           "condition_tags": [
@@ -11519,7 +11519,7 @@
         {
           "code": "603980.SH",
           "name": "吉华集团",
-          "market": "沪市",
+          "market": "A股",
           "industry": "化工",
           "reason": "持续放量",
           "condition_tags": [
@@ -11532,7 +11532,7 @@
         {
           "code": "002312.SZ",
           "name": "川发龙蟒",
-          "market": "深市",
+          "market": "A股",
           "industry": "化工",
           "reason": "持续放量",
           "condition_tags": [
@@ -11558,7 +11558,7 @@
         {
           "code": "601108.SH",
           "name": "财通证券",
-          "market": "沪市",
+          "market": "A股",
           "industry": "非银金融",
           "reason": "持续放量",
           "condition_tags": [
@@ -11584,7 +11584,7 @@
         {
           "code": "002014.SZ",
           "name": "永新股份",
-          "market": "深市",
+          "market": "A股",
           "industry": "造纸与包装",
           "reason": "持续放量",
           "condition_tags": [
@@ -11597,7 +11597,7 @@
         {
           "code": "605377.SH",
           "name": "华旺科技",
-          "market": "沪市",
+          "market": "A股",
           "industry": "造纸与包装",
           "reason": "持续放量",
           "condition_tags": [
@@ -11610,7 +11610,7 @@
         {
           "code": "688105.SH",
           "name": "诺唯赞",
-          "market": "沪市",
+          "market": "A股",
           "industry": "医药生物",
           "reason": "持续放量",
           "condition_tags": [
@@ -11623,7 +11623,7 @@
         {
           "code": "002648.SZ",
           "name": "卫星化学",
-          "market": "深市",
+          "market": "A股",
           "industry": "化工",
           "reason": "持续放量",
           "condition_tags": [
@@ -11636,7 +11636,7 @@
         {
           "code": "002392.SZ",
           "name": "北京利尔",
-          "market": "深市",
+          "market": "A股",
           "industry": "建材Ⅱ",
           "reason": "持续放量",
           "condition_tags": [
@@ -11649,7 +11649,7 @@
         {
           "code": "000776.SZ",
           "name": "广发证券",
-          "market": "深市",
+          "market": "A股",
           "industry": "非银金融",
           "reason": "持续放量",
           "condition_tags": [
@@ -11662,7 +11662,7 @@
         {
           "code": "688755.SH",
           "name": "汉邦科技",
-          "market": "沪市",
+          "market": "A股",
           "industry": "机械",
           "reason": "持续放量",
           "condition_tags": [
@@ -11675,7 +11675,7 @@
         {
           "code": "000686.SZ",
           "name": "东北证券",
-          "market": "深市",
+          "market": "A股",
           "industry": "非银金融",
           "reason": "持续放量",
           "condition_tags": [
@@ -11688,7 +11688,7 @@
         {
           "code": "603339.SH",
           "name": "四方科技",
-          "market": "沪市",
+          "market": "A股",
           "industry": "机械",
           "reason": "持续放量",
           "condition_tags": [
@@ -11701,7 +11701,7 @@
         {
           "code": "688119.SH",
           "name": "中钢洛耐",
-          "market": "沪市",
+          "market": "A股",
           "industry": "建材Ⅱ",
           "reason": "持续放量",
           "condition_tags": [
@@ -11714,7 +11714,7 @@
         {
           "code": "300412.SZ",
           "name": "迦南科技",
-          "market": "深市",
+          "market": "A股",
           "industry": "机械",
           "reason": "持续放量",
           "condition_tags": [
@@ -11727,7 +11727,7 @@
         {
           "code": "601901.SH",
           "name": "方正证券",
-          "market": "沪市",
+          "market": "A股",
           "industry": "非银金融",
           "reason": "持续放量",
           "condition_tags": [
@@ -11740,7 +11740,7 @@
         {
           "code": "300059.SZ",
           "name": "东方财富",
-          "market": "深市",
+          "market": "A股",
           "industry": "非银金融",
           "reason": "持续放量",
           "condition_tags": [
@@ -11753,7 +11753,7 @@
         {
           "code": "601162.SH",
           "name": "天风证券",
-          "market": "沪市",
+          "market": "A股",
           "industry": "非银金融",
           "reason": "持续放量",
           "condition_tags": [
@@ -11766,7 +11766,7 @@
         {
           "code": "000751.SZ",
           "name": "锌业股份",
-          "market": "深市",
+          "market": "A股",
           "industry": "有色金属",
           "reason": "持续放量",
           "condition_tags": [
@@ -11779,7 +11779,7 @@
         {
           "code": "603567.SH",
           "name": "珍宝岛",
-          "market": "沪市",
+          "market": "A股",
           "industry": "医药生物",
           "reason": "持续放量",
           "condition_tags": [
@@ -11792,7 +11792,7 @@
         {
           "code": "002550.SZ",
           "name": "千红制药",
-          "market": "深市",
+          "market": "A股",
           "industry": "医药生物",
           "reason": "持续放量",
           "condition_tags": [
@@ -11805,7 +11805,7 @@
         {
           "code": "600470.SH",
           "name": "六国化工",
-          "market": "沪市",
+          "market": "A股",
           "industry": "化工",
           "reason": "持续放量",
           "condition_tags": [
@@ -11818,7 +11818,7 @@
         {
           "code": "600531.SH",
           "name": "豫光金铅",
-          "market": "沪市",
+          "market": "A股",
           "industry": "有色金属",
           "reason": "持续放量",
           "condition_tags": [
@@ -11831,7 +11831,7 @@
         {
           "code": "002728.SZ",
           "name": "特一药业",
-          "market": "深市",
+          "market": "A股",
           "industry": "医药生物",
           "reason": "持续放量",
           "condition_tags": [
@@ -11844,7 +11844,7 @@
         {
           "code": "301356.SZ",
           "name": "天振股份",
-          "market": "深市",
+          "market": "A股",
           "industry": "造纸与包装",
           "reason": "持续放量",
           "condition_tags": [
@@ -11857,7 +11857,7 @@
         {
           "code": "001296.SZ",
           "name": "长江材料",
-          "market": "深市",
+          "market": "A股",
           "industry": "建材Ⅱ",
           "reason": "持续放量",
           "condition_tags": [
@@ -11870,7 +11870,7 @@
         {
           "code": "002950.SZ",
           "name": "奥美医疗",
-          "market": "深市",
+          "market": "A股",
           "industry": "医疗设备与服务",
           "reason": "持续放量",
           "condition_tags": [
@@ -11883,7 +11883,7 @@
         {
           "code": "300978.SZ",
           "name": "东箭科技",
-          "market": "深市",
+          "market": "A股",
           "industry": "汽车与零配件",
           "reason": "持续放量",
           "condition_tags": [
@@ -11896,7 +11896,7 @@
         {
           "code": "000756.SZ",
           "name": "新华制药",
-          "market": "深市",
+          "market": "A股",
           "industry": "医药生物",
           "reason": "持续放量",
           "condition_tags": [
@@ -11909,7 +11909,7 @@
         {
           "code": "002672.SZ",
           "name": "东江环保",
-          "market": "深市",
+          "market": "A股",
           "industry": "环保Ⅱ",
           "reason": "持续放量",
           "condition_tags": [
@@ -11922,7 +11922,7 @@
         {
           "code": "002083.SZ",
           "name": "孚日股份",
-          "market": "深市",
+          "market": "A股",
           "industry": "纺织服装Ⅱ",
           "reason": "持续放量",
           "condition_tags": [
@@ -11935,7 +11935,7 @@
         {
           "code": "600851.SH",
           "name": "海欣股份",
-          "market": "沪市",
+          "market": "A股",
           "industry": "医药生物",
           "reason": "持续放量",
           "condition_tags": [
@@ -11948,7 +11948,7 @@
         {
           "code": "301211.SZ",
           "name": "亨迪药业",
-          "market": "深市",
+          "market": "A股",
           "industry": "医药生物",
           "reason": "持续放量",
           "condition_tags": [
@@ -11961,7 +11961,7 @@
         {
           "code": "688026.SH",
           "name": "洁特生物",
-          "market": "沪市",
+          "market": "A股",
           "industry": "医药生物",
           "reason": "持续放量",
           "condition_tags": [
@@ -11974,7 +11974,7 @@
         {
           "code": "301257.SZ",
           "name": "普蕊斯",
-          "market": "深市",
+          "market": "A股",
           "industry": "医药生物",
           "reason": "当日放量",
           "condition_tags": [
@@ -12000,7 +12000,7 @@
         {
           "code": "603313.SH",
           "name": "梦百合",
-          "market": "沪市",
+          "market": "A股",
           "industry": "耐用消费品",
           "reason": "当日放量",
           "condition_tags": [
@@ -12039,7 +12039,7 @@
         {
           "code": "605300.SH",
           "name": "佳禾食品",
-          "market": "沪市",
+          "market": "A股",
           "industry": "食品饮料",
           "reason": "当日放量",
           "condition_tags": [
@@ -12052,7 +12052,7 @@
         {
           "code": "002946.SZ",
           "name": "新乳业",
-          "market": "深市",
+          "market": "A股",
           "industry": "食品饮料",
           "reason": "当日放量",
           "condition_tags": [
@@ -12182,7 +12182,7 @@
         {
           "code": "002307.SZ",
           "name": "北新路桥",
-          "market": "深市",
+          "market": "A股",
           "industry": "建筑",
           "reason": "当日放量",
           "condition_tags": [
@@ -12195,7 +12195,7 @@
         {
           "code": "688639.SH",
           "name": "华恒生物",
-          "market": "沪市",
+          "market": "A股",
           "industry": "医药生物",
           "reason": "当日放量",
           "condition_tags": [
@@ -12221,7 +12221,7 @@
         {
           "code": "603956.SH",
           "name": "威派格",
-          "market": "沪市",
+          "market": "A股",
           "industry": "机械",
           "reason": "日涨/超额 / 3D价强 / 5D价强",
           "condition_tags": [
@@ -12251,7 +12251,7 @@
         {
           "code": "603903.SH",
           "name": "中持股份",
-          "market": "沪市",
+          "market": "A股",
           "industry": "环保Ⅱ",
           "reason": "日涨/超额 / 3D价强",
           "condition_tags": [
@@ -12265,7 +12265,7 @@
         {
           "code": "003033.SZ",
           "name": "征和工业",
-          "market": "深市",
+          "market": "A股",
           "industry": "汽车与零配件",
           "reason": "日涨/超额 / 3D价强",
           "condition_tags": [
@@ -12320,7 +12320,7 @@
         {
           "code": "301418.SZ",
           "name": "协昌科技",
-          "market": "深市",
+          "market": "A股",
           "industry": "硬件设备",
           "reason": "3D价强",
           "condition_tags": [
@@ -12333,7 +12333,7 @@
         {
           "code": "300120.SZ",
           "name": "经纬辉开",
-          "market": "深市",
+          "market": "A股",
           "industry": "硬件设备",
           "reason": "3D价强",
           "condition_tags": [
@@ -12359,7 +12359,7 @@
         {
           "code": "001206.SZ",
           "name": "依依股份",
-          "market": "深市",
+          "market": "A股",
           "industry": "家庭用品",
           "reason": "3D价强",
           "condition_tags": [
@@ -12372,7 +12372,7 @@
         {
           "code": "300877.SZ",
           "name": "金春股份",
-          "market": "深市",
+          "market": "A股",
           "industry": "纺织服装Ⅱ",
           "reason": "日涨/超额",
           "condition_tags": [
@@ -12385,7 +12385,7 @@
         {
           "code": "601016.SH",
           "name": "节能风电",
-          "market": "沪市",
+          "market": "A股",
           "industry": "公用事业Ⅱ",
           "reason": "日涨/超额",
           "condition_tags": [
@@ -12398,7 +12398,7 @@
         {
           "code": "603861.SH",
           "name": "白云电器",
-          "market": "沪市",
+          "market": "A股",
           "industry": "电气设备",
           "reason": "日涨/超额",
           "condition_tags": [
@@ -12411,7 +12411,7 @@
         {
           "code": "002930.SZ",
           "name": "宏川智慧",
-          "market": "深市",
+          "market": "A股",
           "industry": "交通运输",
           "reason": "日涨/超额",
           "condition_tags": [
@@ -12424,7 +12424,7 @@
         {
           "code": "001289.SZ",
           "name": "龙源电力",
-          "market": "深市",
+          "market": "A股",
           "industry": "公用事业Ⅱ",
           "reason": "日涨/超额",
           "condition_tags": [
@@ -12437,7 +12437,7 @@
         {
           "code": "605399.SH",
           "name": "晨光新材",
-          "market": "沪市",
+          "market": "A股",
           "industry": "化工",
           "reason": "日涨/超额",
           "condition_tags": [
@@ -12450,7 +12450,7 @@
         {
           "code": "002568.SZ",
           "name": "百润股份",
-          "market": "深市",
+          "market": "A股",
           "industry": "食品饮料",
           "reason": "日涨/超额",
           "condition_tags": [
@@ -12463,7 +12463,7 @@
         {
           "code": "600481.SH",
           "name": "双良节能",
-          "market": "沪市",
+          "market": "A股",
           "industry": "电气设备",
           "reason": "日涨/超额",
           "condition_tags": [
@@ -12476,7 +12476,7 @@
         {
           "code": "001215.SZ",
           "name": "千味央厨",
-          "market": "深市",
+          "market": "A股",
           "industry": "食品饮料",
           "reason": "日涨/超额",
           "condition_tags": [
@@ -12489,7 +12489,7 @@
         {
           "code": "603194.SH",
           "name": "中力股份",
-          "market": "沪市",
+          "market": "A股",
           "industry": "机械",
           "reason": "日涨/超额",
           "condition_tags": [
@@ -12502,7 +12502,7 @@
         {
           "code": "603928.SH",
           "name": "兴业股份",
-          "market": "沪市",
+          "market": "A股",
           "industry": "化工",
           "reason": "日涨/超额",
           "condition_tags": [
@@ -12515,7 +12515,7 @@
         {
           "code": "002180.SZ",
           "name": "奔图科技",
-          "market": "深市",
+          "market": "A股",
           "industry": "硬件设备",
           "reason": "日涨/超额",
           "condition_tags": [
@@ -12528,7 +12528,7 @@
         {
           "code": "601369.SH",
           "name": "陕鼓动力",
-          "market": "沪市",
+          "market": "A股",
           "industry": "机械",
           "reason": "日涨/超额",
           "condition_tags": [
@@ -12567,7 +12567,7 @@
         {
           "code": "002208.SZ",
           "name": "合肥城建",
-          "market": "深市",
+          "market": "A股",
           "industry": "房地产Ⅱ",
           "reason": "日涨/超额",
           "condition_tags": [
@@ -12580,7 +12580,7 @@
         {
           "code": "002225.SZ",
           "name": "濮耐股份",
-          "market": "深市",
+          "market": "A股",
           "industry": "建材Ⅱ",
           "reason": "日涨/超额",
           "condition_tags": [
@@ -12606,7 +12606,7 @@
         {
           "code": "002202.SZ",
           "name": "金风科技",
-          "market": "深市",
+          "market": "A股",
           "industry": "电气设备",
           "reason": "日涨/超额",
           "condition_tags": [
@@ -12619,7 +12619,7 @@
         {
           "code": "000920.SZ",
           "name": "沃顿科技",
-          "market": "深市",
+          "market": "A股",
           "industry": "化工",
           "reason": "日涨/超额",
           "condition_tags": [
@@ -12632,7 +12632,7 @@
         {
           "code": "300320.SZ",
           "name": "海达股份",
-          "market": "深市",
+          "market": "A股",
           "industry": "化工",
           "reason": "日涨/超额",
           "condition_tags": [
@@ -12645,7 +12645,7 @@
         {
           "code": "001322.SZ",
           "name": "箭牌家居",
-          "market": "深市",
+          "market": "A股",
           "industry": "耐用消费品",
           "reason": "日涨/超额",
           "condition_tags": [
@@ -12658,7 +12658,7 @@
         {
           "code": "002783.SZ",
           "name": "凯龙股份",
-          "market": "深市",
+          "market": "A股",
           "industry": "化工",
           "reason": "日涨/超额",
           "condition_tags": [
@@ -12671,7 +12671,7 @@
         {
           "code": "300259.SZ",
           "name": "新天科技",
-          "market": "深市",
+          "market": "A股",
           "industry": "机械",
           "reason": "日涨/超额",
           "condition_tags": [
@@ -12684,7 +12684,7 @@
         {
           "code": "688550.SH",
           "name": "瑞联新材",
-          "market": "沪市",
+          "market": "A股",
           "industry": "化工",
           "reason": "日涨/超额",
           "condition_tags": [
@@ -12697,7 +12697,7 @@
         {
           "code": "689009.SH",
           "name": "九号公司-WD",
-          "market": "沪市",
+          "market": "A股",
           "industry": "家电Ⅱ",
           "reason": "日涨/超额",
           "condition_tags": [
@@ -12710,7 +12710,7 @@
         {
           "code": "002925.SZ",
           "name": "盈趣科技",
-          "market": "深市",
+          "market": "A股",
           "industry": "硬件设备",
           "reason": "3Y新高",
           "condition_tags": [
@@ -12723,7 +12723,7 @@
         {
           "code": "000100.SZ",
           "name": "TCL科技",
-          "market": "深市",
+          "market": "A股",
           "industry": "硬件设备",
           "reason": "3Y新高",
           "condition_tags": [
@@ -12736,7 +12736,7 @@
         {
           "code": "002745.SZ",
           "name": "木林森",
-          "market": "深市",
+          "market": "A股",
           "industry": "半导体",
           "reason": "3Y新高",
           "condition_tags": [
@@ -12749,7 +12749,7 @@
         {
           "code": "603259.SH",
           "name": "药明康德",
-          "market": "沪市",
+          "market": "A股",
           "industry": "医药生物",
           "reason": "3Y新高",
           "condition_tags": [
@@ -12762,7 +12762,7 @@
         {
           "code": "600160.SH",
           "name": "巨化股份",
-          "market": "沪市",
+          "market": "A股",
           "industry": "化工",
           "reason": "3Y新高",
           "condition_tags": [
@@ -12801,7 +12801,7 @@
         {
           "code": "000012.SZ",
           "name": "南玻A",
-          "market": "深市",
+          "market": "A股",
           "industry": "建材Ⅱ",
           "reason": "60D新高",
           "condition_tags": [
@@ -12835,7 +12835,7 @@
         "signal": "持续放量",
         "code": "001296.SZ",
         "name": "长江材料",
-        "market": "深市",
+        "market": "A股",
         "industry": "建材Ⅱ",
         "days": 3,
         "window_days": 7,
@@ -12850,7 +12850,7 @@
         "signal": "持续放量",
         "code": "002083.SZ",
         "name": "孚日股份",
-        "market": "深市",
+        "market": "A股",
         "industry": "纺织服装Ⅱ",
         "days": 3,
         "window_days": 7,
@@ -12865,7 +12865,7 @@
         "signal": "持续放量",
         "code": "002303.SZ",
         "name": "美盈森",
-        "market": "深市",
+        "market": "A股",
         "industry": "造纸与包装",
         "days": 3,
         "window_days": 7,
@@ -12880,7 +12880,7 @@
         "signal": "持续放量",
         "code": "002367.SZ",
         "name": "康力电梯",
-        "market": "深市",
+        "market": "A股",
         "industry": "机械",
         "days": 3,
         "window_days": 7,
@@ -12895,7 +12895,7 @@
         "signal": "持续放量",
         "code": "002910.SZ",
         "name": "庄园牧场",
-        "market": "深市",
+        "market": "A股",
         "industry": "食品饮料",
         "days": 3,
         "window_days": 7,
@@ -12910,7 +12910,7 @@
         "signal": "持续放量",
         "code": "603339.SH",
         "name": "四方科技",
-        "market": "沪市",
+        "market": "A股",
         "industry": "机械",
         "days": 3,
         "window_days": 7,
@@ -12925,7 +12925,7 @@
         "signal": "持续放量",
         "code": "688026.SH",
         "name": "洁特生物",
-        "market": "沪市",
+        "market": "A股",
         "industry": "医药生物",
         "days": 3,
         "window_days": 7,
