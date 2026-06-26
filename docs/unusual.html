@@ -175,6 +175,111 @@
     }
     .date-grid { grid-template-columns: 1fr; }
 
+    .history-panel {
+      margin: 0 0 10px;
+      padding: 12px 14px 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+    }
+    .history-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+    .history-head h2 {
+      margin: 0 0 3px;
+      color: #1d4f7d;
+      font-size: 16px;
+      line-height: 1.3;
+    }
+    .history-head-chips, .history-summary {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      justify-content: flex-end;
+    }
+    .history-summary {
+      justify-content: flex-start;
+      margin-bottom: 10px;
+    }
+    .history-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      min-height: 30px;
+      padding: 5px 8px;
+      border: 1px solid #e4ebf3;
+      border-radius: 6px;
+      background: #fbfdff;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.25;
+      white-space: nowrap;
+    }
+    .history-chip strong {
+      color: var(--blue);
+      font-variant-numeric: tabular-nums;
+    }
+    .history-chip small { color: var(--muted); }
+    .history-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(320px, .85fr);
+      gap: 12px;
+      align-items: start;
+    }
+    .history-block h3 {
+      margin: 0 0 7px;
+      color: var(--text);
+      font-size: 13px;
+      line-height: 1.3;
+    }
+    .history-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+    .history-signal {
+      display: grid;
+      gap: 2px;
+      min-width: 186px;
+      max-width: 260px;
+      padding: 7px 9px;
+      border: 1px solid #e4ebf3;
+      border-radius: 6px;
+      background: #fbfdff;
+      line-height: 1.35;
+    }
+    .history-signal strong {
+      color: var(--green);
+      font-size: 12px;
+    }
+    .history-signal b {
+      color: var(--text);
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .history-signal small {
+      color: var(--muted);
+      font-size: 12px;
+      white-space: normal;
+    }
+    .history-list.compact .history-signal { min-width: 176px; }
+    .history-empty {
+      padding: 8px 9px;
+      border: 1px dashed #d5deea;
+      border-radius: 6px;
+      color: var(--muted);
+      background: #fbfdff;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
     .controls {
       display: grid;
       grid-template-columns: minmax(180px, 1.2fr) repeat(3, minmax(120px, .8fr)) auto;
@@ -450,6 +555,10 @@
       .refresh-note { max-width: none; text-align: left; }
       .controls { grid-template-columns: 1fr; }
       .rule-layout { grid-template-columns: 1fr; }
+      .history-head { flex-direction: column; }
+      .history-head-chips { justify-content: flex-start; }
+      .history-layout { grid-template-columns: 1fr; }
+      .history-signal { max-width: none; width: 100%; }
       .rule-list li { grid-template-columns: 1fr; }
       .threshold-grid { grid-template-columns: 1fr; }
       .reason-section-head { align-items: flex-start; flex-direction: column; }
@@ -468,7 +577,7 @@
     <header>
       <div>
         <h1>2026-06-26 异动标的</h1>
-        <div class="meta">最近交易日 2026-06-26；工作簿保存 2026-06-26 21:55:24；生成 2026-06-26 22:15:13</div>
+        <div class="meta">最近交易日 2026-06-26；工作簿保存 2026-06-26 21:55:24；生成 2026-06-26 22:32:04</div>
         <div class="meta">涨幅阈值 9.5%；超额阈值 8.5%；成交阈值-5 1.5x；成交阈值-20 1.8x；PE阈值 25.0；PB阈值 2.5；YTD阈值 51.0%；最近一季超额阈值 51.0%；3日涨幅 18.0%；3日超额 17.0%；5日涨幅 25.0%；5日超额 24.0%</div>
       </div>
       <div class="refresh-note">读取工作簿已保存缓存。</div>
@@ -500,6 +609,31 @@
         <div class="rule-block">
           <h3>日期口径</h3>
           <div class="threshold-grid date-grid"><span class="threshold-chip"><span>最近交易日</span><strong>2026-06-26</strong></span><span class="threshold-chip"><span>前1交易日</span><strong>2026-06-25</strong></span><span class="threshold-chip"><span>前5交易日</span><strong>2026-06-18</strong></span><span class="threshold-chip"><span>前20交易日</span><strong>2026-05-28</strong></span><span class="threshold-chip"><span>最近一季</span><strong>2026-03-26</strong></span><span class="threshold-chip"><span>过去三年</span><strong>2023-06-26</strong></span></div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="history-panel" aria-label="7日信号跟踪">
+      <div class="history-head">
+        <div>
+          <h2>7日信号跟踪</h2>
+          <div>缓存区间：2026-06-11 至 2026-06-26；当前已有 7/7 个已缓存交易日，按已缓存日期统计；后续每天自动滚动保留最近 7 日。</div>
+        </div>
+        <div class="history-head-chips">
+          <span class="history-chip"><span>覆盖标的</span><strong>699</strong></span>
+          <span class="history-chip"><span>每日均出现</span><strong>0</strong></span>
+          <span class="history-chip"><span>全窗口信号</span><strong>0</strong></span>
+        </div>
+      </div>
+      <div class="history-summary"><span class="history-chip"><span>日涨/超额</span><strong>75只</strong><small>连续0</small></span><span class="history-chip"><span>3D价强</span><strong>64只</strong><small>连续0</small></span><span class="history-chip"><span>5D价强</span><strong>13只</strong><small>连续0</small></span><span class="history-chip"><span>持续放量</span><strong>90只</strong><small>连续0</small></span><span class="history-chip"><span>当日放量</span><strong>40只</strong><small>连续0</small></span><span class="history-chip"><span>3Y新高</span><strong>14只</strong><small>连续0</small></span><span class="history-chip"><span>120D新高</span><strong>11只</strong><small>连续0</small></span><span class="history-chip"><span>60D新高</span><strong>20只</strong><small>连续0</small></span></div>
+      <div class="history-layout">
+        <div class="history-block">
+          <h3>全部已缓存日都出现的信号</h3>
+          <div class="history-list"><div class="history-empty">暂无覆盖全部已缓存交易日的同一信号；统计只按已缓存日期计算。</div></div>
+        </div>
+        <div class="history-block">
+          <h3>高频信号</h3>
+          <div class="history-list compact"><span class="history-signal"><strong>持续放量</strong><b>长江材料</b><small>001296.SZ · 3/7日 · 最新 持续放量</small></span><span class="history-signal"><strong>持续放量</strong><b>孚日股份</b><small>002083.SZ · 3/7日 · 最新 持续放量</small></span><span class="history-signal"><strong>持续放量</strong><b>美盈森</b><small>002303.SZ · 3/7日 · 最新 3D价强 / 持续放量</small></span><span class="history-signal"><strong>持续放量</strong><b>康力电梯</b><small>002367.SZ · 3/7日 · 最新 5D价强 / 持续放量</small></span><span class="history-signal"><strong>持续放量</strong><b>庄园牧场</b><small>002910.SZ · 3/7日 · 最新 日涨/超额 / 持续放量</small></span><span class="history-signal"><strong>持续放量</strong><b>四方科技</b><small>603339.SH · 3/7日 · 最新 持续放量</small></span><span class="history-signal"><strong>持续放量</strong><b>洁特生物</b><small>688026.SH · 3/7日 · 最新 持续放量</small></span></div>
         </div>
       </div>
     </section>
