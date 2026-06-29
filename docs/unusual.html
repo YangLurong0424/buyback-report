@@ -143,107 +143,217 @@
 
     .history-panel {
       margin: 0 0 10px;
-      padding: 12px 14px 14px;
+      padding: 12px;
       border: 1px solid var(--line);
       border-radius: 8px;
-      background: var(--panel);
+      background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
     }
     .history-head {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 14px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(300px, .64fr);
+      gap: 12px;
+      align-items: start;
       margin-bottom: 10px;
-      color: var(--muted);
-      font-size: 12px;
-      line-height: 1.5;
     }
-    .history-head h2 {
-      margin: 0 0 3px;
+    .history-title-group h2 {
+      margin: 0 0 5px;
       color: #1d4f7d;
-      font-size: 16px;
+      font-size: 15px;
       line-height: 1.3;
     }
-    .history-head-chips, .history-summary {
+    .history-period {
       display: flex;
       flex-wrap: wrap;
       gap: 6px;
-      justify-content: flex-end;
-    }
-    .history-summary {
-      justify-content: flex-start;
-      margin-bottom: 10px;
-    }
-    .history-chip {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      min-height: 30px;
-      padding: 5px 8px;
-      border: 1px solid #e4ebf3;
-      border-radius: 6px;
-      background: #fbfdff;
       color: var(--muted);
       font-size: 12px;
-      line-height: 1.25;
+      line-height: 1.35;
+    }
+    .history-period span {
+      padding: 3px 7px;
+      border: 1px solid #e4ebf3;
+      border-radius: 999px;
+      background: #ffffff;
       white-space: nowrap;
     }
-    .history-chip strong {
+    .history-stat-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 6px;
+      min-width: 0;
+    }
+    .history-stat {
+      display: grid;
+      gap: 2px;
+      min-height: 52px;
+      padding: 7px 8px;
+      border: 1px solid #e4ebf3;
+      border-radius: 6px;
+      background: #ffffff;
+      line-height: 1.2;
+    }
+    .history-stat small {
+      color: var(--muted);
+      font-size: 11px;
+      white-space: nowrap;
+    }
+    .history-stat strong {
       color: var(--blue);
+      font-size: 18px;
       font-variant-numeric: tabular-nums;
     }
-    .history-chip small { color: var(--muted); }
-    .history-layout {
+    .history-stat em {
+      color: var(--muted);
+      font-size: 11px;
+      font-style: normal;
+      white-space: nowrap;
+    }
+    .history-dashboard {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(320px, .85fr);
-      gap: 12px;
+      grid-template-columns: minmax(340px, .88fr) minmax(520px, 1.12fr);
+      gap: 10px;
       align-items: start;
     }
-    .history-block h3 {
-      margin: 0 0 7px;
+    .history-overview-stack {
+      display: grid;
+      gap: 10px;
+      min-width: 0;
+    }
+    .history-block {
+      min-width: 0;
+      border: 1px solid #e4ebf3;
+      border-radius: 6px;
+      background: #ffffff;
+      overflow: hidden;
+    }
+    .history-block-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      padding: 8px 10px;
+      border-bottom: 1px solid #edf1f6;
+      background: #fbfdff;
+    }
+    .history-block-head h3 {
+      margin: 0;
       color: var(--text);
       font-size: 13px;
       line-height: 1.3;
     }
-    .history-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 7px;
+    .history-block-head span {
+      color: var(--muted);
+      font-size: 11px;
+      white-space: nowrap;
     }
-    .history-signal {
+    .history-summary-table {
       display: grid;
-      gap: 2px;
-      min-width: 186px;
-      max-width: 260px;
-      padding: 7px 9px;
-      border: 1px solid #e4ebf3;
-      border-radius: 6px;
-      background: #fbfdff;
-      line-height: 1.35;
     }
-    .history-signal strong {
-      color: var(--green);
+    .history-summary-row {
+      display: grid;
+      grid-template-columns: minmax(92px, 1fr) repeat(3, minmax(54px, .52fr));
+      gap: 8px;
+      align-items: center;
+      padding: 7px 10px;
+      border-bottom: 1px solid #edf1f6;
       font-size: 12px;
+      line-height: 1.25;
     }
-    .history-signal b {
+    .history-summary-row:last-child { border-bottom: 0; }
+    .history-summary-signal {
+      color: #1d4f7d;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .history-summary-count {
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+    }
+    .history-summary-count strong {
+      display: block;
+      color: var(--text);
+      font-size: 13px;
+    }
+    .history-summary-count small {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+    }
+    .history-signal-list {
+      display: grid;
+    }
+    .history-signal-row {
+      display: grid;
+      grid-template-columns: 92px minmax(130px, .9fr) 68px minmax(160px, 1fr);
+      gap: 8px;
+      align-items: center;
+      padding: 7px 10px;
+      border-bottom: 1px solid #edf1f6;
+      background: #ffffff;
+      line-height: 1.28;
+    }
+    .history-signal-row:nth-child(even) { background: #fafcff; }
+    .history-signal-row:last-child { border-bottom: 0; }
+    .history-signal-list.compact .history-signal-row {
+      grid-template-columns: 92px minmax(130px, 1fr) 68px;
+    }
+    .history-signal-list.compact .history-signal-latest { display: none; }
+    .history-signal-tag {
+      justify-self: start;
+      max-width: 100%;
+      padding: 3px 6px;
+      border-radius: 5px;
+      color: var(--green);
+      background: var(--green-soft);
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .history-signal-stock { min-width: 0; }
+    .history-signal-stock b {
+      display: block;
+      overflow: hidden;
       color: var(--text);
       font-size: 13px;
       font-weight: 700;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
-    .history-signal small {
+    .history-signal-stock span {
+      display: block;
+      overflow: hidden;
+      color: var(--muted);
+      font-size: 11px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .history-signal-days {
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+    }
+    .history-signal-days strong {
+      display: block;
+      color: var(--blue);
+      font-size: 13px;
+    }
+    .history-signal-days span {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+    }
+    .history-signal-latest {
+      overflow: hidden;
       color: var(--muted);
       font-size: 12px;
-      white-space: normal;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
-    .history-list.compact .history-signal { min-width: 176px; }
     .history-empty {
-      padding: 8px 9px;
-      border: 1px dashed #d5deea;
-      border-radius: 6px;
+      padding: 10px;
       color: var(--muted);
       background: #fbfdff;
       font-size: 12px;
-      line-height: 1.5;
+      line-height: 1.45;
     }
 
     .controls {
@@ -617,10 +727,14 @@
       .controls { grid-template-columns: 1fr; }
       .condition-filter-groups { grid-template-columns: 1fr; }
       .rule-list.compact { grid-template-columns: 1fr; }
-      .history-head { flex-direction: column; }
-      .history-head-chips { justify-content: flex-start; }
-      .history-layout { grid-template-columns: 1fr; }
-      .history-signal { max-width: none; width: 100%; }
+      .history-head { grid-template-columns: 1fr; }
+      .history-stat-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .history-dashboard { grid-template-columns: 1fr; }
+      .history-signal-row, .history-signal-list.compact .history-signal-row { grid-template-columns: 76px minmax(0, 1fr) 52px; align-items: center; }
+      .history-signal-list.compact .history-signal-latest { display: block; }
+      .history-signal-days { justify-self: end; text-align: right; }
+      .history-signal-latest { grid-column: 2 / 4; white-space: normal; }
+      .history-summary-row { grid-template-columns: minmax(88px, 1fr) repeat(3, minmax(48px, .55fr)); }
       .rule-list li { grid-template-columns: 1fr; }
       .threshold-grid { grid-template-columns: 1fr; }
       .reason-section-head { align-items: flex-start; flex-direction: column; }
@@ -639,7 +753,7 @@
     <header>
       <div>
         <h1>2026-06-26 异动标的</h1>
-        <div class="meta">最近交易日 2026-06-26；工作簿保存 2026-06-29 09:32:29；生成 2026-06-29 09:33:12</div>
+        <div class="meta">最近交易日 2026-06-26；工作簿保存 2026-06-29 09:32:29；生成 2026-06-29 09:50:44</div>
         <div class="meta">涨幅阈值 9.5%；超额阈值 8.5%；成交阈值-5 1.5x；成交阈值-20 1.8x；PE阈值 25.0；PB阈值 2.5；YTD阈值 51.0%；最近一季超额阈值 51.0%；3日涨幅 18.0%；3日超额 17.0%；5日涨幅 25.0%；5日超额 24.0%</div>
       </div>
       <div class="refresh-note">读取工作簿已保存缓存。</div>
@@ -661,25 +775,26 @@
     
     <section class="history-panel" aria-label="7日信号跟踪">
       <div class="history-head">
-        <div>
+        <div class="history-title-group">
           <h2>7日信号跟踪</h2>
-          <div>缓存区间：2026-06-11 至 2026-06-26；当前已有 7/7 个已缓存交易日，按已缓存日期统计；后续每天自动滚动保留最近 7 日。</div>
+          <div class="history-period"><span>缓存区间 2026-06-11 至 2026-06-26</span><span>7/7 个已缓存交易日</span><span>滚动保留最近 7 日</span></div>
         </div>
-        <div class="history-head-chips">
-          <span class="history-chip"><span>覆盖标的</span><strong>699</strong></span>
-          <span class="history-chip"><span>每日均出现</span><strong>0</strong></span>
-          <span class="history-chip"><span>全窗口信号</span><strong>0</strong></span>
-        </div>
+        <div class="history-stat-grid"><span class="history-stat"><small>覆盖标的</small><strong>699</strong><em>近 7 日</em></span><span class="history-stat"><small>每日均出现</small><strong>0</strong><em>7/7日</em></span><span class="history-stat"><small>全窗口信号</small><strong>0</strong><em>同一股+信号</em></span></div>
       </div>
-      <div class="history-summary"><span class="history-chip"><span>日涨/超额</span><strong>75只</strong><small>连续0</small></span><span class="history-chip"><span>3D价强</span><strong>64只</strong><small>连续0</small></span><span class="history-chip"><span>5D价强</span><strong>13只</strong><small>连续0</small></span><span class="history-chip"><span>持续放量</span><strong>90只</strong><small>连续0</small></span><span class="history-chip"><span>当日放量</span><strong>40只</strong><small>连续0</small></span><span class="history-chip"><span>3Y新高</span><strong>14只</strong><small>连续0</small></span><span class="history-chip"><span>120D新高</span><strong>11只</strong><small>连续0</small></span><span class="history-chip"><span>60D新高</span><strong>20只</strong><small>连续0</small></span></div>
-      <div class="history-layout">
-        <div class="history-block">
-          <h3>全部已缓存日都出现的信号</h3>
-          <div class="history-list"><div class="history-empty">暂无覆盖全部已缓存交易日的同一信号；统计只按已缓存日期计算。</div></div>
+      <div class="history-dashboard">
+        <div class="history-overview-stack">
+          <div class="history-block history-overview">
+            <div class="history-block-head"><h3>信号覆盖概览</h3><span>覆盖 / 触发 / 连续</span></div>
+            <div class="history-summary-table"><div class="history-summary-row"><div class="history-summary-signal">日涨/超额</div><div class="history-summary-count"><strong>75</strong><small>覆盖</small></div><div class="history-summary-count"><strong>78</strong><small>触发</small></div><div class="history-summary-count"><strong>0</strong><small>连续</small></div></div><div class="history-summary-row"><div class="history-summary-signal">3D价强</div><div class="history-summary-count"><strong>64</strong><small>覆盖</small></div><div class="history-summary-count"><strong>81</strong><small>触发</small></div><div class="history-summary-count"><strong>0</strong><small>连续</small></div></div><div class="history-summary-row"><div class="history-summary-signal">5D价强</div><div class="history-summary-count"><strong>13</strong><small>覆盖</small></div><div class="history-summary-count"><strong>17</strong><small>触发</small></div><div class="history-summary-count"><strong>0</strong><small>连续</small></div></div><div class="history-summary-row"><div class="history-summary-signal">持续放量</div><div class="history-summary-count"><strong>90</strong><small>覆盖</small></div><div class="history-summary-count"><strong>131</strong><small>触发</small></div><div class="history-summary-count"><strong>0</strong><small>连续</small></div></div><div class="history-summary-row"><div class="history-summary-signal">当日放量</div><div class="history-summary-count"><strong>40</strong><small>覆盖</small></div><div class="history-summary-count"><strong>41</strong><small>触发</small></div><div class="history-summary-count"><strong>0</strong><small>连续</small></div></div><div class="history-summary-row"><div class="history-summary-signal">3Y新高</div><div class="history-summary-count"><strong>14</strong><small>覆盖</small></div><div class="history-summary-count"><strong>20</strong><small>触发</small></div><div class="history-summary-count"><strong>0</strong><small>连续</small></div></div><div class="history-summary-row"><div class="history-summary-signal">120D新高</div><div class="history-summary-count"><strong>11</strong><small>覆盖</small></div><div class="history-summary-count"><strong>15</strong><small>触发</small></div><div class="history-summary-count"><strong>0</strong><small>连续</small></div></div><div class="history-summary-row"><div class="history-summary-signal">60D新高</div><div class="history-summary-count"><strong>20</strong><small>覆盖</small></div><div class="history-summary-count"><strong>23</strong><small>触发</small></div><div class="history-summary-count"><strong>0</strong><small>连续</small></div></div></div>
+          </div>
+          <div class="history-block history-full-window">
+            <div class="history-block-head"><h3>全窗口持续信号</h3><span>7/7日</span></div>
+            <div class="history-signal-list compact"><div class="history-empty">暂无覆盖全部已缓存交易日的同一信号。</div></div>
+          </div>
         </div>
-        <div class="history-block">
-          <h3>高频信号</h3>
-          <div class="history-list compact"><span class="history-signal"><strong>持续放量</strong><b>长江材料</b><small>001296.SZ · 3/7日 · 最新 持续放量</small></span><span class="history-signal"><strong>持续放量</strong><b>孚日股份</b><small>002083.SZ · 3/7日 · 最新 持续放量</small></span><span class="history-signal"><strong>持续放量</strong><b>美盈森</b><small>002303.SZ · 3/7日 · 最新 3D价强 / 持续放量</small></span><span class="history-signal"><strong>持续放量</strong><b>康力电梯</b><small>002367.SZ · 3/7日 · 最新 5D价强 / 持续放量</small></span><span class="history-signal"><strong>持续放量</strong><b>庄园牧场</b><small>002910.SZ · 3/7日 · 最新 日涨/超额 / 持续放量</small></span><span class="history-signal"><strong>持续放量</strong><b>四方科技</b><small>603339.SH · 3/7日 · 最新 持续放量</small></span><span class="history-signal"><strong>持续放量</strong><b>洁特生物</b><small>688026.SH · 3/7日 · 最新 持续放量</small></span></div>
+        <div class="history-block history-frequency">
+          <div class="history-block-head"><h3>高频信号</h3><span>按出现天数排序</span></div>
+          <div class="history-signal-list"><div class="history-signal-row"><div class="history-signal-tag">持续放量</div><div class="history-signal-stock"><b>长江材料</b><span>001296.SZ · A股 · 建材Ⅱ</span></div><div class="history-signal-days"><strong>3/7</strong><span>出现</span></div><div class="history-signal-latest">持续放量</div></div><div class="history-signal-row"><div class="history-signal-tag">持续放量</div><div class="history-signal-stock"><b>孚日股份</b><span>002083.SZ · A股 · 纺织服装Ⅱ</span></div><div class="history-signal-days"><strong>3/7</strong><span>出现</span></div><div class="history-signal-latest">持续放量</div></div><div class="history-signal-row"><div class="history-signal-tag">持续放量</div><div class="history-signal-stock"><b>美盈森</b><span>002303.SZ · A股 · 造纸与包装</span></div><div class="history-signal-days"><strong>3/7</strong><span>出现</span></div><div class="history-signal-latest">3D价强 / 持续放量</div></div><div class="history-signal-row"><div class="history-signal-tag">持续放量</div><div class="history-signal-stock"><b>康力电梯</b><span>002367.SZ · A股 · 机械</span></div><div class="history-signal-days"><strong>3/7</strong><span>出现</span></div><div class="history-signal-latest">5D价强 / 持续放量</div></div><div class="history-signal-row"><div class="history-signal-tag">持续放量</div><div class="history-signal-stock"><b>庄园牧场</b><span>002910.SZ · A股 · 食品饮料</span></div><div class="history-signal-days"><strong>3/7</strong><span>出现</span></div><div class="history-signal-latest">日涨/超额 / 持续放量</div></div><div class="history-signal-row"><div class="history-signal-tag">持续放量</div><div class="history-signal-stock"><b>四方科技</b><span>603339.SH · A股 · 机械</span></div><div class="history-signal-days"><strong>3/7</strong><span>出现</span></div><div class="history-signal-latest">持续放量</div></div><div class="history-signal-row"><div class="history-signal-tag">持续放量</div><div class="history-signal-stock"><b>洁特生物</b><span>688026.SH · A股 · 医药生物</span></div><div class="history-signal-days"><strong>3/7</strong><span>出现</span></div><div class="history-signal-latest">持续放量</div></div></div>
         </div>
       </div>
     </section>
