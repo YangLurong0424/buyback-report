@@ -102,7 +102,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 6px;
+      margin-bottom: 7px;
       color: var(--muted);
       font-size: 11px;
       line-height: 1.35;
@@ -113,33 +113,56 @@
       font-size: 13px;
       line-height: 1.3;
     }
+    .rule-categories {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, .86fr) minmax(0, 1fr);
+      gap: 8px;
+      align-items: start;
+    }
+    .rule-category {
+      min-width: 0;
+      border: 1px solid #e4ebf3;
+      border-radius: 6px;
+      background: #fbfdff;
+      overflow: hidden;
+    }
+    .rule-category h3 {
+      margin: 0;
+      padding: 6px 8px;
+      border-bottom: 1px solid #edf1f6;
+      color: var(--text);
+      background: #ffffff;
+      font-size: 12px;
+      line-height: 1.3;
+    }
     .rule-list {
       display: grid;
-      gap: 5px;
+      gap: 0;
       margin: 0;
       padding: 0;
       list-style: none;
     }
     .rule-list.compact {
-      grid-template-columns: repeat(2, minmax(260px, 1fr));
+      grid-template-columns: 1fr;
     }
     .rule-list li {
       display: grid;
-      grid-template-columns: 76px minmax(0, 1fr);
+      grid-template-columns: 74px minmax(0, 1fr);
       gap: 7px;
-      padding: 5px 7px;
-      border: 1px solid #e4ebf3;
-      border-radius: 6px;
-      background: #fbfdff;
+      padding: 6px 8px;
+      border-bottom: 1px solid #edf1f6;
+      background: transparent;
       font-size: 12px;
       line-height: 1.35;
     }
+    .rule-list li:last-child { border-bottom: 0; }
     .rule-term {
       color: var(--blue);
       font-weight: 700;
       white-space: nowrap;
     }
     .rule-desc { color: var(--muted); }
+
 
     .history-panel {
       margin: 0 0 10px;
@@ -192,33 +215,9 @@
       background: #ffffff;
       line-height: 1.2;
     }
-    .history-stat small {
-      color: var(--muted);
-      font-size: 11px;
-      white-space: nowrap;
-    }
-    .history-stat strong {
-      color: var(--blue);
-      font-size: 18px;
-      font-variant-numeric: tabular-nums;
-    }
-    .history-stat em {
-      color: var(--muted);
-      font-size: 11px;
-      font-style: normal;
-      white-space: nowrap;
-    }
-    .history-dashboard {
-      display: grid;
-      grid-template-columns: minmax(340px, .88fr) minmax(520px, 1.12fr);
-      gap: 10px;
-      align-items: start;
-    }
-    .history-overview-stack {
-      display: grid;
-      gap: 10px;
-      min-width: 0;
-    }
+    .history-stat small { color: var(--muted); font-size: 11px; white-space: nowrap; }
+    .history-stat strong { color: var(--blue); font-size: 18px; font-variant-numeric: tabular-nums; }
+    .history-stat em { color: var(--muted); font-size: 11px; font-style: normal; white-space: nowrap; }
     .history-block {
       min-width: 0;
       border: 1px solid #e4ebf3;
@@ -235,126 +234,81 @@
       border-bottom: 1px solid #edf1f6;
       background: #fbfdff;
     }
-    .history-block-head h3 {
-      margin: 0;
-      color: var(--text);
-      font-size: 13px;
-      line-height: 1.3;
-    }
-    .history-block-head span {
-      color: var(--muted);
-      font-size: 11px;
-      white-space: nowrap;
-    }
-    .history-summary-table {
+    .history-block-head h3 { margin: 0; color: var(--text); font-size: 13px; line-height: 1.3; }
+    .history-block-head span { color: var(--muted); font-size: 11px; white-space: nowrap; }
+    .history-stock-list { display: grid; }
+    .history-stock-row {
       display: grid;
-    }
-    .history-summary-row {
-      display: grid;
-      grid-template-columns: minmax(92px, 1fr) repeat(3, minmax(54px, .52fr));
-      gap: 8px;
+      grid-template-columns: minmax(150px, .82fr) 76px minmax(210px, 1.1fr) minmax(280px, 1.25fr);
+      gap: 10px;
       align-items: center;
-      padding: 7px 10px;
-      border-bottom: 1px solid #edf1f6;
-      font-size: 12px;
-      line-height: 1.25;
-    }
-    .history-summary-row:last-child { border-bottom: 0; }
-    .history-summary-signal {
-      color: #1d4f7d;
-      font-weight: 700;
-      white-space: nowrap;
-    }
-    .history-summary-count {
-      text-align: right;
-      font-variant-numeric: tabular-nums;
-    }
-    .history-summary-count strong {
-      display: block;
-      color: var(--text);
-      font-size: 13px;
-    }
-    .history-summary-count small {
-      display: block;
-      color: var(--muted);
-      font-size: 11px;
-    }
-    .history-signal-list {
-      display: grid;
-    }
-    .history-signal-row {
-      display: grid;
-      grid-template-columns: 92px minmax(130px, .9fr) 68px minmax(160px, 1fr);
-      gap: 8px;
-      align-items: center;
-      padding: 7px 10px;
+      padding: 8px 10px;
       border-bottom: 1px solid #edf1f6;
       background: #ffffff;
-      line-height: 1.28;
+      line-height: 1.3;
     }
-    .history-signal-row:nth-child(even) { background: #fafcff; }
-    .history-signal-row:last-child { border-bottom: 0; }
-    .history-signal-list.compact .history-signal-row {
-      grid-template-columns: 92px minmax(130px, 1fr) 68px;
+    .history-stock-row:nth-child(even) { background: #fafcff; }
+    .history-stock-row:last-child { border-bottom: 0; }
+    .history-stock-main { min-width: 0; }
+    .history-stock-main b {
+      display: block;
+      overflow: hidden;
+      color: var(--text);
+      font-size: 13px;
+      font-weight: 700;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
-    .history-signal-list.compact .history-signal-latest { display: none; }
-    .history-signal-tag {
-      justify-self: start;
-      max-width: 100%;
+    .history-stock-main span {
+      display: block;
+      overflow: hidden;
+      color: var(--muted);
+      font-size: 11px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .history-stock-days { text-align: right; font-variant-numeric: tabular-nums; }
+    .history-stock-days strong { display: block; color: var(--blue); font-size: 14px; }
+    .history-stock-days span { display: block; color: var(--muted); font-size: 11px; white-space: nowrap; }
+    .history-stock-latest { min-width: 0; }
+    .history-stock-latest small { display: block; color: var(--muted); font-size: 11px; }
+    .history-stock-latest b {
+      display: block;
+      overflow: hidden;
+      color: var(--text);
+      font-size: 12px;
+      font-weight: 600;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .history-stock-signals {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      min-width: 0;
+    }
+    .history-signal-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      min-height: 24px;
       padding: 3px 6px;
       border-radius: 5px;
       color: var(--green);
       background: var(--green-soft);
       font-size: 12px;
       font-weight: 700;
+      line-height: 1.2;
       white-space: nowrap;
     }
-    .history-signal-stock { min-width: 0; }
-    .history-signal-stock b {
-      display: block;
-      overflow: hidden;
-      color: var(--text);
-      font-size: 13px;
-      font-weight: 700;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-    .history-signal-stock span {
-      display: block;
-      overflow: hidden;
+    .history-signal-chip small { color: var(--muted); font-weight: 600; }
+    .history-signal-chip.muted { color: var(--muted); background: #f1f5f9; }
+    .history-empty, .history-empty-inline {
       color: var(--muted);
-      font-size: 11px;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-    .history-signal-days {
-      text-align: right;
-      font-variant-numeric: tabular-nums;
-    }
-    .history-signal-days strong {
-      display: block;
-      color: var(--blue);
-      font-size: 13px;
-    }
-    .history-signal-days span {
-      display: block;
-      color: var(--muted);
-      font-size: 11px;
-    }
-    .history-signal-latest {
-      overflow: hidden;
-      color: var(--muted);
-      font-size: 12px;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-    .history-empty {
-      padding: 10px;
-      color: var(--muted);
-      background: #fbfdff;
       font-size: 12px;
       line-height: 1.45;
     }
+    .history-empty { padding: 10px; background: #fbfdff; }
 
     .controls {
       display: grid;
@@ -726,15 +680,14 @@
       .refresh-note { max-width: none; text-align: left; }
       .controls { grid-template-columns: 1fr; }
       .condition-filter-groups { grid-template-columns: 1fr; }
+      .rule-categories { grid-template-columns: 1fr; }
       .rule-list.compact { grid-template-columns: 1fr; }
       .history-head { grid-template-columns: 1fr; }
       .history-stat-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-      .history-dashboard { grid-template-columns: 1fr; }
-      .history-signal-row, .history-signal-list.compact .history-signal-row { grid-template-columns: 76px minmax(0, 1fr) 52px; align-items: center; }
-      .history-signal-list.compact .history-signal-latest { display: block; }
-      .history-signal-days { justify-self: end; text-align: right; }
-      .history-signal-latest { grid-column: 2 / 4; white-space: normal; }
-      .history-summary-row { grid-template-columns: minmax(88px, 1fr) repeat(3, minmax(48px, .55fr)); }
+      .history-stock-row { grid-template-columns: minmax(0, 1fr) 64px; align-items: start; }
+      .history-stock-days { text-align: right; }
+      .history-stock-latest, .history-stock-signals { grid-column: 1 / 3; }
+      .history-stock-latest b { white-space: normal; }
       .rule-list li { grid-template-columns: 1fr; }
       .threshold-grid { grid-template-columns: 1fr; }
       .reason-section-head { align-items: flex-start; flex-direction: column; }
@@ -753,7 +706,7 @@
     <header>
       <div>
         <h1>2026-06-26 异动标的</h1>
-        <div class="meta">最近交易日 2026-06-26；工作簿保存 2026-06-29 09:32:29；生成 2026-06-29 09:50:44</div>
+        <div class="meta">最近交易日 2026-06-26；工作簿保存 2026-06-29 09:32:29；生成 2026-06-29 14:18:38</div>
         <div class="meta">涨幅阈值 9.5%；超额阈值 8.5%；成交阈值-5 1.5x；成交阈值-20 1.8x；PE阈值 25.0；PB阈值 2.5；YTD阈值 51.0%；最近一季超额阈值 51.0%；3日涨幅 18.0%；3日超额 17.0%；5日涨幅 25.0%；5日超额 24.0%</div>
       </div>
       <div class="refresh-note">读取工作簿已保存缓存。</div>
@@ -770,32 +723,20 @@
       <div class="rule-panel-head">
         <h2>筛选规则</h2>
       </div>
-      <ul class="rule-list compact"><li><span class="rule-term">日涨/超额</span><span class="rule-desc">当日涨幅超过9.5%，或当日相对指数的涨幅超过8.5%（A股对应沪深300，港股对应恒生指数）</span></li><li><span class="rule-term">3D价强</span><span class="rule-desc">过去3日累计涨幅超过18%，或过去3天相对指数的涨幅累计超过17%</span></li><li><span class="rule-term">5D价强</span><span class="rule-desc">过去5日累计涨幅超过25%，或过去3天相对指数的涨幅累计超过24%</span></li><li><span class="rule-term">持续放量</span><span class="rule-desc">同时满足①近5日有效放量天数（单日成交量 &gt; 起爆前20日均量 × 2）超过2.5天，②近5日均量是前20日均量的至少3倍，③当日未明显缩量（今日成交量 ≥ 近5日均量 × 60%）</span></li><li><span class="rule-term">当日放量</span><span class="rule-desc">同时满足①当日成交量是过去5日均量（不含当日）的2.5倍，②当日成交量是过去20日均量（不含当日）的2.8倍，③不符合持续放量（已有放量的情况）</span></li><li><span class="rule-term">3Y新高</span><span class="rule-desc">当日收盘价超过过去3年最高收盘价（不含当日）</span></li><li><span class="rule-term">120D新高</span><span class="rule-desc">当日收盘价超过过去120日最高收盘价（不含当日）</span></li><li><span class="rule-term">60D新高</span><span class="rule-desc">当日收盘价超过过去60日最高收盘价（不含当日）</span></li></ul>
+      <div class="rule-categories"><div class="rule-category"><h3>价格</h3><ul class="rule-list compact"><li><span class="rule-term">日涨/超额</span><span class="rule-desc">当日涨幅超过9.5%，或当日相对指数的涨幅超过8.5%（A股对应沪深300，港股对应恒生指数）</span></li><li><span class="rule-term">3D价强</span><span class="rule-desc">过去3日累计涨幅超过18%，或过去3天相对指数的涨幅累计超过17%</span></li><li><span class="rule-term">5D价强</span><span class="rule-desc">过去5日累计涨幅超过25%，或过去3天相对指数的涨幅累计超过24%</span></li></ul></div><div class="rule-category"><h3>量能</h3><ul class="rule-list compact"><li><span class="rule-term">持续放量</span><span class="rule-desc">同时满足①近5日有效放量天数（单日成交量 &gt; 起爆前20日均量 × 2）超过2.5天，②近5日均量是前20日均量的至少3倍，③当日未明显缩量（今日成交量 ≥ 近5日均量 × 60%）</span></li><li><span class="rule-term">当日放量</span><span class="rule-desc">同时满足①当日成交量是过去5日均量（不含当日）的2.5倍，②当日成交量是过去20日均量（不含当日）的2.8倍，③不符合持续放量（已有放量的情况）</span></li></ul></div><div class="rule-category"><h3>新高</h3><ul class="rule-list compact"><li><span class="rule-term">3Y新高</span><span class="rule-desc">当日收盘价超过过去3年最高收盘价（不含当日）</span></li><li><span class="rule-term">120D新高</span><span class="rule-desc">当日收盘价超过过去120日最高收盘价（不含当日）</span></li><li><span class="rule-term">60D新高</span><span class="rule-desc">当日收盘价超过过去60日最高收盘价（不含当日）</span></li></ul></div></div>
     </section>
     
     <section class="history-panel" aria-label="7日信号跟踪">
       <div class="history-head">
         <div class="history-title-group">
           <h2>7日信号跟踪</h2>
-          <div class="history-period"><span>缓存区间 2026-06-11 至 2026-06-26</span><span>7/7 个已缓存交易日</span><span>滚动保留最近 7 日</span></div>
+          <div class="history-period"><span>缓存区间 2026-06-11 至 2026-06-26</span><span>只显示近 7 日内出现 2 天及以上的股票</span><span>信号按出现天数排序</span></div>
         </div>
-        <div class="history-stat-grid"><span class="history-stat"><small>覆盖标的</small><strong>699</strong><em>近 7 日</em></span><span class="history-stat"><small>每日均出现</small><strong>0</strong><em>7/7日</em></span><span class="history-stat"><small>全窗口信号</small><strong>0</strong><em>同一股+信号</em></span></div>
+        <div class="history-stat-grid"><span class="history-stat"><small>多次出现个股</small><strong>184</strong><em>≥2日</em></span><span class="history-stat"><small>最高出现天数</small><strong>5/7</strong><em>个股</em></span><span class="history-stat"><small>缓存交易日</small><strong>7/7</strong><em>滚动7日</em></span></div>
       </div>
-      <div class="history-dashboard">
-        <div class="history-overview-stack">
-          <div class="history-block history-overview">
-            <div class="history-block-head"><h3>信号覆盖概览</h3><span>覆盖 / 触发 / 连续</span></div>
-            <div class="history-summary-table"><div class="history-summary-row"><div class="history-summary-signal">日涨/超额</div><div class="history-summary-count"><strong>75</strong><small>覆盖</small></div><div class="history-summary-count"><strong>78</strong><small>触发</small></div><div class="history-summary-count"><strong>0</strong><small>连续</small></div></div><div class="history-summary-row"><div class="history-summary-signal">3D价强</div><div class="history-summary-count"><strong>64</strong><small>覆盖</small></div><div class="history-summary-count"><strong>81</strong><small>触发</small></div><div class="history-summary-count"><strong>0</strong><small>连续</small></div></div><div class="history-summary-row"><div class="history-summary-signal">5D价强</div><div class="history-summary-count"><strong>13</strong><small>覆盖</small></div><div class="history-summary-count"><strong>17</strong><small>触发</small></div><div class="history-summary-count"><strong>0</strong><small>连续</small></div></div><div class="history-summary-row"><div class="history-summary-signal">持续放量</div><div class="history-summary-count"><strong>90</strong><small>覆盖</small></div><div class="history-summary-count"><strong>131</strong><small>触发</small></div><div class="history-summary-count"><strong>0</strong><small>连续</small></div></div><div class="history-summary-row"><div class="history-summary-signal">当日放量</div><div class="history-summary-count"><strong>40</strong><small>覆盖</small></div><div class="history-summary-count"><strong>41</strong><small>触发</small></div><div class="history-summary-count"><strong>0</strong><small>连续</small></div></div><div class="history-summary-row"><div class="history-summary-signal">3Y新高</div><div class="history-summary-count"><strong>14</strong><small>覆盖</small></div><div class="history-summary-count"><strong>20</strong><small>触发</small></div><div class="history-summary-count"><strong>0</strong><small>连续</small></div></div><div class="history-summary-row"><div class="history-summary-signal">120D新高</div><div class="history-summary-count"><strong>11</strong><small>覆盖</small></div><div class="history-summary-count"><strong>15</strong><small>触发</small></div><div class="history-summary-count"><strong>0</strong><small>连续</small></div></div><div class="history-summary-row"><div class="history-summary-signal">60D新高</div><div class="history-summary-count"><strong>20</strong><small>覆盖</small></div><div class="history-summary-count"><strong>23</strong><small>触发</small></div><div class="history-summary-count"><strong>0</strong><small>连续</small></div></div></div>
-          </div>
-          <div class="history-block history-full-window">
-            <div class="history-block-head"><h3>全窗口持续信号</h3><span>7/7日</span></div>
-            <div class="history-signal-list compact"><div class="history-empty">暂无覆盖全部已缓存交易日的同一信号。</div></div>
-          </div>
-        </div>
-        <div class="history-block history-frequency">
-          <div class="history-block-head"><h3>高频信号</h3><span>按出现天数排序</span></div>
-          <div class="history-signal-list"><div class="history-signal-row"><div class="history-signal-tag">持续放量</div><div class="history-signal-stock"><b>长江材料</b><span>001296.SZ · A股 · 建材Ⅱ</span></div><div class="history-signal-days"><strong>3/7</strong><span>出现</span></div><div class="history-signal-latest">持续放量</div></div><div class="history-signal-row"><div class="history-signal-tag">持续放量</div><div class="history-signal-stock"><b>孚日股份</b><span>002083.SZ · A股 · 纺织服装Ⅱ</span></div><div class="history-signal-days"><strong>3/7</strong><span>出现</span></div><div class="history-signal-latest">持续放量</div></div><div class="history-signal-row"><div class="history-signal-tag">持续放量</div><div class="history-signal-stock"><b>美盈森</b><span>002303.SZ · A股 · 造纸与包装</span></div><div class="history-signal-days"><strong>3/7</strong><span>出现</span></div><div class="history-signal-latest">3D价强 / 持续放量</div></div><div class="history-signal-row"><div class="history-signal-tag">持续放量</div><div class="history-signal-stock"><b>康力电梯</b><span>002367.SZ · A股 · 机械</span></div><div class="history-signal-days"><strong>3/7</strong><span>出现</span></div><div class="history-signal-latest">5D价强 / 持续放量</div></div><div class="history-signal-row"><div class="history-signal-tag">持续放量</div><div class="history-signal-stock"><b>庄园牧场</b><span>002910.SZ · A股 · 食品饮料</span></div><div class="history-signal-days"><strong>3/7</strong><span>出现</span></div><div class="history-signal-latest">日涨/超额 / 持续放量</div></div><div class="history-signal-row"><div class="history-signal-tag">持续放量</div><div class="history-signal-stock"><b>四方科技</b><span>603339.SH · A股 · 机械</span></div><div class="history-signal-days"><strong>3/7</strong><span>出现</span></div><div class="history-signal-latest">持续放量</div></div><div class="history-signal-row"><div class="history-signal-tag">持续放量</div><div class="history-signal-stock"><b>洁特生物</b><span>688026.SH · A股 · 医药生物</span></div><div class="history-signal-days"><strong>3/7</strong><span>出现</span></div><div class="history-signal-latest">持续放量</div></div></div>
-        </div>
+      <div class="history-block history-repeated-stocks">
+        <div class="history-block-head"><h3>多次出现个股</h3><span>出现天数 / 最近原因 / 触发信号</span></div>
+        <div class="history-stock-list"><div class="history-stock-row"><div class="history-stock-main"><b>兴发集团</b><span>600141.SH · A股 · 化工</span></div><div class="history-stock-days"><strong>5/7</strong><span>... / 06-12 / 06-24 / 06-25 / 06-26</span></div><div class="history-stock-latest"><small>最新 2026-06-26</small><b>3D价强 / 5D价强 / 3Y新高</b></div><div class="history-stock-signals"><span class="history-signal-chip"><strong>3D价强</strong><small>3日</small></span><span class="history-signal-chip"><strong>日涨/超额</strong><small>2日</small></span><span class="history-signal-chip"><strong>3Y新高</strong><small>2日</small></span><span class="history-signal-chip"><strong>5D价强</strong><small>1日</small></span><span class="history-signal-chip"><strong>60D新高</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>六国化工</b><span>600470.SH · A股 · 化工</span></div><div class="history-stock-days"><strong>5/7</strong><span>... / 06-12 / 06-24 / 06-25 / 06-26</span></div><div class="history-stock-latest"><small>最新 2026-06-26</small><b>持续放量</b></div><div class="history-stock-signals"><span class="history-signal-chip"><strong>3D价强</strong><small>2日</small></span><span class="history-signal-chip"><strong>持续放量</strong><small>2日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>美盈森</b><span>002303.SZ · A股 · 造纸与包装</span></div><div class="history-stock-days"><strong>4/7</strong><span>06-16 / 06-24 / 06-25 / 06-26</span></div><div class="history-stock-latest"><small>最新 2026-06-26</small><b>3D价强 / 持续放量</b></div><div class="history-stock-signals"><span class="history-signal-chip"><strong>持续放量</strong><small>3日</small></span><span class="history-signal-chip"><strong>日涨/超额</strong><small>2日</small></span><span class="history-signal-chip"><strong>3D价强</strong><small>2日</small></span><span class="history-signal-chip"><strong>60D新高</strong><small>2日</small></span><span class="history-signal-chip"><strong>5D价强</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>豫光金铅</b><span>600531.SH · A股 · 有色金属</span></div><div class="history-stock-days"><strong>4/7</strong><span>06-12 / 06-24 / 06-25 / 06-26</span></div><div class="history-stock-latest"><small>最新 2026-06-26</small><b>持续放量</b></div><div class="history-stock-signals"><span class="history-signal-chip"><strong>3D价强</strong><small>2日</small></span><span class="history-signal-chip"><strong>持续放量</strong><small>2日</small></span><span class="history-signal-chip"><strong>日涨/超额</strong><small>1日</small></span><span class="history-signal-chip"><strong>60D新高</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>华盛国际控股</b><span>1323.HK · 港股 · 建材Ⅱ</span></div><div class="history-stock-days"><strong>4/7</strong><span>06-11 / 06-12 / 06-15 / 06-24</span></div><div class="history-stock-latest"><small>最新 2026-06-24</small><b>当日上涨/超额 / 3日加速上涨 / 5日加速上涨 / 120日新高</b></div><div class="history-stock-signals"><span class="history-signal-chip"><strong>日涨/超额</strong><small>1日</small></span><span class="history-signal-chip"><strong>3D价强</strong><small>1日</small></span><span class="history-signal-chip"><strong>5D价强</strong><small>1日</small></span><span class="history-signal-chip"><strong>120D新高</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>依依股份</b><span>001206.SZ · A股 · 家庭用品</span></div><div class="history-stock-days"><strong>4/7</strong><span>06-12 / 06-24 / 06-25 / 06-26</span></div><div class="history-stock-latest"><small>最新 2026-06-26</small><b>3D价强</b></div><div class="history-stock-signals"><span class="history-signal-chip"><strong>3D价强</strong><small>2日</small></span><span class="history-signal-chip"><strong>持续放量</strong><small>1日</small></span><span class="history-signal-chip"><strong>当日放量</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>庄园牧场</b><span>002910.SZ · A股 · 食品饮料</span></div><div class="history-stock-days"><strong>4/7</strong><span>06-16 / 06-24 / 06-25 / 06-26</span></div><div class="history-stock-latest"><small>最新 2026-06-26</small><b>日涨/超额 / 持续放量</b></div><div class="history-stock-signals"><span class="history-signal-chip"><strong>持续放量</strong><small>3日</small></span><span class="history-signal-chip"><strong>日涨/超额</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>木林森</b><span>002745.SZ · A股 · 半导体</span></div><div class="history-stock-days"><strong>4/7</strong><span>06-15 / 06-24 / 06-25 / 06-26</span></div><div class="history-stock-latest"><small>最新 2026-06-26</small><b>3Y新高</b></div><div class="history-stock-signals"><span class="history-signal-chip"><strong>3Y新高</strong><small>3日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>密尔克卫</b><span>603713.SH · A股 · 交通运输</span></div><div class="history-stock-days"><strong>3/7</strong><span>06-24 / 06-25 / 06-26</span></div><div class="history-stock-latest"><small>最新 2026-06-26</small><b>3D价强 / 5D价强 / 120D新高</b></div><div class="history-stock-signals"><span class="history-signal-chip"><strong>3D价强</strong><small>3日</small></span><span class="history-signal-chip"><strong>日涨/超额</strong><small>2日</small></span><span class="history-signal-chip"><strong>5D价强</strong><small>2日</small></span><span class="history-signal-chip"><strong>120D新高</strong><small>2日</small></span><span class="history-signal-chip"><strong>60D新高</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>长江证券</b><span>000783.SZ · A股 · 非银金融</span></div><div class="history-stock-days"><strong>3/7</strong><span>06-24 / 06-25 / 06-26</span></div><div class="history-stock-latest"><small>最新 2026-06-26</small><b>3D价强 / 持续放量</b></div><div class="history-stock-signals"><span class="history-signal-chip"><strong>3D价强</strong><small>3日</small></span><span class="history-signal-chip"><strong>持续放量</strong><small>2日</small></span><span class="history-signal-chip"><strong>日涨/超额</strong><small>1日</small></span><span class="history-signal-chip"><strong>5D价强</strong><small>1日</small></span><span class="history-signal-chip"><strong>当日放量</strong><small>1日</small></span><span class="history-signal-chip"><strong>3Y新高</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>康力电梯</b><span>002367.SZ · A股 · 机械</span></div><div class="history-stock-days"><strong>3/7</strong><span>06-24 / 06-25 / 06-26</span></div><div class="history-stock-latest"><small>最新 2026-06-26</small><b>5D价强 / 持续放量</b></div><div class="history-stock-signals"><span class="history-signal-chip"><strong>5D价强</strong><small>3日</small></span><span class="history-signal-chip"><strong>持续放量</strong><small>3日</small></span><span class="history-signal-chip"><strong>3D价强</strong><small>2日</small></span><span class="history-signal-chip"><strong>日涨/超额</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>长荣股份</b><span>300195.SZ · A股 · 机械</span></div><div class="history-stock-days"><strong>3/7</strong><span>06-24 / 06-25 / 06-26</span></div><div class="history-stock-latest"><small>最新 2026-06-26</small><b>3D价强 / 持续放量</b></div><div class="history-stock-signals"><span class="history-signal-chip"><strong>3D价强</strong><small>3日</small></span><span class="history-signal-chip"><strong>日涨/超额</strong><small>2日</small></span><span class="history-signal-chip"><strong>持续放量</strong><small>2日</small></span><span class="history-signal-chip"><strong>5D价强</strong><small>1日</small></span><span class="history-signal-chip"><strong>当日放量</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>恒通股份</b><span>603223.SH · A股 · 石油石化</span></div><div class="history-stock-days"><strong>3/7</strong><span>06-24 / 06-25 / 06-26</span></div><div class="history-stock-latest"><small>最新 2026-06-26</small><b>3D价强 / 5D价强 / 120D新高</b></div><div class="history-stock-signals"><span class="history-signal-chip"><strong>3D价强</strong><small>3日</small></span><span class="history-signal-chip"><strong>5D价强</strong><small>3日</small></span><span class="history-signal-chip"><strong>120D新高</strong><small>2日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>洁特生物</b><span>688026.SH · A股 · 医药生物</span></div><div class="history-stock-days"><strong>3/7</strong><span>06-24 / 06-25 / 06-26</span></div><div class="history-stock-latest"><small>最新 2026-06-26</small><b>持续放量</b></div><div class="history-stock-signals"><span class="history-signal-chip"><strong>持续放量</strong><small>3日</small></span><span class="history-signal-chip"><strong>5D价强</strong><small>2日</small></span><span class="history-signal-chip"><strong>3D价强</strong><small>1日</small></span><span class="history-signal-chip"><strong>60D新高</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>药师帮</b><span>9885.HK · 港股 · 医疗设备与服务</span></div><div class="history-stock-days"><strong>3/7</strong><span>06-24 / 06-25 / 06-26</span></div><div class="history-stock-latest"><small>最新 2026-06-26</small><b>3D价强 / 5D价强</b></div><div class="history-stock-signals"><span class="history-signal-chip"><strong>3D价强</strong><small>3日</small></span><span class="history-signal-chip"><strong>5D价强</strong><small>3日</small></span><span class="history-signal-chip"><strong>日涨/超额</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>亨迪药业</b><span>301211.SZ · A股 · 医药生物</span></div><div class="history-stock-days"><strong>3/7</strong><span>06-24 / 06-25 / 06-26</span></div><div class="history-stock-latest"><small>最新 2026-06-26</small><b>持续放量</b></div><div class="history-stock-signals"><span class="history-signal-chip"><strong>3D价强</strong><small>2日</small></span><span class="history-signal-chip"><strong>持续放量</strong><small>2日</small></span><span class="history-signal-chip"><strong>5D价强</strong><small>1日</small></span><span class="history-signal-chip"><strong>当日放量</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>四方科技</b><span>603339.SH · A股 · 机械</span></div><div class="history-stock-days"><strong>3/7</strong><span>06-24 / 06-25 / 06-26</span></div><div class="history-stock-latest"><small>最新 2026-06-26</small><b>持续放量</b></div><div class="history-stock-signals"><span class="history-signal-chip"><strong>持续放量</strong><small>3日</small></span><span class="history-signal-chip"><strong>3D价强</strong><small>1日</small></span><span class="history-signal-chip"><strong>5D价强</strong><small>1日</small></span><span class="history-signal-chip"><strong>120D新高</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>汇力资源</b><span>1303.HK · 港股 · 煤炭Ⅱ</span></div><div class="history-stock-days"><strong>3/7</strong><span>06-11 / 06-15 / 06-24</span></div><div class="history-stock-latest"><small>最新 2026-06-24</small><b>当日上涨/超额 / 3日加速上涨 / 5日加速上涨 / 持续放量 / 120日新高</b></div><div class="history-stock-signals"><span class="history-signal-chip"><strong>日涨/超额</strong><small>1日</small></span><span class="history-signal-chip"><strong>3D价强</strong><small>1日</small></span><span class="history-signal-chip"><strong>5D价强</strong><small>1日</small></span><span class="history-signal-chip"><strong>持续放量</strong><small>1日</small></span><span class="history-signal-chip"><strong>120D新高</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>孚日股份</b><span>002083.SZ · A股 · 纺织服装Ⅱ</span></div><div class="history-stock-days"><strong>3/7</strong><span>06-24 / 06-25 / 06-26</span></div><div class="history-stock-latest"><small>最新 2026-06-26</small><b>持续放量</b></div><div class="history-stock-signals"><span class="history-signal-chip"><strong>持续放量</strong><small>3日</small></span><span class="history-signal-chip"><strong>3D价强</strong><small>1日</small></span><span class="history-signal-chip"><strong>5D价强</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>乔治白</b><span>002687.SZ · A股 · 纺织服装Ⅱ</span></div><div class="history-stock-days"><strong>3/7</strong><span>06-24 / 06-25 / 06-26</span></div><div class="history-stock-latest"><small>最新 2026-06-26</small><b>持续放量</b></div><div class="history-stock-signals"><span class="history-signal-chip"><strong>持续放量</strong><small>2日</small></span><span class="history-signal-chip"><strong>日涨/超额</strong><small>1日</small></span><span class="history-signal-chip"><strong>3D价强</strong><small>1日</small></span><span class="history-signal-chip"><strong>当日放量</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>绿源集团控股</b><span>2451.HK · 港股 · 汽车与零配件</span></div><div class="history-stock-days"><strong>3/7</strong><span>06-24 / 06-25 / 06-26</span></div><div class="history-stock-latest"><small>最新 2026-06-26</small><b>3D价强 / 5D价强</b></div><div class="history-stock-signals"><span class="history-signal-chip"><strong>3D价强</strong><small>2日</small></span><span class="history-signal-chip"><strong>日涨/超额</strong><small>1日</small></span><span class="history-signal-chip"><strong>5D价强</strong><small>1日</small></span><span class="history-signal-chip"><strong>持续放量</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>吉宏股份</b><span>2603.HK · 港股 · 可选消费零售</span></div><div class="history-stock-days"><strong>3/7</strong><span>06-24 / 06-25 / 06-26</span></div><div class="history-stock-latest"><small>最新 2026-06-26</small><b>3D价强</b></div><div class="history-stock-signals"><span class="history-signal-chip"><strong>3D价强</strong><small>3日</small></span><span class="history-signal-chip"><strong>5D价强</strong><small>1日</small></span><span class="history-signal-chip"><strong>120D新高</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>迦南科技</b><span>300412.SZ · A股 · 机械</span></div><div class="history-stock-days"><strong>3/7</strong><span>06-24 / 06-25 / 06-26</span></div><div class="history-stock-latest"><small>最新 2026-06-26</small><b>持续放量</b></div><div class="history-stock-signals"><span class="history-signal-chip"><strong>持续放量</strong><small>2日</small></span><span class="history-signal-chip"><strong>日涨/超额</strong><small>1日</small></span><span class="history-signal-chip"><strong>3D价强</strong><small>1日</small></span><span class="history-signal-chip"><strong>当日放量</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>药明康德</b><span>603259.SH · A股 · 医药生物</span></div><div class="history-stock-days"><strong>3/7</strong><span>06-24 / 06-25 / 06-26</span></div><div class="history-stock-latest"><small>最新 2026-06-26</small><b>3Y新高</b></div><div class="history-stock-signals"><span class="history-signal-chip"><strong>3Y新高</strong><small>3日</small></span><span class="history-signal-chip"><strong>3D价强</strong><small>2日</small></span></div></div></div>
       </div>
     </section>
     <section class="controls">
@@ -3239,7 +3180,31 @@
       const setSelectedRow = (row) => {
         rows.forEach((item) => item.classList.toggle('is-selected', item === row));
       };
-      const showDetail = (row, pinned = false) => {
+      const positionDetailNear = (event, row) => {
+        if (detailDrag) return;
+        const offset = 14;
+        let anchorX;
+        let anchorY;
+        if (event && Number.isFinite(event.clientX) && Number.isFinite(event.clientY)) {
+          anchorX = event.clientX;
+          anchorY = event.clientY;
+        } else if (row) {
+          const rect = row.getBoundingClientRect();
+          anchorX = rect.right;
+          anchorY = rect.top + Math.min(28, rect.height / 2);
+        } else {
+          anchorX = window.innerWidth - 410;
+          anchorY = 92;
+        }
+        const panelWidth = detailPanel.offsetWidth || 390;
+        const panelHeight = detailPanel.offsetHeight || 260;
+        let left = anchorX + offset;
+        let top = anchorY + offset;
+        if (left + panelWidth + offset > window.innerWidth) left = anchorX - panelWidth - offset;
+        if (top + panelHeight + offset > window.innerHeight) top = anchorY - panelHeight - offset;
+        clampDetailPosition(left, top);
+      };
+      const showDetail = (row, pinned = false, event = null) => {
         if (!row) return;
         if (pinned) pinnedRow = row;
         setSelectedRow(pinnedRow || row);
@@ -3280,6 +3245,7 @@
         }
         detailMetrics.innerHTML = metrics.length ? metrics.join('') : metric('入选原因', reason || '-');
         detailPanel.classList.remove('is-empty');
+        positionDetailNear(event, row);
       };
       const clearDetail = () => {
         pinnedRow = null;
@@ -3384,7 +3350,11 @@
       });
       sectionsRoot.addEventListener('pointerover', (event) => {
         const row = event.target.closest('tr.movement-row');
-        if (row && !pinnedRow) showDetail(row);
+        if (row && !pinnedRow) showDetail(row, false, event);
+      });
+      sectionsRoot.addEventListener('pointermove', (event) => {
+        const row = event.target.closest('tr.movement-row');
+        if (row && !pinnedRow) showDetail(row, false, event);
       });
       sectionsRoot.addEventListener('click', (event) => {
         const row = event.target.closest('tr.movement-row');
@@ -3392,12 +3362,12 @@
         if (pinnedRow === row) {
           clearDetail();
         } else {
-          showDetail(row, true);
+          showDetail(row, true, event);
         }
       });
       sectionsRoot.addEventListener('focusin', (event) => {
         const row = event.target.closest('tr.movement-row');
-        if (row && !pinnedRow) showDetail(row);
+        if (row && !pinnedRow) showDetail(row, false);
       });
       detailClose.addEventListener('click', clearDetail);
       detailPanel.querySelector('.detail-head').addEventListener('pointerdown', beginDetailDrag);
