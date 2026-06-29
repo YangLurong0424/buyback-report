@@ -21,6 +21,9 @@
       --rose-soft: #fdebf1;
       --gold: #a87405;
       --gold-soft: #fff4d7;
+      --amber: #b45309;
+      --amber-soft: #fff1df;
+      --slate-soft: #f1f5f9;
     }
     * { box-sizing: border-box; }
     body {
@@ -87,6 +90,10 @@
       color: var(--text);
       font-variant-numeric: tabular-nums;
     }
+    .status-chip.blue { border-color: #cfe2f5; background: var(--blue-soft); }
+    .status-chip.green { border-color: #cdebdc; background: var(--green-soft); }
+    .status-chip.rose { border-color: #f3c7d4; background: var(--rose-soft); }
+    .status-chip.gold { border-color: #f1d99a; background: var(--gold-soft); }
     .status-chip.blue strong { color: var(--blue); }
     .status-chip.green strong { color: var(--green); }
     .status-chip.rose strong { color: var(--rose); }
@@ -135,6 +142,13 @@
       font-size: 12px;
       line-height: 1.3;
     }
+    .rule-category.tone-price { border-color: #f3c7d4; background: linear-gradient(180deg, #fff9fb 0%, #ffffff 100%); }
+    .rule-category.tone-price h3 { color: var(--rose); background: var(--rose-soft); }
+    .rule-category.tone-volume { border-color: #cdebdc; background: linear-gradient(180deg, #f7fffb 0%, #ffffff 100%); }
+    .rule-category.tone-volume h3 { color: var(--green); background: var(--green-soft); }
+    .rule-category.tone-high { border-color: #f1d99a; background: linear-gradient(180deg, #fffaf0 0%, #ffffff 100%); }
+    .rule-category.tone-high h3 { color: var(--gold); background: var(--gold-soft); }
+    .rule-category.tone-neutral h3 { color: var(--muted); background: var(--slate-soft); }
     .rule-list {
       display: grid;
       gap: 0;
@@ -161,6 +175,9 @@
       font-weight: 700;
       white-space: nowrap;
     }
+    .tone-price .rule-term { color: var(--rose); }
+    .tone-volume .rule-term { color: var(--green); }
+    .tone-high .rule-term { color: var(--gold); }
     .rule-desc { color: var(--muted); }
 
 
@@ -350,15 +367,18 @@
       min-height: 24px;
       padding: 3px 6px;
       border-radius: 5px;
-      color: var(--green);
-      background: var(--green-soft);
+      color: var(--blue);
+      background: var(--blue-soft);
       font-size: 12px;
       font-weight: 700;
       line-height: 1.25;
       white-space: nowrap;
     }
+    .history-signal-chip.tone-price { color: var(--rose); background: var(--rose-soft); }
+    .history-signal-chip.tone-volume { color: var(--green); background: var(--green-soft); }
+    .history-signal-chip.tone-high { color: var(--gold); background: var(--gold-soft); }
     .history-signal-chip small { color: var(--muted); font-weight: 600; }
-    .history-signal-chip.muted { color: var(--muted); background: #f1f5f9; }
+    .history-signal-chip.muted { color: var(--muted); background: var(--slate-soft); }
     .history-empty, .history-empty-inline {
       color: var(--muted);
       font-size: 12px;
@@ -440,9 +460,13 @@
       min-width: 0;
       padding: 8px;
       border: 1px solid #e4ebf3;
+      border-top-width: 3px;
       border-radius: 6px;
       background: #fbfdff;
     }
+    .condition-group.tone-price { border-color: #f3c7d4; background: #fff9fb; }
+    .condition-group.tone-volume { border-color: #cdebdc; background: #f7fffb; }
+    .condition-group.tone-high { border-color: #f1d99a; background: #fffaf0; }
     .condition-group-title {
       margin-bottom: 6px;
       color: var(--muted);
@@ -450,6 +474,9 @@
       font-weight: 700;
       line-height: 1.25;
     }
+    .condition-group.tone-price .condition-group-title { color: var(--rose); }
+    .condition-group.tone-volume .condition-group-title { color: var(--green); }
+    .condition-group.tone-high .condition-group-title { color: var(--gold); }
     .condition-chip-row {
       display: flex;
       flex-wrap: wrap;
@@ -482,12 +509,18 @@
       color: var(--muted);
       font-variant-numeric: tabular-nums;
     }
+    .condition-chip.tone-price { border-color: #f3c7d4; color: var(--rose); background: #ffffff; }
+    .condition-chip.tone-volume { border-color: #cdebdc; color: var(--green); background: #ffffff; }
+    .condition-chip.tone-high { border-color: #f1d99a; color: var(--gold); background: #ffffff; }
     .condition-chip:has(input:checked), .condition-chip.is-checked {
       border-color: #9fc4e6;
       background: var(--blue-soft);
       color: #1d4f7d;
       font-weight: 700;
     }
+    .condition-chip.tone-price:has(input:checked), .condition-chip.tone-price.is-checked { border-color: #d884a0; background: var(--rose-soft); color: var(--rose); }
+    .condition-chip.tone-volume:has(input:checked), .condition-chip.tone-volume.is-checked { border-color: #88c9aa; background: var(--green-soft); color: var(--green); }
+    .condition-chip.tone-high:has(input:checked), .condition-chip.tone-high.is-checked { border-color: #dfbe63; background: var(--gold-soft); color: var(--gold); }
     .visible-count {
       color: var(--muted);
       font-size: 13px;
@@ -515,12 +548,21 @@
       border-bottom: 1px solid #e5edf6;
       background: #f8fbff;
     }
+    .reason-section.tone-price .reason-section-head { border-left-color: var(--rose); background: linear-gradient(90deg, var(--rose-soft) 0%, #fffafd 42%, #ffffff 100%); }
+    .reason-section.tone-volume .reason-section-head { border-left-color: var(--green); background: linear-gradient(90deg, var(--green-soft) 0%, #f9fffc 42%, #ffffff 100%); }
+    .reason-section.tone-high .reason-section-head { border-left-color: var(--gold); background: linear-gradient(90deg, var(--gold-soft) 0%, #fffdf7 42%, #ffffff 100%); }
+    .reason-section.tone-dual .reason-section-head { border-left-color: var(--blue); background: linear-gradient(90deg, var(--blue-soft) 0%, #fbfdff 42%, #ffffff 100%); }
+    .reason-section.tone-combo .reason-section-head { border-left-color: var(--purple); background: linear-gradient(90deg, var(--purple-soft) 0%, #fbfaff 42%, #ffffff 100%); }
     .reason-section h2 {
       margin: 0;
       color: #1d4f7d;
       font-size: 17px;
       line-height: 1.35;
     }
+    .reason-section.tone-price h2 { color: var(--rose); }
+    .reason-section.tone-volume h2 { color: var(--green); }
+    .reason-section.tone-high h2 { color: var(--gold); }
+    .reason-section.tone-combo h2 { color: var(--purple); }
     .reason-section-meta {
       margin-top: 4px;
       color: var(--muted);
@@ -545,8 +587,16 @@
       font-variant-numeric: tabular-nums;
     }
     .section-chip strong { color: var(--blue); }
-    .section-chip.rose { color: var(--rose); }
-    .section-chip.blue { color: var(--blue); }
+    .section-chip.rose { color: var(--rose); background: var(--rose-soft); border-color: #f3c7d4; }
+    .section-chip.blue { color: var(--blue); background: var(--blue-soft); border-color: #cfe2f5; }
+    .reason-section.tone-combo .section-chip:first-child { background: var(--purple-soft); border-color: #d8d2f1; }
+    .reason-section.tone-combo .section-chip:first-child strong { color: var(--purple); }
+    .reason-section.tone-volume .section-chip:first-child { background: var(--green-soft); border-color: #cdebdc; }
+    .reason-section.tone-volume .section-chip:first-child strong { color: var(--green); }
+    .reason-section.tone-high .section-chip:first-child { background: var(--gold-soft); border-color: #f1d99a; }
+    .reason-section.tone-high .section-chip:first-child strong { color: var(--gold); }
+    .reason-section.tone-price .section-chip:first-child { background: var(--rose-soft); border-color: #f3c7d4; }
+    .reason-section.tone-price .section-chip:first-child strong { color: var(--rose); }
     .table-wrap {
       overflow: auto;
       background: var(--panel);
@@ -790,7 +840,7 @@
       <div class="rule-panel-head">
         <h2>筛选规则</h2>
       </div>
-      <div class="rule-categories"><div class="rule-category"><h3>价格</h3><ul class="rule-list compact"><li><span class="rule-term">日涨/超额</span><span class="rule-desc">当日涨幅超过9.5%，或当日相对指数的涨幅超过8.5%（A股对应沪深300，港股对应恒生指数）</span></li><li><span class="rule-term">3D价强</span><span class="rule-desc">过去3日累计涨幅超过18%，或过去3天相对指数的涨幅累计超过17%</span></li><li><span class="rule-term">5D价强</span><span class="rule-desc">过去5日累计涨幅超过25%，或过去3天相对指数的涨幅累计超过24%</span></li></ul></div><div class="rule-category"><h3>量能</h3><ul class="rule-list compact"><li><span class="rule-term">持续放量</span><span class="rule-desc">同时满足①近5日有效放量天数（单日成交量 &gt; 起爆前20日均量 × 2）超过2.5天，②近5日均量是前20日均量的至少3倍，③当日未明显缩量（今日成交量 ≥ 近5日均量 × 60%）</span></li><li><span class="rule-term">当日放量</span><span class="rule-desc">同时满足①当日成交量是过去5日均量（不含当日）的2.5倍，②当日成交量是过去20日均量（不含当日）的2.8倍，③不符合持续放量（已有放量的情况）</span></li></ul></div><div class="rule-category"><h3>新高</h3><ul class="rule-list compact"><li><span class="rule-term">3Y新高</span><span class="rule-desc">当日收盘价超过过去3年最高收盘价（不含当日）</span></li><li><span class="rule-term">120D新高</span><span class="rule-desc">当日收盘价超过过去120日最高收盘价（不含当日）</span></li><li><span class="rule-term">60D新高</span><span class="rule-desc">当日收盘价超过过去60日最高收盘价（不含当日）</span></li></ul></div></div>
+      <div class="rule-categories"><div class="rule-category tone-price"><h3>价格</h3><ul class="rule-list compact"><li><span class="rule-term">日涨/超额</span><span class="rule-desc">当日涨幅超过9.5%，或当日相对指数的涨幅超过8.5%（A股对应沪深300，港股对应恒生指数）</span></li><li><span class="rule-term">3D价强</span><span class="rule-desc">过去3日累计涨幅超过18%，或过去3天相对指数的涨幅累计超过17%</span></li><li><span class="rule-term">5D价强</span><span class="rule-desc">过去5日累计涨幅超过25%，或过去3天相对指数的涨幅累计超过24%</span></li></ul></div><div class="rule-category tone-volume"><h3>量能</h3><ul class="rule-list compact"><li><span class="rule-term">持续放量</span><span class="rule-desc">同时满足①近5日有效放量天数（单日成交量 &gt; 起爆前20日均量 × 2）超过2.5天，②近5日均量是前20日均量的至少3倍，③当日未明显缩量（今日成交量 ≥ 近5日均量 × 60%）</span></li><li><span class="rule-term">当日放量</span><span class="rule-desc">同时满足①当日成交量是过去5日均量（不含当日）的2.5倍，②当日成交量是过去20日均量（不含当日）的2.8倍，③不符合持续放量（已有放量的情况）</span></li></ul></div><div class="rule-category tone-high"><h3>新高</h3><ul class="rule-list compact"><li><span class="rule-term">3Y新高</span><span class="rule-desc">当日收盘价超过过去3年最高收盘价（不含当日）</span></li><li><span class="rule-term">120D新高</span><span class="rule-desc">当日收盘价超过过去120日最高收盘价（不含当日）</span></li><li><span class="rule-term">60D新高</span><span class="rule-desc">当日收盘价超过过去60日最高收盘价（不含当日）</span></li></ul></div></div>
     </section>
     
     <details class="history-panel" aria-label="7日信号跟踪">
@@ -807,7 +857,7 @@
       <div class="history-content">
       <div class="history-block history-repeated-stocks">
         <div class="history-block-head"><h3>多次出现个股</h3><span>出现天数 / 最近原因 / 触发信号</span></div>
-        <div class="history-stock-list"><div class="history-stock-row"><div class="history-stock-main"><b>美盈森</b><span>002303.SZ · A股 · 造纸与包装</span></div><div class="history-stock-days"><strong>5/7</strong><details class="history-date-details"><summary>具体日期</summary><span>2026-06-16 / 2026-06-24 / 2026-06-25 / 2026-06-26 / 2026-06-29</span></details></div><div class="history-stock-latest"><small>最新 2026-06-29</small><b>3D价强 / 持续放量 / 60D新高</b></div><div class="history-stock-signals"><span class="history-signal-chip"><strong>持续放量</strong><small>4日</small></span><span class="history-signal-chip"><strong>3D价强</strong><small>3日</small></span><span class="history-signal-chip"><strong>60D新高</strong><small>3日</small></span><span class="history-signal-chip"><strong>日涨/超额</strong><small>2日</small></span><span class="history-signal-chip"><strong>5D价强</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>兴发集团</b><span>600141.SH · A股 · 化工</span></div><div class="history-stock-days"><strong>5/7</strong><details class="history-date-details"><summary>具体日期</summary><span>2026-06-12 / 2026-06-24 / 2026-06-25 / 2026-06-26 / 2026-06-29</span></details></div><div class="history-stock-latest"><small>最新 2026-06-29</small><b>3D价强 / 5D价强</b></div><div class="history-stock-signals"><span class="history-signal-chip"><strong>3D价强</strong><small>4日</small></span><span class="history-signal-chip"><strong>日涨/超额</strong><small>2日</small></span><span class="history-signal-chip"><strong>5D价强</strong><small>2日</small></span><span class="history-signal-chip"><strong>3Y新高</strong><small>2日</small></span><span class="history-signal-chip"><strong>60D新高</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>豫光金铅</b><span>600531.SH · A股 · 有色金属</span></div><div class="history-stock-days"><strong>5/7</strong><details class="history-date-details"><summary>具体日期</summary><span>2026-06-12 / 2026-06-24 / 2026-06-25 / 2026-06-26 / 2026-06-29</span></details></div><div class="history-stock-latest"><small>最新 2026-06-29</small><b>持续放量</b></div><div class="history-stock-signals"><span class="history-signal-chip"><strong>持续放量</strong><small>3日</small></span><span class="history-signal-chip"><strong>3D价强</strong><small>2日</small></span><span class="history-signal-chip"><strong>日涨/超额</strong><small>1日</small></span><span class="history-signal-chip"><strong>60D新高</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>依依股份</b><span>001206.SZ · A股 · 家庭用品</span></div><div class="history-stock-days"><strong>5/7</strong><details class="history-date-details"><summary>具体日期</summary><span>2026-06-12 / 2026-06-24 / 2026-06-25 / 2026-06-26 / 2026-06-29</span></details></div><div class="history-stock-latest"><small>最新 2026-06-29</small><b>持续放量</b></div><div class="history-stock-signals"><span class="history-signal-chip"><strong>3D价强</strong><small>2日</small></span><span class="history-signal-chip"><strong>持续放量</strong><small>2日</small></span><span class="history-signal-chip"><strong>当日放量</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>庄园牧场</b><span>002910.SZ · A股 · 食品饮料</span></div><div class="history-stock-days"><strong>5/7</strong><details class="history-date-details"><summary>具体日期</summary><span>2026-06-16 / 2026-06-24 / 2026-06-25 / 2026-06-26 / 2026-06-29</span></details></div><div class="history-stock-latest"><small>最新 2026-06-29</small><b>持续放量</b></div><div class="history-stock-signals"><span class="history-signal-chip"><strong>持续放量</strong><small>4日</small></span><span class="history-signal-chip"><strong>日涨/超额</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>密尔克卫</b><span>603713.SH · A股 · 交通运输</span></div><div class="history-stock-days"><strong>4/7</strong><details class="history-date-details"><summary>具体日期</summary><span>2026-06-24 / 2026-06-25 / 2026-06-26 / 2026-06-29</span></details></div><div class="history-stock-latest"><small>最新 2026-06-29</small><b>3D价强</b></div><div class="history-stock-signals"><span class="history-signal-chip"><strong>3D价强</strong><small>4日</small></span><span class="history-signal-chip"><strong>日涨/超额</strong><small>2日</small></span><span class="history-signal-chip"><strong>5D价强</strong><small>2日</small></span><span class="history-signal-chip"><strong>120D新高</strong><small>2日</small></span><span class="history-signal-chip"><strong>60D新高</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>长江证券</b><span>000783.SZ · A股 · 非银金融</span></div><div class="history-stock-days"><strong>4/7</strong><details class="history-date-details"><summary>具体日期</summary><span>2026-06-24 / 2026-06-25 / 2026-06-26 / 2026-06-29</span></details></div><div class="history-stock-latest"><small>最新 2026-06-29</small><b>持续放量</b></div><div class="history-stock-signals"><span class="history-signal-chip"><strong>3D价强</strong><small>3日</small></span><span class="history-signal-chip"><strong>持续放量</strong><small>3日</small></span><span class="history-signal-chip"><strong>日涨/超额</strong><small>1日</small></span><span class="history-signal-chip"><strong>5D价强</strong><small>1日</small></span><span class="history-signal-chip"><strong>当日放量</strong><small>1日</small></span><span class="history-signal-chip"><strong>3Y新高</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>康力电梯</b><span>002367.SZ · A股 · 机械</span></div><div class="history-stock-days"><strong>4/7</strong><details class="history-date-details"><summary>具体日期</summary><span>2026-06-24 / 2026-06-25 / 2026-06-26 / 2026-06-29</span></details></div><div class="history-stock-latest"><small>最新 2026-06-29</small><b>持续放量</b></div><div class="history-stock-signals"><span class="history-signal-chip"><strong>持续放量</strong><small>4日</small></span><span class="history-signal-chip"><strong>5D价强</strong><small>3日</small></span><span class="history-signal-chip"><strong>3D价强</strong><small>2日</small></span><span class="history-signal-chip"><strong>日涨/超额</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>长荣股份</b><span>300195.SZ · A股 · 机械</span></div><div class="history-stock-days"><strong>4/7</strong><details class="history-date-details"><summary>具体日期</summary><span>2026-06-24 / 2026-06-25 / 2026-06-26 / 2026-06-29</span></details></div><div class="history-stock-latest"><small>最新 2026-06-29</small><b>持续放量</b></div><div class="history-stock-signals"><span class="history-signal-chip"><strong>3D价强</strong><small>3日</small></span><span class="history-signal-chip"><strong>持续放量</strong><small>3日</small></span><span class="history-signal-chip"><strong>日涨/超额</strong><small>2日</small></span><span class="history-signal-chip"><strong>5D价强</strong><small>1日</small></span><span class="history-signal-chip"><strong>当日放量</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>绿源集团控股</b><span>2451.HK · 港股 · 汽车与零配件</span></div><div class="history-stock-days"><strong>4/7</strong><details class="history-date-details"><summary>具体日期</summary><span>2026-06-24 / 2026-06-25 / 2026-06-26 / 2026-06-29</span></details></div><div class="history-stock-latest"><small>最新 2026-06-29</small><b>日涨/超额 / 3D价强 / 5D价强 / 持续放量</b></div><div class="history-stock-signals"><span class="history-signal-chip"><strong>3D价强</strong><small>3日</small></span><span class="history-signal-chip"><strong>日涨/超额</strong><small>2日</small></span><span class="history-signal-chip"><strong>5D价强</strong><small>2日</small></span><span class="history-signal-chip"><strong>持续放量</strong><small>2日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>亨迪药业</b><span>301211.SZ · A股 · 医药生物</span></div><div class="history-stock-days"><strong>4/7</strong><details class="history-date-details"><summary>具体日期</summary><span>2026-06-24 / 2026-06-25 / 2026-06-26 / 2026-06-29</span></details></div><div class="history-stock-latest"><small>最新 2026-06-29</small><b>日涨/超额 / 5D价强 / 持续放量</b></div><div class="history-stock-signals"><span class="history-signal-chip"><strong>持续放量</strong><small>3日</small></span><span class="history-signal-chip"><strong>3D价强</strong><small>2日</small></span><span class="history-signal-chip"><strong>5D价强</strong><small>2日</small></span><span class="history-signal-chip"><strong>日涨/超额</strong><small>1日</small></span><span class="history-signal-chip"><strong>当日放量</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>恒通股份</b><span>603223.SH · A股 · 石油石化</span></div><div class="history-stock-days"><strong>4/7</strong><details class="history-date-details"><summary>具体日期</summary><span>2026-06-24 / 2026-06-25 / 2026-06-26 / 2026-06-29</span></details></div><div class="history-stock-latest"><small>最新 2026-06-29</small><b>120D新高</b></div><div class="history-stock-signals"><span class="history-signal-chip"><strong>3D价强</strong><small>3日</small></span><span class="history-signal-chip"><strong>5D价强</strong><small>3日</small></span><span class="history-signal-chip"><strong>120D新高</strong><small>3日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>药师帮</b><span>9885.HK · 港股 · 医疗设备与服务</span></div><div class="history-stock-days"><strong>4/7</strong><details class="history-date-details"><summary>具体日期</summary><span>2026-06-24 / 2026-06-25 / 2026-06-26 / 2026-06-29</span></details></div><div class="history-stock-latest"><small>最新 2026-06-29</small><b>3D价强 / 5D价强</b></div><div class="history-stock-signals"><span class="history-signal-chip"><strong>3D价强</strong><small>4日</small></span><span class="history-signal-chip"><strong>5D价强</strong><small>4日</small></span><span class="history-signal-chip"><strong>日涨/超额</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>洁特生物</b><span>688026.SH · A股 · 医药生物</span></div><div class="history-stock-days"><strong>4/7</strong><details class="history-date-details"><summary>具体日期</summary><span>2026-06-24 / 2026-06-25 / 2026-06-26 / 2026-06-29</span></details></div><div class="history-stock-latest"><small>最新 2026-06-29</small><b>持续放量</b></div><div class="history-stock-signals"><span class="history-signal-chip"><strong>持续放量</strong><small>4日</small></span><span class="history-signal-chip"><strong>5D价强</strong><small>2日</small></span><span class="history-signal-chip"><strong>3D价强</strong><small>1日</small></span><span class="history-signal-chip"><strong>60D新高</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>乔治白</b><span>002687.SZ · A股 · 纺织服装Ⅱ</span></div><div class="history-stock-days"><strong>4/7</strong><details class="history-date-details"><summary>具体日期</summary><span>2026-06-24 / 2026-06-25 / 2026-06-26 / 2026-06-29</span></details></div><div class="history-stock-latest"><small>最新 2026-06-29</small><b>日涨/超额 / 持续放量</b></div><div class="history-stock-signals"><span class="history-signal-chip"><strong>持续放量</strong><small>3日</small></span><span class="history-signal-chip"><strong>日涨/超额</strong><small>2日</small></span><span class="history-signal-chip"><strong>3D价强</strong><small>1日</small></span><span class="history-signal-chip"><strong>当日放量</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>药明康德</b><span>603259.SH · A股 · 医药生物</span></div><div class="history-stock-days"><strong>4/7</strong><details class="history-date-details"><summary>具体日期</summary><span>2026-06-24 / 2026-06-25 / 2026-06-26 / 2026-06-29</span></details></div><div class="history-stock-latest"><small>最新 2026-06-29</small><b>3D价强 / 3Y新高</b></div><div class="history-stock-signals"><span class="history-signal-chip"><strong>3Y新高</strong><small>4日</small></span><span class="history-signal-chip"><strong>3D价强</strong><small>3日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>四方科技</b><span>603339.SH · A股 · 机械</span></div><div class="history-stock-days"><strong>4/7</strong><details class="history-date-details"><summary>具体日期</summary><span>2026-06-24 / 2026-06-25 / 2026-06-26 / 2026-06-29</span></details></div><div class="history-stock-latest"><small>最新 2026-06-29</small><b>持续放量</b></div><div class="history-stock-signals"><span class="history-signal-chip"><strong>持续放量</strong><small>4日</small></span><span class="history-signal-chip"><strong>3D价强</strong><small>1日</small></span><span class="history-signal-chip"><strong>5D价强</strong><small>1日</small></span><span class="history-signal-chip"><strong>120D新高</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>华旺科技</b><span>605377.SH · A股 · 造纸与包装</span></div><div class="history-stock-days"><strong>4/7</strong><details class="history-date-details"><summary>具体日期</summary><span>2026-06-24 / 2026-06-25 / 2026-06-26 / 2026-06-29</span></details></div><div class="history-stock-latest"><small>最新 2026-06-29</small><b>日涨/超额 / 5D价强 / 持续放量</b></div><div class="history-stock-signals"><span class="history-signal-chip"><strong>持续放量</strong><small>3日</small></span><span class="history-signal-chip"><strong>3D价强</strong><small>2日</small></span><span class="history-signal-chip"><strong>日涨/超额</strong><small>1日</small></span><span class="history-signal-chip"><strong>5D价强</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>新华制药</b><span>000756.SZ · A股 · 医药生物</span></div><div class="history-stock-days"><strong>4/7</strong><details class="history-date-details"><summary>具体日期</summary><span>2026-06-24 / 2026-06-25 / 2026-06-26 / 2026-06-29</span></details></div><div class="history-stock-latest"><small>最新 2026-06-29</small><b>日涨/超额 / 持续放量</b></div><div class="history-stock-signals"><span class="history-signal-chip"><strong>持续放量</strong><small>3日</small></span><span class="history-signal-chip"><strong>日涨/超额</strong><small>1日</small></span><span class="history-signal-chip"><strong>3D价强</strong><small>1日</small></span><span class="history-signal-chip"><strong>当日放量</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>博腾股份</b><span>300363.SZ · A股 · 医药生物</span></div><div class="history-stock-days"><strong>4/7</strong><details class="history-date-details"><summary>具体日期</summary><span>2026-06-24 / 2026-06-25 / 2026-06-26 / 2026-06-29</span></details></div><div class="history-stock-latest"><small>最新 2026-06-29</small><b>3D价强 / 持续放量</b></div><div class="history-stock-signals"><span class="history-signal-chip"><strong>3D价强</strong><small>3日</small></span><span class="history-signal-chip"><strong>持续放量</strong><small>2日</small></span><span class="history-signal-chip"><strong>当日放量</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>迦南科技</b><span>300412.SZ · A股 · 机械</span></div><div class="history-stock-days"><strong>4/7</strong><details class="history-date-details"><summary>具体日期</summary><span>2026-06-24 / 2026-06-25 / 2026-06-26 / 2026-06-29</span></details></div><div class="history-stock-latest"><small>最新 2026-06-29</small><b>持续放量</b></div><div class="history-stock-signals"><span class="history-signal-chip"><strong>持续放量</strong><small>3日</small></span><span class="history-signal-chip"><strong>日涨/超额</strong><small>1日</small></span><span class="history-signal-chip"><strong>3D价强</strong><small>1日</small></span><span class="history-signal-chip"><strong>当日放量</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>拱东医疗</b><span>605369.SH · A股 · 医疗设备与服务</span></div><div class="history-stock-days"><strong>4/7</strong><details class="history-date-details"><summary>具体日期</summary><span>2026-06-24 / 2026-06-25 / 2026-06-26 / 2026-06-29</span></details></div><div class="history-stock-latest"><small>最新 2026-06-29</small><b>持续放量</b></div><div class="history-stock-signals"><span class="history-signal-chip"><strong>3D价强</strong><small>3日</small></span><span class="history-signal-chip"><strong>持续放量</strong><small>2日</small></span><span class="history-signal-chip"><strong>当日放量</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>诺唯赞</b><span>688105.SH · A股 · 医药生物</span></div><div class="history-stock-days"><strong>4/7</strong><details class="history-date-details"><summary>具体日期</summary><span>2026-06-24 / 2026-06-25 / 2026-06-26 / 2026-06-29</span></details></div><div class="history-stock-latest"><small>最新 2026-06-29</small><b>日涨/超额 / 持续放量</b></div><div class="history-stock-signals"><span class="history-signal-chip"><strong>持续放量</strong><small>3日</small></span><span class="history-signal-chip"><strong>日涨/超额</strong><small>1日</small></span><span class="history-signal-chip"><strong>3D价强</strong><small>1日</small></span><span class="history-signal-chip"><strong>5D价强</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>康为世纪</b><span>688426.SH · A股 · 医药生物</span></div><div class="history-stock-days"><strong>4/7</strong><details class="history-date-details"><summary>具体日期</summary><span>2026-06-24 / 2026-06-25 / 2026-06-26 / 2026-06-29</span></details></div><div class="history-stock-latest"><small>最新 2026-06-29</small><b>持续放量</b></div><div class="history-stock-signals"><span class="history-signal-chip"><strong>持续放量</strong><small>3日</small></span><span class="history-signal-chip"><strong>日涨/超额</strong><small>1日</small></span><span class="history-signal-chip"><strong>3D价强</strong><small>1日</small></span><span class="history-signal-chip"><strong>当日放量</strong><small>1日</small></span></div></div></div>
+        <div class="history-stock-list"><div class="history-stock-row"><div class="history-stock-main"><b>美盈森</b><span>002303.SZ · A股 · 造纸与包装</span></div><div class="history-stock-days"><strong>5/7</strong><details class="history-date-details"><summary>具体日期</summary><span>2026-06-16 / 2026-06-24 / 2026-06-25 / 2026-06-26 / 2026-06-29</span></details></div><div class="history-stock-latest"><small>最新 2026-06-29</small><b>3D价强 / 持续放量 / 60D新高</b></div><div class="history-stock-signals"><span class="history-signal-chip tone-volume"><strong>持续放量</strong><small>4日</small></span><span class="history-signal-chip tone-price"><strong>3D价强</strong><small>3日</small></span><span class="history-signal-chip tone-high"><strong>60D新高</strong><small>3日</small></span><span class="history-signal-chip tone-price"><strong>日涨/超额</strong><small>2日</small></span><span class="history-signal-chip tone-price"><strong>5D价强</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>兴发集团</b><span>600141.SH · A股 · 化工</span></div><div class="history-stock-days"><strong>5/7</strong><details class="history-date-details"><summary>具体日期</summary><span>2026-06-12 / 2026-06-24 / 2026-06-25 / 2026-06-26 / 2026-06-29</span></details></div><div class="history-stock-latest"><small>最新 2026-06-29</small><b>3D价强 / 5D价强</b></div><div class="history-stock-signals"><span class="history-signal-chip tone-price"><strong>3D价强</strong><small>4日</small></span><span class="history-signal-chip tone-price"><strong>日涨/超额</strong><small>2日</small></span><span class="history-signal-chip tone-price"><strong>5D价强</strong><small>2日</small></span><span class="history-signal-chip tone-high"><strong>3Y新高</strong><small>2日</small></span><span class="history-signal-chip tone-high"><strong>60D新高</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>豫光金铅</b><span>600531.SH · A股 · 有色金属</span></div><div class="history-stock-days"><strong>5/7</strong><details class="history-date-details"><summary>具体日期</summary><span>2026-06-12 / 2026-06-24 / 2026-06-25 / 2026-06-26 / 2026-06-29</span></details></div><div class="history-stock-latest"><small>最新 2026-06-29</small><b>持续放量</b></div><div class="history-stock-signals"><span class="history-signal-chip tone-volume"><strong>持续放量</strong><small>3日</small></span><span class="history-signal-chip tone-price"><strong>3D价强</strong><small>2日</small></span><span class="history-signal-chip tone-price"><strong>日涨/超额</strong><small>1日</small></span><span class="history-signal-chip tone-high"><strong>60D新高</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>依依股份</b><span>001206.SZ · A股 · 家庭用品</span></div><div class="history-stock-days"><strong>5/7</strong><details class="history-date-details"><summary>具体日期</summary><span>2026-06-12 / 2026-06-24 / 2026-06-25 / 2026-06-26 / 2026-06-29</span></details></div><div class="history-stock-latest"><small>最新 2026-06-29</small><b>持续放量</b></div><div class="history-stock-signals"><span class="history-signal-chip tone-price"><strong>3D价强</strong><small>2日</small></span><span class="history-signal-chip tone-volume"><strong>持续放量</strong><small>2日</small></span><span class="history-signal-chip tone-volume"><strong>当日放量</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>庄园牧场</b><span>002910.SZ · A股 · 食品饮料</span></div><div class="history-stock-days"><strong>5/7</strong><details class="history-date-details"><summary>具体日期</summary><span>2026-06-16 / 2026-06-24 / 2026-06-25 / 2026-06-26 / 2026-06-29</span></details></div><div class="history-stock-latest"><small>最新 2026-06-29</small><b>持续放量</b></div><div class="history-stock-signals"><span class="history-signal-chip tone-volume"><strong>持续放量</strong><small>4日</small></span><span class="history-signal-chip tone-price"><strong>日涨/超额</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>密尔克卫</b><span>603713.SH · A股 · 交通运输</span></div><div class="history-stock-days"><strong>4/7</strong><details class="history-date-details"><summary>具体日期</summary><span>2026-06-24 / 2026-06-25 / 2026-06-26 / 2026-06-29</span></details></div><div class="history-stock-latest"><small>最新 2026-06-29</small><b>3D价强</b></div><div class="history-stock-signals"><span class="history-signal-chip tone-price"><strong>3D价强</strong><small>4日</small></span><span class="history-signal-chip tone-price"><strong>日涨/超额</strong><small>2日</small></span><span class="history-signal-chip tone-price"><strong>5D价强</strong><small>2日</small></span><span class="history-signal-chip tone-high"><strong>120D新高</strong><small>2日</small></span><span class="history-signal-chip tone-high"><strong>60D新高</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>长江证券</b><span>000783.SZ · A股 · 非银金融</span></div><div class="history-stock-days"><strong>4/7</strong><details class="history-date-details"><summary>具体日期</summary><span>2026-06-24 / 2026-06-25 / 2026-06-26 / 2026-06-29</span></details></div><div class="history-stock-latest"><small>最新 2026-06-29</small><b>持续放量</b></div><div class="history-stock-signals"><span class="history-signal-chip tone-price"><strong>3D价强</strong><small>3日</small></span><span class="history-signal-chip tone-volume"><strong>持续放量</strong><small>3日</small></span><span class="history-signal-chip tone-price"><strong>日涨/超额</strong><small>1日</small></span><span class="history-signal-chip tone-price"><strong>5D价强</strong><small>1日</small></span><span class="history-signal-chip tone-volume"><strong>当日放量</strong><small>1日</small></span><span class="history-signal-chip tone-high"><strong>3Y新高</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>康力电梯</b><span>002367.SZ · A股 · 机械</span></div><div class="history-stock-days"><strong>4/7</strong><details class="history-date-details"><summary>具体日期</summary><span>2026-06-24 / 2026-06-25 / 2026-06-26 / 2026-06-29</span></details></div><div class="history-stock-latest"><small>最新 2026-06-29</small><b>持续放量</b></div><div class="history-stock-signals"><span class="history-signal-chip tone-volume"><strong>持续放量</strong><small>4日</small></span><span class="history-signal-chip tone-price"><strong>5D价强</strong><small>3日</small></span><span class="history-signal-chip tone-price"><strong>3D价强</strong><small>2日</small></span><span class="history-signal-chip tone-price"><strong>日涨/超额</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>长荣股份</b><span>300195.SZ · A股 · 机械</span></div><div class="history-stock-days"><strong>4/7</strong><details class="history-date-details"><summary>具体日期</summary><span>2026-06-24 / 2026-06-25 / 2026-06-26 / 2026-06-29</span></details></div><div class="history-stock-latest"><small>最新 2026-06-29</small><b>持续放量</b></div><div class="history-stock-signals"><span class="history-signal-chip tone-price"><strong>3D价强</strong><small>3日</small></span><span class="history-signal-chip tone-volume"><strong>持续放量</strong><small>3日</small></span><span class="history-signal-chip tone-price"><strong>日涨/超额</strong><small>2日</small></span><span class="history-signal-chip tone-price"><strong>5D价强</strong><small>1日</small></span><span class="history-signal-chip tone-volume"><strong>当日放量</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>绿源集团控股</b><span>2451.HK · 港股 · 汽车与零配件</span></div><div class="history-stock-days"><strong>4/7</strong><details class="history-date-details"><summary>具体日期</summary><span>2026-06-24 / 2026-06-25 / 2026-06-26 / 2026-06-29</span></details></div><div class="history-stock-latest"><small>最新 2026-06-29</small><b>日涨/超额 / 3D价强 / 5D价强 / 持续放量</b></div><div class="history-stock-signals"><span class="history-signal-chip tone-price"><strong>3D价强</strong><small>3日</small></span><span class="history-signal-chip tone-price"><strong>日涨/超额</strong><small>2日</small></span><span class="history-signal-chip tone-price"><strong>5D价强</strong><small>2日</small></span><span class="history-signal-chip tone-volume"><strong>持续放量</strong><small>2日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>亨迪药业</b><span>301211.SZ · A股 · 医药生物</span></div><div class="history-stock-days"><strong>4/7</strong><details class="history-date-details"><summary>具体日期</summary><span>2026-06-24 / 2026-06-25 / 2026-06-26 / 2026-06-29</span></details></div><div class="history-stock-latest"><small>最新 2026-06-29</small><b>日涨/超额 / 5D价强 / 持续放量</b></div><div class="history-stock-signals"><span class="history-signal-chip tone-volume"><strong>持续放量</strong><small>3日</small></span><span class="history-signal-chip tone-price"><strong>3D价强</strong><small>2日</small></span><span class="history-signal-chip tone-price"><strong>5D价强</strong><small>2日</small></span><span class="history-signal-chip tone-price"><strong>日涨/超额</strong><small>1日</small></span><span class="history-signal-chip tone-volume"><strong>当日放量</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>恒通股份</b><span>603223.SH · A股 · 石油石化</span></div><div class="history-stock-days"><strong>4/7</strong><details class="history-date-details"><summary>具体日期</summary><span>2026-06-24 / 2026-06-25 / 2026-06-26 / 2026-06-29</span></details></div><div class="history-stock-latest"><small>最新 2026-06-29</small><b>120D新高</b></div><div class="history-stock-signals"><span class="history-signal-chip tone-price"><strong>3D价强</strong><small>3日</small></span><span class="history-signal-chip tone-price"><strong>5D价强</strong><small>3日</small></span><span class="history-signal-chip tone-high"><strong>120D新高</strong><small>3日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>药师帮</b><span>9885.HK · 港股 · 医疗设备与服务</span></div><div class="history-stock-days"><strong>4/7</strong><details class="history-date-details"><summary>具体日期</summary><span>2026-06-24 / 2026-06-25 / 2026-06-26 / 2026-06-29</span></details></div><div class="history-stock-latest"><small>最新 2026-06-29</small><b>3D价强 / 5D价强</b></div><div class="history-stock-signals"><span class="history-signal-chip tone-price"><strong>3D价强</strong><small>4日</small></span><span class="history-signal-chip tone-price"><strong>5D价强</strong><small>4日</small></span><span class="history-signal-chip tone-price"><strong>日涨/超额</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>洁特生物</b><span>688026.SH · A股 · 医药生物</span></div><div class="history-stock-days"><strong>4/7</strong><details class="history-date-details"><summary>具体日期</summary><span>2026-06-24 / 2026-06-25 / 2026-06-26 / 2026-06-29</span></details></div><div class="history-stock-latest"><small>最新 2026-06-29</small><b>持续放量</b></div><div class="history-stock-signals"><span class="history-signal-chip tone-volume"><strong>持续放量</strong><small>4日</small></span><span class="history-signal-chip tone-price"><strong>5D价强</strong><small>2日</small></span><span class="history-signal-chip tone-price"><strong>3D价强</strong><small>1日</small></span><span class="history-signal-chip tone-high"><strong>60D新高</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>乔治白</b><span>002687.SZ · A股 · 纺织服装Ⅱ</span></div><div class="history-stock-days"><strong>4/7</strong><details class="history-date-details"><summary>具体日期</summary><span>2026-06-24 / 2026-06-25 / 2026-06-26 / 2026-06-29</span></details></div><div class="history-stock-latest"><small>最新 2026-06-29</small><b>日涨/超额 / 持续放量</b></div><div class="history-stock-signals"><span class="history-signal-chip tone-volume"><strong>持续放量</strong><small>3日</small></span><span class="history-signal-chip tone-price"><strong>日涨/超额</strong><small>2日</small></span><span class="history-signal-chip tone-price"><strong>3D价强</strong><small>1日</small></span><span class="history-signal-chip tone-volume"><strong>当日放量</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>药明康德</b><span>603259.SH · A股 · 医药生物</span></div><div class="history-stock-days"><strong>4/7</strong><details class="history-date-details"><summary>具体日期</summary><span>2026-06-24 / 2026-06-25 / 2026-06-26 / 2026-06-29</span></details></div><div class="history-stock-latest"><small>最新 2026-06-29</small><b>3D价强 / 3Y新高</b></div><div class="history-stock-signals"><span class="history-signal-chip tone-high"><strong>3Y新高</strong><small>4日</small></span><span class="history-signal-chip tone-price"><strong>3D价强</strong><small>3日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>四方科技</b><span>603339.SH · A股 · 机械</span></div><div class="history-stock-days"><strong>4/7</strong><details class="history-date-details"><summary>具体日期</summary><span>2026-06-24 / 2026-06-25 / 2026-06-26 / 2026-06-29</span></details></div><div class="history-stock-latest"><small>最新 2026-06-29</small><b>持续放量</b></div><div class="history-stock-signals"><span class="history-signal-chip tone-volume"><strong>持续放量</strong><small>4日</small></span><span class="history-signal-chip tone-price"><strong>3D价强</strong><small>1日</small></span><span class="history-signal-chip tone-price"><strong>5D价强</strong><small>1日</small></span><span class="history-signal-chip tone-high"><strong>120D新高</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>华旺科技</b><span>605377.SH · A股 · 造纸与包装</span></div><div class="history-stock-days"><strong>4/7</strong><details class="history-date-details"><summary>具体日期</summary><span>2026-06-24 / 2026-06-25 / 2026-06-26 / 2026-06-29</span></details></div><div class="history-stock-latest"><small>最新 2026-06-29</small><b>日涨/超额 / 5D价强 / 持续放量</b></div><div class="history-stock-signals"><span class="history-signal-chip tone-volume"><strong>持续放量</strong><small>3日</small></span><span class="history-signal-chip tone-price"><strong>3D价强</strong><small>2日</small></span><span class="history-signal-chip tone-price"><strong>日涨/超额</strong><small>1日</small></span><span class="history-signal-chip tone-price"><strong>5D价强</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>新华制药</b><span>000756.SZ · A股 · 医药生物</span></div><div class="history-stock-days"><strong>4/7</strong><details class="history-date-details"><summary>具体日期</summary><span>2026-06-24 / 2026-06-25 / 2026-06-26 / 2026-06-29</span></details></div><div class="history-stock-latest"><small>最新 2026-06-29</small><b>日涨/超额 / 持续放量</b></div><div class="history-stock-signals"><span class="history-signal-chip tone-volume"><strong>持续放量</strong><small>3日</small></span><span class="history-signal-chip tone-price"><strong>日涨/超额</strong><small>1日</small></span><span class="history-signal-chip tone-price"><strong>3D价强</strong><small>1日</small></span><span class="history-signal-chip tone-volume"><strong>当日放量</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>博腾股份</b><span>300363.SZ · A股 · 医药生物</span></div><div class="history-stock-days"><strong>4/7</strong><details class="history-date-details"><summary>具体日期</summary><span>2026-06-24 / 2026-06-25 / 2026-06-26 / 2026-06-29</span></details></div><div class="history-stock-latest"><small>最新 2026-06-29</small><b>3D价强 / 持续放量</b></div><div class="history-stock-signals"><span class="history-signal-chip tone-price"><strong>3D价强</strong><small>3日</small></span><span class="history-signal-chip tone-volume"><strong>持续放量</strong><small>2日</small></span><span class="history-signal-chip tone-volume"><strong>当日放量</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>迦南科技</b><span>300412.SZ · A股 · 机械</span></div><div class="history-stock-days"><strong>4/7</strong><details class="history-date-details"><summary>具体日期</summary><span>2026-06-24 / 2026-06-25 / 2026-06-26 / 2026-06-29</span></details></div><div class="history-stock-latest"><small>最新 2026-06-29</small><b>持续放量</b></div><div class="history-stock-signals"><span class="history-signal-chip tone-volume"><strong>持续放量</strong><small>3日</small></span><span class="history-signal-chip tone-price"><strong>日涨/超额</strong><small>1日</small></span><span class="history-signal-chip tone-price"><strong>3D价强</strong><small>1日</small></span><span class="history-signal-chip tone-volume"><strong>当日放量</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>拱东医疗</b><span>605369.SH · A股 · 医疗设备与服务</span></div><div class="history-stock-days"><strong>4/7</strong><details class="history-date-details"><summary>具体日期</summary><span>2026-06-24 / 2026-06-25 / 2026-06-26 / 2026-06-29</span></details></div><div class="history-stock-latest"><small>最新 2026-06-29</small><b>持续放量</b></div><div class="history-stock-signals"><span class="history-signal-chip tone-price"><strong>3D价强</strong><small>3日</small></span><span class="history-signal-chip tone-volume"><strong>持续放量</strong><small>2日</small></span><span class="history-signal-chip tone-volume"><strong>当日放量</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>诺唯赞</b><span>688105.SH · A股 · 医药生物</span></div><div class="history-stock-days"><strong>4/7</strong><details class="history-date-details"><summary>具体日期</summary><span>2026-06-24 / 2026-06-25 / 2026-06-26 / 2026-06-29</span></details></div><div class="history-stock-latest"><small>最新 2026-06-29</small><b>日涨/超额 / 持续放量</b></div><div class="history-stock-signals"><span class="history-signal-chip tone-volume"><strong>持续放量</strong><small>3日</small></span><span class="history-signal-chip tone-price"><strong>日涨/超额</strong><small>1日</small></span><span class="history-signal-chip tone-price"><strong>3D价强</strong><small>1日</small></span><span class="history-signal-chip tone-price"><strong>5D价强</strong><small>1日</small></span></div></div><div class="history-stock-row"><div class="history-stock-main"><b>康为世纪</b><span>688426.SH · A股 · 医药生物</span></div><div class="history-stock-days"><strong>4/7</strong><details class="history-date-details"><summary>具体日期</summary><span>2026-06-24 / 2026-06-25 / 2026-06-26 / 2026-06-29</span></details></div><div class="history-stock-latest"><small>最新 2026-06-29</small><b>持续放量</b></div><div class="history-stock-signals"><span class="history-signal-chip tone-volume"><strong>持续放量</strong><small>3日</small></span><span class="history-signal-chip tone-price"><strong>日涨/超额</strong><small>1日</small></span><span class="history-signal-chip tone-price"><strong>3D价强</strong><small>1日</small></span><span class="history-signal-chip tone-volume"><strong>当日放量</strong><small>1日</small></span></div></div></div>
       </div>
       </div>
     </details>
@@ -824,11 +874,11 @@
         <button class="condition-clear" id="clearConditionFilters" type="button">清空条件</button>
       </div>
       <div class="condition-filter-groups">
-        <div class="condition-group"><div class="condition-group-title">价格</div><div class="condition-chip-row"><label class="condition-chip"><input type="checkbox" name="conditionFilter" value="日涨/超额"><span>日涨/超额</span><small>68</small></label><label class="condition-chip"><input type="checkbox" name="conditionFilter" value="3D价强"><span>3D价强</span><small>22</small></label><label class="condition-chip"><input type="checkbox" name="conditionFilter" value="5D价强"><span>5D价强</span><small>13</small></label></div></div><div class="condition-group"><div class="condition-group-title">量能</div><div class="condition-chip-row"><label class="condition-chip"><input type="checkbox" name="conditionFilter" value="持续放量"><span>持续放量</span><small>55</small></label><label class="condition-chip"><input type="checkbox" name="conditionFilter" value="当日放量"><span>当日放量</span><small>28</small></label></div></div><div class="condition-group"><div class="condition-group-title">新高</div><div class="condition-chip-row"><label class="condition-chip"><input type="checkbox" name="conditionFilter" value="3Y新高"><span>3Y新高</span><small>8</small></label><label class="condition-chip"><input type="checkbox" name="conditionFilter" value="120D新高"><span>120D新高</span><small>4</small></label><label class="condition-chip"><input type="checkbox" name="conditionFilter" value="60D新高"><span>60D新高</span><small>5</small></label></div></div>
+        <div class="condition-group tone-price"><div class="condition-group-title">价格</div><div class="condition-chip-row"><label class="condition-chip tone-price"><input type="checkbox" name="conditionFilter" value="日涨/超额"><span>日涨/超额</span><small>68</small></label><label class="condition-chip tone-price"><input type="checkbox" name="conditionFilter" value="3D价强"><span>3D价强</span><small>22</small></label><label class="condition-chip tone-price"><input type="checkbox" name="conditionFilter" value="5D价强"><span>5D价强</span><small>13</small></label></div></div><div class="condition-group tone-volume"><div class="condition-group-title">量能</div><div class="condition-chip-row"><label class="condition-chip tone-volume"><input type="checkbox" name="conditionFilter" value="持续放量"><span>持续放量</span><small>55</small></label><label class="condition-chip tone-volume"><input type="checkbox" name="conditionFilter" value="当日放量"><span>当日放量</span><small>28</small></label></div></div><div class="condition-group tone-high"><div class="condition-group-title">新高</div><div class="condition-chip-row"><label class="condition-chip tone-high"><input type="checkbox" name="conditionFilter" value="3Y新高"><span>3Y新高</span><small>8</small></label><label class="condition-chip tone-high"><input type="checkbox" name="conditionFilter" value="120D新高"><span>120D新高</span><small>4</small></label><label class="condition-chip tone-high"><input type="checkbox" name="conditionFilter" value="60D新高"><span>60D新高</span><small>5</small></label></div></div>
       </div>
     </section>
     <div id="reasonSections" class="reason-sections">
-    <section class="reason-section" data-reason="三类条件：价 + 量 + 新高">
+    <section class="reason-section tone-combo" data-reason="三类条件：价 + 量 + 新高">
       <div class="reason-section-head">
         <div>
           <h2>三类条件：价 + 量 + 新高</h2>
@@ -906,7 +956,7 @@
         </table>
       </div>
     </section>
-    <section class="reason-section" data-reason="两类条件：价 + 量">
+    <section class="reason-section tone-dual" data-reason="两类条件：价 + 量">
       <div class="reason-section-head">
         <div>
           <h2>两类条件：价 + 量</h2>
@@ -1194,7 +1244,7 @@
         </table>
       </div>
     </section>
-    <section class="reason-section" data-reason="两类条件：价 + 新高">
+    <section class="reason-section tone-dual" data-reason="两类条件：价 + 新高">
       <div class="reason-section-head">
         <div>
           <h2>两类条件：价 + 新高</h2>
@@ -1300,7 +1350,7 @@
         </table>
       </div>
     </section>
-    <section class="reason-section" data-reason="一类条件：量能 - 持续放量">
+    <section class="reason-section tone-volume" data-reason="一类条件：量能 - 持续放量">
       <div class="reason-section-head">
         <div>
           <h2>一类条件：量能 - 持续放量</h2>
@@ -1882,7 +1932,7 @@
         </table>
       </div>
     </section>
-    <section class="reason-section" data-reason="一类条件：量能 - 当日放量">
+    <section class="reason-section tone-volume" data-reason="一类条件：量能 - 当日放量">
       <div class="reason-section-head">
         <div>
           <h2>一类条件：量能 - 当日放量</h2>
@@ -2240,7 +2290,7 @@
         </table>
       </div>
     </section>
-    <section class="reason-section" data-reason="一类条件：价格 - 3D价强 + 5D价强">
+    <section class="reason-section tone-price" data-reason="一类条件：价格 - 3D价强 + 5D价强">
       <div class="reason-section-head">
         <div>
           <h2>一类条件：价格 - 3D价强 + 5D价强</h2>
@@ -2346,7 +2396,7 @@
         </table>
       </div>
     </section>
-    <section class="reason-section" data-reason="一类条件：价格 - 日涨/超额 + 3D价强">
+    <section class="reason-section tone-price" data-reason="一类条件：价格 - 日涨/超额 + 3D价强">
       <div class="reason-section-head">
         <div>
           <h2>一类条件：价格 - 日涨/超额 + 3D价强</h2>
@@ -2410,7 +2460,7 @@
         </table>
       </div>
     </section>
-    <section class="reason-section" data-reason="一类条件：价格 - 3D价强">
+    <section class="reason-section tone-price" data-reason="一类条件：价格 - 3D价强">
       <div class="reason-section-head">
         <div>
           <h2>一类条件：价格 - 3D价强</h2>
@@ -2530,7 +2580,7 @@
         </table>
       </div>
     </section>
-    <section class="reason-section" data-reason="一类条件：价格 - 日涨/超额">
+    <section class="reason-section tone-price" data-reason="一类条件：价格 - 日涨/超额">
       <div class="reason-section-head">
         <div>
           <h2>一类条件：价格 - 日涨/超额</h2>
@@ -3196,7 +3246,7 @@
         </table>
       </div>
     </section>
-    <section class="reason-section" data-reason="一类条件：新高 - 3Y新高">
+    <section class="reason-section tone-high" data-reason="一类条件：新高 - 3Y新高">
       <div class="reason-section-head">
         <div>
           <h2>一类条件：新高 - 3Y新高</h2>
@@ -3288,7 +3338,7 @@
         </table>
       </div>
     </section>
-    <section class="reason-section" data-reason="一类条件：新高 - 120D新高">
+    <section class="reason-section tone-high" data-reason="一类条件：新高 - 120D新高">
       <div class="reason-section-head">
         <div>
           <h2>一类条件：新高 - 120D新高</h2>
@@ -3366,7 +3416,7 @@
         </table>
       </div>
     </section>
-    <section class="reason-section" data-reason="一类条件：新高 - 60D新高">
+    <section class="reason-section tone-high" data-reason="一类条件：新高 - 60D新高">
       <div class="reason-section-head">
         <div>
           <h2>一类条件：新高 - 60D新高</h2>
