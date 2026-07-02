@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-02T17:18:38",
+  "generated_at": "2026-07-02T17:24:00",
   "window_days": 7,
   "latest_date": "2026-07-02",
   "dates": [
@@ -11943,7 +11943,7 @@
     {
       "date": "2026-07-02",
       "latest_trade_date": "2026-07-02",
-      "generated_at": "2026-07-02T17:18:38",
+      "generated_at": "2026-07-02T17:24:00",
       "total": 173,
       "reason_counts": {
         "日涨/超额": 54,
