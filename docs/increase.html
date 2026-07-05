@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>2026-07-04增持概览</title>
+  <title>2026-07-05增持概览</title>
   <style>
     :root {
       --bg: #f5f7fb;
@@ -58,6 +58,80 @@
     .new-summary strong { color: var(--purple); font-size: 20px; margin: 0 4px; }
     .new-summary span, .update-note { margin-left: 10px; color: var(--muted); font-size: 13px; font-weight: 400; }
     .filter-controls { display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap; margin-left: auto; }
+    .search-panel {
+      margin-top: 14px;
+      padding: 12px 14px;
+      border: 1px solid #d8e5fb;
+      border-radius: 8px;
+      background: #f8fbff;
+    }
+    .search-controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .search-box {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      min-width: min(100%, 360px);
+      padding: 7px 12px;
+      border: 1px solid #d9e3f0;
+      border-radius: 8px;
+      background: #ffffff;
+    }
+    .search-label {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .search-input {
+      width: min(320px, 100%);
+      min-width: 0;
+      border: 0;
+      outline: 0;
+      background: transparent;
+      color: var(--text);
+      font: inherit;
+      font-size: 13px;
+    }
+    .search-input::placeholder { color: #94a3b8; }
+    .search-clear {
+      border: 1px solid #d9e3f0;
+      border-radius: 8px;
+      background: #ffffff;
+      color: var(--text);
+      padding: 7px 12px;
+      font: inherit;
+      font-size: 13px;
+      cursor: pointer;
+    }
+    .search-clear:hover {
+      border-color: #bfd0e4;
+      background: #f1f7ff;
+    }
+    .filter-status {
+      min-height: 20px;
+      color: var(--muted);
+      font-size: 12px;
+      white-space: nowrap;
+    }
+    .search-empty {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px dashed #d8e5fb;
+      color: var(--text);
+      font-size: 13px;
+    }
+    .search-empty strong { color: var(--blue); }
+    .search-empty span { color: var(--muted); }
     .filter-button { min-width: 76px; border: 1px solid var(--line); border-radius: 8px; background: #ffffff; color: var(--text); padding: 7px 12px; font: inherit; font-size: 13px; cursor: pointer; }
     .filter-button.active { border-color: var(--purple); background: var(--purple); color: #ffffff; font-weight: 700; }
     .notes { margin-top: 18px; padding: 14px 18px; background: #fffdf7; border: 1px solid #eadfc8; border-radius: 8px; }
@@ -122,20 +196,21 @@
     .title-full { margin-top: 6px; padding: 8px 10px; white-space: normal; line-height: 1.6; color: var(--text); background: #f8fbff; border: 1px solid #d8e5fb; border-radius: 6px; }
     .empty { padding: 24px 12px; border: 1px dashed var(--line); border-radius: 8px; text-align: center; color: var(--muted); background: #fbfcfe; }
     @media (max-width: 1120px) { .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-    @media (max-width: 760px) { .update-bar { align-items: stretch; flex-direction: column; } .new-summary span { display: block; margin-left: 0; margin-top: 4px; } .update-note { margin-left: 0; } }
+    @media (max-width: 760px) { .update-bar { align-items: stretch; flex-direction: column; } .new-summary span { display: block; margin-left: 0; margin-top: 4px; } .update-note { margin-left: 0; } .search-controls { align-items: stretch; } .search-box { width: 100%; } .search-input { width: 100%; } .filter-status { white-space: normal; } .search-empty { align-items: flex-start; flex-direction: column; } }
     @media (max-width: 640px) { .page { padding: 18px 14px 28px; } .cards { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
   <div class="page">
     <section class="hero">
-      <h1>2026-07-04增持概览</h1>
-      <div class="sub">生成时间：2026-07-05 01:32:36</div>
-      <div class="cards"><div class="card blue"><div class="label">A股拟增持</div><div class="value">1</div></div><div class="card green"><div class="label">A股实际增持进展</div><div class="value">0</div></div><div class="card gold"><div class="label">港股拟增持</div><div class="value">0</div></div><div class="card rose"><div class="label">港股实际增持进展</div><div class="value">0</div></div></div>
+      <h1>2026-07-05增持概览</h1>
+      <div class="sub">生成时间：2026-07-05 21:05:32</div>
+      <div class="cards"><div class="card blue"><div class="label">A股拟增持</div><div class="value">0</div></div><div class="card green"><div class="label">A股实际增持进展</div><div class="value">0</div></div><div class="card gold"><div class="label">港股拟增持</div><div class="value">0</div></div><div class="card rose"><div class="label">港股实际增持进展</div><div class="value">0</div></div></div>
       <div class="update-bar"><div class="new-summary">本次新增 <strong>0</strong> 条<span>A股拟增持0条；A股实际增持进展0条；港股拟增持0条；港股实际增持进展0条</span></div><div class="update-note">补抓：巨潮/交易所/HKEX官网 + Wind邮件；重复公告自动去重。</div><div class="filter-controls" aria-label="公告筛选"><button type="button" class="filter-button active" data-filter-mode="all">全部</button><button type="button" class="filter-button" data-filter-mode="a">A股</button><button type="button" class="filter-button" data-filter-mode="hk">港股</button><button type="button" class="filter-button" data-filter-mode="preplan">拟增持</button><button type="button" class="filter-button" data-filter-mode="progress">实际进展</button></div></div>
-      <div class="notes"><h2>说明</h2><ul><li>更新规则：21:30读取Wind拟增持邮件并做当日官网补抓；22:00、23:00、23:30仅补当日官网新增并去重合并。</li><li>统计窗口：2026-07-04 00:00 - 2026-07-04 23:59</li><li>范围：拟增持=明确计划或进一步增持；实际增持进展=已购买、完成或进展披露。</li><li>来源：A股Wind sheet1+巨潮/交易所官网；港股Wind公告邮件PDF+HKEX官网。本地PDF目录仅作已识别公告的缓存/复核，不作为公告发现来源。</li><li>A股官网补抓暂未读取成功：No module named &#x27;opencc&#x27;</li></ul></div>
+      <div class="search-panel"><div class="search-controls" aria-label="快速搜索"><label class="search-box" for="tableSearch"><span class="search-label">搜索</span><input id="tableSearch" class="search-input" type="search" placeholder="代码 / 简称 / 标题" autocomplete="off" spellcheck="false"></label><button type="button" class="search-clear" id="clearSearch" hidden>清空</button><div class="filter-status" id="filterStatus" aria-live="polite"></div></div><div class="search-empty" id="searchEmpty" hidden><strong>当前没有匹配结果</strong><span>可以尝试更换关键词或切回“全部”视图。</span></div></div>
+      <div class="notes"><h2>说明</h2><ul><li>更新规则：21:30读取Wind拟增持邮件并做当日官网补抓；22:00、23:00、23:30仅补当日官网新增并去重合并。</li><li>统计窗口：2026-07-05 00:00 - 2026-07-05 21:03</li><li>范围：拟增持=明确计划或进一步增持；实际增持进展=已购买、完成或进展披露。</li><li>来源：A股Wind sheet1+巨潮/交易所官网；港股Wind公告邮件PDF+HKEX官网。本地PDF目录仅作已识别公告的缓存/复核，不作为公告发现来源。</li><li>A股官网补抓部分来源失败：北交所:(&#x27;Connection aborted.&#x27;, ConnectionResetError(10054, &#x27;远程主机强迫关闭了一个现有的连接。&#x27;, None, 10054, None))</li></ul></div>
     </section>
-    <section class="market"><h2>A股</h2><section class="table-section" data-total-count="1" data-new-count="0" data-filter-tags="a preplan"><div class="section-head"><h3>A股拟增持</h3><span class="count" data-count-suffix=" 条">1 条</span></div><div class="table-wrap"><table><thead><tr><th data-sort-type="date">公告日</th><th data-sort-type="text">代码</th><th data-sort-type="text">简称</th><th data-sort-type="text">增持主体</th><th data-sort-type="text">方向</th><th data-sort-type="text">增持进度</th><th data-sort-type="number">计划增持金额(百万元)</th><th data-sort-type="text">增持期间</th><th data-sort-type="text">增持方式</th><th data-sort-type="text">增持目的</th><th data-sort-type="text">币种</th><th data-sort-type="text">标题</th><th data-sort-type="text">来源</th></tr></thead><tbody><tr><td class="text" data-sort-value="2026-07-04"><span class="cell-text" title="2026-07-04">2026-07-04</span></td><td class="text" data-sort-value="688117.SH"><span class="cell-text" title="688117.SH">688117.SH</span></td><td class="text" data-sort-value="圣诺生物"><span class="cell-text" title="圣诺生物">圣诺生物</span></td><td class="text" data-sort-value="四川赛诺投资有限公司（直接持股5%以上股东）"><span class="cell-text" title="四川赛诺投资有限公司（直接持股5%以上股东）">四川赛诺投资有限公司（直接持股5%以上股东）</span></td><td class="text" data-sort-value="增持"><span class="cell-text" title="增持">增持</span></td><td class="text" data-sort-value="进行中"><span class="cell-text" title="进行中">进行中</span></td><td class="num" data-sort-value="40.0 - 50.0"><span class="cell-text" title="40.0 - 50.0">40.0 - 50.0</span></td><td class="text" data-sort-value="2026-07-04至2027-01-04"><span class="cell-text" title="2026-07-04至2027-01-04">2026-07-04至2027-01-04</span></td><td class="text" data-sort-value="通过上海证券交易所系统允许的方式（集中竞价）"><span class="cell-text" title="通过上海证券交易所系统允许的方式（集中竞价）">通过上海证券交易所系统允许的方式（集中竞价）</span></td><td class="text" data-sort-value="基于对公司未来持续稳定发展的信心和长期投资价值的认可,增强投资者信心"><span class="cell-text" title="基于对公司未来持续稳定发展的信心和长期投资价值的认可,增强投资者信心">基于对公司未来持续稳定发展的信心和长期投资价值的认可,增强投资者信心</span></td><td class="text" data-sort-value="RMB"><span class="cell-text" title="RMB">RMB</span></td><td class="text" data-sort-value="Wind拟增持记录"><details class="title-details"><summary title="Wind拟增持记录">Wind拟增持记录</summary><div class="title-full"><div class="stack-item">Wind拟增持记录</div></div></details></td><td class="text" data-sort-value="本地文件"><span class="source-note">本地文件</span></td></tr></tbody></table></div></section><section class="table-section" data-filter-tags="a progress"><div class="section-head"><h3>A股实际增持进展</h3><span class="count">0 条</span></div><div class="empty">暂无数据</div></section></section>
+    <section class="market"><h2>A股</h2><section class="table-section" data-filter-tags="a preplan"><div class="section-head"><h3>A股拟增持</h3><span class="count">0 条</span></div><div class="empty">暂无数据</div></section><section class="table-section" data-filter-tags="a progress"><div class="section-head"><h3>A股实际增持进展</h3><span class="count">0 条</span></div><div class="empty">暂无数据</div></section></section>
     <section class="market"><h2>港股</h2><section class="table-section" data-filter-tags="hk preplan"><div class="section-head"><h3>港股拟增持</h3><span class="count">0 条</span></div><div class="empty">暂无数据</div></section><section class="table-section" data-filter-tags="hk progress"><div class="section-head"><h3>港股实际增持进展</h3><span class="count">0 条</span></div><div class="empty">暂无数据</div></section></section>
   </div>
   <script>
@@ -235,22 +310,96 @@
           });
         });
       });
-      const updateSectionFilter = (mode) => {
+      const searchInput = document.getElementById('tableSearch');
+      const clearSearchButton = document.getElementById('clearSearch');
+      const filterStatus = document.getElementById('filterStatus');
+      const searchEmpty = document.getElementById('searchEmpty');
+      let enhancedMode = document.querySelector('.filter-button.active')?.dataset.filterMode || 'all';
+
+      const tokenizeQuery = (value) => (value || '').trim().toLowerCase().split(/\s+/).filter(Boolean);
+      const matchesQuery = (row, terms) => {
+        if (!terms.length) return true;
+        const haystack = (row.dataset.search || row.innerText || '').toLowerCase();
+        return terms.every((term) => haystack.includes(term));
+      };
+
+      const applyEnhancedFilter = (mode = enhancedMode) => {
+        enhancedMode = mode;
+        const terms = tokenizeQuery(searchInput?.value || '');
+        const hasQuery = terms.length > 0;
+        let totalRows = 0;
+        let visibleRows = 0;
+
         document.querySelectorAll('.filter-button').forEach((button) => {
-          button.classList.toggle('active', button.dataset.filterMode === mode);
+          button.classList.toggle('active', button.dataset.filterMode === enhancedMode);
         });
         document.querySelectorAll('.table-section').forEach((section) => {
+          const rows = Array.from(section.querySelectorAll('tbody tr'));
           const tags = (section.dataset.filterTags || '').split(/\s+/).filter(Boolean);
-          section.classList.toggle('section-hidden', !(mode === 'all' || tags.includes(mode)));
+          const sectionMatched = enhancedMode === 'all' || tags.includes(enhancedMode);
+          let sectionVisibleRows = 0;
+
+          rows.forEach((row) => {
+            const matchesMode = sectionMatched;
+            if (matchesMode) {
+              totalRows += 1;
+            }
+            const rowVisible = matchesMode && matchesQuery(row, terms);
+            row.hidden = !rowVisible;
+            if (rowVisible) {
+              sectionVisibleRows += 1;
+              visibleRows += 1;
+            }
+          });
+
+          const hasDataRows = rows.length > 0;
+          section.classList.toggle('section-hidden', !sectionMatched || (hasDataRows && sectionVisibleRows === 0));
+          const count = section.querySelector('.count');
+          if (count) {
+            const suffix = count.dataset.countSuffix || ' 条';
+            if (hasQuery) {
+              count.textContent = `${sectionVisibleRows}${suffix} / 共${rows.length}${suffix}`;
+            } else {
+              count.textContent = `${rows.length}${suffix}`;
+            }
+          }
         });
+
         document.querySelectorAll('.market').forEach((market) => {
           const sections = Array.from(market.querySelectorAll('.table-section'));
           market.classList.toggle('market-hidden', sections.length > 0 && sections.every((section) => section.classList.contains('section-hidden')));
         });
+
+        if (clearSearchButton) {
+          clearSearchButton.hidden = !hasQuery;
+        }
+        if (filterStatus) {
+          const modeLabel = document.querySelector(`.filter-button[data-filter-mode="${enhancedMode}"]`)?.textContent?.trim() || '全部';
+          const queryLabel = hasQuery ? ` | 关键词：${terms.join(' ')}` : '';
+          filterStatus.textContent = `已显示 ${visibleRows} / ${totalRows}条 | 视图：${modeLabel}${queryLabel}`;
+        }
+        if (searchEmpty) {
+          searchEmpty.hidden = visibleRows > 0 || !hasQuery;
+        }
       };
+
       document.querySelectorAll('.filter-button').forEach((button) => {
-        button.addEventListener('click', () => updateSectionFilter(button.dataset.filterMode || 'all'));
+        button.addEventListener('click', () => applyEnhancedFilter(button.dataset.filterMode || 'all'));
       });
+      searchInput?.addEventListener('input', () => applyEnhancedFilter());
+      searchInput?.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          searchInput.value = '';
+          applyEnhancedFilter();
+        }
+      });
+      clearSearchButton?.addEventListener('click', () => {
+        if (!searchInput) return;
+        searchInput.value = '';
+        searchInput.focus();
+        applyEnhancedFilter();
+      });
+      applyEnhancedFilter(enhancedMode);
     })();
   </script>
 </body>
