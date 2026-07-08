@@ -98,6 +98,111 @@
     .status-chip.green strong { color: var(--green); }
     .status-chip.rose strong { color: var(--rose); }
     .status-chip.gold strong { color: var(--gold); }
+    .focus-panel {
+      margin: 12px 0;
+      padding: 14px;
+      border: 1px solid #d7e3ee;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #ffffff 0%, #f5fbff 56%, #fff8eb 100%);
+      box-shadow: 0 8px 20px rgba(31, 95, 153, 0.06);
+    }
+    .focus-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+    .focus-head h2 {
+      margin: 0 0 6px;
+      color: var(--blue);
+      font-size: 16px;
+      line-height: 1.25;
+    }
+    .focus-head p {
+      margin: 0;
+      color: var(--text);
+      font-size: 13px;
+      line-height: 1.65;
+    }
+    .focus-card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 10px;
+    }
+    .focus-card {
+      min-width: 0;
+      padding: 11px;
+      border: 1px solid #dfe7f0;
+      border-radius: 8px;
+      background: rgba(255,255,255,0.88);
+    }
+    .focus-card-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .focus-card-head strong {
+      display: block;
+      color: var(--text);
+      font-size: 15px;
+      line-height: 1.3;
+    }
+    .focus-card-head small {
+      display: block;
+      margin-top: 2px;
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.35;
+    }
+    .focus-card-head b {
+      flex: 0 0 auto;
+      padding: 3px 7px;
+      border-radius: 999px;
+      color: var(--purple);
+      background: var(--purple-soft);
+      font-size: 11px;
+      line-height: 1.35;
+      white-space: nowrap;
+    }
+    .focus-card p {
+      margin: 8px 0;
+      color: var(--text);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+    .focus-metrics, .focus-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .focus-metrics span, .focus-tags span {
+      padding: 3px 6px;
+      border-radius: 6px;
+      background: var(--blue-soft);
+      color: var(--blue);
+      font-size: 11px;
+      line-height: 1.3;
+      font-variant-numeric: tabular-nums;
+    }
+    .focus-tags span {
+      background: var(--slate-soft);
+      color: var(--muted);
+    }
+    .focus-valuation, .focus-signals {
+      margin: 7px 0 0;
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.45;
+    }
+    .focus-empty {
+      padding: 10px;
+      border-radius: 6px;
+      color: var(--muted);
+      background: #fbfdff;
+      font-size: 12px;
+    }
     .rule-panel {
       margin: 0 0 10px;
       padding: 8px 10px 10px;
@@ -843,10 +948,10 @@
     <header>
       <div>
         <h1>2026-07-08 异动标的</h1>
-        <div class="meta">最近交易日 2026-07-08；工作簿保存 2026-07-08 17:44:13；生成 2026-07-08 17:44:22</div>
+        <div class="meta">最近交易日 2026-07-08；工作簿保存 2026-07-08 17:44:13；生成 2026-07-08 18:26:46</div>
         <div class="meta">涨幅阈值 9.5%；超额阈值 8.5%；成交阈值-5 1.5x；成交阈值-20 1.8x；PE阈值 25.0；PB阈值 2.5；YTD阈值 51.0%；最近一季超额阈值 51.0%；3日涨幅 18.0%；3日超额 17.0%；5日涨幅 25.0%；5日超额 24.0%</div>
       </div>
-      <div class="refresh-note">已自动打开 Excel/Wind 刷新公式并保存。</div>
+      <div class="refresh-note">读取工作簿已保存缓存。</div>
     </header>
     <section class="status-strip" aria-label="异动统计">
       <span class="status-chip blue">入选标的 <strong>101</strong></span>
@@ -854,6 +959,96 @@
       <span class="status-chip rose">平均涨跌幅 <strong>4.2%</strong></span>
       <span class="status-chip rose">平均超额 <strong>3.8%</strong></span>
       <span class="status-chip green">入选原因：日涨/超额 24；持续放量 23；5D价强 9；当日放量 8；5D价强 / 持续放量 5；日涨/超额 / 当日放量 4；60D新高 4；日涨/超额 / 120D新高 3；等 22 类原因</span>
+    </section>
+    
+    <section class="focus-panel" aria-label="每日关注简报">
+      <div class="focus-head">
+        <div>
+          <h2>每日关注简报</h2>
+          <p>2026-07-08异动简报：今日优先关注 蠡湖股份、浙江鼎力、视源股份、富春染织等5只。—蠡湖股份为价 + 量共振，2个条件，估值相对合理，连续6个交易日出现；浙江鼎力为价 + 量共振，2个条件，估值相对合理，连续5个交易日出现；视源股份为价 + 量 + 新高共振，5个条件，估值可接受，连续2个交易日出现。</p>
+        </div>
+      </div>
+      <div class="focus-card-grid">
+        <article class="focus-card">
+          <div class="focus-card-head">
+            <div><strong>蠡湖股份</strong><small>300694.SZ · A股 · 汽车与零配件</small></div>
+            <b>价 + 量</b>
+          </div>
+          <p>5D价强 / 持续放量</p>
+          <div class="focus-metrics">
+            <span>当日 -5.0%</span>
+            <span>超额 -4.2%</span>
+            <span>3D -0.8%</span>
+            <span>5D 22.3%</span>
+          </div>
+          <div class="focus-valuation">估值相对合理 · PE 19.5 / 2%，PB 1.68 / 30%</div>
+          <div class="focus-signals">近7日：5D价强5日、持续放量4日、3D价强3日、日涨/超额2日</div>
+          <div class="focus-tags"><span>2个条件</span><span>价 + 量</span><span>估值相对合理</span><span>近7日出现6天</span><span>连续6个交易日</span></div>
+        </article>
+        <article class="focus-card">
+          <div class="focus-card-head">
+            <div><strong>浙江鼎力</strong><small>603338.SH · A股 · 机械</small></div>
+            <b>价 + 量</b>
+          </div>
+          <p>5D价强 / 持续放量</p>
+          <div class="focus-metrics">
+            <span>当日 -3.3%</span>
+            <span>超额 -2.5%</span>
+            <span>3D 10.7%</span>
+            <span>5D 22.3%</span>
+          </div>
+          <div class="focus-valuation">估值相对合理 · PE 13.7 / 11%，PB 2.22 / 8%</div>
+          <div class="focus-signals">近7日：3D价强3日、日涨/超额2日、5D价强2日、持续放量2日</div>
+          <div class="focus-tags"><span>2个条件</span><span>价 + 量</span><span>估值相对合理</span><span>近7日出现5天</span><span>连续5个交易日</span></div>
+        </article>
+        <article class="focus-card">
+          <div class="focus-card-head">
+            <div><strong>视源股份</strong><small>002841.SZ · A股 · 硬件设备</small></div>
+            <b>价 + 量 + 新高</b>
+          </div>
+          <p>日涨/超额 / 3D价强 / 5D价强 / 持续放量 / 120D新高</p>
+          <div class="focus-metrics">
+            <span>当日 10.0%</span>
+            <span>超额 10.8%</span>
+            <span>3D 33.3%</span>
+            <span>5D 37.2%</span>
+          </div>
+          <div class="focus-valuation">估值可接受 · PE 30.2 / 78%，PB 2.44 / 47%</div>
+          <div class="focus-signals">近7日：3D价强3日、日涨/超额2日、5D价强2日、120D新高2日</div>
+          <div class="focus-tags"><span>5个条件</span><span>价 + 量 + 新高</span><span>估值可接受</span><span>近7日出现3天</span><span>连续2个交易日</span></div>
+        </article>
+        <article class="focus-card">
+          <div class="focus-card-head">
+            <div><strong>富春染织</strong><small>605189.SH · A股 · 纺织服装Ⅱ</small></div>
+            <b>量</b>
+          </div>
+          <p>持续放量</p>
+          <div class="focus-metrics">
+            <span>当日 -5.2%</span>
+            <span>超额 -4.4%</span>
+            <span>3D -5.4%</span>
+            <span>5D 14.5%</span>
+          </div>
+          <div class="focus-valuation">估值相对合理 · PE 22.6 / 72%，PB 1.72 / 30%</div>
+          <div class="focus-signals">近7日：日涨/超额3日、持续放量3日、3D价强2日、5D价强1日</div>
+          <div class="focus-tags"><span>1个条件</span><span>量</span><span>估值相对合理</span><span>近7日出现6天</span><span>连续6个交易日</span></div>
+        </article>
+        <article class="focus-card">
+          <div class="focus-card-head">
+            <div><strong>甘化科工</strong><small>000576.SZ · A股 · 国防军工</small></div>
+            <b>量</b>
+          </div>
+          <p>持续放量</p>
+          <div class="focus-metrics">
+            <span>当日 -4.7%</span>
+            <span>超额 -3.9%</span>
+            <span>3D -5.8%</span>
+            <span>5D 6.1%</span>
+          </div>
+          <div class="focus-valuation">估值相对合理 · PE 43.2 / 39%，PB 1.84 / 10%</div>
+          <div class="focus-signals">近7日：日涨/超额2日、持续放量2日、当日放量2日、3D价强1日</div>
+          <div class="focus-tags"><span>1个条件</span><span>量</span><span>估值相对合理</span><span>近7日出现5天</span><span>连续5个交易日</span></div>
+        </article></div>
     </section>
     
     <details class="rule-panel" aria-label="筛选规则">
