@@ -1,1432 +1,17 @@
 {
-  "generated_at": "2026-08-05T19:20:39",
+  "generated_at": "2026-08-06T16:37:18",
   "window_days": 7,
-  "latest_date": "2026-08-05",
+  "latest_date": "2026-08-06",
   "dates": [
-    "2026-07-22",
     "2026-07-23",
     "2026-07-24",
     "2026-07-27",
     "2026-07-28",
     "2026-07-30",
-    "2026-08-05"
+    "2026-08-05",
+    "2026-08-06"
   ],
   "snapshots": [
-    {
-      "date": "2026-07-22",
-      "latest_trade_date": "2026-07-22",
-      "generated_at": "2026-07-22T16:02:51",
-      "total": 104,
-      "reason_counts": {
-        "持续放量": 35,
-        "5D价强": 1,
-        "当日放量 / 60D新高": 1,
-        "日涨/超额": 23,
-        "3D价强": 7,
-        "3D价强 / 持续放量": 2,
-        "3D价强 / 5D价强 / 持续放量 / 60D新高": 1,
-        "3D价强 / 5D价强": 2,
-        "当日放量": 6,
-        "5D价强 / 持续放量": 2,
-        "60D新高": 9,
-        "日涨/超额 / 3D价强 / 5D价强": 1,
-        "日涨/超额 / 当日放量": 6,
-        "日涨/超额 / 3D价强 / 5D价强 / 持续放量": 1,
-        "日涨/超额 / 持续放量": 1,
-        "日涨/超额 / 5D价强 / 持续放量": 1,
-        "3D价强 / 5D价强 / 持续放量": 1,
-        "120D新高": 4
-      },
-      "reason_tag_counts": {
-        "持续放量": 44,
-        "5D价强": 10,
-        "当日放量": 13,
-        "60D新高": 11,
-        "日涨/超额": 33,
-        "3D价强": 15,
-        "120D新高": 4
-      },
-      "rows": [
-        {
-          "code": "600299.SH",
-          "name": "安迪苏",
-          "market": "A股",
-          "industry": "医药生物",
-          "reason": "持续放量",
-          "condition_tags": [
-            "持续放量"
-          ],
-          "factor_combo": "量",
-          "pct_change": 0.025094102885821874,
-          "excess_today": 0.029732937892876787
-        },
-        {
-          "code": "603567.SH",
-          "name": "珍宝岛",
-          "market": "A股",
-          "industry": "医药生物",
-          "reason": "5D价强",
-          "condition_tags": [
-            "5D价强"
-          ],
-          "factor_combo": "价",
-          "pct_change": -0.04213938411669362,
-          "excess_today": -0.03750054910963863
-        },
-        {
-          "code": "300643.SZ",
-          "name": "万通智控",
-          "market": "A股",
-          "industry": "汽车与零配件",
-          "reason": "当日放量 / 60D新高",
-          "condition_tags": [
-            "当日放量",
-            "60D新高"
-          ],
-          "factor_combo": "量 + 新高",
-          "pct_change": 0.06920600858369098,
-          "excess_today": 0.07384484359074595
-        },
-        {
-          "code": "000603.SZ",
-          "name": "盛达资源",
-          "market": "A股",
-          "industry": "有色金属",
-          "reason": "日涨/超额",
-          "condition_tags": [
-            "日涨/超额"
-          ],
-          "factor_combo": "价",
-          "pct_change": 0.09990253411306048,
-          "excess_today": 0.10454136912011537
-        },
-        {
-          "code": "603725.SH",
-          "name": "天安新材",
-          "market": "A股",
-          "industry": "建筑",
-          "reason": "日涨/超额",
-          "condition_tags": [
-            "日涨/超额"
-          ],
-          "factor_combo": "价",
-          "pct_change": 0.10040816326530617,
-          "excess_today": 0.10504699827236118
-        },
-        {
-          "code": "002365.SZ",
-          "name": "永安药业",
-          "market": "A股",
-          "industry": "医药生物",
-          "reason": "持续放量",
-          "condition_tags": [
-            "持续放量"
-          ],
-          "factor_combo": "量",
-          "pct_change": 0.0254724732949877,
-          "excess_today": 0.030111308302042783
-        },
-        {
-          "code": "300146.SZ",
-          "name": "汤臣倍健",
-          "market": "A股",
-          "industry": "食品饮料",
-          "reason": "持续放量",
-          "condition_tags": [
-            "持续放量"
-          ],
-          "factor_combo": "量",
-          "pct_change": -0.045240339302544584,
-          "excess_today": -0.04060150429548958
-        },
-        {
-          "code": "603161.SH",
-          "name": "科华控股",
-          "market": "A股",
-          "industry": "汽车与零配件",
-          "reason": "3D价强",
-          "condition_tags": [
-            "3D价强"
-          ],
-          "factor_combo": "价",
-          "pct_change": 0.003443526170798973,
-          "excess_today": 0.008082361177853992
-        },
-        {
-          "code": "000899.SZ",
-          "name": "赣能股份",
-          "market": "A股",
-          "industry": "公用事业Ⅱ",
-          "reason": "3D价强 / 持续放量",
-          "condition_tags": [
-            "3D价强",
-            "持续放量"
-          ],
-          "factor_combo": "价 + 量",
-          "pct_change": 0.035294117647058726,
-          "excess_today": 0.039932952654113674
-        },
-        {
-          "code": "600578.SH",
-          "name": "京能电力",
-          "market": "A股",
-          "industry": "公用事业Ⅱ",
-          "reason": "3D价强",
-          "condition_tags": [
-            "3D价强"
-          ],
-          "factor_combo": "价",
-          "pct_change": 0.0343698854337153,
-          "excess_today": 0.039008720440770306
-        },
-        {
-          "code": "301151.SZ",
-          "name": "冠龙节能",
-          "market": "A股",
-          "industry": "机械",
-          "reason": "日涨/超额",
-          "condition_tags": [
-            "日涨/超额"
-          ],
-          "factor_combo": "价",
-          "pct_change": 0.09953970080552357,
-          "excess_today": 0.10417853581257865
-        },
-        {
-          "code": "300795.SZ",
-          "name": "米奥会展",
-          "market": "A股",
-          "industry": "企业服务",
-          "reason": "3D价强 / 5D价强 / 持续放量 / 60D新高",
-          "condition_tags": [
-            "3D价强",
-            "5D价强",
-            "持续放量",
-            "60D新高"
-          ],
-          "factor_combo": "价 + 量 + 新高",
-          "pct_change": 0.07738542449286247,
-          "excess_today": 0.08202425949991742
-        },
-        {
-          "code": "600969.SH",
-          "name": "郴电国际",
-          "market": "A股",
-          "industry": "公用事业Ⅱ",
-          "reason": "持续放量",
-          "condition_tags": [
-            "持续放量"
-          ],
-          "factor_combo": "量",
-          "pct_change": 0.004860267314702307,
-          "excess_today": 0.009499102321757213
-        },
-        {
-          "code": "600611.SH",
-          "name": "大众交通",
-          "market": "A股",
-          "industry": "交通运输",
-          "reason": "持续放量",
-          "condition_tags": [
-            "持续放量"
-          ],
-          "factor_combo": "量",
-          "pct_change": -0.04260651629072684,
-          "excess_today": -0.03796768128367189
-        },
-        {
-          "code": "600992.SH",
-          "name": "贵绳股份",
-          "market": "A股",
-          "industry": "钢铁Ⅱ",
-          "reason": "持续放量",
-          "condition_tags": [
-            "持续放量"
-          ],
-          "factor_combo": "量",
-          "pct_change": -0.040281973816717095,
-          "excess_today": -0.03564313880966208
-        },
-        {
-          "code": "000767.SZ",
-          "name": "晋控电力",
-          "market": "A股",
-          "industry": "公用事业Ⅱ",
-          "reason": "3D价强 / 5D价强",
-          "condition_tags": [
-            "3D价强",
-            "5D价强"
-          ],
-          "factor_combo": "价",
-          "pct_change": 0.04511278195488699,
-          "excess_today": 0.04975161696194186
-        },
-        {
-          "code": "600821.SH",
-          "name": "金开新能",
-          "market": "A股",
-          "industry": "公用事业Ⅱ",
-          "reason": "3D价强",
-          "condition_tags": [
-            "3D价强"
-          ],
-          "factor_combo": "价",
-          "pct_change": 0.03417533432392274,
-          "excess_today": 0.03881416933097781
-        },
-        {
-          "code": "603162.SH",
-          "name": "海通发展",
-          "market": "A股",
-          "industry": "交通运输",
-          "reason": "日涨/超额",
-          "condition_tags": [
-            "日涨/超额"
-          ],
-          "factor_combo": "价",
-          "pct_change": 0.10048780487804876,
-          "excess_today": 0.10512663988510385
-        },
-        {
-          "code": "600227.SH",
-          "name": "赤天化",
-          "market": "A股",
-          "industry": "化工",
-          "reason": "持续放量",
-          "condition_tags": [
-            "持续放量"
-          ],
-          "factor_combo": "量",
-          "pct_change": 0.039603960396039604,
-          "excess_today": 0.044242795403094615
-        },
-        {
-          "code": "002412.SZ",
-          "name": "汉森制药",
-          "market": "A股",
-          "industry": "医药生物",
-          "reason": "日涨/超额",
-          "condition_tags": [
-            "日涨/超额"
-          ],
-          "factor_combo": "价",
-          "pct_change": 0.10000000000000005,
-          "excess_today": 0.10463883500705506
-        },
-        {
-          "code": "000034.SZ",
-          "name": "神州数码",
-          "market": "A股",
-          "industry": "硬件设备",
-          "reason": "日涨/超额",
-          "condition_tags": [
-            "日涨/超额"
-          ],
-          "factor_combo": "价",
-          "pct_change": 0.08597464342313799,
-          "excess_today": 0.09061347843019307
-        },
-        {
-          "code": "000037.SZ",
-          "name": "深南电A",
-          "market": "A股",
-          "industry": "公用事业Ⅱ",
-          "reason": "3D价强 / 5D价强",
-          "condition_tags": [
-            "3D价强",
-            "5D价强"
-          ],
-          "factor_combo": "价",
-          "pct_change": 0.07172557172557195,
-          "excess_today": 0.07636440673262701
-        },
-        {
-          "code": "000893.SZ",
-          "name": "亚钾国际",
-          "market": "A股",
-          "industry": "化工",
-          "reason": "3D价强",
-          "condition_tags": [
-            "3D价强"
-          ],
-          "factor_combo": "价",
-          "pct_change": 0.05188884064264001,
-          "excess_today": 0.056527675649695075
-        },
-        {
-          "code": "000506.SZ",
-          "name": "招金黄金",
-          "market": "A股",
-          "industry": "有色金属",
-          "reason": "日涨/超额",
-          "condition_tags": [
-            "日涨/超额"
-          ],
-          "factor_combo": "价",
-          "pct_change": 0.09966216216216203,
-          "excess_today": 0.10430099716921705
-        },
-        {
-          "code": "000526.SZ",
-          "name": "学大教育",
-          "market": "A股",
-          "industry": "消费者服务",
-          "reason": "3D价强",
-          "condition_tags": [
-            "3D价强"
-          ],
-          "factor_combo": "价",
-          "pct_change": 0.06520335700451903,
-          "excess_today": 0.06984219201157393
-        },
-        {
-          "code": "000539.SZ",
-          "name": "粤电力A",
-          "market": "A股",
-          "industry": "公用事业Ⅱ",
-          "reason": "3D价强",
-          "condition_tags": [
-            "3D价强"
-          ],
-          "factor_combo": "价",
-          "pct_change": 0.06776859504132239,
-          "excess_today": 0.07240743004837746
-        },
-        {
-          "code": "000555.SZ",
-          "name": "神州信息",
-          "market": "A股",
-          "industry": "软件服务",
-          "reason": "当日放量",
-          "condition_tags": [
-            "当日放量"
-          ],
-          "factor_combo": "量",
-          "pct_change": 0.024785510009532885,
-          "excess_today": 0.02942434501658786
-        },
-        {
-          "code": "000595.SZ",
-          "name": "*ST宝实",
-          "market": "A股",
-          "industry": "机械",
-          "reason": "日涨/超额",
-          "condition_tags": [
-            "日涨/超额"
-          ],
-          "factor_combo": "价",
-          "pct_change": 0.10087719298245622,
-          "excess_today": 0.10551602798951111
-        },
-        {
-          "code": "000596.SZ",
-          "name": "古井贡酒",
-          "market": "A股",
-          "industry": "食品饮料",
-          "reason": "5D价强 / 持续放量",
-          "condition_tags": [
-            "5D价强",
-            "持续放量"
-          ],
-          "factor_combo": "价 + 量",
-          "pct_change": 0.016145833333333217,
-          "excess_today": 0.02078466834038828
-        },
-        {
-          "code": "000598.SZ",
-          "name": "兴蓉环境",
-          "market": "A股",
-          "industry": "公用事业Ⅱ",
-          "reason": "60D新高",
-          "condition_tags": [
-            "60D新高"
-          ],
-          "factor_combo": "新高",
-          "pct_change": 0.00973574408901244,
-          "excess_today": 0.01437457909606743
-        },
-        {
-          "code": "000651.SZ",
-          "name": "格力电器",
-          "market": "A股",
-          "industry": "家电Ⅱ",
-          "reason": "60D新高",
-          "condition_tags": [
-            "60D新高"
-          ],
-          "factor_combo": "新高",
-          "pct_change": 0.006651884700665033,
-          "excess_today": 0.01129071970772011
-        },
-        {
-          "code": "000676.SZ",
-          "name": "智度股份",
-          "market": "A股",
-          "industry": "软件服务",
-          "reason": "5D价强 / 持续放量",
-          "condition_tags": [
-            "5D价强",
-            "持续放量"
-          ],
-          "factor_combo": "价 + 量",
-          "pct_change": 0.0,
-          "excess_today": 0.0046388350070549755
-        },
-        {
-          "code": "000948.SZ",
-          "name": "南天信息",
-          "market": "A股",
-          "industry": "软件服务",
-          "reason": "持续放量",
-          "condition_tags": [
-            "持续放量"
-          ],
-          "factor_combo": "量",
-          "pct_change": -0.010996563573883117,
-          "excess_today": -0.006357728566828147
-        },
-        {
-          "code": "000975.SZ",
-          "name": "山金国际",
-          "market": "A股",
-          "industry": "有色金属",
-          "reason": "日涨/超额",
-          "condition_tags": [
-            "日涨/超额"
-          ],
-          "factor_combo": "价",
-          "pct_change": 0.10014655593551541,
-          "excess_today": 0.10478539094257044
-        },
-        {
-          "code": "000989.SZ",
-          "name": "九芝堂",
-          "market": "A股",
-          "industry": "医药生物",
-          "reason": "持续放量",
-          "condition_tags": [
-            "持续放量"
-          ],
-          "factor_combo": "量",
-          "pct_change": 0.01907968574635237,
-          "excess_today": 0.023718520753407413
-        },
-        {
-          "code": "001202.SZ",
-          "name": "炬申股份",
-          "market": "A股",
-          "industry": "交通运输",
-          "reason": "当日放量",
-          "condition_tags": [
-            "当日放量"
-          ],
-          "factor_combo": "量",
-          "pct_change": 0.07563025210084043,
-          "excess_today": 0.08026908710789549
-        },
-        {
-          "code": "001221.SZ",
-          "name": "悍高集团",
-          "market": "A股",
-          "industry": "建筑",
-          "reason": "持续放量",
-          "condition_tags": [
-            "持续放量"
-          ],
-          "factor_combo": "量",
-          "pct_change": 0.03470294280955024,
-          "excess_today": 0.039341777816605195
-        },
-        {
-          "code": "001395.SZ",
-          "name": "亚联机械",
-          "market": "A股",
-          "industry": "机械",
-          "reason": "持续放量",
-          "condition_tags": [
-            "持续放量"
-          ],
-          "factor_combo": "量",
-          "pct_change": -0.08021059151440067,
-          "excess_today": -0.07557175650734571
-        },
-        {
-          "code": "002045.SZ",
-          "name": "国光电器",
-          "market": "A股",
-          "industry": "家电Ⅱ",
-          "reason": "持续放量",
-          "condition_tags": [
-            "持续放量"
-          ],
-          "factor_combo": "量",
-          "pct_change": -0.029411764705882342,
-          "excess_today": -0.024772929698827384
-        },
-        {
-          "code": "002197.SZ",
-          "name": "证通电子",
-          "market": "A股",
-          "industry": "软件服务",
-          "reason": "日涨/超额 / 3D价强 / 5D价强",
-          "condition_tags": [
-            "日涨/超额",
-            "3D价强",
-            "5D价强"
-          ],
-          "factor_combo": "价",
-          "pct_change": 0.09936908517350154,
-          "excess_today": 0.10400792018055659
-        },
-        {
-          "code": "002333.SZ",
-          "name": "罗普斯金",
-          "market": "A股",
-          "industry": "有色金属",
-          "reason": "当日放量",
-          "condition_tags": [
-            "当日放量"
-          ],
-          "factor_combo": "量",
-          "pct_change": 0.057324840764331204,
-          "excess_today": 0.06196367577138617
-        },
-        {
-          "code": "002545.SZ",
-          "name": "东方铁塔",
-          "market": "A股",
-          "industry": "化工",
-          "reason": "日涨/超额",
-          "condition_tags": [
-            "日涨/超额"
-          ],
-          "factor_combo": "价",
-          "pct_change": 0.10012135922330093,
-          "excess_today": 0.10476019423035599
-        },
-        {
-          "code": "002695.SZ",
-          "name": "煌上煌",
-          "market": "A股",
-          "industry": "食品饮料",
-          "reason": "持续放量",
-          "condition_tags": [
-            "持续放量"
-          ],
-          "factor_combo": "量",
-          "pct_change": 0.045161290322580615,
-          "excess_today": 0.049800125329635625
-        },
-        {
-          "code": "002759.SZ",
-          "name": "天际股份",
-          "market": "A股",
-          "industry": "化工",
-          "reason": "日涨/超额 / 当日放量",
-          "condition_tags": [
-            "日涨/超额",
-            "当日放量"
-          ],
-          "factor_combo": "价 + 量",
-          "pct_change": 0.08412017167381965,
-          "excess_today": 0.08875900668087455
-        },
-        {
-          "code": "002879.SZ",
-          "name": "长缆科技",
-          "market": "A股",
-          "industry": "电气设备",
-          "reason": "日涨/超额 / 当日放量",
-          "condition_tags": [
-            "日涨/超额",
-            "当日放量"
-          ],
-          "factor_combo": "价 + 量",
-          "pct_change": 0.10029498525073753,
-          "excess_today": 0.10493382025779253
-        },
-        {
-          "code": "002891.SZ",
-          "name": "中宠股份",
-          "market": "A股",
-          "industry": "食品饮料",
-          "reason": "持续放量",
-          "condition_tags": [
-            "持续放量"
-          ],
-          "factor_combo": "量",
-          "pct_change": 0.04463373083475301,
-          "excess_today": 0.04927256584180806
-        },
-        {
-          "code": "002900.SZ",
-          "name": "哈三联",
-          "market": "A股",
-          "industry": "医药生物",
-          "reason": "日涨/超额",
-          "condition_tags": [
-            "日涨/超额"
-          ],
-          "factor_combo": "价",
-          "pct_change": 0.09999999999999998,
-          "excess_today": 0.10463883500705506
-        },
-        {
-          "code": "002953.SZ",
-          "name": "日丰股份",
-          "market": "A股",
-          "industry": "电气设备",
-          "reason": "日涨/超额 / 当日放量",
-          "condition_tags": [
-            "日涨/超额",
-            "当日放量"
-          ],
-          "factor_combo": "价 + 量",
-          "pct_change": 0.1004464285714285,
-          "excess_today": 0.10508526357848359
-        },
-        {
-          "code": "002987.SZ",
-          "name": "京北方",
-          "market": "A股",
-          "industry": "软件服务",
-          "reason": "当日放量",
-          "condition_tags": [
-            "当日放量"
-          ],
-          "factor_combo": "量",
-          "pct_change": 0.024459078080903,
-          "excess_today": 0.02909791308795806
-        },
-        {
-          "code": "003001.SZ",
-          "name": "中岩大地",
-          "market": "A股",
-          "industry": "建筑",
-          "reason": "持续放量",
-          "condition_tags": [
-            "持续放量"
-          ],
-          "factor_combo": "量",
-          "pct_change": -0.0998931623931623,
-          "excess_today": -0.09525432738610728
-        },
-        {
-          "code": "003010.SZ",
-          "name": "若羽臣",
-          "market": "A股",
-          "industry": "可选消费零售",
-          "reason": "持续放量",
-          "condition_tags": [
-            "持续放量"
-          ],
-          "factor_combo": "量",
-          "pct_change": -0.016561514195583434,
-          "excess_today": -0.011922679188528407
-        },
-        {
-          "code": "300039.SZ",
-          "name": "上海凯宝",
-          "market": "A股",
-          "industry": "医药生物",
-          "reason": "持续放量",
-          "condition_tags": [
-            "持续放量"
-          ],
-          "factor_combo": "量",
-          "pct_change": 0.030411449016100208,
-          "excess_today": 0.03505028402315524
-        },
-        {
-          "code": "300040.SZ",
-          "name": "九洲集团",
-          "market": "A股",
-          "industry": "电气设备",
-          "reason": "日涨/超额 / 3D价强 / 5D价强 / 持续放量",
-          "condition_tags": [
-            "日涨/超额",
-            "3D价强",
-            "5D价强",
-            "持续放量"
-          ],
-          "factor_combo": "价 + 量",
-          "pct_change": 0.11882716049382708,
-          "excess_today": 0.12346599550088211
-        },
-        {
-          "code": "300231.SZ",
-          "name": "银信科技",
-          "market": "A股",
-          "industry": "软件服务",
-          "reason": "持续放量",
-          "condition_tags": [
-            "持续放量"
-          ],
-          "factor_combo": "量",
-          "pct_change": -0.018909899888765305,
-          "excess_today": -0.014271064881710371
-        },
-        {
-          "code": "300335.SZ",
-          "name": "迪森股份",
-          "market": "A股",
-          "industry": "环保Ⅱ",
-          "reason": "日涨/超额 / 持续放量",
-          "condition_tags": [
-            "日涨/超额",
-            "持续放量"
-          ],
-          "factor_combo": "价 + 量",
-          "pct_change": 0.0852713178294572,
-          "excess_today": 0.08991015283651228
-        },
-        {
-          "code": "300515.SZ",
-          "name": "三德科技",
-          "market": "A股",
-          "industry": "机械",
-          "reason": "3D价强 / 持续放量",
-          "condition_tags": [
-            "3D价强",
-            "持续放量"
-          ],
-          "factor_combo": "价 + 量",
-          "pct_change": -0.024188415022278784,
-          "excess_today": -0.019549580015223778
-        },
-        {
-          "code": "300519.SZ",
-          "name": "新光药业",
-          "market": "A股",
-          "industry": "医药生物",
-          "reason": "持续放量",
-          "condition_tags": [
-            "持续放量"
-          ],
-          "factor_combo": "量",
-          "pct_change": -0.015723270440251638,
-          "excess_today": -0.011084435433196704
-        },
-        {
-          "code": "300577.SZ",
-          "name": "开润股份",
-          "market": "A股",
-          "industry": "纺织服装Ⅱ",
-          "reason": "持续放量",
-          "condition_tags": [
-            "持续放量"
-          ],
-          "factor_combo": "量",
-          "pct_change": -0.12756378189094525,
-          "excess_today": -0.12292494688389033
-        },
-        {
-          "code": "300622.SZ",
-          "name": "博士眼镜",
-          "market": "A股",
-          "industry": "可选消费零售",
-          "reason": "持续放量",
-          "condition_tags": [
-            "持续放量"
-          ],
-          "factor_combo": "量",
-          "pct_change": 0.028093645484949716,
-          "excess_today": 0.03273248049200461
-        },
-        {
-          "code": "300662.SZ",
-          "name": "科锐国际",
-          "market": "A股",
-          "industry": "企业服务",
-          "reason": "当日放量",
-          "condition_tags": [
-            "当日放量"
-          ],
-          "factor_combo": "量",
-          "pct_change": 0.060744985673352646,
-          "excess_today": 0.0653838206804076
-        },
-        {
-          "code": "300804.SZ",
-          "name": "广康生化",
-          "market": "A股",
-          "industry": "化工",
-          "reason": "日涨/超额",
-          "condition_tags": [
-            "日涨/超额"
-          ],
-          "factor_combo": "价",
-          "pct_change": 0.09141364675155086,
-          "excess_today": 0.09605248175860594
-        },
-        {
-          "code": "300805.SZ",
-          "name": "电声股份",
-          "market": "A股",
-          "industry": "传媒",
-          "reason": "持续放量",
-          "condition_tags": [
-            "持续放量"
-          ],
-          "factor_combo": "量",
-          "pct_change": -0.003567181926278071,
-          "excess_today": 0.0010716530807769464
-        },
-        {
-          "code": "300896.SZ",
-          "name": "爱美客",
-          "market": "A股",
-          "industry": "医药生物",
-          "reason": "日涨/超额 / 5D价强 / 持续放量",
-          "condition_tags": [
-            "日涨/超额",
-            "5D价强",
-            "持续放量"
-          ],
-          "factor_combo": "价 + 量",
-          "pct_change": 0.08702168048756104,
-          "excess_today": 0.09166051549461596
-        },
-        {
-          "code": "300988.SZ",
-          "name": "津荣天宇",
-          "market": "A股",
-          "industry": "汽车与零配件",
-          "reason": "日涨/超额 / 当日放量",
-          "condition_tags": [
-            "日涨/超额",
-            "当日放量"
-          ],
-          "factor_combo": "价 + 量",
-          "pct_change": 0.1356304985337243,
-          "excess_today": 0.1402693335407792
-        },
-        {
-          "code": "301042.SZ",
-          "name": "安联锐视",
-          "market": "A股",
-          "industry": "硬件设备",
-          "reason": "持续放量",
-          "condition_tags": [
-            "持续放量"
-          ],
-          "factor_combo": "量",
-          "pct_change": -0.085539714867617,
-          "excess_today": -0.08090087986056205
-        },
-        {
-          "code": "301190.SZ",
-          "name": "善水科技",
-          "market": "A股",
-          "industry": "化工",
-          "reason": "3D价强 / 5D价强 / 持续放量",
-          "condition_tags": [
-            "3D价强",
-            "5D价强",
-            "持续放量"
-          ],
-          "factor_combo": "价 + 量",
-          "pct_change": 0.07361963190184045,
-          "excess_today": 0.07825846690889549
-        },
-        {
-          "code": "301367.SZ",
-          "name": "瑞迈特",
-          "market": "A股",
-          "industry": "医疗设备与服务",
-          "reason": "日涨/超额",
-          "condition_tags": [
-            "日涨/超额"
-          ],
-          "factor_combo": "价",
-          "pct_change": 0.09761853679467934,
-          "excess_today": 0.10225737180173435
-        },
-        {
-          "code": "600018.SH",
-          "name": "上港集团",
-          "market": "A股",
-          "industry": "交通运输",
-          "reason": "60D新高",
-          "condition_tags": [
-            "60D新高"
-          ],
-          "factor_combo": "新高",
-          "pct_change": 0.00574712643678171,
-          "excess_today": 0.010385961443836633
-        },
-        {
-          "code": "600025.SH",
-          "name": "华能水电",
-          "market": "A股",
-          "industry": "公用事业Ⅱ",
-          "reason": "60D新高",
-          "condition_tags": [
-            "60D新高"
-          ],
-          "factor_combo": "新高",
-          "pct_change": 0.0029440628066733036,
-          "excess_today": 0.007582897813728229
-        },
-        {
-          "code": "600032.SH",
-          "name": "浙江新能",
-          "market": "A股",
-          "industry": "公用事业Ⅱ",
-          "reason": "3D价强",
-          "condition_tags": [
-            "3D价强"
-          ],
-          "factor_combo": "价",
-          "pct_change": 0.06577181208053702,
-          "excess_today": 0.07041064708759204
-        },
-        {
-          "code": "600095.SH",
-          "name": "湘财股份",
-          "market": "A股",
-          "industry": "非银金融",
-          "reason": "持续放量",
-          "condition_tags": [
-            "持续放量"
-          ],
-          "factor_combo": "量",
-          "pct_change": 0.020044543429844106,
-          "excess_today": 0.02468337843689916
-        },
-        {
-          "code": "600101.SH",
-          "name": "明星电力",
-          "market": "A股",
-          "industry": "公用事业Ⅱ",
-          "reason": "持续放量",
-          "condition_tags": [
-            "持续放量"
-          ],
-          "factor_combo": "量",
-          "pct_change": 0.014067995310668234,
-          "excess_today": 0.018706830317723133
-        },
-        {
-          "code": "600126.SH",
-          "name": "杭钢股份",
-          "market": "A股",
-          "industry": "钢铁Ⅱ",
-          "reason": "持续放量",
-          "condition_tags": [
-            "持续放量"
-          ],
-          "factor_combo": "量",
-          "pct_change": -0.023738872403560905,
-          "excess_today": -0.019100037396505898
-        },
-        {
-          "code": "600267.SH",
-          "name": "海正药业",
-          "market": "A股",
-          "industry": "医药生物",
-          "reason": "120D新高",
-          "condition_tags": [
-            "120D新高"
-          ],
-          "factor_combo": "新高",
-          "pct_change": 0.024630541871921107,
-          "excess_today": 0.029269376878976017
-        },
-        {
-          "code": "600535.SH",
-          "name": "天士力",
-          "market": "A股",
-          "industry": "医药生物",
-          "reason": "持续放量",
-          "condition_tags": [
-            "持续放量"
-          ],
-          "factor_combo": "量",
-          "pct_change": 0.0025062656641602894,
-          "excess_today": 0.007145100671215321
-        },
-        {
-          "code": "600594.SH",
-          "name": "益佰制药",
-          "market": "A股",
-          "industry": "医药生物",
-          "reason": "日涨/超额",
-          "condition_tags": [
-            "日涨/超额"
-          ],
-          "factor_combo": "价",
-          "pct_change": 0.09876543209876544,
-          "excess_today": 0.1034042671058204
-        },
-        {
-          "code": "600674.SH",
-          "name": "川投能源",
-          "market": "A股",
-          "industry": "公用事业Ⅱ",
-          "reason": "120D新高",
-          "condition_tags": [
-            "120D新高"
-          ],
-          "factor_combo": "新高",
-          "pct_change": 0.008668730650154942,
-          "excess_today": 0.013307565657209919
-        },
-        {
-          "code": "600690.SH",
-          "name": "海尔智家",
-          "market": "A股",
-          "industry": "家电Ⅱ",
-          "reason": "60D新高",
-          "condition_tags": [
-            "60D新高"
-          ],
-          "factor_combo": "新高",
-          "pct_change": 0.003203661327231236,
-          "excess_today": 0.007842496334286242
-        },
-        {
-          "code": "600711.SH",
-          "name": "盛屯矿业",
-          "market": "A股",
-          "industry": "工业贸易与综合",
-          "reason": "日涨/超额",
-          "condition_tags": [
-            "日涨/超额"
-          ],
-          "factor_combo": "价",
-          "pct_change": 0.09175257731958761,
-          "excess_today": 0.09639141232664249
-        },
-        {
-          "code": "600746.SH",
-          "name": "江苏索普",
-          "market": "A股",
-          "industry": "化工",
-          "reason": "持续放量",
-          "condition_tags": [
-            "持续放量"
-          ],
-          "factor_combo": "量",
-          "pct_change": -0.013761467889908237,
-          "excess_today": -0.00912263288285331
-        },
-        {
-          "code": "600785.SH",
-          "name": "新华百货",
-          "market": "A股",
-          "industry": "可选消费零售",
-          "reason": "持续放量",
-          "condition_tags": [
-            "持续放量"
-          ],
-          "factor_combo": "量",
-          "pct_change": -0.003773584905660427,
-          "excess_today": 0.000865250101394599
-        },
-        {
-          "code": "600797.SH",
-          "name": "浙大网新",
-          "market": "A股",
-          "industry": "软件服务",
-          "reason": "持续放量",
-          "condition_tags": [
-            "持续放量"
-          ],
-          "factor_combo": "量",
-          "pct_change": 0.05433186490455219,
-          "excess_today": 0.05897069991160708
-        },
-        {
-          "code": "600829.SH",
-          "name": "人民同泰",
-          "market": "A股",
-          "industry": "医疗设备与服务",
-          "reason": "持续放量",
-          "condition_tags": [
-            "持续放量"
-          ],
-          "factor_combo": "量",
-          "pct_change": -0.0022197558268589415,
-          "excess_today": 0.0024190791801960154
-        },
-        {
-          "code": "600886.SH",
-          "name": "国投电力",
-          "market": "A股",
-          "industry": "公用事业Ⅱ",
-          "reason": "120D新高",
-          "condition_tags": [
-            "120D新高"
-          ],
-          "factor_combo": "新高",
-          "pct_change": 0.01796407185628759,
-          "excess_today": 0.022602906863342653
-        },
-        {
-          "code": "600900.SH",
-          "name": "长江电力",
-          "market": "A股",
-          "industry": "公用事业Ⅱ",
-          "reason": "120D新高",
-          "condition_tags": [
-            "120D新高"
-          ],
-          "factor_combo": "新高",
-          "pct_change": 0.012530455969369983,
-          "excess_today": 0.017169290976424945
-        },
-        {
-          "code": "600930.SH",
-          "name": "华电新能",
-          "market": "A股",
-          "industry": "公用事业Ⅱ",
-          "reason": "持续放量",
-          "condition_tags": [
-            "持续放量"
-          ],
-          "factor_combo": "量",
-          "pct_change": -0.0046403712296982464,
-          "excess_today": -1.5362226433168757e-06
-        },
-        {
-          "code": "600982.SH",
-          "name": "宁波能源",
-          "market": "A股",
-          "industry": "公用事业Ⅱ",
-          "reason": "持续放量",
-          "condition_tags": [
-            "持续放量"
-          ],
-          "factor_combo": "量",
-          "pct_change": 0.015564202334630248,
-          "excess_today": 0.02020303734168527
-        },
-        {
-          "code": "601168.SH",
-          "name": "西部矿业",
-          "market": "A股",
-          "industry": "有色金属",
-          "reason": "60D新高",
-          "condition_tags": [
-            "60D新高"
-          ],
-          "factor_combo": "新高",
-          "pct_change": 0.07764983761440808,
-          "excess_today": 0.08228867262146311
-        },
-        {
-          "code": "601319.SH",
-          "name": "中国人保",
-          "market": "A股",
-          "industry": "非银金融",
-          "reason": "60D新高",
-          "condition_tags": [
-            "60D新高"
-          ],
-          "factor_combo": "新高",
-          "pct_change": 0.01889338731443982,
-          "excess_today": 0.023532222321494878
-        },
-        {
-          "code": "601628.SH",
-          "name": "中国人寿",
-          "market": "A股",
-          "industry": "非银金融",
-          "reason": "60D新高",
-          "condition_tags": [
-            "60D新高"
-          ],
-          "factor_combo": "新高",
-          "pct_change": 0.020662185710729242,
-          "excess_today": 0.025301020717784173
-        },
-        {
-          "code": "601919.SH",
-          "name": "中远海控",
-          "market": "A股",
-          "industry": "交通运输",
-          "reason": "60D新高",
-          "condition_tags": [
-            "60D新高"
-          ],
-          "factor_combo": "新高",
-          "pct_change": 0.01815736381977146,
-          "excess_today": 0.022796198826826375
-        },
-        {
-          "code": "603192.SH",
-          "name": "汇得科技",
-          "market": "A股",
-          "industry": "化工",
-          "reason": "持续放量",
-          "condition_tags": [
-            "持续放量"
-          ],
-          "factor_combo": "量",
-          "pct_change": 0.03760114231318418,
-          "excess_today": 0.0422399773202391
-        },
-        {
-          "code": "603221.SH",
-          "name": "爱丽家居",
-          "market": "A股",
-          "industry": "耐用消费品",
-          "reason": "日涨/超额",
-          "condition_tags": [
-            "日涨/超额"
-          ],
-          "factor_combo": "价",
-          "pct_change": 0.09980988593155903,
-          "excess_today": 0.104448720938614
-        },
-        {
-          "code": "603296.SH",
-          "name": "华勤技术",
-          "market": "A股",
-          "industry": "硬件设备",
-          "reason": "日涨/超额",
-          "condition_tags": [
-            "日涨/超额"
-          ],
-          "factor_combo": "价",
-          "pct_change": 0.10000000000000003,
-          "excess_today": 0.10463883500705506
-        },
-        {
-          "code": "603619.SH",
-          "name": "中曼石油",
-          "market": "A股",
-          "industry": "石油石化",
-          "reason": "日涨/超额",
-          "condition_tags": [
-            "日涨/超额"
-          ],
-          "factor_combo": "价",
-          "pct_change": 0.10000000000000016,
-          "excess_today": 0.10463883500705506
-        },
-        {
-          "code": "603818.SH",
-          "name": "曲美家居",
-          "market": "A股",
-          "industry": "耐用消费品",
-          "reason": "日涨/超额",
-          "condition_tags": [
-            "日涨/超额"
-          ],
-          "factor_combo": "价",
-          "pct_change": 0.08633093525179873,
-          "excess_today": 0.09096977025885368
-        },
-        {
-          "code": "603839.SH",
-          "name": "安正时尚",
-          "market": "A股",
-          "industry": "纺织服装Ⅱ",
-          "reason": "持续放量",
-          "condition_tags": [
-            "持续放量"
-          ],
-          "factor_combo": "量",
-          "pct_change": -0.025167785234899334,
-          "excess_today": -0.0205289502278444
-        },
-        {
-          "code": "603979.SH",
-          "name": "金诚信",
-          "market": "A股",
-          "industry": "有色金属",
-          "reason": "日涨/超额",
-          "condition_tags": [
-            "日涨/超额"
-          ],
-          "factor_combo": "价",
-          "pct_change": 0.09980401025177146,
-          "excess_today": 0.10444284525882643
-        },
-        {
-          "code": "605028.SH",
-          "name": "世茂能源",
-          "market": "A股",
-          "industry": "公用事业Ⅱ",
-          "reason": "日涨/超额",
-          "condition_tags": [
-            "日涨/超额"
-          ],
-          "factor_combo": "价",
-          "pct_change": 0.1002257336343117,
-          "excess_today": 0.10486456864136671
-        },
-        {
-          "code": "605155.SH",
-          "name": "西大门",
-          "market": "A股",
-          "industry": "建筑",
-          "reason": "日涨/超额",
-          "condition_tags": [
-            "日涨/超额"
-          ],
-          "factor_combo": "价",
-          "pct_change": 0.09991386735572792,
-          "excess_today": 0.10455270236278279
-        },
-        {
-          "code": "605162.SH",
-          "name": "新中港",
-          "market": "A股",
-          "industry": "公用事业Ⅱ",
-          "reason": "日涨/超额",
-          "condition_tags": [
-            "日涨/超额"
-          ],
-          "factor_combo": "价",
-          "pct_change": 0.10028653295128928,
-          "excess_today": 0.10492536795834416
-        },
-        {
-          "code": "688049.SH",
-          "name": "炬芯科技",
-          "market": "A股",
-          "industry": "半导体",
-          "reason": "日涨/超额 / 当日放量",
-          "condition_tags": [
-            "日涨/超额",
-            "当日放量"
-          ],
-          "factor_combo": "价 + 量",
-          "pct_change": 0.1509433962264152,
-          "excess_today": 0.15558223123347026
-        },
-        {
-          "code": "300818.SZ",
-          "name": "耐普矿机",
-          "market": "A股",
-          "industry": "机械",
-          "reason": "日涨/超额 / 当日放量",
-          "condition_tags": [
-            "日涨/超额",
-            "当日放量"
-          ],
-          "factor_combo": "价 + 量",
-          "pct_change": 0.112189205579139,
-          "excess_today": 0.1168280405861939
-        },
-        {
-          "code": "688636.SH",
-          "name": "智明达",
-          "market": "A股",
-          "industry": "国防军工",
-          "reason": "当日放量",
-          "condition_tags": [
-            "当日放量"
-          ],
-          "factor_combo": "量",
-          "pct_change": -0.13640824337585852,
-          "excess_today": -0.13176940836880358
-        }
-      ]
-    },
     {
       "date": "2026-07-23",
       "latest_trade_date": "2026-07-23",
@@ -12415,6 +11000,2565 @@
           "factor_combo": "价",
           "pct_change": 0.03442485306465151,
           "excess_today": 0.02198726000738649
+        }
+      ]
+    },
+    {
+      "date": "2026-08-06",
+      "latest_trade_date": "2026-08-06",
+      "generated_at": "2026-08-06T16:37:18",
+      "total": 186,
+      "reason_counts": {
+        "60D新高": 19,
+        "3D价强": 28,
+        "日涨/超额 / 3D价强 / 5D价强": 9,
+        "当日放量": 39,
+        "120D新高": 6,
+        "3D价强 / 5D价强": 14,
+        "3D价强 / 5D价强 / 当日放量": 5,
+        "3D价强 / 当日放量": 5,
+        "5D价强": 10,
+        "持续放量": 13,
+        "日涨/超额": 11,
+        "5D价强 / 持续放量": 3,
+        "日涨/超额 / 3D价强": 2,
+        "日涨/超额 / 3D价强 / 5D价强 / 当日放量 / 60D新高": 2,
+        "3D价强 / 持续放量": 1,
+        "3Y新高": 4,
+        "日涨/超额 / 3D价强 / 5D价强 / 持续放量": 1,
+        "日涨/超额 / 当日放量": 2,
+        "日涨/超额 / 3D价强 / 5D价强 / 当日放量": 3,
+        "3D价强 / 5D价强 / 持续放量": 1,
+        "3D价强 / 5D价强 / 当日放量 / 120D新高": 1,
+        "5D价强 / 120D新高": 1,
+        "3D价强 / 5D价强 / 持续放量 / 120D新高": 1,
+        "日涨/超额 / 3D价强 / 当日放量": 1,
+        "3D价强 / 5D价强 / 持续放量 / 60D新高": 1,
+        "3D价强 / 120D新高": 1,
+        "日涨/超额 / 当日放量 / 120D新高": 1,
+        "3D价强 / 60D新高": 1
+      },
+      "reason_tag_counts": {
+        "60D新高": 23,
+        "3D价强": 77,
+        "日涨/超额": 32,
+        "5D价强": 52,
+        "当日放量": 59,
+        "120D新高": 11,
+        "持续放量": 21,
+        "3Y新高": 4
+      },
+      "rows": [
+        {
+          "code": "603956.SH",
+          "name": "威派格",
+          "market": "A股",
+          "industry": "机械",
+          "reason": "60D新高",
+          "condition_tags": [
+            "60D新高"
+          ],
+          "factor_combo": "新高",
+          "pct_change": 0.011560693641618451,
+          "excess_today": 0.013030181056045143
+        },
+        {
+          "code": "603339.SH",
+          "name": "四方科技",
+          "market": "A股",
+          "industry": "机械",
+          "reason": "3D价强",
+          "condition_tags": [
+            "3D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": 0.017518248175182414,
+          "excess_today": 0.01898773558960909
+        },
+        {
+          "code": "688026.SH",
+          "name": "洁特生物",
+          "market": "A股",
+          "industry": "医药生物",
+          "reason": "日涨/超额 / 3D价强 / 5D价强",
+          "condition_tags": [
+            "日涨/超额",
+            "3D价强",
+            "5D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": 0.1074260994953136,
+          "excess_today": 0.10889558690974033
+        },
+        {
+          "code": "9860.HK",
+          "name": "艾迪康控股",
+          "market": "港股",
+          "industry": "医疗设备与服务",
+          "reason": "当日放量",
+          "condition_tags": [
+            "当日放量"
+          ],
+          "factor_combo": "量",
+          "pct_change": 0.06940063091482657,
+          "excess_today": 0.08427725839564715
+        },
+        {
+          "code": "601611.SH",
+          "name": "中国核建",
+          "market": "A股",
+          "industry": "建筑",
+          "reason": "当日放量",
+          "condition_tags": [
+            "当日放量"
+          ],
+          "factor_combo": "量",
+          "pct_change": -0.05669291338582669,
+          "excess_today": -0.05522342597139995
+        },
+        {
+          "code": "001256.SZ",
+          "name": "炜冈科技",
+          "market": "A股",
+          "industry": "机械",
+          "reason": "3D价强",
+          "condition_tags": [
+            "3D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": 0.022522522522522525,
+          "excess_today": 0.023992009936949277
+        },
+        {
+          "code": "301376.SZ",
+          "name": "致欧科技",
+          "market": "A股",
+          "industry": "耐用消费品",
+          "reason": "120D新高",
+          "condition_tags": [
+            "120D新高"
+          ],
+          "factor_combo": "新高",
+          "pct_change": -0.011181332036947086,
+          "excess_today": -0.009711844622520283
+        },
+        {
+          "code": "002558.SZ",
+          "name": "巨人网络",
+          "market": "A股",
+          "industry": "传媒",
+          "reason": "3D价强",
+          "condition_tags": [
+            "3D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": -0.02693714665779842,
+          "excess_today": -0.025467659243371688
+        },
+        {
+          "code": "003013.SZ",
+          "name": "地铁设计",
+          "market": "A股",
+          "industry": "建筑",
+          "reason": "120D新高",
+          "condition_tags": [
+            "120D新高"
+          ],
+          "factor_combo": "新高",
+          "pct_change": -0.0010989010989010091,
+          "excess_today": 0.00037058631552577825
+        },
+        {
+          "code": "002346.SZ",
+          "name": "柘中股份",
+          "market": "A股",
+          "industry": "电气设备",
+          "reason": "3D价强",
+          "condition_tags": [
+            "3D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": 0.009500000000000093,
+          "excess_today": 0.010969487414426826
+        },
+        {
+          "code": "0341.HK",
+          "name": "大家乐集团",
+          "market": "港股",
+          "industry": "消费者服务",
+          "reason": "120D新高",
+          "condition_tags": [
+            "120D新高"
+          ],
+          "factor_combo": "新高",
+          "pct_change": -0.004456327985739786,
+          "excess_today": 0.010420299495080831
+        },
+        {
+          "code": "000603.SZ",
+          "name": "盛达资源",
+          "market": "A股",
+          "industry": "有色金属",
+          "reason": "3D价强 / 5D价强",
+          "condition_tags": [
+            "3D价强",
+            "5D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": 0.07375643224699836,
+          "excess_today": 0.07522591966142511
+        },
+        {
+          "code": "002734.SZ",
+          "name": "利民股份",
+          "market": "A股",
+          "industry": "化工",
+          "reason": "3D价强 / 5D价强 / 当日放量",
+          "condition_tags": [
+            "3D价强",
+            "5D价强",
+            "当日放量"
+          ],
+          "factor_combo": "价 + 量",
+          "pct_change": 0.06530343007915561,
+          "excess_today": 0.06677291749358227
+        },
+        {
+          "code": "000967.SZ",
+          "name": "盈峰环境",
+          "market": "A股",
+          "industry": "环保Ⅱ",
+          "reason": "3D价强 / 5D价强",
+          "condition_tags": [
+            "3D价强",
+            "5D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": -0.01055966209081321,
+          "excess_today": -0.009090174676386398
+        },
+        {
+          "code": "80175.HK",
+          "name": "吉利汽车-R",
+          "market": "港股",
+          "industry": "汽车与零配件",
+          "reason": "当日放量",
+          "condition_tags": [
+            "当日放量"
+          ],
+          "factor_combo": "量",
+          "pct_change": -0.04730538922155682,
+          "excess_today": -0.032428761740736174
+        },
+        {
+          "code": "2518.HK",
+          "name": "汽车之家-S",
+          "market": "港股",
+          "industry": "软件服务",
+          "reason": "60D新高",
+          "condition_tags": [
+            "60D新高"
+          ],
+          "factor_combo": "新高",
+          "pct_change": -0.011086474501108634,
+          "excess_today": 0.0037901529797119693
+        },
+        {
+          "code": "000751.SZ",
+          "name": "锌业股份",
+          "market": "A股",
+          "industry": "有色金属",
+          "reason": "3D价强 / 当日放量",
+          "condition_tags": [
+            "3D价强",
+            "当日放量"
+          ],
+          "factor_combo": "价 + 量",
+          "pct_change": 0.011718749999999873,
+          "excess_today": 0.01318823741442654
+        },
+        {
+          "code": "600058.SH",
+          "name": "五矿发展",
+          "market": "A股",
+          "industry": "工业贸易与综合",
+          "reason": "5D价强",
+          "condition_tags": [
+            "5D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": 0.029556650246305313,
+          "excess_today": 0.031026137660732145
+        },
+        {
+          "code": "0999.HK",
+          "name": "小菜园",
+          "market": "港股",
+          "industry": "消费者服务",
+          "reason": "持续放量",
+          "condition_tags": [
+            "持续放量"
+          ],
+          "factor_combo": "量",
+          "pct_change": -0.07090464547677275,
+          "excess_today": -0.05602801799595215
+        },
+        {
+          "code": "001282.SZ",
+          "name": "三联锻造",
+          "market": "A股",
+          "industry": "汽车与零配件",
+          "reason": "当日放量",
+          "condition_tags": [
+            "当日放量"
+          ],
+          "factor_combo": "量",
+          "pct_change": -0.027218934911242564,
+          "excess_today": -0.025749447496815847
+        },
+        {
+          "code": "603206.SH",
+          "name": "嘉环科技",
+          "market": "A股",
+          "industry": "软件服务",
+          "reason": "当日放量",
+          "condition_tags": [
+            "当日放量"
+          ],
+          "factor_combo": "量",
+          "pct_change": -0.03217503217503204,
+          "excess_today": -0.030705544760605274
+        },
+        {
+          "code": "600758.SH",
+          "name": "辽宁能源",
+          "market": "A股",
+          "industry": "煤炭Ⅱ",
+          "reason": "日涨/超额",
+          "condition_tags": [
+            "日涨/超额"
+          ],
+          "factor_combo": "价",
+          "pct_change": 0.09880239520958074,
+          "excess_today": 0.10027188262400744
+        },
+        {
+          "code": "0177.HK",
+          "name": "江苏宁沪高速公路",
+          "market": "港股",
+          "industry": "交通运输",
+          "reason": "当日放量",
+          "condition_tags": [
+            "当日放量"
+          ],
+          "factor_combo": "量",
+          "pct_change": -0.005705394190871336,
+          "excess_today": 0.009171233289949288
+        },
+        {
+          "code": "2199.HK",
+          "name": "维珍妮",
+          "market": "港股",
+          "industry": "纺织服装Ⅱ",
+          "reason": "3D价强",
+          "condition_tags": [
+            "3D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": -0.027542372881355973,
+          "excess_today": -0.012665745400535333
+        },
+        {
+          "code": "002963.SZ",
+          "name": "豪尔赛",
+          "market": "A股",
+          "industry": "建筑",
+          "reason": "日涨/超额 / 3D价强 / 5D价强",
+          "condition_tags": [
+            "日涨/超额",
+            "3D价强",
+            "5D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": 0.10005685048322906,
+          "excess_today": 0.10152633789765586
+        },
+        {
+          "code": "000517.SZ",
+          "name": "荣安地产",
+          "market": "A股",
+          "industry": "房地产Ⅱ",
+          "reason": "5D价强",
+          "condition_tags": [
+            "5D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": -0.009345794392523542,
+          "excess_today": -0.007876306978096825
+        },
+        {
+          "code": "2689.HK",
+          "name": "玖龙纸业",
+          "market": "港股",
+          "industry": "造纸与包装",
+          "reason": "60D新高",
+          "condition_tags": [
+            "60D新高"
+          ],
+          "factor_combo": "新高",
+          "pct_change": -0.022031823745409948,
+          "excess_today": -0.00715519626458927
+        },
+        {
+          "code": "300795.SZ",
+          "name": "米奥会展",
+          "market": "A股",
+          "industry": "企业服务",
+          "reason": "5D价强 / 持续放量",
+          "condition_tags": [
+            "5D价强",
+            "持续放量"
+          ],
+          "factor_combo": "价 + 量",
+          "pct_change": -0.05078597339782353,
+          "excess_today": -0.049316485983396774
+        },
+        {
+          "code": "9889.HK",
+          "name": "东莞农商银行",
+          "market": "港股",
+          "industry": "银行",
+          "reason": "当日放量",
+          "condition_tags": [
+            "当日放量"
+          ],
+          "factor_combo": "量",
+          "pct_change": -0.006024096385542045,
+          "excess_today": 0.008852531095278615
+        },
+        {
+          "code": "1521.HK",
+          "name": "方达控股",
+          "market": "港股",
+          "industry": "医药生物",
+          "reason": "120D新高",
+          "condition_tags": [
+            "120D新高"
+          ],
+          "factor_combo": "新高",
+          "pct_change": 0.03174603174603177,
+          "excess_today": 0.046622659226852485
+        },
+        {
+          "code": "002585.SZ",
+          "name": "双星新材",
+          "market": "A股",
+          "industry": "化工",
+          "reason": "3D价强",
+          "condition_tags": [
+            "3D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": -0.021253985122210207,
+          "excess_today": -0.019784497707783455
+        },
+        {
+          "code": "002438.SZ",
+          "name": "江苏神通",
+          "market": "A股",
+          "industry": "机械",
+          "reason": "3D价强 / 当日放量",
+          "condition_tags": [
+            "3D价强",
+            "当日放量"
+          ],
+          "factor_combo": "价 + 量",
+          "pct_change": -0.05559189012426434,
+          "excess_today": -0.054122402709837585
+        },
+        {
+          "code": "600985.SH",
+          "name": "淮北矿业",
+          "market": "A股",
+          "industry": "煤炭Ⅱ",
+          "reason": "日涨/超额",
+          "condition_tags": [
+            "日涨/超额"
+          ],
+          "factor_combo": "价",
+          "pct_change": 0.10000000000000002,
+          "excess_today": 0.10146948741442685
+        },
+        {
+          "code": "601666.SH",
+          "name": "平煤股份",
+          "market": "A股",
+          "industry": "煤炭Ⅱ",
+          "reason": "日涨/超额",
+          "condition_tags": [
+            "日涨/超额"
+          ],
+          "factor_combo": "价",
+          "pct_change": 0.09987669543773127,
+          "excess_today": 0.10134618285215803
+        },
+        {
+          "code": "300305.SZ",
+          "name": "裕兴股份",
+          "market": "A股",
+          "industry": "化工",
+          "reason": "3D价强 / 5D价强",
+          "condition_tags": [
+            "3D价强",
+            "5D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": -0.03040000000000013,
+          "excess_today": -0.02893051258557333
+        },
+        {
+          "code": "600611.SH",
+          "name": "大众交通",
+          "market": "A股",
+          "industry": "交通运输",
+          "reason": "3D价强 / 当日放量",
+          "condition_tags": [
+            "3D价强",
+            "当日放量"
+          ],
+          "factor_combo": "价 + 量",
+          "pct_change": 0.04264392324093809,
+          "excess_today": 0.04411341065536489
+        },
+        {
+          "code": "688133.SH",
+          "name": "泰坦科技",
+          "market": "A股",
+          "industry": "化工",
+          "reason": "日涨/超额 / 3D价强",
+          "condition_tags": [
+            "日涨/超额",
+            "3D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": 0.0918227501142073,
+          "excess_today": 0.09329223752863403
+        },
+        {
+          "code": "002973.SZ",
+          "name": "侨银股份",
+          "market": "A股",
+          "industry": "环保Ⅱ",
+          "reason": "日涨/超额 / 3D价强",
+          "condition_tags": [
+            "日涨/超额",
+            "3D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": 0.10010010010010005,
+          "excess_today": 0.10156958751452683
+        },
+        {
+          "code": "600449.SH",
+          "name": "宁夏建材",
+          "market": "A股",
+          "industry": "建材Ⅱ",
+          "reason": "3D价强 / 当日放量",
+          "condition_tags": [
+            "3D价强",
+            "当日放量"
+          ],
+          "factor_combo": "价 + 量",
+          "pct_change": 0.022496371552975444,
+          "excess_today": 0.02396585896740211
+        },
+        {
+          "code": "301227.SZ",
+          "name": "森鹰窗业",
+          "market": "A股",
+          "industry": "建筑",
+          "reason": "日涨/超额 / 3D价强 / 5D价强",
+          "condition_tags": [
+            "日涨/超额",
+            "3D价强",
+            "5D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": 0.09169926119078645,
+          "excess_today": 0.09316874860521329
+        },
+        {
+          "code": "301197.SZ",
+          "name": "工大科雅",
+          "market": "A股",
+          "industry": "机械",
+          "reason": "5D价强",
+          "condition_tags": [
+            "5D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": 0.014402491241728179,
+          "excess_today": 0.015871978656154972
+        },
+        {
+          "code": "000981.SZ",
+          "name": "山子高科",
+          "market": "A股",
+          "industry": "汽车与零配件",
+          "reason": "3D价强 / 当日放量",
+          "condition_tags": [
+            "3D价强",
+            "当日放量"
+          ],
+          "factor_combo": "价 + 量",
+          "pct_change": -0.05047318611987386,
+          "excess_today": -0.04900369870544708
+        },
+        {
+          "code": "9878.HK",
+          "name": "汇通达网络",
+          "market": "港股",
+          "industry": "软件服务",
+          "reason": "60D新高",
+          "condition_tags": [
+            "60D新高"
+          ],
+          "factor_combo": "新高",
+          "pct_change": 0.012345679012345633,
+          "excess_today": 0.02722230649316637
+        },
+        {
+          "code": "0004.HK",
+          "name": "九龙仓集团",
+          "market": "港股",
+          "industry": "房地产Ⅱ",
+          "reason": "当日放量",
+          "condition_tags": [
+            "当日放量"
+          ],
+          "factor_combo": "量",
+          "pct_change": 0.044638276038994354,
+          "excess_today": 0.05951490351981493
+        },
+        {
+          "code": "3330.HK",
+          "name": "灵宝黄金",
+          "market": "港股",
+          "industry": "有色金属",
+          "reason": "3D价强",
+          "condition_tags": [
+            "3D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": 0.048237476808905416,
+          "excess_today": 0.06311410428972597
+        },
+        {
+          "code": "6088.HK",
+          "name": "鸿腾精密",
+          "market": "港股",
+          "industry": "硬件设备",
+          "reason": "3D价强",
+          "condition_tags": [
+            "3D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": -0.04850444624090534,
+          "excess_today": -0.0336278187600847
+        },
+        {
+          "code": "2111.HK",
+          "name": "超盈国际控股",
+          "market": "港股",
+          "industry": "纺织服装Ⅱ",
+          "reason": "当日放量",
+          "condition_tags": [
+            "当日放量"
+          ],
+          "factor_combo": "量",
+          "pct_change": 0.0021276595744680513,
+          "excess_today": 0.01700428705528878
+        },
+        {
+          "code": "1357.HK",
+          "name": "美图公司",
+          "market": "港股",
+          "industry": "传媒",
+          "reason": "3D价强",
+          "condition_tags": [
+            "3D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": -0.03469387755102043,
+          "excess_today": -0.019817250070199743
+        },
+        {
+          "code": "300798.SZ",
+          "name": "锦鸡股份",
+          "market": "A股",
+          "industry": "化工",
+          "reason": "持续放量",
+          "condition_tags": [
+            "持续放量"
+          ],
+          "factor_combo": "量",
+          "pct_change": -0.04031209362808855,
+          "excess_today": -0.03884260621366176
+        },
+        {
+          "code": "301468.SZ",
+          "name": "博盈特焊",
+          "market": "A股",
+          "industry": "机械",
+          "reason": "3D价强",
+          "condition_tags": [
+            "3D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": 0.02385986106916332,
+          "excess_today": 0.02532934848359014
+        },
+        {
+          "code": "600301.SH",
+          "name": "华锡有色",
+          "market": "A股",
+          "industry": "有色金属",
+          "reason": "3D价强",
+          "condition_tags": [
+            "3D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": 0.03076274757690694,
+          "excess_today": 0.032232234991333764
+        },
+        {
+          "code": "3636.HK",
+          "name": "金浔资源",
+          "market": "港股",
+          "industry": "有色金属",
+          "reason": "3D价强",
+          "condition_tags": [
+            "3D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": 0.03341584158415841,
+          "excess_today": 0.048292469064978964
+        },
+        {
+          "code": "001358.SZ",
+          "name": "兴欣新材",
+          "market": "A股",
+          "industry": "化工",
+          "reason": "5D价强 / 持续放量",
+          "condition_tags": [
+            "5D价强",
+            "持续放量"
+          ],
+          "factor_combo": "价 + 量",
+          "pct_change": -0.02183071620068937,
+          "excess_today": -0.020361228786262564
+        },
+        {
+          "code": "600693.SH",
+          "name": "东百集团",
+          "market": "A股",
+          "industry": "可选消费零售",
+          "reason": "5D价强 / 持续放量",
+          "condition_tags": [
+            "5D价强",
+            "持续放量"
+          ],
+          "factor_combo": "价 + 量",
+          "pct_change": -0.024514811031664818,
+          "excess_today": -0.0230453236172381
+        },
+        {
+          "code": "002425.SZ",
+          "name": "凯撒文化",
+          "market": "A股",
+          "industry": "传媒",
+          "reason": "日涨/超额 / 3D价强 / 5D价强 / 当日放量 / 60D新高",
+          "condition_tags": [
+            "日涨/超额",
+            "3D价强",
+            "5D价强",
+            "当日放量",
+            "60D新高"
+          ],
+          "factor_combo": "价 + 量 + 新高",
+          "pct_change": 0.10086455331412082,
+          "excess_today": 0.10233404072854757
+        },
+        {
+          "code": "000009.SZ",
+          "name": "中国宝安",
+          "market": "A股",
+          "industry": "工业贸易与综合",
+          "reason": "3D价强 / 持续放量",
+          "condition_tags": [
+            "3D价强",
+            "持续放量"
+          ],
+          "factor_combo": "价 + 量",
+          "pct_change": -0.018324607329843045,
+          "excess_today": -0.016855119915416328
+        },
+        {
+          "code": "000019.SZ",
+          "name": "深粮控股",
+          "market": "A股",
+          "industry": "工业贸易与综合",
+          "reason": "当日放量",
+          "condition_tags": [
+            "当日放量"
+          ],
+          "factor_combo": "量",
+          "pct_change": 0.032840722495894856,
+          "excess_today": 0.03431020991032163
+        },
+        {
+          "code": "000069.SZ",
+          "name": "华侨城A",
+          "market": "A股",
+          "industry": "房地产Ⅱ",
+          "reason": "当日放量",
+          "condition_tags": [
+            "当日放量"
+          ],
+          "factor_combo": "量",
+          "pct_change": 0.05464480874316922,
+          "excess_today": 0.056114296157596
+        },
+        {
+          "code": "000426.SZ",
+          "name": "兴业银锡",
+          "market": "A股",
+          "industry": "有色金属",
+          "reason": "3D价强",
+          "condition_tags": [
+            "3D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": 0.03526170798898072,
+          "excess_today": 0.036731195403407524
+        },
+        {
+          "code": "6805.HK",
+          "name": "金茂源环保",
+          "market": "港股",
+          "industry": "环保Ⅱ",
+          "reason": "当日放量",
+          "condition_tags": [
+            "当日放量"
+          ],
+          "factor_combo": "量",
+          "pct_change": -0.020332717190388216,
+          "excess_today": -0.005456089709567569
+        },
+        {
+          "code": "000739.SZ",
+          "name": "普洛药业",
+          "market": "A股",
+          "industry": "医药生物",
+          "reason": "3Y新高",
+          "condition_tags": [
+            "3Y新高"
+          ],
+          "factor_combo": "新高",
+          "pct_change": -0.02742230347349182,
+          "excess_today": -0.025952816059065076
+        },
+        {
+          "code": "000505.SZ",
+          "name": "京粮控股",
+          "market": "A股",
+          "industry": "食品饮料",
+          "reason": "当日放量",
+          "condition_tags": [
+            "当日放量"
+          ],
+          "factor_combo": "量",
+          "pct_change": 0.0589285714285714,
+          "excess_today": 0.060398058842998203
+        },
+        {
+          "code": "000960.SZ",
+          "name": "锡业股份",
+          "market": "A股",
+          "industry": "有色金属",
+          "reason": "3D价强 / 5D价强",
+          "condition_tags": [
+            "3D价强",
+            "5D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": 0.01683937823834194,
+          "excess_today": 0.01830886565276879
+        },
+        {
+          "code": "001378.SZ",
+          "name": "德冠新材",
+          "market": "A股",
+          "industry": "化工",
+          "reason": "日涨/超额 / 3D价强 / 5D价强",
+          "condition_tags": [
+            "日涨/超额",
+            "3D价强",
+            "5D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": 0.09994385176866945,
+          "excess_today": 0.10141333918309625
+        },
+        {
+          "code": "002012.SZ",
+          "name": "凯恩股份",
+          "market": "A股",
+          "industry": "造纸与包装",
+          "reason": "3D价强",
+          "condition_tags": [
+            "3D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": 0.015527950310559098,
+          "excess_today": 0.016997437724985964
+        },
+        {
+          "code": "002041.SZ",
+          "name": "登海种业",
+          "market": "A股",
+          "industry": "食品饮料",
+          "reason": "当日放量",
+          "condition_tags": [
+            "当日放量"
+          ],
+          "factor_combo": "量",
+          "pct_change": 0.04576659038901601,
+          "excess_today": 0.047236077803442855
+        },
+        {
+          "code": "002064.SZ",
+          "name": "华峰化学",
+          "market": "A股",
+          "industry": "化工",
+          "reason": "60D新高",
+          "condition_tags": [
+            "60D新高"
+          ],
+          "factor_combo": "新高",
+          "pct_change": 0.023376623376623263,
+          "excess_today": 0.024846110791050036
+        },
+        {
+          "code": "002212.SZ",
+          "name": "天融信",
+          "market": "A股",
+          "industry": "软件服务",
+          "reason": "日涨/超额 / 3D价强 / 5D价强 / 持续放量",
+          "condition_tags": [
+            "日涨/超额",
+            "3D价强",
+            "5D价强",
+            "持续放量"
+          ],
+          "factor_combo": "价 + 量",
+          "pct_change": 0.10014947683109114,
+          "excess_today": 0.10161896424551786
+        },
+        {
+          "code": "002291.SZ",
+          "name": "遥望科技",
+          "market": "A股",
+          "industry": "软件服务",
+          "reason": "当日放量",
+          "condition_tags": [
+            "当日放量"
+          ],
+          "factor_combo": "量",
+          "pct_change": -0.0338983050847459,
+          "excess_today": -0.03242881767031913
+        },
+        {
+          "code": "002302.SZ",
+          "name": "西部建设",
+          "market": "A股",
+          "industry": "建材Ⅱ",
+          "reason": "日涨/超额",
+          "condition_tags": [
+            "日涨/超额"
+          ],
+          "factor_combo": "价",
+          "pct_change": 0.09956709956709969,
+          "excess_today": 0.10103658698152641
+        },
+        {
+          "code": "002376.SZ",
+          "name": "新北洋",
+          "market": "A股",
+          "industry": "硬件设备",
+          "reason": "日涨/超额 / 当日放量",
+          "condition_tags": [
+            "日涨/超额",
+            "当日放量"
+          ],
+          "factor_combo": "价 + 量",
+          "pct_change": 0.10078740157480316,
+          "excess_today": 0.10225688898922991
+        },
+        {
+          "code": "002517.SZ",
+          "name": "恺英网络",
+          "market": "A股",
+          "industry": "传媒",
+          "reason": "3D价强",
+          "condition_tags": [
+            "3D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": -0.026115342763873825,
+          "excess_today": -0.024645855349447077
+        },
+        {
+          "code": "002534.SZ",
+          "name": "西子洁能",
+          "market": "A股",
+          "industry": "机械",
+          "reason": "3D价强 / 5D价强",
+          "condition_tags": [
+            "3D价强",
+            "5D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": 0.05124835742444147,
+          "excess_today": 0.05271784483886832
+        },
+        {
+          "code": "002612.SZ",
+          "name": "朗姿股份",
+          "market": "A股",
+          "industry": "纺织服装Ⅱ",
+          "reason": "5D价强",
+          "condition_tags": [
+            "5D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": 0.02416107382550335,
+          "excess_today": 0.025630561239930127
+        },
+        {
+          "code": "002649.SZ",
+          "name": "博彦科技",
+          "market": "A股",
+          "industry": "软件服务",
+          "reason": "日涨/超额 / 3D价强 / 5D价强 / 当日放量 / 60D新高",
+          "condition_tags": [
+            "日涨/超额",
+            "3D价强",
+            "5D价强",
+            "当日放量",
+            "60D新高"
+          ],
+          "factor_combo": "价 + 量 + 新高",
+          "pct_change": 0.10038986354775811,
+          "excess_today": 0.10185935096218479
+        },
+        {
+          "code": "002659.SZ",
+          "name": "凯文教育",
+          "market": "A股",
+          "industry": "消费者服务",
+          "reason": "当日放量",
+          "condition_tags": [
+            "当日放量"
+          ],
+          "factor_combo": "量",
+          "pct_change": -0.06799999999999994,
+          "excess_today": -0.06653051258557319
+        },
+        {
+          "code": "002686.SZ",
+          "name": "亿利达",
+          "market": "A股",
+          "industry": "机械",
+          "reason": "日涨/超额 / 3D价强 / 5D价强",
+          "condition_tags": [
+            "日涨/超额",
+            "3D价强",
+            "5D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": 0.10050251256281423,
+          "excess_today": 0.10197199997724103
+        },
+        {
+          "code": "002705.SZ",
+          "name": "新宝股份",
+          "market": "A股",
+          "industry": "家电Ⅱ",
+          "reason": "当日放量",
+          "condition_tags": [
+            "当日放量"
+          ],
+          "factor_combo": "量",
+          "pct_change": 0.05846947549441102,
+          "excess_today": 0.05993896290883782
+        },
+        {
+          "code": "002759.SZ",
+          "name": "天际股份",
+          "market": "A股",
+          "industry": "化工",
+          "reason": "日涨/超额",
+          "condition_tags": [
+            "日涨/超额"
+          ],
+          "factor_combo": "价",
+          "pct_change": 0.10026385224274392,
+          "excess_today": 0.10173333965717068
+        },
+        {
+          "code": "002826.SZ",
+          "name": "易明医药",
+          "market": "A股",
+          "industry": "医药生物",
+          "reason": "日涨/超额",
+          "condition_tags": [
+            "日涨/超额"
+          ],
+          "factor_combo": "价",
+          "pct_change": 0.09999999999999992,
+          "excess_today": 0.10146948741442662
+        },
+        {
+          "code": "002879.SZ",
+          "name": "长缆科技",
+          "market": "A股",
+          "industry": "电气设备",
+          "reason": "持续放量",
+          "condition_tags": [
+            "持续放量"
+          ],
+          "factor_combo": "量",
+          "pct_change": -0.053129931614939646,
+          "excess_today": -0.051660444200512856
+        },
+        {
+          "code": "002889.SZ",
+          "name": "东方嘉盛",
+          "market": "A股",
+          "industry": "企业服务",
+          "reason": "持续放量",
+          "condition_tags": [
+            "持续放量"
+          ],
+          "factor_combo": "量",
+          "pct_change": -0.0040716612377848975,
+          "excess_today": -0.002602173823358145
+        },
+        {
+          "code": "002900.SZ",
+          "name": "哈三联",
+          "market": "A股",
+          "industry": "医药生物",
+          "reason": "持续放量",
+          "condition_tags": [
+            "持续放量"
+          ],
+          "factor_combo": "量",
+          "pct_change": -0.03619197482297418,
+          "excess_today": -0.03472248740854744
+        },
+        {
+          "code": "002912.SZ",
+          "name": "中新赛克",
+          "market": "A股",
+          "industry": "硬件设备",
+          "reason": "当日放量",
+          "condition_tags": [
+            "当日放量"
+          ],
+          "factor_combo": "量",
+          "pct_change": -0.05720720720720726,
+          "excess_today": -0.055737719792780534
+        },
+        {
+          "code": "003005.SZ",
+          "name": "竞业达",
+          "market": "A股",
+          "industry": "消费者服务",
+          "reason": "当日放量",
+          "condition_tags": [
+            "当日放量"
+          ],
+          "factor_combo": "量",
+          "pct_change": -0.02729181245626301,
+          "excess_today": -0.025822325041836236
+        },
+        {
+          "code": "003023.SZ",
+          "name": "彩虹集团",
+          "market": "A股",
+          "industry": "家电Ⅱ",
+          "reason": "5D价强",
+          "condition_tags": [
+            "5D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": 0.03739612188365636,
+          "excess_today": 0.038865609298083026
+        },
+        {
+          "code": "300134.SZ",
+          "name": "大富科技",
+          "market": "A股",
+          "industry": "硬件设备",
+          "reason": "日涨/超额 / 3D价强 / 5D价强 / 当日放量",
+          "condition_tags": [
+            "日涨/超额",
+            "3D价强",
+            "5D价强",
+            "当日放量"
+          ],
+          "factor_combo": "价 + 量",
+          "pct_change": 0.15264423076923075,
+          "excess_today": 0.1541137181836576
+        },
+        {
+          "code": "300182.SZ",
+          "name": "捷成股份",
+          "market": "A股",
+          "industry": "软件服务",
+          "reason": "3D价强 / 5D价强",
+          "condition_tags": [
+            "3D价强",
+            "5D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": -0.030303030303030262,
+          "excess_today": -0.028833542888603514
+        },
+        {
+          "code": "300244.SZ",
+          "name": "迪安诊断",
+          "market": "A股",
+          "industry": "医疗设备与服务",
+          "reason": "3D价强 / 5D价强",
+          "condition_tags": [
+            "3D价强",
+            "5D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": -0.007088607594936761,
+          "excess_today": -0.005619120180510029
+        },
+        {
+          "code": "300248.SZ",
+          "name": "新开普",
+          "market": "A股",
+          "industry": "软件服务",
+          "reason": "3D价强 / 5D价强 / 当日放量",
+          "condition_tags": [
+            "3D价强",
+            "5D价强",
+            "当日放量"
+          ],
+          "factor_combo": "价 + 量",
+          "pct_change": -0.011916583912611906,
+          "excess_today": -0.010447096498185093
+        },
+        {
+          "code": "300599.SZ",
+          "name": "雄塑科技",
+          "market": "A股",
+          "industry": "建筑",
+          "reason": "3D价强 / 5D价强",
+          "condition_tags": [
+            "3D价强",
+            "5D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": 0.023255813953488403,
+          "excess_today": 0.024725301367915176
+        },
+        {
+          "code": "300826.SZ",
+          "name": "测绘股份",
+          "market": "A股",
+          "industry": "企业服务",
+          "reason": "3D价强",
+          "condition_tags": [
+            "3D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": 0.023880597014925408,
+          "excess_today": 0.02535008442935216
+        },
+        {
+          "code": "300887.SZ",
+          "name": "谱尼测试",
+          "market": "A股",
+          "industry": "企业服务",
+          "reason": "日涨/超额 / 3D价强 / 5D价强 / 当日放量",
+          "condition_tags": [
+            "日涨/超额",
+            "3D价强",
+            "5D价强",
+            "当日放量"
+          ],
+          "factor_combo": "价 + 量",
+          "pct_change": 0.1342465753424657,
+          "excess_today": 0.13571606275689252
+        },
+        {
+          "code": "300981.SZ",
+          "name": "中红医疗",
+          "market": "A股",
+          "industry": "医疗设备与服务",
+          "reason": "3D价强 / 5D价强 / 持续放量",
+          "condition_tags": [
+            "3D价强",
+            "5D价强",
+            "持续放量"
+          ],
+          "factor_combo": "价 + 量",
+          "pct_change": -0.07307692307692312,
+          "excess_today": -0.07160743566249639
+        },
+        {
+          "code": "301026.SZ",
+          "name": "浩通科技",
+          "market": "A股",
+          "industry": "有色金属",
+          "reason": "3D价强 / 5D价强 / 当日放量",
+          "condition_tags": [
+            "3D价强",
+            "5D价强",
+            "当日放量"
+          ],
+          "factor_combo": "价 + 量",
+          "pct_change": 0.044206607724523096,
+          "excess_today": 0.04567609513894988
+        },
+        {
+          "code": "301047.SZ",
+          "name": "义翘神州",
+          "market": "A股",
+          "industry": "医药生物",
+          "reason": "3D价强 / 5D价强 / 当日放量 / 120D新高",
+          "condition_tags": [
+            "3D价强",
+            "5D价强",
+            "当日放量",
+            "120D新高"
+          ],
+          "factor_combo": "价 + 量 + 新高",
+          "pct_change": -0.007726269315673166,
+          "excess_today": -0.006256781901246455
+        },
+        {
+          "code": "301051.SZ",
+          "name": "信濠光电",
+          "market": "A股",
+          "industry": "硬件设备",
+          "reason": "3D价强",
+          "condition_tags": [
+            "3D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": 0.048813559322033975,
+          "excess_today": 0.05028304673646078
+        },
+        {
+          "code": "301058.SZ",
+          "name": "中粮科工",
+          "market": "A股",
+          "industry": "企业服务",
+          "reason": "当日放量",
+          "condition_tags": [
+            "当日放量"
+          ],
+          "factor_combo": "量",
+          "pct_change": 0.050909090909091015,
+          "excess_today": 0.05237857832351778
+        },
+        {
+          "code": "301108.SZ",
+          "name": "洁雅股份",
+          "market": "A股",
+          "industry": "家庭用品",
+          "reason": "5D价强 / 120D新高",
+          "condition_tags": [
+            "5D价强",
+            "120D新高"
+          ],
+          "factor_combo": "价 + 新高",
+          "pct_change": 0.029930069930069855,
+          "excess_today": 0.03139955734449651
+        },
+        {
+          "code": "301201.SZ",
+          "name": "诚达药业",
+          "market": "A股",
+          "industry": "医药生物",
+          "reason": "3D价强",
+          "condition_tags": [
+            "3D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": 0.06606799230275828,
+          "excess_today": 0.06753747971718504
+        },
+        {
+          "code": "301262.SZ",
+          "name": "海看股份",
+          "market": "A股",
+          "industry": "传媒",
+          "reason": "持续放量",
+          "condition_tags": [
+            "持续放量"
+          ],
+          "factor_combo": "量",
+          "pct_change": -0.0260366441658629,
+          "excess_today": -0.02456715675143617
+        },
+        {
+          "code": "301381.SZ",
+          "name": "赛维时代",
+          "market": "A股",
+          "industry": "纺织服装Ⅱ",
+          "reason": "120D新高",
+          "condition_tags": [
+            "120D新高"
+          ],
+          "factor_combo": "新高",
+          "pct_change": -0.009318085556967297,
+          "excess_today": -0.007848598142540575
+        },
+        {
+          "code": "301395.SZ",
+          "name": "仁信新材",
+          "market": "A股",
+          "industry": "化工",
+          "reason": "3D价强 / 5D价强",
+          "condition_tags": [
+            "3D价强",
+            "5D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": 0.011686143572620869,
+          "excess_today": 0.013155630987047529
+        },
+        {
+          "code": "301508.SZ",
+          "name": "中机认检",
+          "market": "A股",
+          "industry": "企业服务",
+          "reason": "当日放量",
+          "condition_tags": [
+            "当日放量"
+          ],
+          "factor_combo": "量",
+          "pct_change": 0.011934156378600735,
+          "excess_today": 0.013403643793027387
+        },
+        {
+          "code": "600094.SH",
+          "name": "大名城",
+          "market": "A股",
+          "industry": "房地产Ⅱ",
+          "reason": "3D价强 / 5D价强",
+          "condition_tags": [
+            "3D价强",
+            "5D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": 0.010845986984815583,
+          "excess_today": 0.01231547439924241
+        },
+        {
+          "code": "600262.SH",
+          "name": "北方股份",
+          "market": "A股",
+          "industry": "机械",
+          "reason": "日涨/超额 / 当日放量",
+          "condition_tags": [
+            "日涨/超额",
+            "当日放量"
+          ],
+          "factor_combo": "价 + 量",
+          "pct_change": 0.09992962702322306,
+          "excess_today": 0.10139911443764982
+        },
+        {
+          "code": "600333.SH",
+          "name": "长春燃气",
+          "market": "A股",
+          "industry": "公用事业Ⅱ",
+          "reason": "60D新高",
+          "condition_tags": [
+            "60D新高"
+          ],
+          "factor_combo": "新高",
+          "pct_change": 0.006578947368420963,
+          "excess_today": 0.00804843478284778
+        },
+        {
+          "code": "600439.SH",
+          "name": "瑞贝卡",
+          "market": "A股",
+          "industry": "家庭用品",
+          "reason": "当日放量",
+          "condition_tags": [
+            "当日放量"
+          ],
+          "factor_combo": "量",
+          "pct_change": 0.027027027027027025,
+          "excess_today": 0.028496514441453735
+        },
+        {
+          "code": "600549.SH",
+          "name": "厦门钨业",
+          "market": "A股",
+          "industry": "有色金属",
+          "reason": "3D价强",
+          "condition_tags": [
+            "3D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": 0.0698064035740879,
+          "excess_today": 0.07127589098851472
+        },
+        {
+          "code": "600556.SH",
+          "name": "天下秀",
+          "market": "A股",
+          "industry": "软件服务",
+          "reason": "3D价强 / 5D价强 / 当日放量",
+          "condition_tags": [
+            "3D价强",
+            "5D价强",
+            "当日放量"
+          ],
+          "factor_combo": "价 + 量",
+          "pct_change": -0.05956678700361011,
+          "excess_today": -0.058097299589183304
+        },
+        {
+          "code": "600650.SH",
+          "name": "锦江在线",
+          "market": "A股",
+          "industry": "交通运输",
+          "reason": "当日放量",
+          "condition_tags": [
+            "当日放量"
+          ],
+          "factor_combo": "量",
+          "pct_change": 0.0026978417266188127,
+          "excess_today": 0.0041673291410455615
+        },
+        {
+          "code": "600661.SH",
+          "name": "昂立教育",
+          "market": "A股",
+          "industry": "消费者服务",
+          "reason": "5D价强",
+          "condition_tags": [
+            "5D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": -0.04110996916752327,
+          "excess_today": -0.03964048175309653
+        },
+        {
+          "code": "600663.SH",
+          "name": "陆家嘴",
+          "market": "A股",
+          "industry": "房地产Ⅱ",
+          "reason": "3D价强 / 5D价强 / 持续放量 / 120D新高",
+          "condition_tags": [
+            "3D价强",
+            "5D价强",
+            "持续放量",
+            "120D新高"
+          ],
+          "factor_combo": "价 + 量 + 新高",
+          "pct_change": 0.02604756511891276,
+          "excess_today": 0.02751705253333947
+        },
+        {
+          "code": "600665.SH",
+          "name": "天地源",
+          "market": "A股",
+          "industry": "房地产Ⅱ",
+          "reason": "日涨/超额 / 3D价强 / 5D价强",
+          "condition_tags": [
+            "日涨/超额",
+            "3D价强",
+            "5D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": 0.09900990099009908,
+          "excess_today": 0.10047938840452586
+        },
+        {
+          "code": "600801.SH",
+          "name": "华新建材",
+          "market": "A股",
+          "industry": "建材Ⅱ",
+          "reason": "60D新高",
+          "condition_tags": [
+            "60D新高"
+          ],
+          "factor_combo": "新高",
+          "pct_change": 0.04924760601915191,
+          "excess_today": 0.05071709343357855
+        },
+        {
+          "code": "600829.SH",
+          "name": "人民同泰",
+          "market": "A股",
+          "industry": "医疗设备与服务",
+          "reason": "日涨/超额",
+          "condition_tags": [
+            "日涨/超额"
+          ],
+          "factor_combo": "价",
+          "pct_change": 0.09989373007438881,
+          "excess_today": 0.1013632174888155
+        },
+        {
+          "code": "601001.SH",
+          "name": "晋控煤业",
+          "market": "A股",
+          "industry": "煤炭Ⅱ",
+          "reason": "日涨/超额",
+          "condition_tags": [
+            "日涨/超额"
+          ],
+          "factor_combo": "价",
+          "pct_change": 0.09482758620689662,
+          "excess_today": 0.09629707362132335
+        },
+        {
+          "code": "601003.SH",
+          "name": "柳钢股份",
+          "market": "A股",
+          "industry": "钢铁Ⅱ",
+          "reason": "持续放量",
+          "condition_tags": [
+            "持续放量"
+          ],
+          "factor_combo": "量",
+          "pct_change": -0.01259445843828717,
+          "excess_today": -0.011124971023860453
+        },
+        {
+          "code": "601069.SH",
+          "name": "西部黄金",
+          "market": "A股",
+          "industry": "有色金属",
+          "reason": "3D价强 / 5D价强",
+          "condition_tags": [
+            "3D价强",
+            "5D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": 0.06004447739065979,
+          "excess_today": 0.06151396480508664
+        },
+        {
+          "code": "601138.SH",
+          "name": "工业富联",
+          "market": "A股",
+          "industry": "硬件设备",
+          "reason": "3D价强",
+          "condition_tags": [
+            "3D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": 0.03564927184466007,
+          "excess_today": 0.03711875925908692
+        },
+        {
+          "code": "601168.SH",
+          "name": "西部矿业",
+          "market": "A股",
+          "industry": "有色金属",
+          "reason": "3Y新高",
+          "condition_tags": [
+            "3Y新高"
+          ],
+          "factor_combo": "新高",
+          "pct_change": -0.03144807411019024,
+          "excess_today": -0.029978586695763476
+        },
+        {
+          "code": "601231.SH",
+          "name": "环旭电子",
+          "market": "A股",
+          "industry": "硬件设备",
+          "reason": "3D价强",
+          "condition_tags": [
+            "3D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": 0.060092449922958355,
+          "excess_today": 0.06156193733738502
+        },
+        {
+          "code": "601699.SH",
+          "name": "潞安环能",
+          "market": "A股",
+          "industry": "煤炭Ⅱ",
+          "reason": "日涨/超额",
+          "condition_tags": [
+            "日涨/超额"
+          ],
+          "factor_combo": "价",
+          "pct_change": 0.10027100271002702,
+          "excess_today": 0.10174049012445385
+        },
+        {
+          "code": "603048.SH",
+          "name": "浙江黎明",
+          "market": "A股",
+          "industry": "汽车与零配件",
+          "reason": "5D价强",
+          "condition_tags": [
+            "5D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": 0.014691478942213374,
+          "excess_today": 0.016160966356640216
+        },
+        {
+          "code": "603081.SH",
+          "name": "大丰实业",
+          "market": "A股",
+          "industry": "机械",
+          "reason": "当日放量",
+          "condition_tags": [
+            "当日放量"
+          ],
+          "factor_combo": "量",
+          "pct_change": 0.056353591160220914,
+          "excess_today": 0.057823078574647635
+        },
+        {
+          "code": "603132.SH",
+          "name": "金徽股份",
+          "market": "A股",
+          "industry": "有色金属",
+          "reason": "3D价强 / 5D价强 / 当日放量",
+          "condition_tags": [
+            "3D价强",
+            "5D价强",
+            "当日放量"
+          ],
+          "factor_combo": "价 + 量",
+          "pct_change": 0.04743729552889858,
+          "excess_today": 0.0489067829433254
+        },
+        {
+          "code": "603185.SH",
+          "name": "弘元绿能",
+          "market": "A股",
+          "industry": "电气设备",
+          "reason": "3D价强",
+          "condition_tags": [
+            "3D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": 0.012883435582822138,
+          "excess_today": 0.014352922997248996
+        },
+        {
+          "code": "603217.SH",
+          "name": "元利科技",
+          "market": "A股",
+          "industry": "化工",
+          "reason": "3D价强 / 5D价强",
+          "condition_tags": [
+            "3D价强",
+            "5D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": 0.007975188303057148,
+          "excess_today": 0.009444675717483975
+        },
+        {
+          "code": "603337.SH",
+          "name": "杰克科技",
+          "market": "A股",
+          "industry": "机械",
+          "reason": "3D价强",
+          "condition_tags": [
+            "3D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": -0.029602420051858355,
+          "excess_today": -0.02813293263743155
+        },
+        {
+          "code": "603352.SH",
+          "name": "至信股份",
+          "market": "A股",
+          "industry": "汽车与零配件",
+          "reason": "持续放量",
+          "condition_tags": [
+            "持续放量"
+          ],
+          "factor_combo": "量",
+          "pct_change": -0.015670553935860084,
+          "excess_today": -0.01420106652143327
+        },
+        {
+          "code": "603421.SH",
+          "name": "鼎信通讯",
+          "market": "A股",
+          "industry": "电气设备",
+          "reason": "日涨/超额 / 3D价强 / 当日放量",
+          "condition_tags": [
+            "日涨/超额",
+            "3D价强",
+            "当日放量"
+          ],
+          "factor_combo": "价 + 量",
+          "pct_change": 0.09948542024013739,
+          "excess_today": 0.10095490765456416
+        },
+        {
+          "code": "603556.SH",
+          "name": "海兴电力",
+          "market": "A股",
+          "industry": "硬件设备",
+          "reason": "3D价强",
+          "condition_tags": [
+            "3D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": 0.032418001525553075,
+          "excess_today": 0.03388748893997984
+        },
+        {
+          "code": "603699.SH",
+          "name": "纽威股份",
+          "market": "A股",
+          "industry": "机械",
+          "reason": "3D价强",
+          "condition_tags": [
+            "3D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": 0.0,
+          "excess_today": 0.0014694874144267622
+        },
+        {
+          "code": "603869.SH",
+          "name": "ST智知",
+          "market": "A股",
+          "industry": "软件服务",
+          "reason": "当日放量",
+          "condition_tags": [
+            "当日放量"
+          ],
+          "factor_combo": "量",
+          "pct_change": 0.05182567726737331,
+          "excess_today": 0.05329516468180007
+        },
+        {
+          "code": "603979.SH",
+          "name": "金诚信",
+          "market": "A股",
+          "industry": "有色金属",
+          "reason": "60D新高",
+          "condition_tags": [
+            "60D新高"
+          ],
+          "factor_combo": "新高",
+          "pct_change": -0.0035587188612099074,
+          "excess_today": -0.0020892314467831907
+        },
+        {
+          "code": "605007.SH",
+          "name": "五洲特纸",
+          "market": "A股",
+          "industry": "造纸与包装",
+          "reason": "60D新高",
+          "condition_tags": [
+            "60D新高"
+          ],
+          "factor_combo": "新高",
+          "pct_change": 0.01677018633540369,
+          "excess_today": 0.018239673749830487
+        },
+        {
+          "code": "605068.SH",
+          "name": "明新旭腾",
+          "market": "A股",
+          "industry": "汽车与零配件",
+          "reason": "3D价强 / 5D价强",
+          "condition_tags": [
+            "3D价强",
+            "5D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": -0.03690205011389511,
+          "excess_today": -0.03543256269946837
+        },
+        {
+          "code": "605167.SH",
+          "name": "利柏特",
+          "market": "A股",
+          "industry": "建筑",
+          "reason": "当日放量",
+          "condition_tags": [
+            "当日放量"
+          ],
+          "factor_combo": "量",
+          "pct_change": -0.06301197227473224,
+          "excess_today": -0.061542484860305446
+        },
+        {
+          "code": "605336.SH",
+          "name": "*ST帅电",
+          "market": "A股",
+          "industry": "家电Ⅱ",
+          "reason": "日涨/超额 / 3D价强 / 5D价强",
+          "condition_tags": [
+            "日涨/超额",
+            "3D价强",
+            "5D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": 0.10009532888465199,
+          "excess_today": 0.10156481629907876
+        },
+        {
+          "code": "605366.SH",
+          "name": "宏柏新材",
+          "market": "A股",
+          "industry": "化工",
+          "reason": "日涨/超额",
+          "condition_tags": [
+            "日涨/超额"
+          ],
+          "factor_combo": "价",
+          "pct_change": 0.1000000000000001,
+          "excess_today": 0.10146948741442685
+        },
+        {
+          "code": "605388.SH",
+          "name": "均瑶健康",
+          "market": "A股",
+          "industry": "食品饮料",
+          "reason": "5D价强",
+          "condition_tags": [
+            "5D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": -0.015075376884422047,
+          "excess_today": -0.013605889469995303
+        },
+        {
+          "code": "688095.SH",
+          "name": "福昕软件",
+          "market": "A股",
+          "industry": "软件服务",
+          "reason": "3D价强 / 5D价强",
+          "condition_tags": [
+            "3D价强",
+            "5D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": -0.028236914600550923,
+          "excess_today": -0.026767427186124126
+        },
+        {
+          "code": "688118.SH",
+          "name": "普元信息",
+          "market": "A股",
+          "industry": "软件服务",
+          "reason": "5D价强",
+          "condition_tags": [
+            "5D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": 0.0004629629629627457,
+          "excess_today": 0.0019324503773894275
+        },
+        {
+          "code": "688435.SH",
+          "name": "英方软件",
+          "market": "A股",
+          "industry": "软件服务",
+          "reason": "5D价强",
+          "condition_tags": [
+            "5D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": 0.004740834386852041,
+          "excess_today": 0.006210321801278784
+        },
+        {
+          "code": "688503.SH",
+          "name": "聚和材料",
+          "market": "A股",
+          "industry": "电气设备",
+          "reason": "日涨/超额",
+          "condition_tags": [
+            "日涨/超额"
+          ],
+          "factor_combo": "价",
+          "pct_change": 0.10745181362877519,
+          "excess_today": 0.10892130104320197
+        },
+        {
+          "code": "688571.SH",
+          "name": "杭华股份",
+          "market": "A股",
+          "industry": "化工",
+          "reason": "日涨/超额 / 3D价强 / 5D价强",
+          "condition_tags": [
+            "日涨/超额",
+            "3D价强",
+            "5D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": 0.09414466130884022,
+          "excess_today": 0.0956141487232669
+        },
+        {
+          "code": "688621.SH",
+          "name": "阳光诺和",
+          "market": "A股",
+          "industry": "医药生物",
+          "reason": "60D新高",
+          "condition_tags": [
+            "60D新高"
+          ],
+          "factor_combo": "新高",
+          "pct_change": -0.006898817345597933,
+          "excess_today": -0.0054293299311711785
+        },
+        {
+          "code": "920403.BJ",
+          "name": "康农种业",
+          "market": "A股",
+          "industry": "食品饮料",
+          "reason": "当日放量",
+          "condition_tags": [
+            "当日放量"
+          ],
+          "factor_combo": "量",
+          "pct_change": 0.08093716719914798,
+          "excess_today": 0.08240665461357466
+        },
+        {
+          "code": "0016.HK",
+          "name": "新鸿基地产",
+          "market": "港股",
+          "industry": "房地产Ⅱ",
+          "reason": "当日放量",
+          "condition_tags": [
+            "当日放量"
+          ],
+          "factor_combo": "量",
+          "pct_change": -0.04683648315529996,
+          "excess_today": -0.03195985567447935
+        },
+        {
+          "code": "0032.HK",
+          "name": "港通控股",
+          "market": "港股",
+          "industry": "消费者服务",
+          "reason": "持续放量",
+          "condition_tags": [
+            "持续放量"
+          ],
+          "factor_combo": "量",
+          "pct_change": 0.025503355704697944,
+          "excess_today": 0.0403799831855186
+        },
+        {
+          "code": "0293.HK",
+          "name": "国泰航空",
+          "market": "港股",
+          "industry": "交通运输",
+          "reason": "3Y新高",
+          "condition_tags": [
+            "3Y新高"
+          ],
+          "factor_combo": "新高",
+          "pct_change": 0.022972972972973026,
+          "excess_today": 0.03784960045379371
+        },
+        {
+          "code": "0340.HK",
+          "name": "潼关黄金",
+          "market": "港股",
+          "industry": "有色金属",
+          "reason": "日涨/超额 / 3D价强 / 5D价强 / 当日放量",
+          "condition_tags": [
+            "日涨/超额",
+            "3D价强",
+            "5D价强",
+            "当日放量"
+          ],
+          "factor_combo": "价 + 量",
+          "pct_change": 0.08577405857740587,
+          "excess_today": 0.10065068605822647
+        },
+        {
+          "code": "0579.HK",
+          "name": "京能清洁能源",
+          "market": "港股",
+          "industry": "公用事业Ⅱ",
+          "reason": "当日放量",
+          "condition_tags": [
+            "当日放量"
+          ],
+          "factor_combo": "量",
+          "pct_change": -0.022662889518413522,
+          "excess_today": -0.007786262037592917
+        },
+        {
+          "code": "0590.HK",
+          "name": "六福集团",
+          "market": "港股",
+          "industry": "纺织服装Ⅱ",
+          "reason": "60D新高",
+          "condition_tags": [
+            "60D新高"
+          ],
+          "factor_combo": "新高",
+          "pct_change": 0.003946329913180772,
+          "excess_today": 0.018822957394001416
+        },
+        {
+          "code": "0659.HK",
+          "name": "周大福创建",
+          "market": "港股",
+          "industry": "工业贸易与综合",
+          "reason": "当日放量",
+          "condition_tags": [
+            "当日放量"
+          ],
+          "factor_combo": "量",
+          "pct_change": -0.05360443622920523,
+          "excess_today": -0.03872780874838455
+        },
+        {
+          "code": "0746.HK",
+          "name": "理文化工",
+          "market": "港股",
+          "industry": "化工",
+          "reason": "60D新高",
+          "condition_tags": [
+            "60D新高"
+          ],
+          "factor_combo": "新高",
+          "pct_change": -0.01633045148895293,
+          "excess_today": -0.0014538240081323206
+        },
+        {
+          "code": "1057.HK",
+          "name": "浙江世宝",
+          "market": "港股",
+          "industry": "汽车与零配件",
+          "reason": "持续放量",
+          "condition_tags": [
+            "持续放量"
+          ],
+          "factor_combo": "量",
+          "pct_change": -0.09544950055493892,
+          "excess_today": -0.08057287307411831
+        },
+        {
+          "code": "1117.HK",
+          "name": "现代牧业",
+          "market": "港股",
+          "industry": "食品饮料",
+          "reason": "3D价强 / 5D价强 / 持续放量 / 60D新高",
+          "condition_tags": [
+            "3D价强",
+            "5D价强",
+            "持续放量",
+            "60D新高"
+          ],
+          "factor_combo": "价 + 量 + 新高",
+          "pct_change": -0.08381502890173405,
+          "excess_today": -0.06893840142091344
+        },
+        {
+          "code": "1205.HK",
+          "name": "中信资源",
+          "market": "港股",
+          "industry": "工业贸易与综合",
+          "reason": "当日放量",
+          "condition_tags": [
+            "当日放量"
+          ],
+          "factor_combo": "量",
+          "pct_change": 0.04040404040404035,
+          "excess_today": 0.05528066788486107
+        },
+        {
+          "code": "1224.HK",
+          "name": "中渝置地",
+          "market": "港股",
+          "industry": "房地产Ⅱ",
+          "reason": "当日放量",
+          "condition_tags": [
+            "当日放量"
+          ],
+          "factor_combo": "量",
+          "pct_change": 0.0,
+          "excess_today": 0.014876627480820637
+        },
+        {
+          "code": "1234.HK",
+          "name": "中国利郎",
+          "market": "港股",
+          "industry": "纺织服装Ⅱ",
+          "reason": "当日放量",
+          "condition_tags": [
+            "当日放量"
+          ],
+          "factor_combo": "量",
+          "pct_change": 0.0014684287812041944,
+          "excess_today": 0.01634505626202476
+        },
+        {
+          "code": "1258.HK",
+          "name": "中国有色矿业",
+          "market": "港股",
+          "industry": "有色金属",
+          "reason": "60D新高",
+          "condition_tags": [
+            "60D新高"
+          ],
+          "factor_combo": "新高",
+          "pct_change": -0.0018761726078799403,
+          "excess_today": 0.013000454872940659
+        },
+        {
+          "code": "1299.HK",
+          "name": "友邦保险",
+          "market": "港股",
+          "industry": "非银金融",
+          "reason": "当日放量",
+          "condition_tags": [
+            "当日放量"
+          ],
+          "factor_combo": "量",
+          "pct_change": -0.05916398713826359,
+          "excess_today": -0.0442873596574429
+        },
+        {
+          "code": "1432.HK",
+          "name": "中国圣牧",
+          "market": "港股",
+          "industry": "食品饮料",
+          "reason": "120D新高",
+          "condition_tags": [
+            "120D新高"
+          ],
+          "factor_combo": "新高",
+          "pct_change": 0.052631578947368564,
+          "excess_today": 0.06750820642818922
+        },
+        {
+          "code": "1501.HK",
+          "name": "瑛泰医疗",
+          "market": "港股",
+          "industry": "医疗设备与服务",
+          "reason": "当日放量",
+          "condition_tags": [
+            "当日放量"
+          ],
+          "factor_combo": "量",
+          "pct_change": 0.0032362459546925854,
+          "excess_today": 0.018112873435513266
+        },
+        {
+          "code": "1905.HK",
+          "name": "海通恒信",
+          "market": "港股",
+          "industry": "非银金融",
+          "reason": "当日放量",
+          "condition_tags": [
+            "当日放量"
+          ],
+          "factor_combo": "量",
+          "pct_change": -0.012903225806451686,
+          "excess_today": 0.001973401674368991
+        },
+        {
+          "code": "1913.HK",
+          "name": "普拉达",
+          "market": "港股",
+          "industry": "纺织服装Ⅱ",
+          "reason": "3D价强 / 120D新高",
+          "condition_tags": [
+            "3D价强",
+            "120D新高"
+          ],
+          "factor_combo": "价 + 新高",
+          "pct_change": -0.012747252747252628,
+          "excess_today": 0.0021293747335680013
+        },
+        {
+          "code": "1997.HK",
+          "name": "九龙仓置业",
+          "market": "港股",
+          "industry": "房地产Ⅱ",
+          "reason": "日涨/超额 / 当日放量 / 120D新高",
+          "condition_tags": [
+            "日涨/超额",
+            "当日放量",
+            "120D新高"
+          ],
+          "factor_combo": "价 + 量 + 新高",
+          "pct_change": 0.13722517058377573,
+          "excess_today": 0.15210179806459634
+        },
+        {
+          "code": "2099.HK",
+          "name": "中国黄金国际",
+          "market": "港股",
+          "industry": "有色金属",
+          "reason": "3D价强 / 60D新高",
+          "condition_tags": [
+            "3D价强",
+            "60D新高"
+          ],
+          "factor_combo": "价 + 新高",
+          "pct_change": 0.0009737098344692655,
+          "excess_today": 0.015850337315289953
+        },
+        {
+          "code": "2232.HK",
+          "name": "晶苑国际",
+          "market": "港股",
+          "industry": "纺织服装Ⅱ",
+          "reason": "60D新高",
+          "condition_tags": [
+            "60D新高"
+          ],
+          "factor_combo": "新高",
+          "pct_change": -0.0007490636704120858,
+          "excess_today": 0.014127563810408583
+        },
+        {
+          "code": "2269.HK",
+          "name": "药明生物",
+          "market": "港股",
+          "industry": "医药生物",
+          "reason": "60D新高",
+          "condition_tags": [
+            "60D新高"
+          ],
+          "factor_combo": "新高",
+          "pct_change": 0.018709995076317144,
+          "excess_today": 0.033586622557137846
+        },
+        {
+          "code": "2276.HK",
+          "name": "康耐特光学",
+          "market": "港股",
+          "industry": "医疗设备与服务",
+          "reason": "3D价强",
+          "condition_tags": [
+            "3D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": -0.020521353300055493,
+          "excess_today": -0.005644725819234808
+        },
+        {
+          "code": "2285.HK",
+          "name": "泉峰控股",
+          "market": "港股",
+          "industry": "家电Ⅱ",
+          "reason": "60D新高",
+          "condition_tags": [
+            "60D新高"
+          ],
+          "factor_combo": "新高",
+          "pct_change": -0.0009727626459143906,
+          "excess_today": 0.013903864834906243
+        },
+        {
+          "code": "2525.HK",
+          "name": "禾赛-W",
+          "market": "港股",
+          "industry": "硬件设备",
+          "reason": "持续放量",
+          "condition_tags": [
+            "持续放量"
+          ],
+          "factor_combo": "量",
+          "pct_change": -0.04563160823594882,
+          "excess_today": -0.030754980755128173
+        },
+        {
+          "code": "2580.HK",
+          "name": "奥克斯电气",
+          "market": "港股",
+          "industry": "家电Ⅱ",
+          "reason": "60D新高",
+          "condition_tags": [
+            "60D新高"
+          ],
+          "factor_combo": "新高",
+          "pct_change": 0.014324082363473602,
+          "excess_today": 0.029200709844294237
+        },
+        {
+          "code": "2589.HK",
+          "name": "沪上阿姨",
+          "market": "港股",
+          "industry": "消费者服务",
+          "reason": "当日放量",
+          "condition_tags": [
+            "当日放量"
+          ],
+          "factor_combo": "量",
+          "pct_change": 0.018047579983593024,
+          "excess_today": 0.03292420746441371
+        },
+        {
+          "code": "2696.HK",
+          "name": "复宏汉霖",
+          "market": "港股",
+          "industry": "医药生物",
+          "reason": "3D价强",
+          "condition_tags": [
+            "3D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": -0.013535031847133666,
+          "excess_today": 0.001341595633686965
+        },
+        {
+          "code": "2698.HK",
+          "name": "乐舒适",
+          "market": "港股",
+          "industry": "可选消费零售",
+          "reason": "3Y新高",
+          "condition_tags": [
+            "3Y新高"
+          ],
+          "factor_combo": "新高",
+          "pct_change": -0.007896221094190577,
+          "excess_today": 0.006980406386630111
+        },
+        {
+          "code": "2888.HK",
+          "name": "渣打集团",
+          "market": "港股",
+          "industry": "银行",
+          "reason": "持续放量",
+          "condition_tags": [
+            "持续放量"
+          ],
+          "factor_combo": "量",
+          "pct_change": 0.0017094017094018746,
+          "excess_today": 0.016586029190222562
+        },
+        {
+          "code": "3887.HK",
+          "name": "HASHKEY HLDGS",
+          "market": "港股",
+          "industry": "软件服务",
+          "reason": "日涨/超额 / 3D价强 / 5D价强",
+          "condition_tags": [
+            "日涨/超额",
+            "3D价强",
+            "5D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": 0.07960199004975133,
+          "excess_today": 0.09447861753057196
+        },
+        {
+          "code": "3888.HK",
+          "name": "金山软件",
+          "market": "港股",
+          "industry": "软件服务",
+          "reason": "60D新高",
+          "condition_tags": [
+            "60D新高"
+          ],
+          "factor_combo": "新高",
+          "pct_change": -0.04472396925227121,
+          "excess_today": -0.029847341771450542
+        },
+        {
+          "code": "6055.HK",
+          "name": "中烟香港",
+          "market": "港股",
+          "industry": "可选消费零售",
+          "reason": "持续放量",
+          "condition_tags": [
+            "持续放量"
+          ],
+          "factor_combo": "量",
+          "pct_change": -0.029761904761904708,
+          "excess_today": -0.01488527728108413
+        },
+        {
+          "code": "6998.HK",
+          "name": "亿腾嘉和",
+          "market": "港股",
+          "industry": "医药生物",
+          "reason": "当日放量",
+          "condition_tags": [
+            "当日放量"
+          ],
+          "factor_combo": "量",
+          "pct_change": -0.07142857142857137,
+          "excess_today": -0.05655194394775077
+        },
+        {
+          "code": "81299.HK",
+          "name": "友邦保险-R",
+          "market": "港股",
+          "industry": "非银金融",
+          "reason": "当日放量",
+          "condition_tags": [
+            "当日放量"
+          ],
+          "factor_combo": "量",
+          "pct_change": -0.0577211394302849,
+          "excess_today": -0.04284451194946426
+        },
+        {
+          "code": "9987.HK",
+          "name": "百胜中国",
+          "market": "港股",
+          "industry": "消费者服务",
+          "reason": "60D新高",
+          "condition_tags": [
+            "60D新高"
+          ],
+          "factor_combo": "新高",
+          "pct_change": -0.004221635883905074,
+          "excess_today": 0.01065499159691552
+        },
+        {
+          "code": "688657.SH",
+          "name": "浩辰软件",
+          "market": "A股",
+          "industry": "软件服务",
+          "reason": "3D价强",
+          "condition_tags": [
+            "3D价强"
+          ],
+          "factor_combo": "价",
+          "pct_change": 0.009959539371303991,
+          "excess_today": 0.011429026785730656
         }
       ]
     }
