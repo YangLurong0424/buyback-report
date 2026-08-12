@@ -1,0 +1,63 @@
+name: Protect unusual report
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - docs/unusual.html
+
+permissions:
+  contents: write
+
+concurrency:
+  group: protect-unusual-main
+  cancel-in-progress: false
+
+jobs:
+  restore-unrelated-overwrite:
+    if: startsWith(github.event.head_commit.message, 'Update public announcement reports')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Restore unusual page changed by announcement publisher
+        env:
+          BAD_COMMIT: ${{ github.sha }}
+          GOOD_PARENT: ${{ github.event.before }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          bad_blob="$(git rev-parse "${BAD_COMMIT}:docs/unusual.html")"
+
+          for attempt in 1 2 3; do
+            git fetch origin main
+            current_blob="$(git rev-parse "origin/main:docs/unusual.html")"
+
+            # A newer legitimate unusual-page publish has already repaired it.
+            if [ "${current_blob}" != "${bad_blob}" ]; then
+              exit 0
+            fi
+
+            git checkout -B protect-unusual origin/main
+            git show "${GOOD_PARENT}:docs/unusual.html" > docs/unusual.html
+            git add docs/unusual.html
+
+            if git diff --cached --quiet; then
+              exit 0
+            fi
+
+            git commit -m "Restore unusual report after announcement update"
+
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+          done
+
+          exit 1
