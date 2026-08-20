@@ -56,7 +56,7 @@
     }
     .cards {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 12px;
       margin-top: 20px;
     }
@@ -120,6 +120,86 @@
       flex: 0 0 auto;
       flex-wrap: wrap;
       justify-content: center;
+    }
+    .search-panel {
+      margin-top: 14px;
+      padding: 12px 14px;
+      border: 1px solid #d8e5fb;
+      border-radius: 8px;
+      background: #f8fbff;
+    }
+    .search-controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .search-box {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      min-width: min(100%, 360px);
+      padding: 7px 12px;
+      border: 1px solid #d9e3f0;
+      border-radius: 8px;
+      background: #ffffff;
+    }
+    .search-label {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .search-input {
+      width: min(320px, 100%);
+      min-width: 0;
+      border: 0;
+      outline: 0;
+      background: transparent;
+      color: var(--text);
+      font: inherit;
+      font-size: 13px;
+    }
+    .search-input::placeholder {
+      color: #94a3b8;
+    }
+    .search-clear {
+      border: 1px solid #d9e3f0;
+      border-radius: 8px;
+      background: #ffffff;
+      color: var(--text);
+      padding: 7px 12px;
+      font: inherit;
+      font-size: 13px;
+      cursor: pointer;
+    }
+    .search-clear:hover {
+      border-color: #bfd0e4;
+      background: #f1f7ff;
+    }
+    .filter-status {
+      min-height: 20px;
+      color: var(--muted);
+      font-size: 12px;
+      white-space: nowrap;
+    }
+    .search-empty {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px dashed #d8e5fb;
+      color: var(--text);
+      font-size: 13px;
+    }
+    .search-empty strong {
+      color: var(--blue);
+    }
+    .search-empty span {
+      color: var(--muted);
     }
     .filter-button {
       min-width: 76px;
@@ -378,6 +458,11 @@
       .update-bar { align-items: stretch; flex-direction: column; }
       .filter-controls { width: 100%; }
       .filter-button { flex: 1 1 0; }
+      .search-controls { align-items: stretch; }
+      .search-box { width: 100%; }
+      .search-input { width: 100%; }
+      .filter-status { white-space: normal; }
+      .search-empty { align-items: flex-start; flex-direction: column; }
     }
   </style>
 </head>
@@ -385,23 +470,22 @@
   <div class="page">
     <section class="hero">
       <h1>2026-08-19回购概览</h1>
-      <div class="sub">生成时间：2026-08-20 00:53:41</div>
-      <div class="cards"><div class="card blue"><div class="label">A股预案</div><div class="value">0</div></div><div class="card green"><div class="label">A股累计实施</div><div class="value">0</div></div><div class="card gold"><div class="label">港股预案</div><div class="value">0</div></div><div class="card rose"><div class="label">港股累计实施</div><div class="value">0</div></div></div>
-      <div class="update-bar"><div class="new-summary">本次新增 <strong>0</strong> 条<span>A股预案0条；A股累计实施0条；港股预案0条；港股累计实施0条</span></div><div class="filter-controls" aria-label="公告筛选"><button type="button" class="filter-button active" data-filter-mode="all">全部</button><button type="button" class="filter-button" data-filter-mode="a">A股</button><button type="button" class="filter-button" data-filter-mode="hk">港股</button><button type="button" class="filter-button" data-filter-mode="preplan">预案</button><button type="button" class="filter-button" data-filter-mode="progress">累计实施</button><button type="button" class="filter-button" data-filter-mode="new">只看新增</button></div></div>
+      <div class="sub">生成时间：2026-08-19 20:45:17</div>
+      <div class="cards"><div class="card blue"><div class="label">A股预案</div><div class="value">0</div></div><div class="card gold"><div class="label">港股预案</div><div class="value">3</div></div></div>
+      <div class="update-bar"><div class="new-summary">本次新增 <strong>0</strong> 条<span>A股预案0条；港股预案0条</span></div><div class="filter-controls" aria-label="公告筛选"><button type="button" class="filter-button active" data-filter-mode="all">全部</button><button type="button" class="filter-button" data-filter-mode="a">A股</button><button type="button" class="filter-button" data-filter-mode="hk">港股</button><button type="button" class="filter-button" data-filter-mode="new">只看新增</button></div></div>
+      <div class="search-panel"><div class="search-controls" aria-label="快速搜索"><label class="search-box" for="tableSearch"><span class="search-label">搜索</span><input id="tableSearch" class="search-input" type="search" placeholder="代码 / 简称 / 标题" autocomplete="off" spellcheck="false"></label><button type="button" class="search-clear" id="clearSearch" hidden>清空</button><div class="filter-status" id="filterStatus" aria-live="polite"></div></div><div class="search-empty" id="searchEmpty" hidden><strong>当前没有匹配结果</strong><span>可以尝试更换关键词或切回“全部”视图。</span></div></div>
       <div class="notes">
         <h2>说明</h2>
-        <ul><li>更新：自然日口径；21:30邮件+网站，22:00/23:00/23:30仅补当日官网新增。</li><li>统计窗口：2026-08-19 00:00 - 2026-08-19 23:59</li><li>范围：预案=具体回购方案、计划或要约；授权、AGM通函、章程等不计入。</li><li>来源：A股Wind sheet1+巨潮/交易所补漏；港股Wind/HKEX公告PDF；A股股权激励回购注销纳入回购进度，港股仍排除授权、供股、期权/RSU、转股等非实际回购。</li><li>A股官方补漏失败：No module named &#x27;opencc&#x27;</li></ul>
+        <ul><li>更新：自然日口径；21:30邮件+网站，22:00/23:00/23:30仅补当日官网新增。</li><li>统计窗口：2026-08-19 00:00 - 2026-08-19 20:31</li><li>范围：仅统计预案，即具体回购方案、计划、要约或港股股份购回授权；已实施、累计实施、注销进展、章程等不计入页面统计。</li><li>来源：A股以当日 Wind 邮件 Excel 为底表，并合并巨潮/交易所官网补漏；官网记录需通过标题/PDF规则确认后才入表。港股使用 Wind/HKEX 公告 PDF，保留股份购回授权/repurchase mandate，仍排除供股、期权/RSU、转股等非预案公告。</li><li>A股官方补漏失败：巨潮资讯:HTTPSConnectionPool(host=&#x27;www.cninfo.com.cn&#x27;, port=443): Max retries exceeded with url: /new/hisAnnouncement/query (Caused by NameResolutionError(&quot;HTTPSConnection(host=&#x27;www.cninfo.com.cn&#x27;, port=443): Failed to resolve &#x27;www.cninfo.com.cn&#x27; ([Errno 11001] getaddrinfo failed)&quot;))；上交所:HTTPSConnectionPool(host=&#x27;query.sse.com.cn&#x27;, port=443): Max retries exceeded with url: /security/stock/queryCompanyBulletinNew.do?isPagination=true&amp;pageHelp.pageSize=100&amp;pageHelp.pageNo=1&amp;pageHelp.beginPage=1&amp;pageHelp.cacheSize=1&amp;pageHelp.endPage=1&amp;START_DATE=2026-08-19&amp;END_DATE=2026-08-19&amp;SECURITY_CODE=&amp;TITLE=&amp;BULLETIN_TYPE=&amp;stockType= (Caused by NameResolutionError(&quot;HTTPSConnection(host=&#x27;query.sse.com.cn&#x27;, port=443): Failed to resolve &#x27;query.sse.com.cn&#x27; ([Errno 11001] getaddrinfo failed)&quot;))；深交所:HTTPSConnectionPool(host=&#x27;www.szse.cn&#x27;, port=443): Max retries exceeded with url: /api/disc/announcement/annList (Caused by NameResolutionError(&quot;HTTPSConnection(host=&#x27;www.szse.cn&#x27;, port=443): Failed to resolve &#x27;www.szse.cn&#x27; ([Errno 11001] getaddrinfo failed)&quot;))；北交所:HTTPSConnectionPool(host=&#x27;www.bseinfo.net&#x27;, port=443): Max retries exceeded with url: /disclosureInfoController/initDisclosureList.do (Caused by NameResolutionError(&quot;HTTPSConnection(host=&#x27;www.bseinfo.net&#x27;, port=443): Failed to resolve &#x27;www.bseinfo.net&#x27; ([Errno 11001] getaddrinfo failed)&quot;))</li><li>未找到当日21:30基线，当前网站补跑结果已作为当日初始页面。</li></ul>
       </div>
     </section>
     <section class="market">
       <h2>A股</h2>
       <section class="table-section" data-filter-tags="a preplan"><div class="section-head"><h3>A股预案</h3><span class="count">0 条</span></div><div class="empty">暂无数据</div></section>
-      <section class="table-section" data-filter-tags="a progress"><div class="section-head"><h3>A股累计实施</h3><span class="count">0 条</span></div><div class="empty">暂无数据</div></section>
     </section>
     <section class="market">
       <h2>港股</h2>
-      <section class="table-section" data-filter-tags="hk preplan"><div class="section-head"><h3>港股预案</h3><span class="count">0 条</span></div><div class="empty">暂无数据</div></section>
-      <section class="table-section" data-filter-tags="hk progress"><div class="section-head"><h3>港股累计实施</h3><span class="count">0 条</span></div><div class="empty">暂无数据</div></section>
+      <section class="table-section" data-total-count="3" data-new-count="0" data-filter-tags="hk preplan"><div class="section-head"><h3>港股预案</h3><span class="count" data-count-suffix=" 条">3 条</span></div><div class="table-wrap"><table><thead><tr><th data-sort-type="date">公告日</th><th data-sort-type="text">代码</th><th data-sort-type="text">简称</th><th data-sort-type="number">授权比例(%)</th><th data-sort-type="text">标题</th><th data-sort-type="text">来源</th></tr></thead><tbody><tr data-search="2026-08-19 08366.hk 浙江联合投资 (1)建议重选退任董事(2)建议授出发行股份及购回股份之一般授权及(3)股东周年大会通告"><td class="text" data-sort-value="2026-08-19"><span class="cell-text" title="2026-08-19">2026-08-19</span></td><td class="text" data-sort-value="08366.HK"><span class="cell-text" title="08366.HK">08366.HK</span></td><td class="text" data-sort-value="浙江联合投资"><span class="cell-text" title="浙江联合投资">浙江联合投资</span></td><td class="num" data-sort-value="10.00"><span class="cell-text" title="10.00">10.00</span></td><td class="text" data-sort-value="(1)建议重选退任董事(2)建议授出发行股份及购回股份之一般授权及(3)股东周年大会通告"><details class="title-details"><summary title="(1)建议重选退任董事(2)建议授出发行股份及购回股份之一般授权及(3)股东周年大会通告">(1)建议重选退任董事(2)建议授出发行股份及购回股份之一般授权及(3)股东周年大会通告</summary><div class="title-full"><div class="stack-item">(1)建议重选退任董事(2)建议授出发行股份及购回股份之一般授权及(3)股东周年大会通告</div></div></details></td><td class="text" data-sort-value="本地文件"><span class="source-note">本地文件</span></td></tr><tr data-search="2026-08-19 02566.hk 九源基因 自愿公告本公司根据购回授权购回h股"><td class="text" data-sort-value="2026-08-19"><span class="cell-text" title="2026-08-19">2026-08-19</span></td><td class="text" data-sort-value="02566.HK"><span class="cell-text" title="02566.HK">02566.HK</span></td><td class="text" data-sort-value="九源基因"><span class="cell-text" title="九源基因">九源基因</span></td><td class="num" data-sort-value="5.00"><span class="cell-text" title="5.00">5.00</span></td><td class="text" data-sort-value="自愿公告本公司根据购回授权购回H股"><details class="title-details"><summary title="自愿公告本公司根据购回授权购回H股">自愿公告本公司根据购回授权购回H股</summary><div class="title-full"><div class="stack-item">自愿公告本公司根据购回授权购回H股</div></div></details></td><td class="text" data-sort-value="本地文件"><span class="source-note">本地文件</span></td></tr><tr data-search="2026-08-19 00674.hk 中国唐商 (1)-(3)建议重选退任董事及继续委任已服务超过九年之独立非执行董事；(4)重新委任核数师(5)修订现有公司细则及采纳新公司细则(6)建议发行及购回股份之一般授权及(7)股东周年大会通告"><td class="text" data-sort-value="2026-08-19"><span class="cell-text" title="2026-08-19">2026-08-19</span></td><td class="text" data-sort-value="00674.HK"><span class="cell-text" title="00674.HK">00674.HK</span></td><td class="text" data-sort-value="中国唐商"><span class="cell-text" title="中国唐商">中国唐商</span></td><td class="num" data-sort-value="5.00"><span class="cell-text" title="5.00">5.00</span></td><td class="text" data-sort-value="(1)-(3)建议重选退任董事及继续委任已服务超过九年之独立非执行董事；(4)重新委任核数师(5)修订现有公司细则及采纳新公司细则(6)建议发行及购回股份之一般授权及(7)股东周年大会通告"><details class="title-details"><summary title="(1)-(3)建议重选退任董事及继续委任已服务超过九年之独立非执行董事；(4)重新委任核数师(5)修订现有公司细则及采纳新公司细则(6)建议发行及购回股份之一般授权及(7)股东周年大会通告">(1)-(3)建议重选退任董事及继续委任已服务超过九年之独立非执行董事；(4)重新委任核数师(5)修订现有公司细则及采纳新公司细则(6)建议发行及购回股份之一般授权及(7)股东周年大会通告</summary><div class="title-full"><div class="stack-item">(1)-(3)建议重选退任董事及继续委任已服务超过九年之独立非执行董事；(4)重新委任核数师(5)修订现有公司细则及采纳新公司细则(6)建议发行及购回股份之一般授权及(7)股东周年大会通告</div></div></details></td><td class="text" data-sort-value="本地文件"><span class="source-note">本地文件</span></td></tr></tbody></table></div></section>
     </section>
   </div>
   <script>
@@ -541,6 +625,96 @@
       document.querySelectorAll('.filter-button').forEach((button) => {
         button.addEventListener('click', () => updateTableFilter(button.dataset.filterMode || 'all'));
       });
+      const searchInput = document.getElementById('tableSearch');
+      const clearSearchButton = document.getElementById('clearSearch');
+      const filterStatus = document.getElementById('filterStatus');
+      const searchEmpty = document.getElementById('searchEmpty');
+      let enhancedMode = document.querySelector('.filter-button.active')?.dataset.filterMode || 'all';
+
+      const tokenizeQuery = (value) => (value || '').trim().toLowerCase().split(/\s+/).filter(Boolean);
+      const matchesQuery = (row, terms) => {
+        if (!terms.length) return true;
+        const haystack = (row.dataset.search || row.innerText || '').toLowerCase();
+        return terms.every((term) => haystack.includes(term));
+      };
+
+      const applyEnhancedFilter = (mode = enhancedMode) => {
+        enhancedMode = mode;
+        const terms = tokenizeQuery(searchInput?.value || '');
+        const hasQuery = terms.length > 0;
+        let totalRows = 0;
+        let visibleRows = 0;
+
+        document.querySelectorAll('.filter-button').forEach((button) => {
+          button.classList.toggle('active', button.dataset.filterMode === enhancedMode);
+        });
+        document.querySelectorAll('.table-section').forEach((section) => {
+          const rows = Array.from(section.querySelectorAll('tbody tr'));
+          const tags = (section.dataset.filterTags || '').split(/\s+/).filter(Boolean);
+          const sectionMatched = enhancedMode === 'all' || enhancedMode === 'new' || tags.includes(enhancedMode);
+          let sectionVisibleRows = 0;
+
+          rows.forEach((row) => {
+            const matchesMode = sectionMatched && (enhancedMode !== 'new' || row.classList.contains('new-row'));
+            if (matchesMode) {
+              totalRows += 1;
+            }
+            const rowVisible = matchesMode && matchesQuery(row, terms);
+            row.hidden = !rowVisible;
+            if (rowVisible) {
+              sectionVisibleRows += 1;
+              visibleRows += 1;
+            }
+          });
+
+          const hasDataRows = rows.length > 0;
+          section.classList.toggle('section-hidden', !sectionMatched || (hasDataRows && sectionVisibleRows === 0));
+          const count = section.querySelector('.count');
+          if (count) {
+            const suffix = count.dataset.countSuffix || ' 条';
+            if (enhancedMode === 'new' || hasQuery) {
+              count.textContent = `${sectionVisibleRows}${suffix} / 共${rows.length}${suffix}`;
+            } else {
+              count.textContent = `${rows.length}${suffix}`;
+            }
+          }
+        });
+
+        document.querySelectorAll('.market').forEach((market) => {
+          const sections = Array.from(market.querySelectorAll('.table-section'));
+          market.classList.toggle('market-hidden', sections.length > 0 && sections.every((section) => section.classList.contains('section-hidden')));
+        });
+
+        if (clearSearchButton) {
+          clearSearchButton.hidden = !hasQuery;
+        }
+        if (filterStatus) {
+          const modeLabel = document.querySelector(`.filter-button[data-filter-mode="${enhancedMode}"]`)?.textContent?.trim() || '全部';
+          const queryLabel = hasQuery ? ` | 关键词：${terms.join(' ')}` : '';
+          filterStatus.textContent = `已显示 ${visibleRows} / ${totalRows}条 | 视图：${modeLabel}${queryLabel}`;
+        }
+        if (searchEmpty) {
+          searchEmpty.hidden = visibleRows > 0 || (!hasQuery && enhancedMode !== 'new');
+        }
+      };
+
+      document.querySelectorAll('.filter-button').forEach((button) => {
+        button.addEventListener('click', () => applyEnhancedFilter(button.dataset.filterMode || 'all'));
+      });
+      searchInput?.addEventListener('input', () => applyEnhancedFilter());
+      searchInput?.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          searchInput.value = '';
+          applyEnhancedFilter();
+        }
+      });
+      clearSearchButton?.addEventListener('click', () => {
+        if (!searchInput) return;
+        searchInput.value = '';
+        searchInput.focus();
+        applyEnhancedFilter();
+      });
+      applyEnhancedFilter(enhancedMode);
     })();
   </script>
 </body>
