@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-24T21:15:51",
+  "generated_at": "2026-08-24T22:20:51",
   "window_days": 7,
   "latest_date": "2026-08-24",
   "dates": [
@@ -30369,7 +30369,7 @@
     {
       "date": "2026-08-24",
       "latest_trade_date": "2026-08-24",
-      "generated_at": "2026-08-24T21:15:51",
+      "generated_at": "2026-08-24T22:20:51",
       "total": 400,
       "reason_counts": {
         "日涨/超额 / 3D价强 / 5D价强 / 当日放量": 6,
