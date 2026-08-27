@@ -56,7 +56,7 @@
     }
     .cards {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 12px;
       margin-top: 20px;
     }
@@ -120,6 +120,86 @@
       flex: 0 0 auto;
       flex-wrap: wrap;
       justify-content: center;
+    }
+    .search-panel {
+      margin-top: 14px;
+      padding: 12px 14px;
+      border: 1px solid #d8e5fb;
+      border-radius: 8px;
+      background: #f8fbff;
+    }
+    .search-controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .search-box {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      min-width: min(100%, 360px);
+      padding: 7px 12px;
+      border: 1px solid #d9e3f0;
+      border-radius: 8px;
+      background: #ffffff;
+    }
+    .search-label {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .search-input {
+      width: min(320px, 100%);
+      min-width: 0;
+      border: 0;
+      outline: 0;
+      background: transparent;
+      color: var(--text);
+      font: inherit;
+      font-size: 13px;
+    }
+    .search-input::placeholder {
+      color: #94a3b8;
+    }
+    .search-clear {
+      border: 1px solid #d9e3f0;
+      border-radius: 8px;
+      background: #ffffff;
+      color: var(--text);
+      padding: 7px 12px;
+      font: inherit;
+      font-size: 13px;
+      cursor: pointer;
+    }
+    .search-clear:hover {
+      border-color: #bfd0e4;
+      background: #f1f7ff;
+    }
+    .filter-status {
+      min-height: 20px;
+      color: var(--muted);
+      font-size: 12px;
+      white-space: nowrap;
+    }
+    .search-empty {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px dashed #d8e5fb;
+      color: var(--text);
+      font-size: 13px;
+    }
+    .search-empty strong {
+      color: var(--blue);
+    }
+    .search-empty span {
+      color: var(--muted);
     }
     .filter-button {
       min-width: 76px;
@@ -378,6 +458,11 @@
       .update-bar { align-items: stretch; flex-direction: column; }
       .filter-controls { width: 100%; }
       .filter-button { flex: 1 1 0; }
+      .search-controls { align-items: stretch; }
+      .search-box { width: 100%; }
+      .search-input { width: 100%; }
+      .filter-status { white-space: normal; }
+      .search-empty { align-items: flex-start; flex-direction: column; }
     }
   </style>
 </head>
@@ -385,23 +470,22 @@
   <div class="page">
     <section class="hero">
       <h1>2026-08-27回购概览</h1>
-      <div class="sub">生成时间：2026-08-27 23:23:11</div>
-      <div class="cards"><div class="card blue"><div class="label">A股预案</div><div class="value">0</div></div><div class="card green"><div class="label">A股累计实施</div><div class="value">0</div></div><div class="card gold"><div class="label">港股预案</div><div class="value">0</div></div><div class="card rose"><div class="label">港股累计实施</div><div class="value">0</div></div></div>
-      <div class="update-bar"><div class="new-summary">本次新增 <strong>0</strong> 条<span>A股预案0条；A股累计实施0条；港股预案0条；港股累计实施0条</span></div><div class="filter-controls" aria-label="公告筛选"><button type="button" class="filter-button active" data-filter-mode="all">全部</button><button type="button" class="filter-button" data-filter-mode="a">A股</button><button type="button" class="filter-button" data-filter-mode="hk">港股</button><button type="button" class="filter-button" data-filter-mode="preplan">预案</button><button type="button" class="filter-button" data-filter-mode="progress">累计实施</button><button type="button" class="filter-button" data-filter-mode="new">只看新增</button></div></div>
+      <div class="sub">生成时间：2026-08-27 23:23:58</div>
+      <div class="cards"><div class="card blue"><div class="label">A股预案</div><div class="value">4</div></div><div class="card gold"><div class="label">港股预案</div><div class="value">3</div></div></div>
+      <div class="update-bar"><div class="new-summary">本次新增 <strong>0</strong> 条<span>A股预案0条；港股预案0条</span></div><div class="filter-controls" aria-label="公告筛选"><button type="button" class="filter-button active" data-filter-mode="all">全部</button><button type="button" class="filter-button" data-filter-mode="a">A股</button><button type="button" class="filter-button" data-filter-mode="hk">港股</button><button type="button" class="filter-button" data-filter-mode="new">只看新增</button></div></div>
+      <div class="search-panel"><div class="search-controls" aria-label="快速搜索"><label class="search-box" for="tableSearch"><span class="search-label">搜索</span><input id="tableSearch" class="search-input" type="search" placeholder="代码 / 简称 / 标题" autocomplete="off" spellcheck="false"></label><button type="button" class="search-clear" id="clearSearch" hidden>清空</button><div class="filter-status" id="filterStatus" aria-live="polite"></div></div><div class="search-empty" id="searchEmpty" hidden><strong>当前没有匹配结果</strong><span>可以尝试更换关键词或切回“全部”视图。</span></div></div>
       <div class="notes">
         <h2>说明</h2>
-        <ul><li>更新：自然日口径；21:30邮件+网站，22:00/23:00/23:30仅补当日官网新增。</li><li>统计窗口：2026-08-27 00:00 - 2026-08-27 23:23</li><li>范围：预案=具体回购方案、计划或要约；授权、AGM通函、章程等不计入。</li><li>来源：A股Wind sheet1+巨潮/交易所补漏；港股Wind/HKEX公告PDF；A股股权激励回购注销纳入回购进度，港股仍排除授权、供股、期权/RSU、转股等非实际回购。</li><li>A股官方补漏失败：No module named &#x27;opencc&#x27;</li></ul>
+        <ul><li>更新：自然日口径；21:30邮件+网站，22:00/23:00/23:30仅补当日官网新增。</li><li>统计窗口：2026-08-27 00:00 - 2026-08-27 23:00</li><li>范围：仅统计预案，即具体回购方案、计划、要约或港股股份购回授权；已实施、累计实施、注销进展、章程等不计入页面统计。</li><li>来源：A股以当日 Wind 邮件 Excel 为底表，并合并巨潮/交易所官网补漏；官网记录需通过标题/PDF规则确认后才入表。港股使用 Wind/HKEX 公告 PDF，保留股份购回授权/repurchase mandate，仍排除供股、期权/RSU、转股等非预案公告。</li><li>未找到当日21:30基线，当前网站补跑结果已作为当日初始页面。</li><li>A股回购分类：激励类回购4条。页面仅保留预案，已实施及进展公告不计入统计。</li></ul>
       </div>
     </section>
     <section class="market">
       <h2>A股</h2>
-      <section class="table-section" data-filter-tags="a preplan"><div class="section-head"><h3>A股预案</h3><span class="count">0 条</span></div><div class="empty">暂无数据</div></section>
-      <section class="table-section" data-filter-tags="a progress"><div class="section-head"><h3>A股累计实施</h3><span class="count">0 条</span></div><div class="empty">暂无数据</div></section>
+      <section class="table-section" data-total-count="4" data-new-count="0" data-filter-tags="a preplan"><div class="section-head"><h3>A股预案</h3><span class="count" data-count-suffix=" 条">4 条</span></div><div class="table-wrap"><table><thead><tr><th data-sort-type="date">公告日</th><th data-sort-type="text">代码</th><th data-sort-type="text">简称</th><th data-sort-type="text">回购进度</th><th data-sort-type="text">回购方式</th><th data-sort-type="text">回购目的</th><th data-sort-type="number">公告回购股数(万股)</th><th data-sort-type="number">公告回购金额(百万元)</th><th data-sort-type="number">回购比例(%)</th><th data-sort-type="number">价格上限(元/股)</th><th data-sort-type="text">资金来源</th><th data-sort-type="date">最新预案日</th><th data-sort-type="date">首次预案日</th><th data-sort-type="text">币种</th><th data-sort-type="text">是否已注销</th><th data-sort-type="text">标题</th></tr></thead><tbody><tr data-search="2026-08-27 920570.bj 坤博精工 董事会预案 实施股权激励或员工持股计划 [临时公告]坤博精工:竞价回购股份方案公告 竞价回购股份方案公告"><td class="text" data-sort-value="2026-08-27"><span class="cell-text" title="2026-08-27">2026-08-27</span></td><td class="text" data-sort-value="920570.BJ"><span class="cell-text" title="920570.BJ">920570.BJ</span></td><td class="text" data-sort-value="坤博精工"><span class="cell-text" title="坤博精工">坤博精工</span></td><td class="text" data-sort-value="董事会预案"><span class="cell-text" title="董事会预案">董事会预案</span></td><td class="text" data-sort-value=""><span class="cell-missing">—</span></td><td class="text" data-sort-value="实施股权激励或员工持股计划"><span class="cell-text" title="实施股权激励或员工持股计划">实施股权激励或员工持股计划</span></td><td class="num" data-sort-value="10.0"><span class="cell-text" title="10.0">10.0</span></td><td class="num" data-sort-value=""><span class="cell-missing">—</span></td><td class="num" data-sort-value="0.20"><span class="cell-text" title="0.20">0.20</span></td><td class="num" data-sort-value="30.00"><span class="cell-text" title="30.00">30.00</span></td><td class="text" data-sort-value="自有资金"><span class="cell-text" title="自有资金">自有资金</span></td><td class="text" data-sort-value="2026-08-27"><span class="cell-text" title="2026-08-27">2026-08-27</span></td><td class="text" data-sort-value="2026-08-27"><span class="cell-text" title="2026-08-27">2026-08-27</span></td><td class="text" data-sort-value="RMB"><span class="cell-text" title="RMB">RMB</span></td><td class="text" data-sort-value="否"><span class="cell-text" title="否">否</span></td><td class="text" data-sort-value="[临时公告]坤博精工:竞价回购股份方案公告"><details class="title-details"><summary title="竞价回购股份方案公告">[临时公告]坤博精工:竞价回购股份方案公告</summary><div class="title-full"><div class="stack-item">竞价回购股份方案公告</div></div></details></td></tr><tr data-search="2026-08-27 600887.sh 伊利股份 董事会预案 股权激励 集中竞价交易 内蒙古伊利实业集团股份有限公司关于以集中竞价交易方式回购公司股份方案的公告"><td class="text" data-sort-value="2026-08-27"><span class="cell-text" title="2026-08-27">2026-08-27</span></td><td class="text" data-sort-value="600887.SH"><span class="cell-text" title="600887.SH">600887.SH</span></td><td class="text" data-sort-value="伊利股份"><span class="cell-text" title="伊利股份">伊利股份</span></td><td class="text" data-sort-value="董事会预案"><span class="cell-text" title="董事会预案">董事会预案</span></td><td class="text" data-sort-value="集中竞价交易"><span class="cell-text" title="集中竞价交易">集中竞价交易</span></td><td class="text" data-sort-value="股权激励"><span class="cell-text" title="股权激励">股权激励</span></td><td class="num" data-sort-value="5,059.4"><span class="cell-text" title="5,059.4">5,059.4</span></td><td class="num" data-sort-value="1,000.0-2,000.0"><span class="cell-text" title="1,000.0-2,000.0">1,000.0-2,000.0</span></td><td class="num" data-sort-value="0.98"><span class="cell-text" title="0.98">0.98</span></td><td class="num" data-sort-value="39.53"><span class="cell-text" title="39.53">39.53</span></td><td class="text" data-sort-value="自有资金"><span class="cell-text" title="自有资金">自有资金</span></td><td class="text" data-sort-value="2026-08-27"><span class="cell-text" title="2026-08-27">2026-08-27</span></td><td class="text" data-sort-value="2026-08-27"><span class="cell-text" title="2026-08-27">2026-08-27</span></td><td class="text" data-sort-value="RMB"><span class="cell-text" title="RMB">RMB</span></td><td class="text" data-sort-value="否"><span class="cell-text" title="否">否</span></td><td class="text" data-sort-value="内蒙古伊利实业集团股份有限公司关于以集中竞价交易方式回购公司股份方案的公告"><details class="title-details"><summary title="内蒙古伊利实业集团股份有限公司关于以集中竞价交易方式回购公司股份方案的公告">内蒙古伊利实业集团股份有限公司关于以集中竞价交易方式回购公司股份方案的公告</summary><div class="title-full"><div class="stack-item">内蒙古伊利实业集团股份有限公司关于以集中竞价交易方式回购公司股份方案的公告</div></div></details></td></tr><tr data-search="2026-08-27 600276.sh 恒瑞医药 董事会预案 实施股权激励或员工持股计划 集中竞价交易 恒瑞医药关于以集中竞价交易方式回购公司a股股份事项的回购报告书"><td class="text" data-sort-value="2026-08-27"><span class="cell-text" title="2026-08-27">2026-08-27</span></td><td class="text" data-sort-value="600276.SH"><span class="cell-text" title="600276.SH">600276.SH</span></td><td class="text" data-sort-value="恒瑞医药"><span class="cell-text" title="恒瑞医药">恒瑞医药</span></td><td class="text" data-sort-value="董事会预案"><span class="cell-text" title="董事会预案">董事会预案</span></td><td class="text" data-sort-value="集中竞价交易"><span class="cell-text" title="集中竞价交易">集中竞价交易</span></td><td class="text" data-sort-value="实施股权激励或员工持股计划"><span class="cell-text" title="实施股权激励或员工持股计划">实施股权激励或员工持股计划</span></td><td class="num" data-sort-value="2,445.6"><span class="cell-text" title="2,445.6">2,445.6</span></td><td class="num" data-sort-value="1,000.0-2,000.0"><span class="cell-text" title="1,000.0-2,000.0">1,000.0-2,000.0</span></td><td class="num" data-sort-value="0.37"><span class="cell-text" title="0.37">0.37</span></td><td class="num" data-sort-value="81.78"><span class="cell-text" title="81.78">81.78</span></td><td class="text" data-sort-value="自有资金"><span class="cell-text" title="自有资金">自有资金</span></td><td class="text" data-sort-value="2026-08-27"><span class="cell-text" title="2026-08-27">2026-08-27</span></td><td class="text" data-sort-value="2026-08-27"><span class="cell-text" title="2026-08-27">2026-08-27</span></td><td class="text" data-sort-value="RMB"><span class="cell-text" title="RMB">RMB</span></td><td class="text" data-sort-value="否"><span class="cell-text" title="否">否</span></td><td class="text" data-sort-value="恒瑞医药关于以集中竞价交易方式回购公司A股股份事项的回购报告书"><details class="title-details"><summary title="恒瑞医药关于以集中竞价交易方式回购公司A股股份事项的回购报告书">恒瑞医药关于以集中竞价交易方式回购公司A股股份事项的回购报告书</summary><div class="title-full"><div class="stack-item">恒瑞医药关于以集中竞价交易方式回购公司A股股份事项的回购报告书</div></div></details></td></tr><tr class="focus-row" data-search="2026-08-27 301199.sz 迈赫股份 董事会预案 实施股权激励或员工持股计划 集中竞价交易 迈赫股份：关于回购公司股份方案的公告 关于回购公司股份方案的公告"><td class="text" data-sort-value="2026-08-27"><span class="cell-text" title="2026-08-27">2026-08-27</span></td><td class="text" data-sort-value="301199.SZ"><span class="cell-text" title="301199.SZ">301199.SZ</span></td><td class="text" data-sort-value="迈赫股份"><span class="cell-text" title="迈赫股份">迈赫股份</span></td><td class="text" data-sort-value="董事会预案"><span class="cell-text" title="董事会预案">董事会预案</span></td><td class="text" data-sort-value="集中竞价交易"><span class="cell-text" title="集中竞价交易">集中竞价交易</span></td><td class="text" data-sort-value="实施股权激励或员工持股计划"><span class="cell-text" title="实施股权激励或员工持股计划">实施股权激励或员工持股计划</span></td><td class="num" data-sort-value="0.0"><span class="cell-text" title="0.0">0.0</span></td><td class="num" data-sort-value="60.0"><span class="cell-text" title="60.0">60.0</span></td><td class="num" data-sort-value="1.93"><span class="cell-text" title="1.93">1.93</span><span class="flag ratio-flag">≥1%</span></td><td class="num" data-sort-value="25.00"><span class="cell-text" title="25.00">25.00</span></td><td class="text" data-sort-value="自有资金"><span class="cell-text" title="自有资金">自有资金</span></td><td class="text" data-sort-value="2026-08-27"><span class="cell-text" title="2026-08-27">2026-08-27</span></td><td class="text" data-sort-value="2026-08-27"><span class="cell-text" title="2026-08-27">2026-08-27</span></td><td class="text" data-sort-value="RMB"><span class="cell-text" title="RMB">RMB</span></td><td class="text" data-sort-value="否"><span class="cell-text" title="否">否</span></td><td class="text" data-sort-value="迈赫股份：关于回购公司股份方案的公告"><details class="title-details"><summary title="关于回购公司股份方案的公告">迈赫股份：关于回购公司股份方案的公告</summary><div class="title-full"><div class="stack-item">关于回购公司股份方案的公告</div></div></details></td></tr></tbody></table></div></section>
     </section>
     <section class="market">
       <h2>港股</h2>
-      <section class="table-section" data-filter-tags="hk preplan"><div class="section-head"><h3>港股预案</h3><span class="count">0 条</span></div><div class="empty">暂无数据</div></section>
-      <section class="table-section" data-filter-tags="hk progress"><div class="section-head"><h3>港股累计实施</h3><span class="count">0 条</span></div><div class="empty">暂无数据</div></section>
+      <section class="table-section" data-total-count="3" data-new-count="0" data-filter-tags="hk preplan"><div class="section-head"><h3>港股预案</h3><span class="count" data-count-suffix=" 条">3 条</span></div><div class="table-wrap"><table><thead><tr><th data-sort-type="date">公告日</th><th data-sort-type="text">代码</th><th data-sort-type="text">简称</th><th data-sort-type="number">授权比例(%)</th><th data-sort-type="text">标题</th><th data-sort-type="text">来源</th></tr></thead><tbody><tr data-search="2026-08-27 01633.hk 上谕集团 发行股份及出售库存股及购回股份的一般授权、重选退任董事、续聘核数师及股东周年大会通告"><td class="text" data-sort-value="2026-08-27"><span class="cell-text" title="2026-08-27">2026-08-27</span></td><td class="text" data-sort-value="01633.HK"><span class="cell-text" title="01633.HK">01633.HK</span></td><td class="text" data-sort-value="上谕集团"><span class="cell-text" title="上谕集团">上谕集团</span></td><td class="num" data-sort-value="10.00"><span class="cell-text" title="10.00">10.00</span></td><td class="text" data-sort-value="发行股份及出售库存股及购回股份的一般授权、重选退任董事、续聘核数师及股东周年大会通告"><details class="title-details"><summary title="发行股份及出售库存股及购回股份的一般授权、重选退任董事、续聘核数师及股东周年大会通告">发行股份及出售库存股及购回股份的一般授权、重选退任董事、续聘核数师及股东周年大会通告</summary><div class="title-full"><div class="stack-item">发行股份及出售库存股及购回股份的一般授权、重选退任董事、续聘核数师及股东周年大会通告</div></div></details></td><td class="text" data-sort-value="本地文件"><span class="source-note">本地文件</span></td></tr><tr data-search="2026-08-27 01470.hk 富一国际控股 建议发行股份及购回股份之一般授权；重选退任董事；续聘独立核数师；及股东周年大会通告"><td class="text" data-sort-value="2026-08-27"><span class="cell-text" title="2026-08-27">2026-08-27</span></td><td class="text" data-sort-value="01470.HK"><span class="cell-text" title="01470.HK">01470.HK</span></td><td class="text" data-sort-value="富一国际控股"><span class="cell-text" title="富一国际控股">富一国际控股</span></td><td class="num" data-sort-value="10.00"><span class="cell-text" title="10.00">10.00</span></td><td class="text" data-sort-value="建议发行股份及购回股份之一般授权；重选退任董事；续聘独立核数师；及股东周年大会通告"><details class="title-details"><summary title="建议发行股份及购回股份之一般授权；重选退任董事；续聘独立核数师；及股东周年大会通告">建议发行股份及购回股份之一般授权；重选退任董事；续聘独立核数师；及股东周年大会通告</summary><div class="title-full"><div class="stack-item">建议发行股份及购回股份之一般授权；重选退任董事；续聘独立核数师；及股东周年大会通告</div></div></details></td><td class="text" data-sort-value="本地文件"><span class="source-note">本地文件</span></td></tr><tr data-search="2026-08-27 00343.hk 文化传信 (1)建议授出发行及购回股份之一般授权；(2)建议重选董事；(3)重新委聘核数师；及(4)股东周年大会通告"><td class="text" data-sort-value="2026-08-27"><span class="cell-text" title="2026-08-27">2026-08-27</span></td><td class="text" data-sort-value="00343.HK"><span class="cell-text" title="00343.HK">00343.HK</span></td><td class="text" data-sort-value="文化传信"><span class="cell-text" title="文化传信">文化传信</span></td><td class="num" data-sort-value="10.00"><span class="cell-text" title="10.00">10.00</span></td><td class="text" data-sort-value="(1)建议授出发行及购回股份之一般授权；(2)建议重选董事；(3)重新委聘核数师；及(4)股东周年大会通告"><details class="title-details"><summary title="(1)建议授出发行及购回股份之一般授权；(2)建议重选董事；(3)重新委聘核数师；及(4)股东周年大会通告">(1)建议授出发行及购回股份之一般授权；(2)建议重选董事；(3)重新委聘核数师；及(4)股东周年大会通告</summary><div class="title-full"><div class="stack-item">(1)建议授出发行及购回股份之一般授权；(2)建议重选董事；(3)重新委聘核数师；及(4)股东周年大会通告</div></div></details></td><td class="text" data-sort-value="本地文件"><span class="source-note">本地文件</span></td></tr></tbody></table></div></section>
     </section>
   </div>
   <script>
@@ -541,6 +625,96 @@
       document.querySelectorAll('.filter-button').forEach((button) => {
         button.addEventListener('click', () => updateTableFilter(button.dataset.filterMode || 'all'));
       });
+      const searchInput = document.getElementById('tableSearch');
+      const clearSearchButton = document.getElementById('clearSearch');
+      const filterStatus = document.getElementById('filterStatus');
+      const searchEmpty = document.getElementById('searchEmpty');
+      let enhancedMode = document.querySelector('.filter-button.active')?.dataset.filterMode || 'all';
+
+      const tokenizeQuery = (value) => (value || '').trim().toLowerCase().split(/\s+/).filter(Boolean);
+      const matchesQuery = (row, terms) => {
+        if (!terms.length) return true;
+        const haystack = (row.dataset.search || row.innerText || '').toLowerCase();
+        return terms.every((term) => haystack.includes(term));
+      };
+
+      const applyEnhancedFilter = (mode = enhancedMode) => {
+        enhancedMode = mode;
+        const terms = tokenizeQuery(searchInput?.value || '');
+        const hasQuery = terms.length > 0;
+        let totalRows = 0;
+        let visibleRows = 0;
+
+        document.querySelectorAll('.filter-button').forEach((button) => {
+          button.classList.toggle('active', button.dataset.filterMode === enhancedMode);
+        });
+        document.querySelectorAll('.table-section').forEach((section) => {
+          const rows = Array.from(section.querySelectorAll('tbody tr'));
+          const tags = (section.dataset.filterTags || '').split(/\s+/).filter(Boolean);
+          const sectionMatched = enhancedMode === 'all' || enhancedMode === 'new' || tags.includes(enhancedMode);
+          let sectionVisibleRows = 0;
+
+          rows.forEach((row) => {
+            const matchesMode = sectionMatched && (enhancedMode !== 'new' || row.classList.contains('new-row'));
+            if (matchesMode) {
+              totalRows += 1;
+            }
+            const rowVisible = matchesMode && matchesQuery(row, terms);
+            row.hidden = !rowVisible;
+            if (rowVisible) {
+              sectionVisibleRows += 1;
+              visibleRows += 1;
+            }
+          });
+
+          const hasDataRows = rows.length > 0;
+          section.classList.toggle('section-hidden', !sectionMatched || (hasDataRows && sectionVisibleRows === 0));
+          const count = section.querySelector('.count');
+          if (count) {
+            const suffix = count.dataset.countSuffix || ' 条';
+            if (enhancedMode === 'new' || hasQuery) {
+              count.textContent = `${sectionVisibleRows}${suffix} / 共${rows.length}${suffix}`;
+            } else {
+              count.textContent = `${rows.length}${suffix}`;
+            }
+          }
+        });
+
+        document.querySelectorAll('.market').forEach((market) => {
+          const sections = Array.from(market.querySelectorAll('.table-section'));
+          market.classList.toggle('market-hidden', sections.length > 0 && sections.every((section) => section.classList.contains('section-hidden')));
+        });
+
+        if (clearSearchButton) {
+          clearSearchButton.hidden = !hasQuery;
+        }
+        if (filterStatus) {
+          const modeLabel = document.querySelector(`.filter-button[data-filter-mode="${enhancedMode}"]`)?.textContent?.trim() || '全部';
+          const queryLabel = hasQuery ? ` | 关键词：${terms.join(' ')}` : '';
+          filterStatus.textContent = `已显示 ${visibleRows} / ${totalRows}条 | 视图：${modeLabel}${queryLabel}`;
+        }
+        if (searchEmpty) {
+          searchEmpty.hidden = visibleRows > 0 || (!hasQuery && enhancedMode !== 'new');
+        }
+      };
+
+      document.querySelectorAll('.filter-button').forEach((button) => {
+        button.addEventListener('click', () => applyEnhancedFilter(button.dataset.filterMode || 'all'));
+      });
+      searchInput?.addEventListener('input', () => applyEnhancedFilter());
+      searchInput?.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          searchInput.value = '';
+          applyEnhancedFilter();
+        }
+      });
+      clearSearchButton?.addEventListener('click', () => {
+        if (!searchInput) return;
+        searchInput.value = '';
+        searchInput.focus();
+        applyEnhancedFilter();
+      });
+      applyEnhancedFilter(enhancedMode);
     })();
   </script>
 </body>
