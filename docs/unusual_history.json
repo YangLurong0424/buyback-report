@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-23T16:29:26",
+  "generated_at": "2026-10-23T16:46:50",
   "window_days": 7,
   "latest_date": "2026-10-23",
   "dates": [
@@ -50347,7 +50347,7 @@
     {
       "date": "2026-10-23",
       "latest_trade_date": "2026-10-23",
-      "generated_at": "2026-10-23T16:29:26",
+      "generated_at": "2026-10-23T16:46:50",
       "total": 764,
       "reason_counts": {
         "3D价强 / 5D价强": 332,
